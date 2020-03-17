@@ -138,5 +138,3 @@ KubeMQ allows the consumer to connect in a stream transactional model where the 
 
 ![](../.gitbook/assets/queue-stream-flow-fail.png)
 
-#### Demo
-
