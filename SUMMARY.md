@@ -1,13 +1,11 @@
 # Table of contents
 
-* [Initial page](README.md)
-* [Introduction](untitled-4.md)
-* [yes](untitled.md)
-* [Untitled](untitled-1.md)
-
 ## Learn
 
 * [The Basics](learn/the-basics.md)
+* [Queues](learn/queue.md)
+* [Pub/Sub](learn/pubsub.md)
+* [RPC](learn/rpc.md)
 
 ## Development
 
