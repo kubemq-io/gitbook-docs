@@ -9,9 +9,7 @@ Message queues provide an asynchronous communications protocol, meaning that the
 
 Message queues have implicit or explicit limits on the size of data that may be transmitted in a single message and the number of messages that may remain outstanding in the queue.
 
-![image info](./images/queue.png)
-## Table of Content
-[[toc]]
+![image info](../.gitbook/assets/queue.png)
 
 ## Core Features
 KubeMQ supports distributed durable FIFO based queues with the following core features:
@@ -108,7 +106,7 @@ KubeMQ allows a consumer to peek one or many messages in the queue without remov
 
 KubeMQ allows a consumer to ack all messages in the queue (clean-up); therefore, existing messages in the queue will not be available anymore to consume.
 
- ![image info](./images/queue-ack-all.png)
+ ![image info](../.gitbook/assets/queue-ack-all.png)
 
 #### Demo
 
@@ -121,10 +119,10 @@ KubeMQ allows a consumer to ack all messages in the queue (clean-up); therefore,
 KubeMQ allows the consumer to set a visibility time, which during this time, the message will not be available to any other consumer. During the visibility period, the consumer can extend the visibility time window at any time. Once the consumer completed the message processing, he sends an ack notification to the queue. If the consumer failed to ack the message during the visibility time, the message will be available back in the queue to consume by others.
 
 #### Visibility With Ack
-  ![image info](./images/queue-visibility-ack.png)
+  ![image info](../.gitbook/assets/queue-visibility-ack.png)
 
 #### Visibility With Failure
-  ![image info](./images/queue-visibility-reject.png)
+  ![image info](../.gitbook/assets/queue-visibility-reject.png)
 
 #### Demo
 
@@ -136,7 +134,7 @@ KubeMQ allows the consumer to set a visibility time, which during this time, the
 
 KubeMQ allows the consumer to resend the current pulled message to a new queue without the need to send the actual message (act as producer).
 
-![image info](./images/queue-resend.png)
+![image info](../.gitbook/assets/queue-resend.png)
 
 #### Demo
 
@@ -146,7 +144,7 @@ KubeMQ allows the consumer to resend the current pulled message to a new queue w
 
 KubeMQ allows the consumer to send back to the queue a modified message for further processing by other consumers.
 
-![image info](./images/queue-resend-new.png)
+![image info](../.gitbook/assets/queue-resend-new.png)
 
 #### Demo
 
@@ -158,12 +156,12 @@ KubeMQ allows the consumer to connect in a stream transactional model where the 
 
 #### Successful Flow
 
-![image info](./images/queue-stream-flow-ok.png)
+![image info](../.gitbook/assets/queue-stream-flow-ok.png)
 
 
 #### Failed Flow
 
-![image info](./images/queue-stream-flow-fail.png)
+![image info](../.gitbook/assets/queue-stream-flow-fail.png)
 
 #### Demo
 
