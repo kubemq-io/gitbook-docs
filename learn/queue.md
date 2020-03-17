@@ -37,23 +37,14 @@ KubeMQ allows the producer to set each message with an expiration time (in secon
 
 
 #### Demo
-
-<div class="video-block">
-    <iframe src="https://player.vimeo.com/video/372196075" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-</div>
-
+https://player.vimeo.com/video/372196075
 
 ### Message Delay (Scheduled Messages)
 KubeMQ allows the producer to set each message with sending delay (in seconds) time, also known as Scheduled Messages. Until this time, the message will not be available to and consumer.
 
-
-
 #### Demo
+https://player.vimeo.com/video/372196064
 
-
-<div class="video-block">
-   <iframe src="https://player.vimeo.com/video/372196064" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-</div>
 
 
 
