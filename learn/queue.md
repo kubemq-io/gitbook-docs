@@ -38,21 +38,13 @@ KubeMQ allows the producer to send single and/or batch messages in one command.
 
 KubeMQ allows the producer to set each message with an expiration time \(in seconds\) also known as Time To Live \(TTL\). After this time, the message will not be longer available to any consumer.
 
-#### 
-
 {% embed url="https://player.vimeo.com/video/372196075" %}
-
-
 
 ### Message Delay \(Scheduled Messages\)
 
 KubeMQ allows the producer to set each message with sending delay \(in seconds\) time, also known as Scheduled Messages. Until this time, the message will not be available to and consumer.
 
-#### 
-
 {% embed url="https://player.vimeo.com/video/372196064" %}
-
-
 
 ### Dead-Letter Queue
 
