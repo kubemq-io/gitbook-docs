@@ -5,6 +5,10 @@
 * [yes](untitled.md)
 * [Untitled](untitled-1.md)
 
+## Learn
+
+* [The Basics](learn/untitled-2.md)
+
 ## Development
 
 * [.Net SDK](https://github.com/kubemq-io/kubemq-CSharp)
