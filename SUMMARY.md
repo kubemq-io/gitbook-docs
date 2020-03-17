@@ -7,7 +7,7 @@
 
 ## Learn
 
-* [The Basics](learn/untitled-2.md)
+* [The Basics](learn/the-basics.md)
 
 ## Development
 
