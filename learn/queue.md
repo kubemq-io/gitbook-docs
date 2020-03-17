@@ -58,7 +58,9 @@ KubeMQ allows the producer to set each message with sending delay \(in seconds\)
 
 KubeMQ allows a producer to set a dead-letter queue per each message a which the message will be moved onto in case of a consumer will fail to ack the message \(such a poison message\).
 
-#### Demo
+{% embed url="https://vimeo.com/372196052" %}
+
+
 
 ## Consume from Queue
 
@@ -66,13 +68,17 @@ KubeMQ allows a producer to set a dead-letter queue per each message a which the
 
 KubeMQ allows the consumer to connect to KubeMQ and wait for a specified time until a message is available in the queue to consume.
 
-#### Demo
+{% embed url="https://vimeo.com/372196094" %}
+
+
 
 ### Peek Queue Messages
 
 KubeMQ allows a consumer to peek one or many messages in the queue without removing them from the queue.
 
-#### Demo
+{% embed url="https://vimeo.com/372196106" %}
+
+
 
 ### Ack All Queue Messages
 
@@ -80,7 +86,9 @@ KubeMQ allows a consumer to ack all messages in the queue \(clean-up\); therefor
 
 ![](../.gitbook/assets/queue-ack-all.png)
 
-#### Demo
+{% embed url="https://vimeo.com/372196028" %}
+
+
 
 ### Message Visibility
 
@@ -94,7 +102,9 @@ KubeMQ allows the consumer to set a visibility time, which during this time, the
 
 ![](../.gitbook/assets/queue-visibility-reject.png)
 
-#### Demo
+{% embed url="https://vimeo.com/372196120" %}
+
+
 
 ### Resend Message
 
