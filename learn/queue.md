@@ -1,15 +1,9 @@
----
-title: Queues
-lang: en-US
-description: 'KubeMQ queue tutorial'
-tags: ['pub/sub','rpc','message broker','KubeMQ','kubernetes','docker','cloud native','message queue','guide','tutorial','queue']
----
-# Queue <Badge text="v1.6.0+"/> <Badge text="stable"/>
+# Queues
 Message queues provide an asynchronous communications protocol, meaning that the sender and receiver of the message do not need to interact with the message queue at the same time. Messages placed onto the queue are stored until the recipient retrieves them.
 
 Message queues have implicit or explicit limits on the size of data that may be transmitted in a single message and the number of messages that may remain outstanding in the queue.
 
-![image info](../.gitbook/assets/queue.png)
+![](../.gitbook/assets/queue.png)
 
 ## Core Features
 KubeMQ supports distributed durable FIFO based queues with the following core features:
@@ -31,11 +25,11 @@ KubeMQ allows the producer to send single and/or batch messages in one command.
 
 #### Demo - Single
 
-![kubemqctl-queue-send-receive.gif](./demo/kubemqctl-queue-send-receive.gif)
+![](../.gitbook/assets/kubemqctl-queue-send-receive.gif)
 
 #### Demo - Batch
 
-![kubemqctl-queue-send-receive-batch.gif](./demo/kubemqctl-queue-send-receive-batch.gif)
+![](../.gitbook/assets/kubemqctl-queue-send-receive-batch.gif)
 
 ### Message Expiration (TTL)
 KubeMQ allows the producer to set each message with an expiration time (in seconds) also known as Time To Live (TTL). After this time, the message will not be longer available to any consumer.
@@ -106,7 +100,7 @@ KubeMQ allows a consumer to peek one or many messages in the queue without remov
 
 KubeMQ allows a consumer to ack all messages in the queue (clean-up); therefore, existing messages in the queue will not be available anymore to consume.
 
- ![image info](../.gitbook/assets/queue-ack-all.png)
+ ![](../.gitbook/assets/queue-ack-all.png)
 
 #### Demo
 
@@ -119,10 +113,10 @@ KubeMQ allows a consumer to ack all messages in the queue (clean-up); therefore,
 KubeMQ allows the consumer to set a visibility time, which during this time, the message will not be available to any other consumer. During the visibility period, the consumer can extend the visibility time window at any time. Once the consumer completed the message processing, he sends an ack notification to the queue. If the consumer failed to ack the message during the visibility time, the message will be available back in the queue to consume by others.
 
 #### Visibility With Ack
-  ![image info](../.gitbook/assets/queue-visibility-ack.png)
+  ![](../.gitbook/assets/queue-visibility-ack.png)
 
 #### Visibility With Failure
-  ![image info](../.gitbook/assets/queue-visibility-reject.png)
+  ![](../.gitbook/assets/queue-visibility-reject.png)
 
 #### Demo
 
@@ -134,21 +128,21 @@ KubeMQ allows the consumer to set a visibility time, which during this time, the
 
 KubeMQ allows the consumer to resend the current pulled message to a new queue without the need to send the actual message (act as producer).
 
-![image info](../.gitbook/assets/queue-resend.png)
+![](../.gitbook/assets/queue-resend.png)
 
 #### Demo
 
-![kubemqctl-queue-stream-resend-queue.gif](./demo/kubemqctl-queue-stream-resend-queue.gif)
+![](../.gitbook/assets/kubemqctl-queue-stream-resend-queue.gif)
 
 ### Resend Modified Message
 
 KubeMQ allows the consumer to send back to the queue a modified message for further processing by other consumers.
 
-![image info](../.gitbook/assets/queue-resend-new.png)
+![](../.gitbook/assets/queue-resend-new.png)
 
 #### Demo
 
-![kubemqctl-queue-stream-resend-new.gif](./demo/kubemqctl-queue-stream-resend-new.gif)
+![](../.gitbook/assets/kubemqctl-queue-stream-resend-new.gif)
 
 ### Transactional Queue
 
@@ -156,12 +150,12 @@ KubeMQ allows the consumer to connect in a stream transactional model where the 
 
 #### Successful Flow
 
-![image info](../.gitbook/assets/queue-stream-flow-ok.png)
+![](../.gitbook/assets/queue-stream-flow-ok.png)
 
 
 #### Failed Flow
 
-![image info](../.gitbook/assets/queue-stream-flow-fail.png)
+![](../.gitbook/assets/queue-stream-flow-fail.png)
 
 #### Demo
 
