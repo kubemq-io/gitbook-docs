@@ -35,7 +35,9 @@ This pattern implements the ‘Command’ part of CQRS as follows:
 
 Commands pattern is suitable for use cases, such as sending updates to a DB, WebHooks, or any request without the need of response by a specific time.
 
-https://vimeo.com/372196128
+{% embed url="https://vimeo.com/372196128" %}
+
+
 
 ## Queries
 
@@ -55,7 +57,9 @@ This pattern implements the Query part of CQRS as follows:
 
 Queries pattern is suitable for use cases, primarily for database queries.
 
-https://vimeo.com/372196137
+{% embed url="https://vimeo.com/372196137" %}
+
+
 
 ## Caching
 

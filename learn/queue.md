@@ -38,21 +38,19 @@ KubeMQ allows the producer to send single and/or batch messages in one command.
 
 KubeMQ allows the producer to set each message with an expiration time \(in seconds\) also known as Time To Live \(TTL\). After this time, the message will not be longer available to any consumer.
 
-{% embed url="https://player.vimeo.com/video/372196075" %}
+{% embed url="https://player.vimeo.com/video/372196075" caption="" %}
 
 ### Message Delay \(Scheduled Messages\)
 
 KubeMQ allows the producer to set each message with sending delay \(in seconds\) time, also known as Scheduled Messages. Until this time, the message will not be available to and consumer.
 
-{% embed url="https://player.vimeo.com/video/372196064" %}
+{% embed url="https://player.vimeo.com/video/372196064" caption="" %}
 
 ### Dead-Letter Queue
 
 KubeMQ allows a producer to set a dead-letter queue per each message a which the message will be moved onto in case of a consumer will fail to ack the message \(such a poison message\).
 
-{% embed url="https://vimeo.com/372196052" %}
-
-
+{% embed url="https://vimeo.com/372196052" caption="" %}
 
 ## Consume from Queue
 
@@ -60,17 +58,13 @@ KubeMQ allows a producer to set a dead-letter queue per each message a which the
 
 KubeMQ allows the consumer to connect to KubeMQ and wait for a specified time until a message is available in the queue to consume.
 
-{% embed url="https://vimeo.com/372196094" %}
-
-
+{% embed url="https://vimeo.com/372196094" caption="" %}
 
 ### Peek Queue Messages
 
 KubeMQ allows a consumer to peek one or many messages in the queue without removing them from the queue.
 
-{% embed url="https://vimeo.com/372196106" %}
-
-
+{% embed url="https://vimeo.com/372196106" caption="" %}
 
 ### Ack All Queue Messages
 
@@ -78,9 +72,7 @@ KubeMQ allows a consumer to ack all messages in the queue \(clean-up\); therefor
 
 ![](../.gitbook/assets/queue-ack-all.png)
 
-{% embed url="https://vimeo.com/372196028" %}
-
-
+{% embed url="https://vimeo.com/372196028" caption="" %}
 
 ### Message Visibility
 
@@ -94,9 +86,7 @@ KubeMQ allows the consumer to set a visibility time, which during this time, the
 
 ![](../.gitbook/assets/queue-visibility-reject.png)
 
-{% embed url="https://vimeo.com/372196120" %}
-
-
+{% embed url="https://vimeo.com/372196120" caption="" %}
 
 ### Resend Message
 
