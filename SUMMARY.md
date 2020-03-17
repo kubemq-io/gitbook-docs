@@ -1,5 +1,7 @@
 # Table of contents
 
+* [Introduction](README.md)
+
 ## Learn
 
 * [The Basics](learn/the-basics.md)
