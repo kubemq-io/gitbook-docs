@@ -21,7 +21,7 @@ KubeMQ supports CQRS\) based flows with the following core features:
 
 Commands is a synchronous two ways RPC \(Request and Response\) pattern for CQRS\) types of system architecture.
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/command.png)
+![](../.gitbook/assets/command.png)
 
 This pattern implements the ‘Command’ part of CQRS as follows:
 
@@ -35,13 +35,13 @@ This pattern implements the ‘Command’ part of CQRS as follows:
 
 Commands pattern is suitable for use cases, such as sending updates to a DB, WebHooks, or any request without the need of response by a specific time.
 
-### Demo
+https://vimeo.com/372196128
 
 ## Queries
 
 Queries’ is a synchronous two ways RPC \(Request and Response\) pattern for [CQRS](https://martinfowler.com/bliki/CQRS.html) types of system architecture.
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/query.png)
+![](../.gitbook/assets/query.png)
 
 This pattern implements the Query part of CQRS as follows:
 
@@ -55,13 +55,13 @@ This pattern implements the Query part of CQRS as follows:
 
 Queries pattern is suitable for use cases, primarily for database queries.
 
-### Demo
+https://vimeo.com/372196137
 
 ## Caching
 
 KubeMQ supports caching of query results as follows:
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/query-caching.png)
+![](../.gitbook/assets/query-caching.png)
 
 1. A Sender will send a Request to a channel with a specific set timeout, Cache key \(string\) and Cache TTL \(Time To Live\) value in seconds for getting a Response.
 2. KubeMQ will attempt to get the response results from Cache base on the Cache key.
