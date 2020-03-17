@@ -76,6 +76,8 @@ During a Subscription request, the receiver can set the group name to join or no
 * Any receiver without a group setting \(group="", blank\)
 * Only one receiver for each group he belongs to
 
+![](../.gitbook/assets/grouping.png)
+
 Example:
 
 In the table below we have 8 receivers which subscribe to different channels and groups:
@@ -143,5 +145,5 @@ Setting the Rest/Websocket TLS secured server via the following environment vari
 
 KubeMQ exposes the API endpoint at port 8080. This port can be changed by setting the environment variable `KUBEMQ_PORT`
 
-Last Updated: 9/20/2019, 1:37:35 PM
+
 
