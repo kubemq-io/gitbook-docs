@@ -121,7 +121,7 @@ gateways:
   ca: ""
 ```
 
-{% page-ref page="helm.md" %}
+{% page-ref page="./configuration/cluster.md" %}
 
 
 
