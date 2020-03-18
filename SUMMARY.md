@@ -13,14 +13,14 @@
 * [Smart Routing](learn/smart-routing.md)
 
 ## Kubemqctl CLI
-
+### Functions
+* [Create](kubemqctl/kubemqctl_create.md)
+* [Get](kubemqctl/kubemqctl_get.md)
 * [kubemqctl commands](kubemqctl/kubemqctl_commands.md)
 * [kubemqctl config](kubemqctl/kubemqctl_config.md)
-* [kubemqctl create](kubemqctl/kubemqctl_create.md)
 * [kubemqctl delete](kubemqctl/kubemqctl_delete.md)
 * [kubemqctl events](kubemqctl/kubemqctl_events.md)
 * [kubemqctl events_store](kubemqctl/kubemqctl_events_store.md)
-* [kubemqctl get](kubemqctl/kubemqctl_get.md)
 * [kubemqctl queries](kubemqctl/kubemqctl_queries.md)
 * [kubemqctl queues](kubemqctl/kubemqctl_queues.md)
 * [kubemqctl scale](kubemqctl/kubemqctl_scale.md)
