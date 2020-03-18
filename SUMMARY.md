@@ -9,6 +9,8 @@
 * [Create Dashboard](getting-started/create-dashboard/README.md)
   * [Openshift](getting-started/create-dashboard/openshift.md)
 * [Queues](getting-started/queues.md)
+* [PubSub](getting-started/pubsub.md)
+* [RPC](getting-started/rpc.md)
 
 ## Learn
 
