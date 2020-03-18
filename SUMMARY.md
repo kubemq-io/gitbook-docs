@@ -5,9 +5,10 @@
 ## Learn
 
 * [The Basics](learn/the-basics.md)
-* [Queues](learn/queue.md)
-* [Pub/Sub](learn/pubsub.md)
-* [RPC](learn/rpc.md)
+* [Message Patterns](learn/message-patterns.md)
+  * [Queues](learn/queue.md)
+  * [Pub/Sub](learn/pubsub.md)
+  * [RPC](learn/rpc.md)
 * [Authentication](learn/authentication.md)
 * [Authorization](learn/authorization.md)
 * [Smart Routing](learn/smart-routing.md)
