@@ -11,7 +11,7 @@
   * [Helm](getting-started/create-dashboard/helm.md)
   * [Openshift](getting-started/create-dashboard/openshift.md)
 * [Queues](getting-started/queues.md)
-* [Pub Sub](getting-started/pubsub.md)
+* [Pub/Sub](getting-started/pubsub.md)
 * [RPC](getting-started/rpc.md)
 
 ## Learn
