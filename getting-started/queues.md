@@ -355,6 +355,7 @@ $.ajax(settings).done(function (response) {
 After you have sent a message to a queue, you can request the message from a queue.
 
 {% tabs %}
+
 {% tab title="kubemqctl" %}
 
 Run the following kubemqctl command:
