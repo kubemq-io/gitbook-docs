@@ -324,13 +324,15 @@ $.ajax(settings).done(function (response) {
 ## Receive a Queue Message
 
 After you have sent a message to a queue, you can request the message from a queue.
-
+{% tabs %}
+{% tab title="kubemqctl" %}
 Run the following kubemqctl command:
 
 ```bash
 kubemqctl queues receive "hello-world-queue"
 ```
-
+{% endtab %}
+{% tab title="curl" %}
 The following cURL command is using KubeMQ's REST interface:
 
 ```bash
@@ -338,7 +340,8 @@ The following cURL command is using KubeMQ's REST interface:
   --header "Content-Type: application/json" \
   --data '{"RequestID":"some-request-id","ClientID":"receive-message-client-id","Channel":"hello-world-queue","MaxNumberOfMessages":1,"WaitTimeSeconds":5}'
 ```
-
+{% endtab %}
+{% tab title=".Net" %}
 The following c\# code snippet is using KubeMQ's Java SDK with gRPC interface:
 
 ```csharp
@@ -388,7 +391,8 @@ namespace Queue_Receive_a_Message
     }
 }
 ```
-
+{% endtab %}
+{% tab title="Java" %}
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
 ```java
@@ -444,7 +448,9 @@ public class Program {
     }
 }
 ```
+{% endtab %}
 
+{% tab title="Go" %}
 The following Go code snippet is using KubeMQ's Go SDK with gRPC interface:
 
 ```go
@@ -484,7 +490,9 @@ func main() {
    }
 }
 ```
+{% endtab %}
 
+{% tab title="Python" %}
 The following Python code snippet is using KubeMQ's Python SDK with gRPC interface:
 
 ```python
@@ -515,7 +523,9 @@ if __name__ == "__main__":
         )
     input("Press 'Enter' to stop the application...\n")
 ```
+{% endtab %}
 
+{% tab title="Node" %}
 The following JS code snippet is using KubeMQ's NodeJS SDK with gRPC interface:
 
 ```javascript
@@ -539,7 +549,9 @@ queue.receiveQueueMessages(2, 1).then(res => {
 }).catch(
     err => console.log('Error:' + err));
 ```
+{% endtab %}
 
+{% tab title="PHP" %}
 The following PHP code snippet is using KubeMQ's REST interface:
 
 ```php
@@ -572,7 +584,9 @@ if ($err) {
   echo $response;
 } ?>
 ```
+{% endtab %}
 
+{% tab title="Ruby" %}
 The following Ruby code snippet is using KubeMQ's REST interface:
 
 ```ruby
@@ -590,7 +604,9 @@ request.body = "{\r\n   \"RequestID\":\"some-request-id\",\r\n   \"ClientID\":\"
 response = http.request(request)
 puts response.read_body
 ```
+{% endtab %}
 
+{% tab title="jquery" %}
 The following jQuery code snippet is using KubeMQ's REST interface:
 
 ```javascript
@@ -608,6 +624,8 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
+{% endtab %}
+{% endtabs %}
 
 ::: tip Get Queues information You can get Queues information by running `kubemqctl queues list`. ::: [https://player.vimeo.com/video/372195918](https://player.vimeo.com/video/372195918)
 
