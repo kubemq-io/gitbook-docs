@@ -24,7 +24,7 @@
     * [Events](kubemqctl/kubemqctl_get_cluster_events.md)
     * [Describe](kubemqctl/kubemqctl_get_cluster_describe.md)
   * [Dashboard](kubemqctl/kubemqctl_get_dashboard.md)
-     * [Describe](kubemqctl/kubemqctl_get_cluster_describe.md)
+    * [Describe](kubemqctl/kubemqctl_get_cluster_describe.md)
   * [Operator](kubemqctl/kubemqctl_get_operator.md)
     * [logs](kubemqctl/kubemqctl_get_operator_logs.md)
 * [kubemqctl commands](kubemqctl/kubemqctl_commands.md)
