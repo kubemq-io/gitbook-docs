@@ -1,6 +1,10 @@
 # Queues
 
-### Connect Your KubeMQ Cluster
+## Create KubeMQ Cluster
+
+{% page-ref page="queues.md" %}
+
+## Connect Your KubeMQ Cluster
 
 To be able to communicate with KubeMQ interface ports running in Kubernetes cluster, a Port Forward of KubeMQ's ports is needed.
 
@@ -324,6 +328,7 @@ $.ajax(settings).done(function (response) {
 ## Receive a Queue Message
 
 After you have sent a message to a queue, you can request the message from a queue.
+
 {% tabs %}
 {% tab title="kubemqctl" %}
 Run the following kubemqctl command:
@@ -332,6 +337,7 @@ Run the following kubemqctl command:
 kubemqctl queues receive "hello-world-queue"
 ```
 {% endtab %}
+
 {% tab title="curl" %}
 The following cURL command is using KubeMQ's REST interface:
 
@@ -341,6 +347,7 @@ The following cURL command is using KubeMQ's REST interface:
   --data '{"RequestID":"some-request-id","ClientID":"receive-message-client-id","Channel":"hello-world-queue","MaxNumberOfMessages":1,"WaitTimeSeconds":5}'
 ```
 {% endtab %}
+
 {% tab title=".Net" %}
 The following c\# code snippet is using KubeMQ's Java SDK with gRPC interface:
 
@@ -392,6 +399,7 @@ namespace Queue_Receive_a_Message
 }
 ```
 {% endtab %}
+
 {% tab title="Java" %}
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
@@ -627,5 +635,15 @@ $.ajax(settings).done(function (response) {
 {% endtab %}
 {% endtabs %}
 
-::: tip Get Queues information You can get Queues information by running `kubemqctl queues list`. ::: [https://player.vimeo.com/video/372195918](https://player.vimeo.com/video/372195918)
+{% hint style="info" %}
+Get Queues information You can get Queues information by running `kubemqctl queues list`
+{% endhint %}
+
+
+
+{% embed url="https://player.vimeo.com/video/372195918" %}
+
+
+
+
 
