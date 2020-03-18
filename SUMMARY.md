@@ -35,7 +35,7 @@
   * [Cluster](kubemqctl/kubemqctl_set_cluster.md)
   * [Cluster Proxy](kubemqctl/kubemqctl_set_cluster_proxy.md)
   * [Context](kubemqctl/kubemqctl_set_context.md)
-* [Scale](kubemqctl/kubemqctl_scale.md)
+* [Scale Cluster](kubemqctl/kubemqctl_scale_cluster.md)
 * [Queues](kubemqctl/kubemqctl_queues.md)
   * [Send](kubemqctl/kubemqctl_queues_send.md)
   * [Receive](kubemqctl/kubemqctl_queues_receive.md)
