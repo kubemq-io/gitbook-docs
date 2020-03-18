@@ -4,10 +4,11 @@
 
 ## Getting Started
 
-* [Create Cluster](get-started/create-cluster/README.md)
-  * [Openshift](get-started/create-cluster/openshift.md)
-* [Create Dashboard](get-started/create-dashboard/README.md)
-  * [Openshift](get-started/create-dashboard/openshift.md)
+* [Create Cluster](getting-started/create-cluster/README.md)
+  * [Openshift](getting-started/create-cluster/openshift.md)
+* [Create Dashboard](getting-started/create-dashboard/README.md)
+  * [Openshift](getting-started/create-dashboard/openshift.md)
+* [Queues](getting-started/queues.md)
 
 ## Learn
 
@@ -88,9 +89,9 @@
   * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
   * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
 
-
 ## Change Log
 
 * [Kubemq Cluster](change-log/kubemq-cluster.md)
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
+
