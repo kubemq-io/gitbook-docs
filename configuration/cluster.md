@@ -1,4 +1,4 @@
-# Cluster
+# Cluster Configuration
 
 ## Basic
     | Field                     | Type/Options                                                 | Description                                                         | Example              |
@@ -6,11 +6,16 @@
     | replicas| int                                                          | Desired amount of pods in the cluster                               | 3                    |
     | configData| yaml/toml                                                    | Load configuration file                                             |                      |
 
+## Volume
+    | Field                     | Type/Options                                                 | Description                                                         | Example              |
+    |:--------------------------|:-------------------------------------------------------------|:--------------------------------------------------------------------|:---------------------|
+    | size                      | string                                                       | Desired size of Persisted Volume Claim                              | "30Gi"               |
+
 
     | Spec               | Field                     | Type/Options                                                 | Description                                                         | Example              |
     |:-------------------|:--------------------------|:-------------------------------------------------------------|:--------------------------------------------------------------------|:---------------------|
     | **volume**         |                           |                                                              | **Setting for Persisted Volume**                                    |                      |
-    |                    | size                      | string                                                       | Desired size of Persisted Volume Claim                              | "30Gi"               |
+
     | **license**        |                           |                                                              | **Setting for License**                                             |                      |
     |                    | data                      | string                                                       | Set Licence data key                                                |                      |
     |                    | token                     | string                                                       | Set License Token                                                   |                      |
