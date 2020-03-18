@@ -1,20 +1,20 @@
-# Scale Cluster
+# Cluster
 
-Scale Kubemq cluster replicas command
+Delete Kubemq cluster
 
 ## Synopsis
 
-Scale command allows to scale Kubemq cluster replicas
+Delete one or more Kubemq clusters
 
 ```text
-kubemqctl scale cluster [flags]
+kubemqctl delete cluster [flags]
 ```
 
 ## Examples
 
 ```text
-    # Scale Kubemq cluster  
-    kubemqctl scale cluster 5
+     # Delete Kubemq cluster
+    kubemqctl delete cluster
 ```
 
 ## Options

@@ -1,20 +1,22 @@
-# Scale Cluster
+# Cluster
 
-Scale Kubemq cluster replicas command
+Executes set cluster commands
 
 ## Synopsis
 
-Scale command allows to scale Kubemq cluster replicas
+Executes set cluster commands
 
 ```text
-kubemqctl scale cluster [flags]
+kubemqctl set cluster [flags]
 ```
 
 ## Examples
 
 ```text
-    # Scale Kubemq cluster  
-    kubemqctl scale cluster 5
+    # Execute set Kubemq cluster connection default
+    kubemqctl set cluster 
+    # Execute set Kubemq cluster proxy
+    kubemqctl set cluster proxy
 ```
 
 ## Options

@@ -1,4 +1,4 @@
-# kubemqctl config
+# Config
 
 Run Kubemqctl configuration wizard command
 
@@ -28,3 +28,4 @@ kubemqctl config [flags]
 ```text
       --config string   set kubemqctl configuration file (default "./.kubemqctl.yaml")
 ```
+

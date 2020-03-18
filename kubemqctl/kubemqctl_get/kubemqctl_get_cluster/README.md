@@ -1,20 +1,20 @@
-# Scale Cluster
+# Cluster
 
-Scale Kubemq cluster replicas command
+Get information of Kubemq cluster resources
 
 ## Synopsis
 
-Scale command allows to scale Kubemq cluster replicas
+Get information of Kubemq cluster resources
 
 ```text
-kubemqctl scale cluster [flags]
+kubemqctl get cluster [flags]
 ```
 
 ## Examples
 
 ```text
-    # Scale Kubemq cluster  
-    kubemqctl scale cluster 5
+    # Get status of Kubemq of clusters
+    kubemqctl get clusters
 ```
 
 ## Options
