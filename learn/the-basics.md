@@ -105,7 +105,8 @@ In the table below, we explore several message channels and which receiver will 
 
 KubeMQ has three exported endpoints, gRPC, Rest/Websocket, and API.
 
-### gRPC <a id="grpc"></a>
+TODO - Update
+### gRPC
 
 KubeMQ’s main endpoint is gRPC server.
 
@@ -123,7 +124,8 @@ Setting the gRPC TLS secured server via the following environment variables:
 
 **Note:** The gRPC endpoint has additional configuration settings. Please refer to the Configuration section.
 
-### Rest/WebSocket <a id="rest-websocket"></a>
+TODO - Update
+### Rest/WebSocket
 
 The KubeMQ secondary endpoint is the Rest/Websocket server.
 
@@ -141,7 +143,8 @@ Setting the Rest/Websocket TLS secured server via the following environment vari
 
 **Note:** The Rest/Websocket endpoint has additional configuration settings. Please refer to the Configuration section.
 
-### API <a id="api"></a>
+TODO - Update
+### API
 
 KubeMQ exposes the API endpoint at port 8080. This port can be changed by setting the environment variable `KUBEMQ_PORT`
 
