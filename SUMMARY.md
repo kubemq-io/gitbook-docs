@@ -2,13 +2,7 @@
 
 * [Introduction](README.md)
 
-## Change Log
-
-* [Kubemq Cluster](change-log/kubemq-cluster.md)
-* [Kubemq Dashboard](change-log/kubemq-dashboard.md)
-* [Kubemq Operator](change-log/kubemq-operator.md)
-
-## Get Started
+## Getting Started
 
 * [Create Cluster](get-started/create-cluster/README.md)
   * [Openshift](get-started/create-cluster/openshift.md)
@@ -94,3 +88,9 @@
   * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
   * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
 
+
+## Change Log
+
+* [Kubemq Cluster](change-log/kubemq-cluster.md)
+* [Kubemq Dashboard](change-log/kubemq-dashboard.md)
+* [Kubemq Operator](change-log/kubemq-operator.md)
