@@ -1,18 +1,3 @@
----
-title: Get Started
-lang: en-US
-description: Kubemq get started
-tags:
-  - pub/sub
-  - message broker
-  - KubeMQ
-  - kubernetes
-  - docker
-  - cloud native
-  - message queue
-  - go
----
-
 # Get Started
 
 Kubemqctl is a command line interface \(CLI\) for [KubeMQ](https://kubemq.io) [Kubernetes](https://kubernetes.io/) Message Broker.
