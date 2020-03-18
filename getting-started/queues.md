@@ -2,7 +2,7 @@
 
 ## Create KubeMQ Cluster
 
-{% page-ref page="getting-started/create-cluster/README.md" %}
+{% page-ref page="./create-cluster/README.md" %}
 
 ## Connect Your KubeMQ Cluster
 
