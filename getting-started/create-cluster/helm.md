@@ -121,7 +121,7 @@ gateways:
   ca: ""
 ```
 
-{% page-ref page="configuration/cluster" %}
+{% page-ref page="create-cluster/" %}
 
 
 
