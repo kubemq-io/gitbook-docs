@@ -15,6 +15,9 @@
 ## Kubemqctl
 
 * [Create](kubemqctl/kubemqctl_create.md)
+  * [Cluster](kubemqctl/kubemqctl_create_cluster.md)
+  * [Operator](kubemqctl/kubemqctl_create_operator.md)
+  * [Dashboard](kubemqctl/kubemqctl_create_dashboard.md)
 * [Get](kubemqctl/kubemqctl_get.md)
 * [kubemqctl commands](kubemqctl/kubemqctl_commands.md)
 * [kubemqctl config](kubemqctl/kubemqctl_config.md)
