@@ -6,6 +6,8 @@
 
 * [Create Cluster](get-started/create-cluster/README.md)
   * [Openshift](get-started/create-cluster/openshift.md)
+* [Create Dashboard](get-started/create-dashboard/README.md)
+  * [Openshift](get-started/create-dashboard/openshift.md)
 
 ## Learn
 
