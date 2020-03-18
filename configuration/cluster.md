@@ -1,10 +1,14 @@
 # Cluster
 
+## Basic
+    | Field                     | Type/Options                                                 | Description                                                         | Example              |
+    |:--------------------------|:-------------------------------------------------------------|:--------------------------------------------------------------------|:---------------------|
+    | replicas| int                                                          | Desired amount of pods in the cluster                               | 3                    |
+    | configData| yaml/toml                                                    | Load configuration file                                             |                      |
+
 
     | Spec               | Field                     | Type/Options                                                 | Description                                                         | Example              |
     |:-------------------|:--------------------------|:-------------------------------------------------------------|:--------------------------------------------------------------------|:---------------------|
-    | **replicas**       |                           | int                                                          | Desired amount of pods in the cluster                               | 3                    |
-    | **configData**     |                           | yaml/toml                                                    | Load configuration file                                             |                      |
     | **volume**         |                           |                                                              | **Setting for Persisted Volume**                                    |                      |
     |                    | size                      | string                                                       | Desired size of Persisted Volume Claim                              | "30Gi"               |
     | **license**        |                           |                                                              | **Setting for License**                                             |                      |
