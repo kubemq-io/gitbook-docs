@@ -13,17 +13,18 @@
 * [Smart Routing](learn/smart-routing.md)
 
 ## Kubemqctl CLI
-* [Create](kubemqctl/kubemqctl_create.md)
-* [Get](kubemqctl/kubemqctl_get.md)
-* [kubemqctl commands](kubemqctl/kubemqctl_commands.md)
-* [kubemqctl config](kubemqctl/kubemqctl_config.md)
-* [kubemqctl delete](kubemqctl/kubemqctl_delete.md)
-* [kubemqctl events](kubemqctl/kubemqctl_events.md)
-* [kubemqctl events_store](kubemqctl/kubemqctl_events_store.md)
-* [kubemqctl queries](kubemqctl/kubemqctl_queries.md)
-* [kubemqctl queues](kubemqctl/kubemqctl_queues.md)
-* [kubemqctl scale](kubemqctl/kubemqctl_scale.md)
-* [kubemqctl set](kubemqctl/kubemqctl_set.md)
+
+* [Create](kubemqctl-cli/kubemqctl_create.md)
+* [Get](kubemqctl-cli/kubemqctl_get.md)
+* [kubemqctl commands](kubemqctl-cli/kubemqctl_commands.md)
+* [kubemqctl config](kubemqctl-cli/kubemqctl_config.md)
+* [kubemqctl delete](kubemqctl-cli/kubemqctl_delete.md)
+* [kubemqctl events](kubemqctl-cli/kubemqctl_events.md)
+* [kubemqctl events\_store](kubemqctl-cli/kubemqctl_events_store.md)
+* [kubemqctl queries](kubemqctl-cli/kubemqctl_queries.md)
+* [kubemqctl queues](kubemqctl-cli/kubemqctl_queues.md)
+* [kubemqctl scale](kubemqctl-cli/kubemqctl_scale.md)
+* [kubemqctl set](kubemqctl-cli/kubemqctl_set.md)
 
 ## Development
 
