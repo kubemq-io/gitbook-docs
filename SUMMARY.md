@@ -13,7 +13,6 @@
 * [Smart Routing](learn/smart-routing.md)
 
 ## Kubemqctl CLI
-### Functions
 * [Create](kubemqctl/kubemqctl_create.md)
 * [Get](kubemqctl/kubemqctl_get.md)
 * [kubemqctl commands](kubemqctl/kubemqctl_commands.md)
