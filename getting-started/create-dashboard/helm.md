@@ -20,3 +20,20 @@ helm repo list
 helm install kubemq-dashboard kubemq-charts/dashboard
 ```
 
+
+## Configuration
+
+The following table lists the configurable parameters of the KubeMQ dashboard chart and their default values.
+
+{% file src="../../.gitbook/assets/dashboard-values.yaml" caption="values.yaml" %}
+
+```yaml
+port: 32000
+prometheus:
+  nodePort: 0
+  image: prom/prometheus:latest
+grafana:
+  image: grafana/grafana:latest
+  dashboardUrl: "https://raw.githubusercontent.com/kubemq-io/kubemq-dashboard/master/dashboard.json"
+```
+{% page-ref page="../../configuration/dashboard.md" %}
