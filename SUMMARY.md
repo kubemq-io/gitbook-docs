@@ -17,7 +17,7 @@
 ## Configuration
 
 * [Cluster Configuration](configuration/cluster.md)
-* [Dashboard](configuration/dashboard.md)
+* [Dashboard Configuration](configuration/dashboard.md)
 
 ## Learn
 

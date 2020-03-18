@@ -20,7 +20,6 @@ helm repo list
 helm install kubemq-dashboard kubemq-charts/dashboard
 ```
 
-
 ## Configuration
 
 The following table lists the configurable parameters of the KubeMQ dashboard chart and their default values.
@@ -36,4 +35,6 @@ grafana:
   image: grafana/grafana:latest
   dashboardUrl: "https://raw.githubusercontent.com/kubemq-io/kubemq-dashboard/master/dashboard.json"
 ```
+
 {% page-ref page="../../configuration/dashboard.md" %}
+
