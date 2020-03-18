@@ -6,10 +6,9 @@ To be able to communicate with KubeMQ interface ports running in Kubernetes clus
 
 kubemqctl has a handy command that will do it for you:
 
-``` bash
+```bash
 kubemqctl set cluster proxy
 ```
-
 
 ## Send a Queue Message
 
@@ -17,35 +16,29 @@ The producer can send a message to the "hello-world-queue" channel with one of t
 
 {% tabs %}
 {% tab title="kubemqctl" %}
-
 Run the following kubemqctl command:
-``` bash
+
+```bash
 kubemqctl queues send "hello-world-queue" "this is a queue message"
 ```
 
 A result message will be shown with an indication of the sending time of the message.
-
 {% endtab %}
 
 {% tab title="curl" %}
-
 The following cURL command is using KubeMQ's REST interface:
 
-``` bash
+```bash
 curl -H 'Content-Type: application/json'  \
     --request POST "http://localhost:9090/queue/send" \
     --data '{"Id":"","ClientId":"send-message-client-id","Channel":"hello-world-queue","Metadata":"","Body":"QmF0Y2ggTWVzc2FnZSAw","Tags":{"message":"0"}}'
 ```
-
-
 {% endtab %}
 
-
 {% tab title=".Net" %}
-
 The following .NET code snippet is using KubeMQ's .NET SDK with gRPC interface:
 
-``` csharp
+```csharp
 using System;
 
 namespace Queue_Send_a_Message
@@ -89,21 +82,19 @@ namespace Queue_Send_a_Message
             {
                 Console.WriteLine(ex.Message);
             }
-           
+
         }
     }
 }
-
 ```
 
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Java" %}
 
+{% tab title="Java" %}
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
-``` java
+```java
 package io.kubemq.sdk.examples.get_Started.queue_Send_a_Message;
 
 import io.kubemq.sdk.queue.Message;
@@ -119,8 +110,8 @@ import java.io.IOException;
 public class Program {
 
     public static void main(String[] args) throws ServerAddressNotSuppliedException {
-        
-        
+
+
         String queueName = "hello-world-queue", clientID = "test-queue-client-id2", kubeMQServerAddress = "localhost:50000";
 
         Queue queue = null;
@@ -135,7 +126,7 @@ public class Program {
         }
 
         try {
-            
+
             Message msg = new Message()
             .setBody(Converter.ToByteArray("some-simple_queue-queue-message"))
             .setMetadata("empty");
@@ -151,13 +142,14 @@ public class Program {
     }
 }
 ```
+
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Go" %}
 
+{% tab title="Go" %}
 The following Go code snippet is using KubeMQ's Go SDK with gRPC interface:
-``` go
+
+```go
 package main
 
 import (
@@ -190,14 +182,14 @@ func main() {
    log.Printf("Send to Queue Result: MessageID:%s,Sent At: %s\n", sendResult.MessageID, time.Unix(0, sendResult.SentAt).String())
 }
 ```
+
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Python" %}
 
+{% tab title="Python" %}
 The following Python code snippet is using KubeMQ's Python SDK with gRPC interface:
 
-``` py
+```python
 from kubemq.queue.message_queue import MessageQueue
 
 from kubemq.queue.message import Message
@@ -222,17 +214,15 @@ if __name__ == "__main__":
         print('message enqueue error, error:%s'  % (
                 err
                         ))
-
 ```
-When executed, a stream of events messages will be shown in the console.
 
+When executed, a stream of events messages will be shown in the console.
 {% endtab %}
 
 {% tab title="Node" %}
-
 The following JS code snippet is using KubeMQ's NodeJS SDK with gRPC interface:
 
-``` js
+```javascript
 const kubemq = require('kubemq-nodejs');
 
 let queueName = 'hello-world-queue', clientID = 'test-queue-client-id2',
@@ -253,16 +243,12 @@ queue.sendQueueMessage(
         console.log('message enqueue error, error:' + err);
     });
 ```
-
-
-
 {% endtab %}
 
 {% tab title="PHP" %}
-
 The following PHP code snippet is using KubeMQ's REST interface:
 
-``` php
+```php
 <?php
 
 $curl = curl_init();
@@ -292,17 +278,12 @@ if ($err) {
   echo $response;
 } ?>
 ```
-
-
-
 {% endtab %}
 
-
 {% tab title="Ruby" %}
-
 The following Ruby code snippet is using KubeMQ's REST interface:
 
-``` ruby
+```ruby
 require "uri"
 require "net/http"
 
@@ -317,16 +298,12 @@ request.body = "{\r\n         \"Id\":\"\",\r\n         \"ClientId\":\"send-messa
 response = http.request(request)
 puts response.read_body
 ```
-
-
 {% endtab %}
 
-
 {% tab title="jquery" %}
-
 The following jQuery code snippet is using KubeMQ's REST interface:
 
-``` js
+```javascript
 var settings = {
   "url": "http://localhost:9090/queue/send",
   "method": "POST",
@@ -341,14 +318,8 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
-
-
-
 {% endtab %}
-
-
 {% endtabs %}
-
 
 ## Receive a Queue Message
 
@@ -356,36 +327,23 @@ After you have sent a message to a queue, you can request the message from a que
 
 {% tabs %}
 
-{% tab title="kubemqctl" %}
-
 Run the following kubemqctl command:
 
-``` bash
+```bash
 kubemqctl queues receive "hello-world-queue"
 ```
 
-{% endtab %}
-
-{% tab title="curl" %}
-
 The following cURL command is using KubeMQ's REST interface:
 
-``` bash
+```bash
  curl --location --request POST "http://localhost:9090/queue/receive" \
   --header "Content-Type: application/json" \
   --data '{"RequestID":"some-request-id","ClientID":"receive-message-client-id","Channel":"hello-world-queue","MaxNumberOfMessages":1,"WaitTimeSeconds":5}'
 ```
 
+The following c\# code snippet is using KubeMQ's Java SDK with gRPC interface:
 
-
-
-{% endtab %}
-
-{% tab title=".Net" %}
-
-The following c# code snippet is using KubeMQ's Java SDK with gRPC interface:
-
-``` csharp
+```csharp
 using System;
 
 namespace Queue_Receive_a_Message
@@ -431,16 +389,11 @@ namespace Queue_Receive_a_Message
         }
     }
 }
-
 ```
-
-{% endtab %}
-
-{% tab title="Java" %}
 
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
-``` java
+```java
 package io.kubemq.sdk.examples.get_Started.queue_Receive_a_Message;
 
 import java.io.IOException;
@@ -456,8 +409,8 @@ import io.kubemq.sdk.tools.Converter;
 public class Program {
 
     public static void main(String[] args) throws ServerAddressNotSuppliedException, ClassNotFoundException {
-        
-        
+
+
         String queueName = "hello-world-queue", clientID = "test-queue-client-id2", kubeMQServerAddress = "localhost:50000";
 
 
@@ -477,14 +430,14 @@ public class Program {
           if(res.getIsError()  )       {
             System.out.println("message enqueue error, error:{res.Error}");
           }
-          
+
           System.out.println("Received {msg.MessagesReceived} Messages:");
 
           for (Message msg : res.getMessages()) {              
-        
+
             System.out.printf("MessageID:%s, Body:%s",msg.getMessageID(), Converter.FromByteArray(msg.getBody()));
           }
-          
+
 
 
         } catch (IOException e) {
@@ -494,12 +447,9 @@ public class Program {
 }
 ```
 
-{% endtab %}
-{% tab title="Go" %}
-
 The following Go code snippet is using KubeMQ's Go SDK with gRPC interface:
 
-``` go
+```go
 package main
 
 import (
@@ -535,14 +485,11 @@ func main() {
       log.Printf("MessageID: %s, Body: %s", msg.Id, string(msg.Body))
    }
 }
-
 ```
-
-{% tab title="Python" %}
 
 The following Python code snippet is using KubeMQ's Python SDK with gRPC interface:
 
-``` py
+```python
 from kubemq.queue.message_queue import MessageQueue
 if __name__ == "__main__":
     queue = MessageQueue("hello-world-queue", "test-queue-client-id2", "localhost:50000", 2, 1)
@@ -571,15 +518,9 @@ if __name__ == "__main__":
     input("Press 'Enter' to stop the application...\n")
 ```
 
-
-{% endtab %}
-
-
-{% tab title="Node" %}
-
 The following JS code snippet is using KubeMQ's NodeJS SDK with gRPC interface:
 
-``` js
+```javascript
 const kubemq = require('kubemq-nodejs');
 let queueName = 'hello-world-queue', clientID = 'test-queue-client-id2',
     kubeMQAddress = 'localhost:50000';
@@ -599,16 +540,11 @@ queue.receiveQueueMessages(2, 1).then(res => {
     }
 }).catch(
     err => console.log('Error:' + err));
-
 ```
-
-{% endtab %}
-
-{% tab title="PHP" %}
 
 The following PHP code snippet is using KubeMQ's REST interface:
 
-``` php
+```php
 <?php
 
 $curl = curl_init();
@@ -639,13 +575,9 @@ if ($err) {
 } ?>
 ```
 
-{% endtab %}
-
-{% tab title="Ruby" %}
-
 The following Ruby code snippet is using KubeMQ's REST interface:
 
-``` ruby
+```ruby
 require "uri"
 require "net/http"
 
@@ -661,12 +593,9 @@ response = http.request(request)
 puts response.read_body
 ```
 
-{% endtab %}
-
-{% tab title="jquery" %}
 The following jQuery code snippet is using KubeMQ's REST interface:
 
-``` js
+```javascript
 var settings = {
   "url": "http://localhost:9090/queue/receive",
   "method": "POST",
@@ -682,12 +611,5 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
-{% endtab %}
-
-{% endtabs %}
-
-::: tip Get Queues information
-You can get Queues information by running `kubemqctl queues list`.
-:::
-https://player.vimeo.com/video/372195918
+::: tip Get Queues information You can get Queues information by running `kubemqctl queues list`. ::: [https://player.vimeo.com/video/372195918](https://player.vimeo.com/video/372195918)
 
