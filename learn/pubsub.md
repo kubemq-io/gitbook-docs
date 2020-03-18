@@ -116,15 +116,15 @@ KubeMQ supports grouping \(load balancing\) of multiple receivers to share the l
 
 **Example 1**
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-1.gif)
+![](../.gitbook/assets/kubemqctl-pub-sub-events-store-groups-1.gif)
 
 **Example 2**
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-2.gif)
+![](../.gitbook/assets/kubemqctl-pub-sub-events-store-groups-2.gif)
 
 **Example 3**
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-3.gif)
+![](../.gitbook/assets/kubemqctl-pub-sub-events-store-groups-3.gif)
 
 ### Unique Client ID
 
