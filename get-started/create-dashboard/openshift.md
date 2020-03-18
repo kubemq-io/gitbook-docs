@@ -25,18 +25,16 @@
 
 ![](../../.gitbook/assets/install-operator-4.png)
 
-### Install KubeMQ Cluster
+### Install KubeMQ Dashboard
 
-1. Click On Kubemq Cluster 
+1. Click On Kubemq Dashboard 
 2. Click on Create New
 3. A yaml editor will open with default configuration will open
 4. Click Create
 
-![](../../.gitbook/assets/create-cluster-2.png)
+![](../../.gitbook/assets/create-dashboard.png)
 
-### Verify KubeMQ Cluster Installation
+### Verify KubeMQ Dashboard Installation
 
 ![](../../.gitbook/assets/create-cluster-1.png)
-
-
 
