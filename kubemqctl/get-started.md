@@ -42,7 +42,7 @@ Flags:
 Use "kubemqctl [command] --help" for more information about a command.
 ```
 
-## 
+## Installation
 
 {% tabs %}
 {% tab title="MacOS/Linux" %}
