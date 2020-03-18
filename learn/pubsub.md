@@ -1,27 +1,10 @@
----
-title: Pub/Sub
-lang: en-US
-description: KubeMQ Pub/Sub tutorial
-tags:
-  - pub/sub
-  - rpc
-  - message broker
-  - KubeMQ
-  - kubernetes
-  - docker
-  - cloud native
-  - message queue
-  - guide
-  - tutorial
----
-
 # Pub/Sub
 
 The publish-subscribe pattern \(or pub/sub, for short\) is a messaging pattern where senders of messages \(publishers\), do not program the messages to be sent directly to specific receivers \(subscribers\). Instead, the programmer “publishes” messages \(events\), without any knowledge of any subscribers there may be.
 
 Similarly, subscribers express interest in one or more events and only receive messages that are of interest, without any knowledge of any publishers.
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/pubsub.png)
+![](../.gitbook/assets/pubsub.png)
 
 ## Table of Content
 
@@ -40,7 +23,7 @@ KubeMQ supports Publish-Subscribe messages patterns with the following core feat
 
 Events are an asynchronous real-time Pub/Sub pattern. In Events, multiple senders can send real-time messages to various receivers; however, only if they are currently connected to KubeMQ; there is no message persistence available in this pattern.
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event.png)
+![](../.gitbook/assets/event.png)
 
 **Use Cases**
 
@@ -48,15 +31,20 @@ Events are an asynchronous real-time Pub/Sub pattern. In Events, multiple sender
 
 ### Demo - Basic
 
+https://vimeo.com/372195988
+
 ### Demo - Group \(Load Balancing\)
+https://vimeo.com/372195963
 
 ### Demo - Wildcards
+
+https://vimeo.com/372196013
 
 ## Events Store
 
 Events Store is an asynchronous Pub/Sub pattern with persistence. In Events Store, multiple senders can send messages to various receivers even if they are not currently. Any receiver can connect to KubeMQ and replay one, any, or all of the messages stored for a specific channel.
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store.png)
+![](../.gitbook/assets/event-store.png)
 
 ### Events Store Replay Messages Types
 
@@ -73,39 +61,39 @@ KubeMQ supports six types of Events Store subscriptions and replay:
 
 #### Start From New Events
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-new.png)
+![](../.gitbook/assets/event-store-from-new.png)
 
-**Demo**
+https://vimeo.com/372195866
 
 #### Start From First Event
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-first.png)
+![](../.gitbook/assets/event-store-from-first.png)
 
-**Demo**
+https://vimeo.com/372196147
 
 #### Start From Last Event
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-last.png)
+![](../.gitbook/assets/event-store-from-last.png)
 
-**Demo**
+https://vimeo.com/372196161
 
 #### Start From Sequence
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-seq.png)
+![](../.gitbook/assets/event-store-from-seq.png)
 
-**Demo**
+https://vimeo.com/372195881
 
 #### Start From Time
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-time.png)
+![](../.gitbook/assets/event-store-from-time.png)
 
-**Demo**
+https://vimeo.com/372195889
 
 #### Start From Time Delta
 
-![image info](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/event-store-from-time-delta.png)
+![](../.gitbook/assets/event-store-from-time-delta.png)
 
-**Demo**
+https://vimeo.com/372195899
 
 ### Grouping - Load Balancing
 
@@ -115,15 +103,15 @@ KubeMQ supports grouping \(load balancing\) of multiple receivers to share the l
 
 **Example 1**
 
-![kubemqctl-pub-sub-events-store-groups-1.gif](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-1.gif)
+![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-1.gif)
 
 **Example 2**
 
-![kubemqctl-pub-sub-events-store-groups-2.gif](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-2.gif)
+![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-2.gif)
 
 **Example 3**
 
-![kubemqctl-pub-sub-events-store-groups-3.gif](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-3.gif)
+![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/demo/kubemqctl-pub-sub-events-store-groups-3.gif)
 
 ### Unique Client ID
 
