@@ -24,7 +24,7 @@ helm install kubemq-cluster kubemq-charts/kubemq
 
 The following table lists the configurable parameters of the KubeMQ chart and their default values.
 
-{% page-ref page="helm.md" %}
+{% page-ref page="getting-started/" %}
 
 {% file src="../../.gitbook/assets/cluster-values.yaml" caption="values.yaml" %}
 
