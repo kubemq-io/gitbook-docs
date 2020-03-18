@@ -4,12 +4,6 @@ The publish-subscribe pattern \(or pub/sub, for short\) is a messaging pattern w
 
 Similarly, subscribers express interest in one or more events and only receive messages that are of interest, without any knowledge of any publishers.
 
-![](../.gitbook/assets/pubsub.png)
-
-## Table of Content
-
-\[\[toc\]\]
-
 ## Core Features
 
 KubeMQ supports Publish-Subscribe messages patterns with the following core features:
@@ -31,14 +25,21 @@ Events are an asynchronous real-time Pub/Sub pattern. In Events, multiple sender
 
 ### Demo - Basic
 
-https://vimeo.com/372195988
+{% embed url="https://vimeo.com/372195988" %}
+
+
 
 ### Demo - Group \(Load Balancing\)
-https://vimeo.com/372195963
+
+{% embed url="https://vimeo.com/372195963" %}
+
+
 
 ### Demo - Wildcards
 
-https://vimeo.com/372196013
+{% embed url="https://vimeo.com/372196013" %}
+
+
 
 ## Events Store
 
@@ -63,37 +64,49 @@ KubeMQ supports six types of Events Store subscriptions and replay:
 
 ![](../.gitbook/assets/event-store-from-new.png)
 
-https://vimeo.com/372195866
+{% embed url="https://vimeo.com/372195866" %}
+
+
 
 #### Start From First Event
 
 ![](../.gitbook/assets/event-store-from-first.png)
 
-https://vimeo.com/372196147
+{% embed url="https://vimeo.com/372196147" %}
+
+
 
 #### Start From Last Event
 
 ![](../.gitbook/assets/event-store-from-last.png)
 
-https://vimeo.com/372196161
+{% embed url="https://vimeo.com/372196161" %}
+
+
 
 #### Start From Sequence
 
 ![](../.gitbook/assets/event-store-from-seq.png)
 
-https://vimeo.com/372195881
+{% embed url="https://vimeo.com/372195881" %}
+
+
 
 #### Start From Time
 
 ![](../.gitbook/assets/event-store-from-time.png)
 
-https://vimeo.com/372195889
+{% embed url="https://vimeo.com/372195889" %}
+
+
 
 #### Start From Time Delta
 
 ![](../.gitbook/assets/event-store-from-time-delta.png)
 
-https://vimeo.com/372195899
+{% embed url="https://vimeo.com/372195899" %}
+
+
 
 ### Grouping - Load Balancing
 
