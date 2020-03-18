@@ -2,7 +2,7 @@
 
 ## Create KubeMQ Cluster
 
-{% page-ref page="./create-cluster/README.md" %}
+{% page-ref page="create-cluster/" %}
 
 ## Connect Your KubeMQ Cluster
 
@@ -639,11 +639,5 @@ $.ajax(settings).done(function (response) {
 Get Queues information You can get Queues information by running `kubemqctl queues list`
 {% endhint %}
 
-
-
-{% embed url="https://player.vimeo.com/video/372195918" %}
-
-
-
-
+{% embed url="https://player.vimeo.com/video/372195918" caption="" %}
 

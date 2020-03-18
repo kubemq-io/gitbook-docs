@@ -1,8 +1,8 @@
-# PubSub
+# Pub/Sub
 
 ## Create KubeMQ Cluster
 
-{% page-ref page="./create-cluster/README.md" %}
+{% page-ref page="create-cluster/" %}
 
 ## Connect Your KubeMQ Cluster
 
@@ -20,39 +20,33 @@ A consumer can subscribe to the "hello-world" channel with one of the following 
 
 {% tabs %}
 {% tab title="kubemqctl" %}
-
 Run the following kubemqctl command:
 
-``` bash
+```bash
 kubemqctl events rec hello-world
 ```
 
 When connected, a stream of events messages will be shown in the console.
-
-
 {% endtab %}
 
 {% tab title="curl" %}
-
 The following cURL command is using KubeMQ's REST interface:
 
-``` bash
+```bash
 curl --location --request GET "http://localhost:9090/subscribe/events?client_id=some_client_id&channel=some_channel&group=some_group&subscribe_type=events" \
   --header "Content-Type: application/json" \
   --data ""
 ```
 
-{% hint style="'warning" %}
-Subscribe to Events in REST interface is using WebSocket for streaming (Push) events to the consumer. You will need to implement a WebSocket receiver accordingly.
+{% hint style="info" %}
+Subscribe to Events in REST interface is using WebSocket for streaming \(Push\) events to the consumer. You will need to implement a WebSocket receiver accordingly.
 {% endhint %}
 {% endtab %}
 
-
 {% tab title=".Net" %}
-
 The following .NET code snippet is using KubeMQ's .NET SDK with gRPC interface:
 
-``` csharp
+```csharp
 using System;
 
 namespace PubSub_Subscribe_to_a_Channel
@@ -65,7 +59,7 @@ namespace PubSub_Subscribe_to_a_Channel
             var ChannelName = "hello-world";
             var ClientID = "hello-world-subscriber";
             var KubeMQServerAddress = "localhost:50000";
-     
+
             var  subscriber = new KubeMQ.SDK.csharp.Events.Subscriber(KubeMQServerAddress);
             try
             {
@@ -77,7 +71,7 @@ namespace PubSub_Subscribe_to_a_Channel
 
                 }, (eventReceive) =>
                 {
-           
+
                     Console.WriteLine($"Event Received: EventID:{eventReceive.EventID} Channel:{eventReceive.Channel} Metadata:{eventReceive.Metadata} Body:{ KubeMQ.SDK.csharp.Tools.Converter.FromByteArray(eventReceive.Body)} ");
                 },
                 (errorHandler) =>                 
@@ -92,19 +86,18 @@ namespace PubSub_Subscribe_to_a_Channel
             Console.WriteLine("press any key to close PubSub_Subscribe_to_a_Channel");
             Console.ReadLine();
         }  
-        
+
     }
 }
 ```
 
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Java" %}
 
+{% tab title="Java" %}
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
-``` java
+```java
 package io.kubemq.sdk.examples.get_Started.pubSub_Subscribe_to_a_Channel;
 
 import java.io.IOException;
@@ -122,8 +115,8 @@ import io.kubemq.sdk.tools.Converter;
 public class Program {
 
     public static void main(String[] args)  {
-        
-        
+
+
         String channelName = "hello-world", clientID = "hello-world-subscriber", kubeMQAddress = "localhost:50000";
         Subscriber subscriber = new Subscriber(kubeMQAddress);
         SubscribeRequest subscribeRequest = new SubscribeRequest();
@@ -168,17 +161,18 @@ public class Program {
             System.out.printf("ServerAddressNotSuppliedException: %s", e.toString());
          e.printStackTrace();
       }
-       
+
     }
-}    
+}
 ```
+
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Go" %}
 
+{% tab title="Go" %}
 The following Go code snippet is using KubeMQ's Go SDK with gRPC interface:
-``` go
+
+```go
 package main
 import (
    "context"
@@ -223,14 +217,14 @@ func main() {
    }
 }
 ```
+
 When executed, a stream of events messages will be shown in the console.
-
 {% endtab %}
-{% tab title="Python" %}
 
+{% tab title="Python" %}
 The following Python code snippet is using KubeMQ's Python SDK with gRPC interface:
 
-``` py
+```python
 from builtins import input
 from random import randint
 from kubemq.events.subscriber import Subscriber
@@ -272,21 +266,19 @@ if __name__ == "__main__":
         subscribe_type=SubscribeType.Events
     )
     subscriber.subscribe_to_events(subscribe_request, handle_incoming_events,handle_incoming_error,cancel_token)
-    
+
     input("Press 'Enter' to stop Listen...\n")
     cancel_token.cancel()
     input("Press 'Enter' to stop the application...\n")
-
 ```
-When executed, a stream of events messages will be shown in the console.
 
+When executed, a stream of events messages will be shown in the console.
 {% endtab %}
 
 {% tab title="Node" %}
-
 The following JS code snippet is using KubeMQ's NodeJS SDK with gRPC interface:
 
-``` js
+```javascript
 const kubemq = require('kubemq-nodejs');
 
 let channelName = 'pubsub', clientID = 'hello-world-subscriber',
@@ -299,16 +291,13 @@ sub.subscribeToEvents(msg => {
 }, err => {
     console.log('error:' + err)
 })
-
 ```
-
 {% endtab %}
 
 {% tab title="PHP" %}
-
 The following PHP code snippet is using KubeMQ's REST interface:
 
-``` php
+```php
 <?php
 
 $curl = curl_init();
@@ -339,19 +328,15 @@ if ($err) {
 } ?>
 ```
 
-
-{% hint style="'warning" %}
-Subscribe to Events in REST interface is using WebSocket for streaming (Push) events to the consumer. You will need to implement a WebSocket receiver accordingly.
+{% hint style="info" %}
+Subscribe to Events in REST interface is using WebSocket for streaming \(Push\) events to the consumer. You will need to implement a WebSocket receiver accordingly.
 {% endhint %}
-
 {% endtab %}
 
-
 {% tab title="Ruby" %}
-
 The following Ruby code snippet is using KubeMQ's REST interface:
 
-``` ruby
+```ruby
 require "uri"
 require "net/http"
 
@@ -366,19 +351,15 @@ response = http.request(request)
 puts response.read_body
 ```
 
-
-{% hint style="'warning" %}
-Subscribe to Events in REST interface is using WebSocket for streaming (Push) events to the consumer. You will need to implement a WebSocket receiver accordingly.
+{% hint style="info" %}
+Subscribe to Events in REST interface is using WebSocket for streaming \(Push\) events to the consumer. You will need to implement a WebSocket receiver accordingly.
 {% endhint %}
-
 {% endtab %}
 
-
 {% tab title="jquery" %}
-
 The following jQuery code snippet is using KubeMQ's REST interface:
 
-``` js
+```javascript
 var settings = {
   "url": "http://localhost:9090/subscribe/events?client_id=some_client_id&channel=hello-world&group=some_group&subscribe_type=events",
   "method": "GET",
@@ -393,41 +374,29 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
-
-{% hint style="'warning" %}
-Subscribe to Events in REST interface is using WebSocket for streaming (Push) events to the consumer. You will need to implement a WebSocket receiver accordingly.
+{% hint style="info" %}
+Subscribe to Events in REST interface is using WebSocket for streaming \(Push\) events to the consumer. You will need to implement a WebSocket receiver accordingly.
 {% endhint %}
-
 {% endtab %}
 {% endtabs %}
-
-
-
-
 
 ## Publish to Event Channel
 
 After you have subscribed to a hello-world channel, you can send your message to it.
 
-
 {% tabs %}
 {% tab title="kubemqctl" %}
-
 Run the following kubemqctl command:
 
-``` bash
+```bash
 kubemqctl events send hello-world "Hi KubeMQ"
 ```
-
-
 {% endtab %}
 
-
 {% tab title="curl" %}
-
 The following cURL command is using KubeMQ's REST interface:
 
-``` bash
+```bash
 curl --location --request POST "http://localhost:9090/send/event" 
   --header "Content-Type: application/json" 
   --data '{"EventID": "1234-5678-90","ClientID": "events-client-id","Channel": "events-channel","Metadata": "some-metadata","Body": "c29tZSBlbmNvZGVkIGJvZHk=","Store": false}'
@@ -435,7 +404,7 @@ curl --location --request POST "http://localhost:9090/send/event"
 
 A response for a successful command will look like this:
 
-``` bash
+```bash
 {
   "is_error": false,
   "message": "OK",
@@ -448,10 +417,9 @@ A response for a successful command will look like this:
 {% endtab %}
 
 {% tab title=".Net" %}
-
 The following .NET code snippet is using KubeMQ's .NET SDK with gRPC interface:
 
-``` csharp
+```csharp
 using System;
 
 namespace PubSub_Publish_to_a_Channel
@@ -490,15 +458,13 @@ namespace PubSub_Publish_to_a_Channel
         }
     }
 }
-
 ```
-
 {% endtab %}
-{% tab title="Java" %}
 
+{% tab title="Java" %}
 The following Java code snippet is using KubeMQ's Java SDK with gRPC interface:
 
-``` java
+```java
 package io.kubemq.sdk.examples.get_Started.pubSub_Publish_to_a_Channel;
 
 import java.io.IOException;
@@ -513,36 +479,35 @@ import io.kubemq.sdk.tools.Converter;
 public class Program {
 
     public static void main(String[] args)  {
-        
+
         String channelName = "hello-world", clientID = "hello-world-subscriber", kubeMQAddress = "localhost:50000";
-    
+
         io.kubemq.sdk.event.Channel chan = new io.kubemq.sdk.event.Channel(channelName, clientID, false, kubeMQAddress);
 
         Event event = new Event();
         try {
             event.setBody(Converter.ToByteArray("hello kubemq - sending single event"));
         } catch (IOException e) {
-            
+
             e.printStackTrace();
         }
-        
+
         try {
             Result res = chan.SendEvent(event);
         } catch (SSLException | ServerAddressNotSuppliedException e) {
-           
+
             e.printStackTrace();
         }
 
     }
-} 
+}
 ```
-
 {% endtab %}
-{% tab title="Go" %}
 
+{% tab title="Go" %}
 The following Go code snippet is using KubeMQ's Go SDK with gRPC interface:
 
-``` go
+```go
 package main
 import (
    "context"
@@ -573,16 +538,13 @@ func main() {
    }
 
 }
-
 ```
-
 {% endtab %}
-{% tab title="Python" %}
 
+{% tab title="Python" %}
 The following Python code snippet is using KubeMQ's Python SDK with gRPC interface:
 
-``` py
-
+```python
 import datetime
 
 from kubemq.events.lowlevel.event import Event
@@ -607,19 +569,13 @@ if __name__ == "__main__":
                 err
                         )
         )
-
-    
 ```
-
-
 {% endtab %}
 
-
 {% tab title="Node" %}
-
 The following JS code snippet is using KubeMQ's NodeJS SDK with gRPC interface:
 
-``` js
+```javascript
 const kubemq = require('kubemq-nodejs');
 let channelName = 'pubsub', clientID = 'hello-world-subscriber',
     kubeMQHost = 'localhost', kubeMQGrpcPort = '50000';
@@ -632,16 +588,13 @@ publisher.send(event).then(
         err => {
             console.log('error sending' + err)
         });
-
 ```
-
 {% endtab %}
 
 {% tab title="PHP" %}
-
 The following PHP code snippet is using KubeMQ's REST interface:
 
-``` php
+```php
 <?php
 
 $curl = curl_init();
@@ -675,7 +628,7 @@ if ($err) {
 
 A response for a successful command will look like this:
 
-``` bash
+```bash
 {
   "is_error": false,
   "message": "OK",
@@ -687,12 +640,10 @@ A response for a successful command will look like this:
 ```
 {% endtab %}
 
-
 {% tab title="Ruby" %}
-
 The following Ruby code snippet is using KubeMQ's REST interface:
 
-``` ruby
+```ruby
 require "uri"
 require "net/http"
 
@@ -710,7 +661,7 @@ puts response.read_body
 
 A response for a successful command will look like this:
 
-``` bash
+```bash
 {
   "is_error": false,
   "message": "OK",
@@ -722,12 +673,10 @@ A response for a successful command will look like this:
 ```
 {% endtab %}
 
-
 {% tab title="jquery" %}
-
 The following jQuery code snippet is using KubeMQ's REST interface:
 
-``` js
+```javascript
 var settings = {
   "url": "http://localhost:9090/send/event",
   "method": "POST",
@@ -745,7 +694,7 @@ $.ajax(settings).done(function (response) {
 
 A response for a successful command will look like this:
 
-``` bash
+```bash
 {
   "is_error": false,
   "message": "OK",
@@ -758,7 +707,9 @@ A response for a successful command will look like this:
 {% endtab %}
 {% endtabs %}
 
-
-
 ## Demo
-https://player.vimeo.com/video/372195907
+
+{% embed url="https://player.vimeo.com/video/372195907" %}
+
+
+
