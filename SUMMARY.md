@@ -5,8 +5,10 @@
 ## Getting Started
 
 * [Create Cluster](getting-started/create-cluster/README.md)
+  * [Helm](getting-started/create-cluster/helm.md)
   * [Openshift](getting-started/create-cluster/openshift.md)
 * [Create Dashboard](getting-started/create-dashboard/README.md)
+  * [Helm](getting-started/create-dashboard/helm.md)
   * [Openshift](getting-started/create-dashboard/openshift.md)
 * [Queues](getting-started/queues.md)
 * [Pub Sub](getting-started/pubsub.md)
