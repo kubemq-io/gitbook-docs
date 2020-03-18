@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 
 ## Get Started
+
 * [Create Cluster](get-started/create-cluster/README.md)
   * [Openshift](get-started/create-cluster/openshift.md)
 
