@@ -26,6 +26,8 @@ The following table lists the configurable parameters of the KubeMQ chart and th
 
 {% file src="../../.gitbook/assets/cluster-values.yaml" caption="values.yaml" %}
 
+{% page-ref page="create-cluster/" %}
+
 ```yaml
 configData: ""
 replicas: 3
@@ -121,7 +123,7 @@ gateways:
   ca: ""
 ```
 
-{% page-ref page="create-cluster/" %}
+
 
 
 
