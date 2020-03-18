@@ -52,23 +52,21 @@ sudo curl -sL https://get.kubemq.io/install | sudo sh
 {% endtab %}
 
 {% tab title="Windows" %}
+### Option 1:
 
-#### Option 1:
+* [Download the latest kubemqctl.exe](https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe).
+* Place the file under e.g. `C:\Program Files\kubemqctl\kubemqctl.exe`
+* Add that directory to your system path to access it from any command prompt
 
-- [Download the latest kubemqctl.exe](https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe).
-- Place the file under e.g. `C:\Program Files\kubemqctl\kubemqctl.exe`
-- Add that directory to your system path to access it from any command prompt
+### Option 2:
 
-#### Option 2:
 Run in PowerShell as administrator:
 
-```powershell
+```bash
 New-Item -ItemType Directory 'C:\Program Files\kubemqctl'
 Invoke-WebRequest https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe -OutFile 'C:\Program Files\kubemqctl\kubemqctl.exe'
-[Environment]::SetEnvironmentVariable('Path', [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine) + ';C:\Program Files\kubemqctl', [EnvironmentVariableTarget]::Machine)
 $env:Path += ';C:\Program Files\kubemqctl'
 ```
 {% endtab %}
-
 {% endtabs %}
 
