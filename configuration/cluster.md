@@ -1,7 +1,5 @@
 # Cluster Configuration
 
-
-
 ## Basic
 
 | Field | Type/Options | Description | Example |
