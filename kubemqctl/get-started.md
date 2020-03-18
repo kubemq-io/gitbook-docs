@@ -52,6 +52,10 @@ New-Item -ItemType Directory 'C:\Program Files\kubemqctl'
 Invoke-WebRequest https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe -OutFile 'C:\Program Files\kubemqctl\kubemqctl.exe'
 $env:Path += ';C:\Program Files\kubemqctl'
 ```
+
+{% file src="../.gitbook/assets/kubemqctl.zip" caption="windows-kubemqctl" %}
 {% endtab %}
 {% endtabs %}
+
+
 
