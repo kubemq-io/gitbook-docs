@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
+## Get Started
+
 
 ## Learn
 
@@ -14,7 +16,7 @@
 * [Smart Routing](learn/smart-routing.md)
 
 ## Kubemqctl
-
+* [Get Started](kubemqctl/get-started.md)
 * [Create](kubemqctl/kubemqctl_create.md)
   * [Cluster](kubemqctl/kubemqctl_create_cluster.md)
   * [Dashboard](kubemqctl/kubemqctl_create_dashboard.md)
