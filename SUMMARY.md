@@ -99,3 +99,8 @@
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
 
+## Configuration
+
+* [Cluster](configuration/cluster.md)
+* [Dashboard](configuration/dashboard.md)
+
