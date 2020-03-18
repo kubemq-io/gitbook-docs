@@ -1,6 +1,6 @@
-# Cluster
+# Cluster Configuration
 
-## Configuration Settings
+
 
 ## Basic
 
