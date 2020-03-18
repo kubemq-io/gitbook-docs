@@ -688,10 +688,5 @@ $.ajax(settings).done(function (response) {
 ::: tip Get Queues information
 You can get Queues information by running `kubemqctl queues list`.
 :::
-
-## Demo
-
-<div class="video-block">
-   <iframe src="https://player.vimeo.com/video/372195918" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-</div>
+https://player.vimeo.com/video/372195918
 
