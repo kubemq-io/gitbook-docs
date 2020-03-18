@@ -13,6 +13,10 @@
 * [Queues](getting-started/queues.md)
 * [Pub/Sub](getting-started/pubsub.md)
 * [RPC](getting-started/rpc.md)
+## Configuration
+
+* [Cluster](configuration/cluster.md)
+* [Dashboard](configuration/dashboard.md)
 
 ## Learn
 
@@ -98,9 +102,4 @@
 * [Kubemq Cluster](change-log/kubemq-cluster.md)
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
-
-## Configuration
-
-* [Cluster](configuration/cluster.md)
-* [Dashboard](configuration/dashboard.md)
 
