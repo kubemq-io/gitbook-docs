@@ -51,7 +51,7 @@
 * [Events Store](kubemqctl/kubemqctl_events_store.md)
   * [Send](kubemqctl/kubemqctl_events_store_send.md)
   * [Receive](kubemqctl/kubemqctl_events_store_receive.md)
-  * [Attach](kubemqctl/kubemqctl_events_store_event_attach.md)
+  * [Attach](kubemqctl/kubemqctl_events_store_attach.md)
   * [List](kubemqctl/kubemqctl_events_store_list.md)
 * [Commands](kubemqctl/kubemqctl_commands.md)
   * [Send](kubemqctl/kubemqctl_commands_send.md)
