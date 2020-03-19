@@ -2,7 +2,9 @@
 
 Kubemqctl is KubeMQ's CLI tool.
 
-{% page-ref page="../../configuration/cluster.md" %}
+## Install Kubemqctl Tool
+
+{% page-ref page="../../kubemqctl/get-started.md" %}
 
 ## Install KubeMQ Cluster
 
