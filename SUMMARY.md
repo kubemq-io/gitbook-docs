@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Create Cluster](getting-started/create-cluster/README.md)
+  * [Kubemqctl](getting-started/create-cluster/kubemqctl.md)
   * [Helm](getting-started/create-cluster/helm.md)
   * [Openshift](getting-started/create-cluster/openshift.md)
 * [Create Dashboard](getting-started/create-dashboard/README.md)
