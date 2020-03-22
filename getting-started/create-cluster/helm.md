@@ -14,7 +14,7 @@ helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 helm repo list
 ```
 
-## Install KubeMQ Cluster
+## Install KubeMQ Cluster With Default values
 
 ```bash
 helm install kubemq-cluster kubemq-charts/kubemq
@@ -31,8 +31,7 @@ configData: ""
 replicas: 3
 volume:
   size: ""
-license:
-  data: ""
+license: ""
   token: ""
 image:
   image: "docker.io/kubemq/kubemq:latest"
