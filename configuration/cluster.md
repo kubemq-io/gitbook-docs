@@ -6,19 +6,14 @@
 | :--- | :--- | :--- | :--- |
 | replicas | int | Desired amount of pods in the cluster | 3 |
 | configData | yaml/toml | Load configuration file |  |
+| license | string | Set Licence data  |  |
+
 
 ## Volume
 
 | Field | Type/Options | Description | Example |
 | :--- | :--- | :--- | :--- |
 | size | string | Desired size of Persisted Volume Claim | "30Gi" |
-
-## License
-
-| Field | Type/Options | Description | Example |
-| :--- | :--- | :--- | :--- |
-| data | string | Set Licence data key |  |
-| token | string | Set License Token |  |
 
 ## Image
 
