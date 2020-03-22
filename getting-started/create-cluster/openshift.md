@@ -33,7 +33,7 @@
 4. Click Create
 
 {% hint style="danger" %}
-For all installations of kubemq in Openshift platform, a License key is required.
+For all installations of Kubemq in Openshift platform, a License key is required.
 
 Obtain free license key: [Register](https://account.kubemq.io/login/register)
 {% endhint %}
