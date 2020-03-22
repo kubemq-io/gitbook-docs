@@ -19,24 +19,28 @@
 
 ![](../../.gitbook/assets/install-operator-2.png)
 
-### Verify Operator Installation
+## Verify Operator Installation
 
 ![](../../.gitbook/assets/install-operator-3.png)
 
 ![](../../.gitbook/assets/install-operator-4.png)
 
-### Install KubeMQ Cluster
+## Install KubeMQ Cluster with license key
 
 1. Click On Kubemq Cluster 
 2. Click on Create New
 3. A yaml editor will open with default configuration will open
 4. Click Create
 
+{% hint style="danger" %}
+For all installations of kubemq in Openshift platform, a License key is required.
+
+Obtain free license key: [Register](https://account.kubemq.io/login/register)
+{% endhint %}
+
 ![](../../.gitbook/assets/create-cluster-2.png)
 
-### Verify KubeMQ Cluster Installation
+## Verify KubeMQ Cluster Installation
 
 ![](../../.gitbook/assets/create-cluster-3.png)
-
-
 

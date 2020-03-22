@@ -22,12 +22,11 @@ helm install kubemq-cluster kubemq-charts/kubemq
 
 ## Install KubeMQ Cluster with license key
 
-Save your key to a file (e.g. ./lic.key)
+Save your key to a file \(e.g. ./lic.key\)
 
 ```bash
 helm install kubemq-cluster --set-file license=./lic.key -n kubemq .
 ```
-
 
 ## Configuration
 

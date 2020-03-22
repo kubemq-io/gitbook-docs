@@ -6,8 +6,7 @@
 | :--- | :--- | :--- | :--- |
 | replicas | int | Desired amount of pods in the cluster | 3 |
 | configData | yaml/toml | Load configuration file |  |
-| license | string | Set Licence data  |  |
-
+| license | string | Set Licence data |  |
 
 ## Volume
 
