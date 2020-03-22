@@ -14,7 +14,7 @@ helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 helm repo list
 ```
 
-## Install KubeMQ Cluster With Default values
+## Install KubeMQ Cluster with default values
 
 ```bash
 helm install kubemq-cluster kubemq-charts/kubemq
