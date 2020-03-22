@@ -6,10 +6,22 @@ Kubemqctl is KubeMQ's CLI tool.
 
 {% page-ref page="../../kubemqctl/get-started.md" %}
 
-## Install KubeMQ Cluster
+## Install KubeMQ Cluster without License key (default)
 
 ```text
 kubemqctl create cluster
+```
+
+## Install KubeMQ Cluster with License token
+
+```text
+kubemqctl create cluster -t {your-license-token}
+```
+
+## Install KubeMQ Cluster with License file
+
+```text
+kubemqctl create cluster --license-filename {your-license-filenam}
 ```
 
 ## Configuration
