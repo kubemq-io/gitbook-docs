@@ -20,6 +20,8 @@ helm repo list
 helm install kubemq-cluster kubemq-charts/kubemq
 ```
 
+helm install kubemq-cluster-helm --set-file license=./lic.key -n kubemq .
+
 ## Configuration
 
 The following values yaml lists the configurable parameters of the KubeMQ cluster chart and their default values.
