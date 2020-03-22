@@ -20,7 +20,12 @@ helm repo list
 helm install kubemq-cluster kubemq-charts/kubemq
 ```
 
-helm install kubemq-cluster-helm --set-file license=./lic.key -n kubemq .
+## Install KubeMQ Cluster with license key
+
+```bash
+helm install kubemq-cluster --set-file license=./lic.key -n kubemq .
+```
+
 
 ## Configuration
 
@@ -34,7 +39,6 @@ replicas: 3
 volume:
   size: ""
 license: ""
-  token: ""
 image:
   image: "docker.io/kubemq/kubemq:latest"
   pullPolicy: Always
