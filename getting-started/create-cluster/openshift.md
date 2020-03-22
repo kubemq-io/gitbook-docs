@@ -36,7 +36,7 @@
 
 ### Verify KubeMQ Cluster Installation
 
-![](../../.gitbook/assets/create-cluster-1.png)
+![](../../.gitbook/assets/create-cluster-3.png)
 
 
 
