@@ -14,13 +14,13 @@ helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 helm repo list
 ```
 
-## Install KubeMQ Cluster with default values
+## Install KubeMQ Cluster Community Edition
 
 ```bash
 helm install kubemq-cluster kubemq-charts/kubemq
 ```
 
-## Install KubeMQ Cluster with license key
+## Install KubeMQ Cluster Enterprise Edition
 
 Save your key to a file \(e.g. ./lic.key\)
 

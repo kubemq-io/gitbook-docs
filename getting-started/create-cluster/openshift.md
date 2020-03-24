@@ -25,7 +25,7 @@
 
 ![](../../.gitbook/assets/install-operator-4.png)
 
-## Install KubeMQ Cluster with license key
+## Install KubeMQ Cluster Enterprise Edition
 
 1. Click On Kubemq Cluster 
 2. Click on Create New
