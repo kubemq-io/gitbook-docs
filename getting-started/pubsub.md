@@ -2,8 +2,7 @@
 
 ## Install Kubemqctl tool
 
-{% page-ref page="../../kubemqctl/get-started.md" %}
-
+{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 
@@ -710,7 +709,5 @@ A response for a successful command will look like this:
 
 ## Demo
 
-{% embed url="https://player.vimeo.com/video/372195907" %}
-
-
+{% embed url="https://player.vimeo.com/video/372195907" caption="" %}
 

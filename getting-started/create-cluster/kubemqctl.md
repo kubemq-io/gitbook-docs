@@ -19,6 +19,7 @@ kubemqctl create cluster
 ```text
 kubemqctl create cluster -t {your-license-token}
 ```
+
 ### install with license file
 
 ```text

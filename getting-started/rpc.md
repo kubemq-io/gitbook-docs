@@ -2,8 +2,7 @@
 
 ## Install Kubemqctl tool
 
-{% page-ref page="../../kubemqctl/get-started.md" %}
-
+{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 
@@ -786,7 +785,5 @@ $.ajax(settings).done(function (response) {
 
 ## Demo
 
-{% embed url="https://player.vimeo.com/video/372195951" %}
-
-
+{% embed url="https://player.vimeo.com/video/372195951" caption="" %}
 
