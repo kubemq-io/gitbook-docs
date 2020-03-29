@@ -1,18 +1,19 @@
 # The Basics
 
-## Channels <a id="channels"></a>
+## Channels
 
 KubeMQ Channel \(Topic/Subject/Address/Destination\) is a string-based representation of an endpoint or a target of a message. KubeMQ supports [NATS.IO](https://nats.io/documentation/writing_applications/subjects/) Subject-based Messaging patterns for hierarchies, wildcards, and tokens.
 
-## Senders and Receivers <a id="senders-and-receivers"></a>
+## Senders and Receivers
 
 The core functionality of KubeMQ messaging is sending and receiving messages.
 
-**Senders** \(publishers\) can send one or many messages \(stream\) to one specific destination \(Channel\). Sending a message does not require the set up of any predefined destination.
+**Senders** \(publishers\) can send one or many messages \(stream\) to one or many destinations \(Channel\). Sending a message does not require the set up of any predefined destination.
 
 **Receiver** \(subscribers/listeners\) can receive messages from one or more senders on the same channel or a wildcards channel. Before a Receiver can receive any messages, a Subscription function is needed to register his interest in receiving messages from a senders designation.
 
-## Format <a id="format"></a>
+
+## Format
 
 A channel string can be formed from any UTF-8 characters with the following attributes:
 
@@ -24,7 +25,42 @@ A channel string can be formed from any UTF-8 characters with the following attr
 * Can begin with `>` or `*` \(for subscription receivers only\)
 * Unlimited hierarchies
 
-## Hierarchies <a id="hierarchies"></a>
+## Multicast Destinations
+RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern.
+Separate each destination with a `;` and specify the message pattern type with `:`.
+#### Message Pattern Format
+
+| Pattern      | Format        | Example                                                   |
+|:-------------|:--------------|:----------------------------------------------------------|
+| Events       | events:       | events: events.foo.bar;events: events.foo.bar.1           |
+| Events Store | events_store: | events_store: store.foo.bar;events_store: store.foo.bar.1 |
+| Queues       | queues:       | queues: q1.foo.bar; queues: q2.foo.bar                    |
+
+
+#### Predefined Routes - Smart routes
+A predefined routes rule can be set with Kubemq Smart Routing configuration and can be used like that:
+
+
+| Pattern      | Format        | Will routes                                                   |
+|:-------------|:--------------|:----------------------------------------------------------|
+| Routes       | routes: all-foo-bar       |  to all destinations defined by all-foo-bar route|
+
+More on Smart Route here:
+
+{% page-ref page="smart-routing.md" %}
+
+#### Mixing Message Pattern destinations
+Mixing message pattern destination is allowed. for example, an events sender can send a message to events_store subscriber and to a queues subscriber at the same time.
+
+#### Exmaples
+
+ | Sender is      | Channel Destinations        | Will routes to                                                  |
+|:-------------|:--------------|:----------------------------------------------------------|
+| Routes       | routes: all-foo-bar       |  to all destinations defined by all-foo-bar route|
+
+
+
+## Hierarchies
 
 Channels names can be separated by the `.` symbol to create messaging stream hierarchies.
 

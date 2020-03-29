@@ -15,6 +15,7 @@ Enterprise-grade message broker and message queue, scalable, high available and 
 * Supports durable FIFO based Queue, Publish-Subscribe Events, Publish-Subscribe with Persistence \(Events Store\), RPC Command and Query messaging patterns
 * Supports gRPC, Rest and WebSocket Transport protocols with TLS support \(both RPC and Stream modes\)
 * Supports Access control Authorization and Authentication
+* Supports message masticating and smart routing
 * No Message broker configuration needed \(i.e., queues, exchanges\)
 * .Net, Java, Python, Go and NodeJS SDKs
 * Monitoring Dashboard
