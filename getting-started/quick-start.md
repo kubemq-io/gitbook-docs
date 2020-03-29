@@ -24,21 +24,48 @@ kubectl apply -f https://get.kubemq.io/deploy
 kubectl apply -f https://get.kubemq.io/deploy?token=<your-license-token>
 ```
 
-## What next ?
-
 {% hint style="info" %}
 For free 30 days Enterprise licence Please [Register](https://account.kubemq.io/login/register)
 {% endhint %}
 
+## What next ?
+
 ### Install Kubemqctl tool 
 
-{% page-ref page="create-cluster/kubemqctl.md" %}
+{% tabs %}
+{% tab title="MacOS/Linux" %}
+```bash
+sudo curl -sL https://get.kubemq.io/install | sudo sh
+```
+{% endtab %}
+
+{% tab title="Windows" %}
+### Option 1:
+
+* [Download the latest kubemqctl.exe](https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe).
+* Place the file under e.g. `C:\Program Files\kubemqctl\kubemqctl.exe`
+* Add that directory to your system path to access it from any command prompt
+
+### Option 2:
+
+Run in PowerShell as administrator:
+
+```bash
+New-Item -ItemType Directory 'C:\Program Files\kubemqctl'
+Invoke-WebRequest https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe -OutFile 'C:\Program Files\kubemqctl\kubemqctl.exe'
+$env:Path += ';C:\Program Files\kubemqctl'
+```
+{% endtab %}
+{% endtabs %}
 
 
 
-### t started with:
+
+### Gett started with:
 
 {% page-ref page="queues.md" %}
+{% page-ref page="pubsub.md" %}
+{% page-ref page="rpc.md" %}
 
 
 
