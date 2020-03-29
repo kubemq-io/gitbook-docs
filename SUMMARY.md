@@ -21,7 +21,7 @@
 
 * [Cluster Configuration](configuration/cluster.md)
 * [Dashboard Configuration](configuration/dashboard.md)
-* [How To](configuration/how-to/README.md)
+* [How to](configuration/how-to/README.md)
   * [Set Enterprise License](configuration/how-to/set-enterprise-license.md)
   * [Set Cluster Name](configuration/how-to/set-cluster-name.md)
   * [Set Namespace name](configuration/how-to/set-namespace-name.md)
