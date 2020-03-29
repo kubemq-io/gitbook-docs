@@ -11,7 +11,7 @@ kubemqctl create cluster -v 30Gi
 
 {% tab title="Helm" %}
 ```text
-helm install kubemq-cluster --set volume.size=30Gi kubemq-charts/kubemq
+helm install kubemq-cluster --set volume.size=30Gi -n kubemq kubemq-charts/kubemq 
 ```
 {% endtab %}
 
@@ -21,6 +21,7 @@ apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqCluster
 metadata:
   name: kubemq-cluster
+  namesapce: kubemq
   labels:
     app: kubemq-cluster
 spec:
