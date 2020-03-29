@@ -23,4 +23,6 @@ kubectl apply -f https://get.kubemq.io/deploy
 ```bash
 kubectl apply -f https://get.kubemq.io/deploy?token=<your-license-token>
 ```
-
+{% hint style="info" %}
+For free 30 days Enterprise licence Please [Register](https://account.kubemq.io/login/register)
+{% endhint %}
