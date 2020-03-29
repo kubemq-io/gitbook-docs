@@ -11,7 +11,7 @@ kubemqctl create cluster -v 30Gi
 
 {% tab title="Helm" %}
 ```text
-helm install kubemq-cluster --set volume.size=30Gi -n kubemq kubemq-charts/kubemq 
+helm install kubemq-cluster --set volume.size=30Gi -n kubemq kubemq-charts/kubemq
 ```
 {% endtab %}
 
@@ -27,7 +27,7 @@ metadata:
 spec:
   replicas: 3
   volume:
-    size: 30Gi  
+    size: 30Gi
 ```
 {% endtab %}
 {% endtabs %}

@@ -23,8 +23,21 @@
 * [Dashboard Configuration](configuration/dashboard.md)
 * [How To](configuration/how-to/README.md)
   * [Set Enterprise License](configuration/how-to/set-enterprise-license.md)
+  * [Set Cluster Name](configuration/how-to/set-cluster-name.md)
+  * [Set Namespace name](configuration/how-to/set-namespace-name.md)
   * [Set Persistent Volume](configuration/how-to/set-persistence-volume.md)
-
+  * [Set Cluster Image](configuration/how-to/set-cluster-image.md)
+  * [Set Cluster Replicas](configuration/how-to/untitled.md)
+  * [Scale Cluster](configuration/how-to/scale-cluster.md)
+  * [Expose gRPC Interface](configuration/how-to/expose-grpc-interface.md)
+  * [Expose Rest Interface](configuration/how-to/expose-rest-interface.md)
+  * [Secure Cluster With TLS](configuration/how-to/secure-cluster-with-tls.md)
+  * [Set Authentication](configuration/how-to/set-authentication.md)
+  * [Set Authorization](configuration/how-to/set-authorization.md)
+  * [Set Smart Routing](configuration/how-to/set-smart-routing.md)
+  * [Set Health Probe](configuration/how-to/set-health-probe.md)
+  * [Set Store Settings](configuration/how-to/set-store-settings.md)
+  * [Set Queues Settings](configuration/how-to/set-queues-settings.md)
 
 ## Learn
 
