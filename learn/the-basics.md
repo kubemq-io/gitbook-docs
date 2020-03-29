@@ -12,7 +12,6 @@ The core functionality of KubeMQ messaging is sending and receiving messages.
 
 **Receiver** \(subscribers/listeners\) can receive messages from one or more senders on the same channel or a wildcards channel. Before a Receiver can receive any messages, a Subscription function is needed to register his interest in receiving messages from a senders designation.
 
-
 ## Format
 
 A channel string can be formed from any UTF-8 characters with the following attributes:
@@ -26,39 +25,42 @@ A channel string can be formed from any UTF-8 characters with the following attr
 * Unlimited hierarchies
 
 ## Multicast Destinations
-RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern.
-Separate each destination with a `;` and specify the message pattern type with `:`.
+
+RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern. Separate each destination with a `;` and specify the message pattern type with `:`.
+
 #### Message Pattern Format
 
-| Pattern      | Format        | Example                                                   |
-|:-------------|:--------------|:----------------------------------------------------------|
-| Events       | events:       | events: events.foo.bar;events: events.foo.bar.1           |
-| Events Store | events_store: | events_store: store.foo.bar;events_store: store.foo.bar.1 |
-| Queues       | queues:       | queues: q1.foo.bar; queues: q2.foo.bar                    |
-
+| Pattern | Format | Example |
+| :--- | :--- | :--- |
+| Events | events: | events: events.foo.bar;events: events.foo.bar.1 |
+| Events Store | events\_store: | events\_store: store.foo.bar;events\_store: store.foo.bar.1 |
+| Queues | queues: | queues: q1.foo.bar; queues: q2.foo.bar |
 
 #### Predefined Routes - Smart routes
+
 A predefined routes rule can be set with Kubemq Smart Routing configuration and can be used like that:
 
-
-| Pattern      | Format        | Will routes                                                   |
-|:-------------|:--------------|:----------------------------------------------------------|
-| Routes       | routes: all-foo-bar       |  to all destinations defined by all-foo-bar route|
+| Pattern | Format | Will routes |
+| :--- | :--- | :--- |
+| Routes | routes: all-foo-bar | to all destinations defined by all-foo-bar route |
 
 More on Smart Route here:
 
 {% page-ref page="smart-routing.md" %}
 
 #### Mixing Message Pattern destinations
-Mixing message pattern destination is allowed. for example, an events sender can send a message to events_store subscriber and to a queues subscriber at the same time.
 
-#### Exmaples
+Mixing message pattern destination is allowed. for example, an events sender can send a message to events\_store subscriber and to a queues subscriber at the same time.
 
- | Sender is      | Channel Destinations        | Will routes to                                                  |
-|:-------------|:--------------|:----------------------------------------------------------|
-| Routes       | routes: all-foo-bar       |  to all destinations defined by all-foo-bar route|
+#### Examples
 
-
+| Sens From  | Channel Destinations | Will routes to |
+| :--- | :--- | :--- |
+| Events | foo.bar;foo.bar.1;events\_store: store.foo;queues: q1 | events-&gt;foo.bar |
+|  |  | events-&gt;foo.bar.1 |
+|  |  | events\_store-&gt;store.foo |
+|  |  | queues-&gt;q1 |
+| Events Store | foo.bar.store;events: bar.1;queues:q2;routes:my-route | events\_store-&gt;foo.bar.store |
 
 ## Hierarchies
 
