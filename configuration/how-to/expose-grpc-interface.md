@@ -35,7 +35,7 @@ grpc:
 
 #### More Configuration Options
 
-{% page-ref page="../cluster.md#grpc" %}
+{% page-ref page="../cluster.md" %}
 
 
 
