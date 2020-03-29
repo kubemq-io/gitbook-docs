@@ -1,7 +1,7 @@
 # Expose Rest Interface
 
 
-Expose Rest interface port on NodePort
+Expose Rest interface port with a NodePort
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
