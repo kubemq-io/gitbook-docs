@@ -61,7 +61,7 @@ $env:Path += ';C:\Program Files\kubemqctl'
 
 
 
-### Gett started with:
+### Get started with:
 
 {% page-ref page="queues.md" %}
 {% page-ref page="pubsub.md" %}
