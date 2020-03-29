@@ -54,10 +54,11 @@ Mixing message pattern destination is allowed. for example, an events sender can
 
 #### Examples
 
-| Sens From  | Channel Destinations | Will routes to |
+| Sends From  | Channel Destinations | Will routes to |
 | :--- | :--- | :--- |
 | Events | foo.bar;foo.bar.1;events\_store: store.foo;queues: q1 | events-&gt;foo.bar, events-&gt;foo.bar.1, events\_store-&gt;store.foo, queues-&gt;q1 |
 | Events Store | foo.bar.store;events: bar.1;queues:q2; routes:my-route | events\_store-&gt;foo.bar.store, events-> bar.1, queues -> q2, all destinations defined by my-route |
+| Queues | q1.foo.bar;events: bar.1;events_store:store.foo.1 | queues-> q1.foo.bar, events-> bar.1, events_store-> store.foo.1 |
 
 ## Hierarchies
 
