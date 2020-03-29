@@ -16,8 +16,17 @@ helm install kubemq-cluster --set volume.size=30Gi kubemq-charts/kubemq
 {% endtab %}
 
 {% tab title="yaml" %}
-```text
-
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  volume:
+    size: 30Gi  
 ```
 {% endtab %}
 {% endtabs %}
