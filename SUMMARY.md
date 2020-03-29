@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 
 ## Getting Started
-
+* [Quick Start](getting-started/quick-start.md)
 * [Create Cluster](getting-started/create-cluster/README.md)
   * [Kubemqctl](getting-started/create-cluster/kubemqctl.md)
   * [Helm](getting-started/create-cluster/helm.md)

@@ -1,6 +1,6 @@
 # Queues
 
-## Install Kubemqctl Tool
+## Install Kubemqctl tool
 
 {% page-ref page="../../kubemqctl/get-started.md" %}
 
