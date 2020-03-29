@@ -1,6 +1,6 @@
 # Expose gRPC Interface
 
-Expose gRPC port on NodePort
+Expose gRPC interface port on NodePort
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
