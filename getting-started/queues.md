@@ -1,8 +1,9 @@
 # Queues
 
-## Create KubeMQ Cluster
+## Install Kubemqctl Tool
 
-{% page-ref page="create-cluster/" %}
+{% page-ref page="../../kubemqctl/get-started.md" %}
+
 
 ## Connect Your KubeMQ Cluster
 

@@ -1,9 +1,8 @@
-# Pub/Sub
+# Quick Start
 
-## Install Kubemqctl Tool
+## Create KubeMQ Cluster
 
-{% page-ref page="../../kubemqctl/get-started.md" %}
-
+{% page-ref page="create-cluster/" %}
 
 ## Connect Your KubeMQ Cluster
 
