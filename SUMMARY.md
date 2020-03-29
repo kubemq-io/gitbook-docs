@@ -22,7 +22,7 @@
 * [Cluster Configuration](configuration/cluster.md)
 * [Dashboard Configuration](configuration/dashboard.md)
 * [How To](configuration/how-to/README.md)
-  * [Set Persistence Volume](configuration/how-to/set-persistence-volume.md)
+  * [Set Persistent Volume](configuration/how-to/set-persistence-volume.md)
 
 ## Learn
 

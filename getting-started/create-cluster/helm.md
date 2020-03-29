@@ -25,7 +25,7 @@ helm install kubemq-cluster kubemq-charts/kubemq
 Save your key to a file \(e.g. ./lic.key\)
 
 ```bash
-helm install kubemq-cluster --set-file license=./lic.key -n kubemq .
+helm install kubemq-cluster --set-file license=./lic.key -n kubemq kubemq-charts/kubemq
 ```
 
 ## Configuration
