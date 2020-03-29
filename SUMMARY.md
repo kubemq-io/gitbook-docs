@@ -22,7 +22,9 @@
 * [Cluster Configuration](configuration/cluster.md)
 * [Dashboard Configuration](configuration/dashboard.md)
 * [How To](configuration/how-to/README.md)
+  * [Set Enterprise License](configuration/how-to/set-enterprise-license.md)
   * [Set Persistent Volume](configuration/how-to/set-persistence-volume.md)
+
 
 ## Learn
 

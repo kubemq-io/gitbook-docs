@@ -1,16 +1,16 @@
-# Set Persistent Volume
+# Set Enterprise License
 
-Create Kubemq Cluster with 30Gi Persistent Volume Claim
+Create Kubemq Cluster with Enterprise License
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-```bash
+```text
 kubemqctl create cluster -v 30Gi
 ```
 {% endtab %}
 
 {% tab title="Helm" %}
-```bash
+```text
 helm install kubemq-cluster --set volume.size=30Gi -n kubemq kubemq-charts/kubemq 
 ```
 {% endtab %}
