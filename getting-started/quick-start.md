@@ -30,7 +30,7 @@ For free 30 days Enterprise licence Please [Register](https://account.kubemq.io/
 
 ## What next ?
 
-### Install Kubemqctl tool 
+### Install Kubemqctl tool
 
 {% tabs %}
 {% tab title="MacOS/Linux" %}
@@ -58,14 +58,17 @@ $env:Path += ';C:\Program Files\kubemqctl'
 {% endtab %}
 {% endtabs %}
 
-
-
-
 ### Get started with:
 
 {% page-ref page="queues.md" %}
+
 {% page-ref page="pubsub.md" %}
+
 {% page-ref page="rpc.md" %}
+
+## Demo
+
+{% embed url="https://player.vimeo.com/video/373966650" %}
 
 
 
