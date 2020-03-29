@@ -33,9 +33,5 @@ grpc:
 {% endtab %}
 {% endtabs %}
 
-#### More Configuration Options
-
-{% page-ref page="../cluster.md" %}
-
-
+#### [More Configuration Options](../cluster.md#grpc)
 
