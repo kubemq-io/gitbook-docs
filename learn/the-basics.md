@@ -24,42 +24,6 @@ A channel string can be formed from any UTF-8 characters with the following attr
 * Can begin with `>` or `*` \(for subscription receivers only\)
 * Unlimited hierarchies
 
-## Multicast Destinations
-
-RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern. Separate each destination with a `;` and specify the message pattern type with `:`.
-
-#### Message Pattern Format
-
-| Pattern | Format | Example |
-| :--- | :--- | :--- |
-| Events | events: | events: events.foo.bar;events: events.foo.bar.1 |
-| Events Store | events\_store: | events\_store: store.foo.bar;events\_store: store.foo.bar.1 |
-| Queues | queues: | queues: q1.foo.bar; queues: q2.foo.bar |
-
-#### Predefined Routes - Smart routes
-
-A predefined routes rule can be set with Kubemq Smart Routing configuration and can be used like that:
-
-| Pattern | Format | Will routes |
-| :--- | :--- | :--- |
-| Routes | routes: all-foo-bar | to all destinations defined by all-foo-bar route |
-
-More on Smart Route here:
-
-{% page-ref page="smart-routing.md" %}
-
-#### Mixing Message Pattern destinations
-
-Mixing message pattern destination is allowed. for example, an events sender can send a message to events\_store subscriber and to a queues subscriber at the same time.
-
-#### Examples
-
-| Sends From  | Channel Destinations | Will routes to |
-| :--- | :--- | :--- |
-| Events | foo.bar;foo.bar.1;events\_store: store.foo;queues: q1 | events-&gt;foo.bar, events-&gt;foo.bar.1, events\_store-&gt;store.foo, queues-&gt;q1 |
-| Events Store | foo.bar.store;events: bar.1;queues:q2; routes:my-route | events\_store-&gt;foo.bar.store, events-> bar.1, queues -> q2, all destinations defined by my-route |
-| Queues | q1.foo.bar;events: bar.1;events_store:store.foo.1 | queues-> q1.foo.bar, events-> bar.1, events_store-> store.foo.1 |
-
 ## Hierarchies
 
 Channels names can be separated by the `.` symbol to create messaging stream hierarchies.
@@ -103,6 +67,44 @@ Here some cases of channel subscription patterns and which types of messages wit
 
 ![](../.gitbook/assets/channels.png)
 
+
+## Multicast Destinations
+
+RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern. Separate each destination with a `;` and specify the message pattern type with `:`.
+
+#### Message Pattern Format
+
+| Pattern | Format | Example |
+| :--- | :--- | :--- |
+| Events | events: | events: events.foo.bar;events: events.foo.bar.1 |
+| Events Store | events\_store: | events\_store: store.foo.bar;events\_store: store.foo.bar.1 |
+| Queues | queues: | queues: q1.foo.bar; queues: q2.foo.bar |
+
+#### Predefined Routes - Smart routes
+
+A predefined routes rule can be set with Kubemq Smart Routing configuration and can be used like that:
+
+| Pattern | Format | Will routes |
+| :--- | :--- | :--- |
+| Routes | routes: all-foo-bar | to all destinations defined by all-foo-bar route |
+
+More on Smart Routes here:
+
+{% page-ref page="smart-routing.md" %}
+
+#### Mixing Message Pattern destinations
+
+Mixing message pattern destination is allowed. for example, an events sender can send a message to events\_store subscriber and to a queues subscriber at the same time.
+
+#### Examples
+
+| Sends From  | Channel Destinations | Will routes to |
+| :--- | :--- | :--- |
+| Events | foo.bar;foo.bar.1;events\_store: store.foo;queues: q1 | events-&gt;foo.bar, events-&gt;foo.bar.1, events\_store-&gt;store.foo, queues-&gt;q1 |
+| Events Store | foo.bar.store;events: bar.1;queues:q2; routes:my-route | events\_store-&gt;foo.bar.store, events-> bar.1, queues -> q2, all destinations defined by my-route |
+| Queues | q1.foo.bar;events: bar.1;events_store:store.foo.1 | queues-> q1.foo.bar, events-> bar.1, events_store-> store.foo.1 |
+
+
 ## Grouping \(Load Balancing\) <a id="grouping-load-balancing"></a>
 
 KubeMQ supports grouping receivers with the same subscription channel patterns to form a load balancing group. The group pattern is a useful pattern for sharing message load handling between services and for redundancy functionality too.
@@ -136,54 +138,3 @@ In the table below, we explore several message channels and which receiver will 
 | `foo` | R6,R7 |
 | `foo.bar` | R1, R2 or R3, R4 or R5, R6, R8 |
 | `foo.bar.zoo` | R1, R2 or R3, R6, R8 |
-
-## Endpoints <a id="endpoints"></a>
-
-KubeMQ has three exported endpoints, gRPC, Rest/Websocket, and API.
-
-TODO - Update
-
-### gRPC
-
-KubeMQ’s main endpoint is gRPC server.
-
-The KubeMQ gRPC server is enabled by default and can be disabled by setting environment variable `GRPC_ENABLE=false`.
-
-The KubeMQ gRPC embedded server exposes port 50000 by default and can be set via environment variable `GRPC_PORT`.
-
-KubeMQ gRPC can be secured by providing TLS certification and key.
-
-Setting the gRPC TLS secured server via the following environment variables:
-
-* `GRPC_SECURITY_TLS_MODE=tls`
-* `GRPC_SECURITY_CERT_FILE=cert_file_location`
-* `GRPC_SECURITY_KEY_FILE=key_file_location`
-
-**Note:** The gRPC endpoint has additional configuration settings. Please refer to the Configuration section.
-
-TODO - Update
-
-### Rest/WebSocket
-
-The KubeMQ secondary endpoint is the Rest/Websocket server.
-
-The KubeMQ Rest/Websocket server is enabled by default and can be disabled by setting environment variable `REST_ENABLE=false`.
-
-The KubeMQ Rest/Websocket server exposes port 9090 by default and can be set via environment variable `REST_PORT`.
-
-The KubeMQ Rest/Websocket can be secured by providing the TLS certification and key.
-
-Setting the Rest/Websocket TLS secured server via the following environment variables:
-
-* `REST_SECURITY_TLS_MODE=tls`
-* `REST_SECURITY_CERT_FILE=cert_file_location`
-* `REST_SECURITY_KEY_FILE=key_file_location`
-
-**Note:** The Rest/Websocket endpoint has additional configuration settings. Please refer to the Configuration section.
-
-TODO - Update
-
-### API
-
-KubeMQ exposes the API endpoint at port 8080. This port can be changed by setting the environment variable `KUBEMQ_PORT`
-
