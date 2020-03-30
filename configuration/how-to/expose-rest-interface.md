@@ -1,6 +1,5 @@
 # Expose Rest Interface
 
-
 Expose Rest interface port with a NodePort
 
 {% tabs %}
