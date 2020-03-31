@@ -31,3 +31,8 @@ Each signing method expects a different object type for its signing keys. Here a
 
 {% page-ref page="../../configuration/how-to/set-authentication.md" %}
 
+{% hint style="success" %}
+Authentication feature is available only on Kubemq Enterprise Edition.
+
+Register for free 30 days license [here](https://account.kubemq.io/login/register).
+{% endhint %}
