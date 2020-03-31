@@ -1,6 +1,5 @@
 # Set Authentication
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ```bash
@@ -40,12 +39,12 @@ authentication:
     sK3/XksM/87qPL4xNCJuV8MF4Pbx8JE3ZRusK6usmJrohv8+vgIIg4oKdpMjDlrz
     pQIDAQAB
     -----END PUBLIC KEY-----
-  type: RS512  
+  type: RS512
 ```
 {% endtab %}
 {% endtabs %}
 
-
 {% hint style="info" %}
 [Learn Access Control - Authentication Feature](../../learn/access-control/authentication.md)
 {% endhint %}
+

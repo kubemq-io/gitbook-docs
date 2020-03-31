@@ -23,10 +23,11 @@ Kubemq's JWT support require two parameters:
 
 Each signing method expects a different object type for its signing keys. Here are the supported ones:
 
-* The HMAC signing method - (`HS256`,`HS384`,`HS512`).
-* The RSA signing method -  (`RS256`,`RS384`,`RS512`).
-* The ECDSA signing method - (`ES256`,`ES384`,`ES512`).
+* The HMAC signing method - \(`HS256`,`HS384`,`HS512`\).
+* The RSA signing method -  \(`RS256`,`RS384`,`RS512`\).
+* The ECDSA signing method - \(`ES256`,`ES384`,`ES512`\).
 
 ## Loading Configuration
 
 {% page-ref page="../../configuration/how-to/set-authentication.md" %}
+
