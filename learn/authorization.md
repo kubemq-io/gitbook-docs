@@ -6,13 +6,60 @@ description: >-
 
 # Authorization
 
-
-
 ## How Permission Work
 
-When a client sends service commands such send data to a channel, subscribe to a channel, pull messages from a queue, Kubemq server checks whether the client has the permission to access the relevant resources and the action.
+When a client wants to perform an operation such send data to a channel, subscribe to a channel, pull messages from a queue, Kubemq server checks whether the client has the permission to access the relevant resources and the action. The client must have been granted the appropriate permission rule in order to complete the operation.
 
-Access control rule consist from 3 objects: 1. Source - client id
+Access control permission rule consist from 4 objects: 
+
+1. Source - the client\_id of each message or request
+2. Resource Type - Events, EventsStore, Queues, Commands, Queries
+3. Resource Name - Channel
+4. Action - Read, Write 
+
+
 
 ## Authorization Configuration
+
+#### Access Control Permission Record
+
+An access control permission record consists from 8 fields:
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| ClientID | string | Client ID - regular expression |
+| Events | bool | Allow access to events, true/false  |
+| EventsStore | bool | Allow access to events\_store, true/false |
+| Queues | bool | Allow access to queues, true/false |
+| Commands | bool | Allow access to commands, true/false |
+| Queries | bool | Allow access to queries, true/false |
+| Channel | string | Channel name - regular expression |
+| Read | bool | Allow reading from a resource \(i.e subscribe to a channel\), true/false |
+| Write | bool | Allow writing to a resource \(i.e. send message to a channel\), true/false |
+
+The regular expressions for ClientID and Channel allows great flexibility for access control permissions. Let's see some examples.
+
+For ClientID :
+
+| ClientID Regular Expression | Will Grant Access To |
+| :--- | :--- |
+| client-redis | clients with client\_id = 'client-redis' |
+| client\* | any client\_id start with 'client' |
+| .\* | any client\_id |
+
+For Channel:
+
+| Channel Regular Expression | Will Grant Access To |
+| :--- | :--- |
+| foo.bar | Channel = 'foo.bar' |
+| foo.bar\* | Any channel starts with foo.bar |
+| .\* | Any channel |
+
+#### Access Control Permission Rules Set
+
+An array of access control permission records form an access control permission rules set. Every operation will check against all the records in the rules set. In order to grant an access at least one rule set must meet the permission requirements.
+
+
+
+
 
