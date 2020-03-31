@@ -7,6 +7,7 @@
 ```bash
 kubemqctl create cluster --authorization-enabled --authorization-policy-file ./policy.json
 ```
+
 Where policy.json is json array of access control rules.
 {% endtab %}
 
@@ -14,6 +15,7 @@ Where policy.json is json array of access control rules.
 ```bash
 helm install kubemq-cluster --set-file authorization.policyData=./policy.json kubemq-charts/kubemq
 ```
+
 Where policy.json is json array of access control rules.
 {% endtab %}
 
@@ -58,22 +60,23 @@ authorization:
 {% endtab %}
 {% endtabs %}
 
-## Set Authorization Webservice Rules Source
-
+## Set Authorization Web Service Rules Source
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ```bash
 kubemqctl create cluster --authorization-enabled --authorization-url "http://your.url.rules/" --authorization-auto-reload 120
 ```
-Kubemq will call "http://your.url.rules" every 120 seconds and pulls the Authorization policy json array
+
+Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
 {% endtab %}
 
 {% tab title="Helm" %}
 ```bash
 helm install kubemq-cluster --set authorization.url="http://your.url.rules/",authorization.autoReload=120 kubemq-charts/kubemq
 ```
-Kubemq will call "http://your.url.rules" every 120 seconds and pulls the Authorization policy json array
+
+Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
 {% endtab %}
 
 {% tab title="yaml" %}
@@ -94,4 +97,7 @@ authorization:
 {% endtab %}
 {% endtabs %}
 
-## Learn Access Control - Authorization Feature
+{% hint style="info" %}
+[Learn Access Control - Authorization Feature](../../learn/access-control/authorization.md)
+{% endhint %}
+
