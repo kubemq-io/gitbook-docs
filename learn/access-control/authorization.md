@@ -17,8 +17,6 @@ Access control permission rule consists of 4 objects:
 3. Resource Name - Channel
 4. Action - Read, Write
 
-
-
 ## Authorization Configuration
 
 ### Access Control Permission Record
@@ -28,7 +26,7 @@ An access control permission record consists of 8 fields:
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | ClientID | string | Client ID - regular expression |
-| Events | bool | Allow access to events, true/false  |
+| Events | bool | Allow access to events, true/false |
 | EventsStore | bool | Allow access to events\_store, true/false |
 | Queues | bool | Allow access to queues, true/false |
 | Commands | bool | Allow access to commands, true/false |
@@ -81,7 +79,7 @@ An array of access control permission records form an access control permission 
 
 #### Grant access to all client ids starts with sub. to all resources only for reading from foo.bar channel
 
-```json
+```javascript
 [
    {
       "ClientID":"sub.*",
@@ -99,7 +97,7 @@ An array of access control permission records form an access control permission 
 
 Grant access for client-1 to send events only to foo.bar.1 and client-2 to send only to foo.bar.2
 
-```json
+```javascript
 [
    {
       "ClientID":"client-1",
@@ -123,7 +121,7 @@ Grant access for client-1 to send events only to foo.bar.1 and client-2 to send 
       "Read":false,
       "Write": true
    },
-   
+
 ]
 ```
 
@@ -134,7 +132,5 @@ Kubemq supports two configuration loading options:
 1. Set json array on cluster creation
 2. Set Url of a web service to call and get Authorization configuration json array with automatic reloading options every predefined second
 
-{% page-ref page="../configuration/how-to/set-authorization.md" %}
-
-
+{% page-ref page="../../configuration/how-to/set-authorization.md" %}
 

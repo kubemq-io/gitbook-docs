@@ -46,8 +46,9 @@
   * [Queues](learn/message-patterns/queue.md)
   * [Pub/Sub](learn/message-patterns/pubsub.md)
   * [RPC](learn/message-patterns/rpc.md)
-* [Authentication](learn/authentication.md)
-* [Authorization](learn/authorization.md)
+* [Access Control](learn/access-control/README.md)
+  * [Authentication](learn/access-control/authentication.md)
+  * [Authorization](learn/access-control/authorization.md)
 * [Smart Routing](learn/smart-routing.md)
 
 ## Kubemqctl
