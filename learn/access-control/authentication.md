@@ -36,3 +36,4 @@ Authentication feature is available only on Kubemq Enterprise Edition.
 
 Register for free 30 days license [here](https://account.kubemq.io/login/register).
 {% endhint %}
+
