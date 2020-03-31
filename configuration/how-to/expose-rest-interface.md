@@ -33,4 +33,5 @@ rest:
 {% endtab %}
 {% endtabs %}
 
-#### [More Configuration Options](../cluster.md#rest)
+## [More Configuration Options](../cluster.md#rest)
+

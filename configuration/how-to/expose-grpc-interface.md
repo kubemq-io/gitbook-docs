@@ -33,5 +33,5 @@ grpc:
 {% endtab %}
 {% endtabs %}
 
-#### [More Configuration Options](../cluster.md#grpc)
+## [More Configuration Options](../cluster.md#grpc)
 

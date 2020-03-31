@@ -24,7 +24,7 @@
 * [How to](configuration/how-to/README.md)
   * [Set Enterprise License](configuration/how-to/set-enterprise-license.md)
   * [Set Cluster Name](configuration/how-to/set-cluster-name.md)
-  * [Set Namespace name](configuration/how-to/set-namespace-name.md)
+  * [Set Cluster Namespace](configuration/how-to/set-namespace-name.md)
   * [Set Persistent Volume](configuration/how-to/set-persistence-volume.md)
   * [Set Cluster Image](configuration/how-to/set-cluster-image.md)
   * [Set Cluster Replicas](configuration/how-to/untitled.md)

@@ -1,2 +1,2 @@
-# Set Namespace name
+# Set Cluster Namespace
 

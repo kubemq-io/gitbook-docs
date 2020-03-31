@@ -14,9 +14,11 @@ kubemqctl kubemqctl scale cluster 5
 helm upgrade kubemq-cluster kubemq-charts/kubemq --set replicas=5
 ```
 {% endtab %}
+
 {% tab title="kubectl" %}
 ```bash
 kubectl scale --replicas=5 kubemqclusters/kubemq-cluster
 ```
 {% endtab %}
 {% endtabs %}
+
