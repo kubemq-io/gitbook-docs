@@ -14,5 +14,11 @@ description: >-
 
 ![](../.gitbook/assets/dashboard-2.png)
 
+## Exported Metrics
 
+Kubemq exports the following metrics:
+
+| Metric | Tytp | Labels |
+| :--- | :--- | :--- |
+| Messages Count | Counter | "node",  |
 
