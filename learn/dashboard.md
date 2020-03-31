@@ -6,7 +6,7 @@ description: >-
 
 # Dashboard
 
-
+## Kubemq Dashboard Main View
 
 ![](../.gitbook/assets/dashboard-1.png)
 
