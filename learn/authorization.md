@@ -8,7 +8,7 @@ description: >-
 
 ## How Permission Work
 
-When a client wants to perform an operation such send data to a channel, subscribe to a channel, pull messages from a queue, Kubemq server checks whether the client has the permission to access the relevant resources and the action. The client must have been granted the appropriate permission rule in order to complete the operation.
+When a client wants to perform an operation such send data to a channel, subscribe to a channel, pull messages from a queue etc, Kubemq server checks whether the client has the permission to access the relevant resources and the action. The client must have been granted the appropriate permission rule in order to complete the operation.
 
 Access control permission rule consist from 4 objects: 
 
