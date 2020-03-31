@@ -18,7 +18,13 @@ description: >-
 
 Kubemq exports the following metrics:
 
-| Metric | Tytp | Labels |
-| :--- | :--- | :--- |
-| Messages Count | Counter | "node",  |
+| Metric          | Tytp    | Labels                                         |
+|:----------------|:--------|:-----------------------------------------------|
+| Messages Count  | Counter | "node", "client_id", "type", "side", "channel" |
+| Messages Volume | Counter | "node", "client_id", "type", "side", "channel" |
+| Messages Errors | Counter | "node", "client_id", "type", "side", "channel" |
+| Clients         | Gauge   | "node", "client_id", "type", "side", "channel" |
+
+Labels Descriptions:
+
 
