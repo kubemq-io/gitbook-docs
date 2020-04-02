@@ -39,6 +39,8 @@
   * [Set Store Settings](configuration/how-to/set-store-settings.md)
   * [Set Queues Settings](configuration/how-to/set-queues-settings.md)
 
+## Troubleshooting
+
 ## Learn
 
 * [The Basics](learn/the-basics.md)
@@ -126,7 +128,6 @@
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
 
-## troubleshooting
+## Troubleshooting
 
-* [Untitled](troubleshooting/untitled.md)
 
