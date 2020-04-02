@@ -40,7 +40,8 @@
   * [Set Queues Settings](configuration/how-to/set-queues-settings.md)
 
 ## Troubleshooting
-* [Start Here](troubleshooting/README.md)
+
+* [Start Here](troubleshooting/start-here.md)
 
 ## Learn
 
@@ -128,7 +129,4 @@
 * [Kubemq Cluster](change-log/kubemq-cluster.md)
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
-
-## Troubleshooting
-
 
