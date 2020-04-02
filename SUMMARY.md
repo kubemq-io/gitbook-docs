@@ -126,3 +126,7 @@
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
 
+## troubleshooting
+
+* [Untitled](troubleshooting/untitled.md)
+

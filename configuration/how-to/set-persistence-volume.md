@@ -35,6 +35,7 @@ spec:
 {% endtabs %}
 
 ## Set Storage Class
+
 Create Kubemq Cluster with 30Gi Persistent Volume Claim with specific Storage Class name
 
 {% tabs %}
@@ -67,3 +68,4 @@ spec:
 ```
 {% endtab %}
 {% endtabs %}
+
