@@ -40,6 +40,7 @@
   * [Set Queues Settings](configuration/how-to/set-queues-settings.md)
 
 ## Troubleshooting
+* [Troubleshooting](troubleshooting/README.md)
 
 ## Learn
 
