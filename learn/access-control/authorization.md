@@ -135,7 +135,7 @@ Kubemq supports two configuration loading options:
 {% page-ref page="../../configuration/how-to/set-authorization.md" %}
 
 {% hint style="success" %}
-Authorization feature is available only on Kubemq Enterprise Edition.
+The authorization feature is available only on Kubemq Enterprise Edition.
 
 Register for free 30 days license [here](https://account.kubemq.io/login/register).
 {% endhint %}
