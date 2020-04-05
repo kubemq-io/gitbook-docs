@@ -4,15 +4,28 @@ Create Kubemq Cluster with Enterprise License
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-```text
-kubemqctl create cluster -v 30Gi
+
+#### With License Token
+```bash
+kubemqctl create cluster -t {your-license-token-here}
 ```
 {% endtab %}
 
-{% tab title="Helm" %}
-```text
-helm install kubemq-cluster --set volume.size=30Gi -n kubemq kubemq-charts/kubemq
+#### With License Key
+
+```bash
+kubemqctl create cluster --license-filename ./license.key
 ```
+Where license.key contains the license data
+{% endtab %}
+
+{% tab title="Helm" %}
+
+```bash
+helm install kubemq-cluster --set-file license=./license.key
+```
+Where license.key contains the license data
+
 {% endtab %}
 
 {% tab title="yaml" %}
@@ -26,8 +39,8 @@ metadata:
     app: kubemq-cluster
 spec:
   replicas: 3
-  volume:
-    size: 30Gi
+  license: |-
+    { License Data Here} 
 ```
 {% endtab %}
 {% endtabs %}

@@ -16,6 +16,12 @@ helm install kubemq-cluster --set grpc.expose=NodePort,grpc-nodePort=30500  -n k
 {% endtab %}
 
 {% tab title="yaml" %}
+
+Run:
+```bash
+kubectl apply -f {below-yaml-file}
+```
+
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqCluster
@@ -26,9 +32,9 @@ metadata:
     app: kubemq-cluster
 spec:
   replicas: 3
-grpc:
-  expose: NodePort
-  nodePort: 30500
+  grpc:
+    expose: NodePort
+    nodePort: 30500
 ```
 {% endtab %}
 {% endtabs %}

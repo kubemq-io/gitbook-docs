@@ -5,7 +5,7 @@ Scale Kubemq cluster replicas
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ```bash
-kubemqctl kubemqctl scale cluster 5
+kubemqctl scale cluster 5
 ```
 {% endtab %}
 

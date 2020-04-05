@@ -30,32 +30,32 @@ metadata:
     app: kubemq-cluster
 spec:
   replicas: 3
-authorization:
-  policy: |-
-    [
-       {
-          "ClientID":"client-1",
-          "Events":true,
-          "EventsStore": false,
-          "Queues": false,
-          "Commands": false,
-          "Queries": false,
-          "Channel":"foo.bar.1",
-          "Read":false,
-          "Write": true
-       },
-       {
-          "ClientID":"client-2",
-          "Events":true,
-          "EventsStore": false,
-          "Queues": false,
-          "Commands": false,
-          "Queries": false,
-          "Channel":"foo.bar.2",
-          "Read":false,
-          "Write": true
-       },
-    ]
+  authorization:
+    policy: |-
+      [
+         {
+            "ClientID":"client-1",
+            "Events":true,
+            "EventsStore": false,
+            "Queues": false,
+            "Commands": false,
+            "Queries": false,
+            "Channel":"foo.bar.1",
+            "Read":false,
+            "Write": true
+         },
+         {
+            "ClientID":"client-2",
+            "Events":true,
+            "EventsStore": false,
+            "Queues": false,
+            "Commands": false,
+            "Queries": false,
+            "Channel":"foo.bar.2",
+            "Read":false,
+            "Write": true
+         },
+      ]
 ```
 {% endtab %}
 {% endtabs %}
@@ -80,6 +80,12 @@ Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seco
 {% endtab %}
 
 {% tab title="yaml" %}
+
+Run:
+```bash
+kubectl apply -f {below-yaml-file}
+```
+
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqCluster
@@ -90,9 +96,9 @@ metadata:
     app: kubemq-cluster
 spec:
   replicas: 3
-authorization:
-  url: "http://your.url.rules/"
-  autoReload: 120
+  authorization:
+    url: "http://your.url.rules/"
+    autoReload: 120
 ```
 {% endtab %}
 {% endtabs %}
