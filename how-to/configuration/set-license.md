@@ -4,36 +4,58 @@ Create Kubemq Cluster with Enterprise License
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-## With License Token
+## Flags
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| --license-data | string | ""|Set license data |
+| --license-file | string | "" |set license filename |
+| --license-token | string |"" |Set license token" |
+
+## Exmaples
+
+With license token:
 
 ```bash
 kubemqctl create cluster -t {your-license-token-here}
 ```
-{% endtab %}
+With license key file:
 
-{% tab %}
-## With License Key
-{% endtab %}
-
-{% tab %}
 ```bash
-kubemqctl create cluster --license-filename ./license.key
+kubemqctl create cluster --license-file ./license.key
 ```
-{% endtab %}
-
-{% tab %}
 Where license.key contains the license data
+
 {% endtab %}
 
 {% tab title="Helm" %}
+
+## Values
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| license | string | ""|Set license data |
+
+## Exmaple
+
+With license key file:
 ```bash
 helm install kubemq-cluster --set-file license=./license.key
 ```
-
 Where license.key contains the license data
 {% endtab %}
 
 {% tab title="yaml" %}
+
+## Fields
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| license | string | ""|Set license data |
+
+## Exmaple
+
+With license key data:
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqCluster
