@@ -41,23 +41,23 @@
 ## HOW TO
 
 * [Configuration](how-to/configuration/README.md)
-  * [Set Enterprise License](how-to/configuration/set-enterprise-license.md)
+  * [Set License](how-to/configuration/set-license.md)
   * [Set Cluster Name](how-to/configuration/set-cluster-name.md)
   * [Set Cluster Namespace](how-to/configuration/set-cluster-namespace.md)
   * [Set Persistent Volume](how-to/configuration/set-persistence-volume.md)
   * [Set Cluster Image](how-to/configuration/set-cluster-image.md)
-  * [Set Cluster Replicas](how-to/configuration/untitled.md)
-  * [Scale Cluster](how-to/configuration/scale-cluster.md)
+  * [Set Cluster Replicas](how-to/configuration/default-template.md)
   * [Expose gRPC Interface](how-to/configuration/expose-grpc-interface.md)
   * [Expose Rest Interface](how-to/configuration/expose-rest-interface.md)
   * [Secure Cluster With TLS](how-to/configuration/secure-cluster-with-tls.md)
   * [Set Authentication](how-to/configuration/set-authentication.md)
   * [Set Authorization](how-to/configuration/set-authorization.md)
-  * [Set Smart Routing](how-to/configuration/set-smart-routing.md)
+  * [Set Routing](how-to/configuration/set-routing.md)
   * [Set Health Probe](how-to/configuration/set-health-probe.md)
   * [Set Store Settings](how-to/configuration/set-store-settings.md)
   * [Set Queues Settings](how-to/configuration/set-queues-settings.md)
 * [Operation](how-to/operation/README.md)
+  * [Scale Cluster](how-to/operation/scale-cluster.md)
   * [Connect Your Cluster](how-to/operation/connect-your-cluster.md)
 
 ## Troubleshooting
