@@ -2,22 +2,55 @@
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
+
+#### Flags
+
+| Flag                               | Type/Options | Default | Description                                                         |
+|:-----------------------------------|:-------------|:--------|:--------------------------------------------------------------------|
+| authentication-enabled | bool | false | Enable authentication configuration |
+| authentication-public-key-data | string | "" |Set authentication public key data |
+| authentication-public-key-file | string | "" |Set authentication public key filename |
+| authentication-public-key-type | string HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512 | ""|Set authentication public key type |
+
+#### Example
+
+Load key.pem as a public key file encoded with RSA 512:
+
 ```bash
 kubemqctl create cluster --authentication-enabled --authentication-public-key-file ./key.pem --authentication-public-key-type "RS512"
 ```
 
-Where key.pem is a public key file encoded with RSA 512.
 {% endtab %}
 
 {% tab title="Helm" %}
+
+#### Values
+| Flag                               | Type/Options | Default | Description                                                         |
+|:-----------------------------------|:-------------|:--------|:--------------------------------------------------------------------|
+| authentication.key | string | "" |Set authentication public key data |
+| authentication.type | string HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512 | ""|Set authentication public key type |
+
+
+#### Example
+
+Load key.pem as a public key file encoded with RSA 512:
+
 ```bash
 helm install kubemq-cluster --set-file authentication.key=./key.pem --set authentication.type=RS512 kubemq-charts/kubemq
 ```
 
-Where key.pem is a public key file encoded with RSA 512.
 {% endtab %}
 
 {% tab title="yaml" %}
+
+#### Fields
+| Flag                               | Type/Options | Default | Description                                                         |
+|:-----------------------------------|:-------------|:--------|:--------------------------------------------------------------------|
+| key | string | "" |Set JWT public key data |
+| type | string HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512 | ""|Set JWT public key signing method |
+
+#### Exmaple
+
 Run:
 
 ```bash
