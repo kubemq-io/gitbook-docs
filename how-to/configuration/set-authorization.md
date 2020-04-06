@@ -38,9 +38,9 @@ Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seco
 
 | Flag                     | Type/Options | Default | Description                                           |
 |:-------------------------|:-------------|:--------|:------------------------------------------------------|
-| authorization.PolicyData | string       |         | Set Authorization policy data                         |
-| authorization.url        | string url   |         | Set Optional authorization server url for policy data |
-| authorization.autoReload | int          |         | Set auto reload policy data from url                  |
+| authorization.PolicyData | string       |     ""    | Set Authorization policy data                         |
+| authorization.url        | string url   |   ""      | Set Optional authorization server url for policy data |
+| authorization.autoReload | int          |     0    | Set auto reload policy data from url                  |
 
 
 ## Exmaples
@@ -65,9 +65,9 @@ helm install kubemq-cluster --set authorization.url="http://your.url.rules/",aut
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| policyData | string | |Set Authorization policy data |
-| url | string url | |Set Optional authorization server url for policy data |
-| autoReload | int | |Set auto reload policy data from url |
+| policyData | string | ""|Set Authorization policy data |
+| url | string url |"" |Set Optional authorization server url for policy data |
+| autoReload | int |0 |Set auto reload policy data from url |
 
 ## Exmaples
 
