@@ -55,8 +55,8 @@
   * [Set Authorization](how-to/configuration/set-authorization.md)
   * [Set Smart Routing](how-to/configuration/set-smart-routing.md)
   * [Set Health Probe](how-to/configuration/set-health-probe.md)
-  * [Set Queues Settings](how-to/configuration/set-queues-settings%20%281%29.md)
-  * [Set Queues Settings](how-to/configuration/set-queues-settings%20%281%29.md)
+  * [Set Store Settings](how-to/configuration/set-store-settings.md)
+  * [Set Queues Settings](how-to/configuration/set-queues-settings.md)
 * [Operation](how-to/operation/README.md)
   * [Connect Your Cluster](how-to/operation/connect-your-cluster.md)
 
