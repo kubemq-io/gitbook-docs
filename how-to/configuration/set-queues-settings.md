@@ -23,13 +23,13 @@ Queues options allows to configure Kubemq Queues defaults.
 
 #### Exmaples
 
-##### Set max delay seconds allowed to no more than one hour
+Set max delay seconds allowed to no more than one hour
 
 ```bash
 kubemqctl create cluster --queue-max-delay-seconds 3600
 ```
 
-##### Change default of visibility to 3 minutes
+Change default of visibility to 3 minutes
 
 ```bash
 kubemqctl create cluster --queue-default-visibility-seconds 180
@@ -57,13 +57,13 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 
 #### Exmaples
 
-##### Set max delay seconds allowed to no more than one hour
+Set max delay seconds allowed to no more than one hour
 
 ```bash
 helm install kubemq-cluster  --set queue.maxDelaySeconds=3600 kubemq-charts/kubemq
 ```
 
-##### Change default of visibility to 3 minutes
+Change default of visibility to 3 minutes
 
 ```bash
 helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-charts/kubemq
@@ -90,7 +90,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 
 #### Exmaples
 
-##### Set max delay seconds allowed to no more than one hour
+Set max delay seconds allowed to no more than one hour
 
 Run:
 ```bash
@@ -111,7 +111,7 @@ spec:
     maxDelaySeconds: 3600
 ```
 
-##### Change default of visibility to 3 minutes
+Change default of visibility to 3 minutes
 
 Run:
 ```bash

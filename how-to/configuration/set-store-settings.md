@@ -21,13 +21,13 @@ Store options allows to configure the way Kubemq server store persistence data f
 
 #### Exmaples
 
-##### Clean store when loading - in case of a need to clean and start fresh store
+Clean store when loading - in case of a need to clean and start fresh store
 
 ```bash
 kubemqctl create cluster --store-clean true
 ```
 
-##### Delete inactive channels after 180 minutes if inactivity
+Delete inactive channels after 180 minutes if inactivity
 ```bash
 kubemqctl create cluster --store-purge-inactive-minutes 180
 ```
@@ -83,7 +83,7 @@ helm install kubemq-cluster  --set store.purgeInactiveMinutes=t180 kubemq-charts
 
 #### Exmaples
 
-##### Clean store when loading - in case of a need to clean and start fresh store
+ Clean store when loading - in case of a need to clean and start fresh store
 
 Run:
 ```bash
@@ -104,7 +104,7 @@ spec:
     clean: true
 ```
 
-##### Delete inactive channels after 180 minutes if inactivity
+Delete inactive channels after 180 minutes if inactivity
 
 Run:
 ```bash
