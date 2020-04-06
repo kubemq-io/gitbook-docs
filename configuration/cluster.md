@@ -98,7 +98,7 @@
 | Field | Type/Options | Description | Example |
 | :--- | :--- | :--- | :--- |
 | maxReceiveMessagesRequest | int | Set max of sending / receiving batch of queue message | 1024 |
-| maxWaitTimeoutSeconds | int | Set max expiration allowed for message | 3600 |
+| maxWaitTimeoutSeconds | int | Set max wait timeout allowed for message | 3600 |
 | maxExpirationSeconds | int | Set max expiration allowed for message | 43200 |
 | maxDelaySeconds | int | set max delay seconds allowed for message | 43200 |
 | maxReQueues | int | Set max retires to receive message before discard | 1024 |
