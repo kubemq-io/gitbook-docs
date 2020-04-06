@@ -18,6 +18,21 @@
 * [Pub/Sub](getting-started/pubsub.md)
 * [RPC](getting-started/rpc.md)
 
+## Learn
+
+* [The Basics](learn/the-basics.md)
+* [Message Patterns](learn/message-patterns/README.md)
+  * [Queues](learn/message-patterns/queue.md)
+  * [Pub/Sub](learn/message-patterns/pubsub.md)
+  * [RPC](learn/message-patterns/rpc.md)
+* [Access Control](learn/access-control/README.md)
+  * [Authentication](learn/access-control/authentication.md)
+  * [Authorization](learn/access-control/authorization.md)
+* [Smart Routing](learn/smart-routing.md)
+* [Cluster Persistency](learn/cluster-persistency.md)
+* [Cluster Scale](learn/cluster-scale.md)
+* [Dashboard](learn/dashboard.md)
+
 ## Configuration
 
 * [Cluster Configuration](configuration/cluster.md)
@@ -40,29 +55,14 @@
   * [Set Authorization](how-to/configuration/set-authorization.md)
   * [Set Smart Routing](how-to/configuration/set-smart-routing.md)
   * [Set Health Probe](how-to/configuration/set-health-probe.md)
-  * [Set Store Settings](how-to/configuration/set-store-settings.md)
-  * [Set Queues Settings](how-to/configuration/set-queues-settings.md)
+  * [Set Queues Settings](how-to/configuration/set-queues-settings%20%281%29.md)
+  * [Set Queues Settings](how-to/configuration/set-queues-settings%20%281%29.md)
 * [Operation](how-to/operation/README.md)
   * [Connect Your Cluster](how-to/operation/connect-your-cluster.md)
 
 ## Troubleshooting
 
 * [Start Here](troubleshooting/start-here.md)
-
-## Learn
-
-* [The Basics](learn/the-basics.md)
-* [Message Patterns](learn/message-patterns/README.md)
-  * [Queues](learn/message-patterns/queue.md)
-  * [Pub/Sub](learn/message-patterns/pubsub.md)
-  * [RPC](learn/message-patterns/rpc.md)
-* [Access Control](learn/access-control/README.md)
-  * [Authentication](learn/access-control/authentication.md)
-  * [Authorization](learn/access-control/authorization.md)
-* [Smart Routing](learn/smart-routing.md)
-* [Cluster Persistency](learn/cluster-persistency.md)
-* [Cluster Scale](learn/cluster-scale.md)
-* [Dashboard](learn/dashboard.md)
 
 ## Kubemqctl
 

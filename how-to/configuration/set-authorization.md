@@ -80,8 +80,8 @@ Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seco
 {% endtab %}
 
 {% tab title="yaml" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```

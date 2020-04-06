@@ -16,8 +16,8 @@ helm install kubemq-cluster --set grpc.expose=NodePort,grpc-nodePort=30500  -n k
 {% endtab %}
 
 {% tab title="yaml" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```

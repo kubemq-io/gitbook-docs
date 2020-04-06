@@ -13,12 +13,11 @@ kubemqctl create cluster --namespace kubemq-namespace
 ```bash
 helm install kubemq-cluster  kubemq-charts/kubemq -n kubemq-namespace
 ```
-
 {% endtab %}
 
 {% tab title="kubectl" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```
@@ -34,6 +33,4 @@ spec:
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

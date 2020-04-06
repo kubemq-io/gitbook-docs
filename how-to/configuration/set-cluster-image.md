@@ -17,12 +17,11 @@ helm install kubemq-cluster  --set image.image  docker.io/kubemq/kubemq:latest k
 ```
 
 Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `registry/repository:tag` format
-
 {% endtab %}
 
 {% tab title="kubectl" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```
@@ -42,6 +41,4 @@ spec:
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -48,15 +48,15 @@ Labels descriptions:
 | Outgoing Volume Rate | Events, Events Store, Queues, Queries, Commands |
 
 #### Message Pattern View
+
 For each message pattern a dedicated panel with the following info:
 
 | View | Description |
 | :--- | :--- |
-| Incoming Message Rate | Messages per second received in the cluster from clients|
-| Incoming Volume Rate | Volume (bps) received in the cluster from clients|
+| Incoming Message Rate | Messages per second received in the cluster from clients |
+| Incoming Volume Rate | Volume \(bps\) received in the cluster from clients |
 | Outgoing Message Rate | Messages per second sent from the cluster to clients |
-| Outgoing Volume Rate | Volume (bps) send from the cluster to clients |
-| Channels | List of active channels|
-| Clients| List of active clients |
-
+| Outgoing Volume Rate | Volume \(bps\) send from the cluster to clients |
+| Channels | List of active channels |
+| Clients | List of active clients |
 

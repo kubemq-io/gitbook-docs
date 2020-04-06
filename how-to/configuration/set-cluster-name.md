@@ -1,6 +1,5 @@
 # Set Cluster Name
 
-
 Set implicit Kubemq cluster name
 
 {% tabs %}
@@ -14,12 +13,11 @@ kubemqctl create cluster --name your-kubemq-cluster-name
 ```bash
 helm install your-kubemq-cluster-name  kubemq-charts/kubemq
 ```
-
 {% endtab %}
 
 {% tab title="kubectl" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```
@@ -35,6 +33,4 @@ spec:
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -20,12 +20,11 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 {% endtab %}
 
 {% tab title="yaml" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```
-
 
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1

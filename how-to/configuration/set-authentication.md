@@ -18,12 +18,11 @@ Where key.pem is a public key file encoded with RSA 512.
 {% endtab %}
 
 {% tab title="yaml" %}
-
 Run:
+
 ```bash
 kubectl apply -f {below-yaml-file}
 ```
-
 
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1
@@ -47,7 +46,6 @@ spec:
       pQIDAQAB
       -----END PUBLIC KEY-----
     type: RS512
-
 ```
 {% endtab %}
 {% endtabs %}
