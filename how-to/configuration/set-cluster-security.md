@@ -1,17 +1,42 @@
-# Secure Cluster With TLS
-
-Set TLS certificates to secure Kubemq cluster
+# Set Cluster Security
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
+## Flags
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| tls-enabled | bool |false |Enable tls configuration |
+| tls-cert-data | string |"" |Set tls certification data |
+| tls-cert-file | string |"" |Set tls certification file name |
+| tls-key-data | string | "" |Set tls private key data |
+| tls-key-file | string | "" |Set tls private key file name |
+| tls-ca-data | string | "" |Set tls certification authority  data |
+| tls-ca-data | string | "" |Set tls certification authority  file name |
+
+## Exmaple
+
+Set TLS certificates to secure Kubemq cluster:
+
 ```bash
 kubemqctl create cluster --tls-enabled --tls-cert-file ./cert.pem --tls-key-file ./key.pem --tls-ca-file ./ca.pem
 ```
-
 Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS settings.
 {% endtab %}
 
 {% tab title="Helm" %}
+
+## Values
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| tls.cert | string |"" |Set tls certification data |
+| tls.key | string | "" |Set tls private key data |
+| tls.ca | string | "" |Set tls certification authority  data |
+
+## Exmaple
+Set TLS certificates to secure Kubemq cluster:
+
 ```bash
 helm install kubemq-cluster --set-file tls.cert=./cert.pem,tls.key=./key.pem,tls.ca=./ca.pem kubemq-charts/kubemq
 ```
@@ -20,6 +45,18 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 {% endtab %}
 
 {% tab title="yaml" %}
+
+## Fields
+
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| cert | string |"" |Set tls certification data |
+| key | string | "" |Set tls private key data |
+| ca | string | "" |Set tls certification authority  data |
+
+## Exmaple
+Set TLS certificates to secure Kubemq cluster:
+
 Run:
 
 ```bash
