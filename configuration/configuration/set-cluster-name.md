@@ -8,7 +8,7 @@
 | :--- | :--- | :--- | :--- |
 | --name | string | "kubemq-cluster" | set kubemq cluster name |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster name:
 
@@ -22,7 +22,7 @@ kubemqctl create cluster --name your-kubemq-cluster-name
 
 No values defined for cluster name.
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster name:
 
@@ -38,7 +38,7 @@ helm install your-kubemq-cluster-name  kubemq-charts/kubemq
 | :--- | :--- | :--- | :--- |
 | name | string | "kubemq-cluster" | set kubemq cluster name |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster name: Run:
 

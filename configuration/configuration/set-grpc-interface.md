@@ -19,7 +19,7 @@ Expose Options:
 
 ClusterIP/NodePort/LoadBalancer
 
-## Exmaple
+## Example
 
 Expose gRPC interface port with a NodePort:
 
@@ -44,7 +44,7 @@ Expose Options:
 
 ClusterIP/NodePort/LoadBalancer
 
-## Exmaples
+## Examples
 
 Expose gRPC interface port with a NodePort:
 
@@ -69,7 +69,7 @@ Expose Options:
 
 ClusterIP/NodePort/LoadBalancer
 
-## Exmaple
+## Example
 
 Expose gRPC interface port with a NodePort:
 

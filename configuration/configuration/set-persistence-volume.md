@@ -11,7 +11,7 @@
 | --volume-size | string | "" | Desired size of Persisted Volume Claim |
 | --volume-storageClass | string | "default" | Set persisted volume storage class |
 
-## Exmaples
+## Examples
 
 Create Kubemq Cluster with 30Gi Persistent Volume Claim:
 
@@ -34,7 +34,7 @@ kubemqctl create cluster -v 30Gi --volume-storage-class "your-storage-class-name
 | volume.size | string | "" | Desired size of Persisted Volume Claim |
 | volume.storageClass | string | "default" | Set persisted volume storage class |
 
-## Exmaples
+## Examples
 
 Create Kubemq Cluster with 30Gi Persistent Volume Claim:
 
@@ -57,7 +57,7 @@ helm install kubemq-cluster --set volume.size=30Gi,volume.storageClass="your-sto
 | size | string | "" | Desired size of Persisted Volume Claim |
 | storageClass | string | "default" | Set persisted volume storage class |
 
-## Exmaples
+## Examples
 
 Create Kubemq Cluster with 30Gi Persistent Volume Claim:
 

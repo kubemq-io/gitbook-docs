@@ -9,7 +9,7 @@
 | --image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
 | --image-pull-policy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster docker image:
 
@@ -28,7 +28,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 | image.image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
 | image.pullPolicy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster docker image:
 
@@ -47,7 +47,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 | image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
 | pullPolicy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster docker image: Run:
 

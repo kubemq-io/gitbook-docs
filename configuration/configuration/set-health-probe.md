@@ -13,7 +13,7 @@
 | --health-success-threshold | int | 1 | Set Success Threshold |
 | --health-failure-threshold | int | 12 | Set Failure Threshold |
 
-## Exmaple
+## Example
 
 Enable liveness prob with default values
 
@@ -40,7 +40,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 | health.successThreshold | int | 1 | Set Success Threshold |
 | health.failureThreshold | int | 12 | Set Failure Threshold |
 
-## Exmaple
+## Example
 
 Enable liveness prob with default values
 
@@ -61,7 +61,7 @@ helm install kubemq-cluster  --set health.enabled=true  kubemq-charts/kubemq
 | successThreshold | int | 1 | Set Success Threshold |
 | failureThreshold | int | 12 | Set Failure Threshold |
 
-## Exmaple
+## Example
 
 Enable liveness prob with default values
 

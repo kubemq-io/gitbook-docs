@@ -17,7 +17,7 @@ Store options allows to configure the way Kubemq server store persistence data f
 | --store-messages-retention-minutes | int | 1440 | Set message retention time in minutes |
 | --store-purge-inactive-minutes | int | 1440 | Set time in minutes of channel inactivity to delete |
 
-## Exmaples
+## Examples
 
 Clean store when loading - in case of a need to clean and start fresh store
 
@@ -46,7 +46,7 @@ kubemqctl create cluster --store-purge-inactive-minutes 180
 | store.messagesRetention-minutes | int | 1440 | Set message retention time in minutes |
 | store.purgeInactiveMinutes | int | 1440 | Set time in minutes of channel inactivity to delete |
 
-## Exmaples
+## Examples
 
 Clean store when loading - in case of a need to clean and start fresh store
 
@@ -75,7 +75,7 @@ helm install kubemq-cluster  --set store.purgeInactiveMinutes=t180 kubemq-charts
 | messagesRetention-minutes | int | 1440 | Set message retention time in minutes |
 | purgeInactiveMinutes | int | 1440 | Set time in minutes of channel inactivity to delete |
 
-## Exmaples
+## Examples
 
 Clean store when loading - in case of a need to clean and start fresh store
 

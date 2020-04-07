@@ -12,7 +12,7 @@ Create Kubemq Cluster with Enterprise License
 | --license-file | string | "" | set license filename |
 | --license-token | string | "" | Set license token" |
 
-## Exmaples
+## Examples
 
 With license token:
 
@@ -36,7 +36,7 @@ Where license.key contains the license data
 | :--- | :--- | :--- | :--- |
 | license | string | "" | Set license data |
 
-## Exmaple
+## Example
 
 With license key file:
 
@@ -54,7 +54,7 @@ Where license.key contains the license data
 | :--- | :--- | :--- | :--- |
 | license | string | "" | Set license data |
 
-## Exmaple
+## Example
 
 With license key data:
 

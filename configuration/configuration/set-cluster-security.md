@@ -14,7 +14,7 @@
 | --tls-ca-data | string | "" | Set tls certification authority  data |
 | --tls-ca-data | string | "" | Set tls certification authority  file name |
 
-## Exmaple
+## Example
 
 Set TLS certificates to secure Kubemq cluster:
 
@@ -34,7 +34,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 | tls.key | string | "" | Set tls private key data |
 | tls.ca | string | "" | Set tls certification authority  data |
 
-## Exmaple
+## Example
 
 Set TLS certificates to secure Kubemq cluster:
 
@@ -54,7 +54,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 | key | string | "" | Set tls private key data |
 | ca | string | "" | Set tls certification authority  data |
 
-## Exmaple
+## Example
 
 Set TLS certificates to secure Kubemq cluster:
 

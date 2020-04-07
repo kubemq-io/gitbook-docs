@@ -12,7 +12,7 @@
 | --authorization-url | string url | "" | Set authorization policy loading url |
 | --authorization-auto-reload | int | 0 | Set auto reload policy data from url |
 
-## Exmaples
+## Examples
 
 Set predefined authorization rules policy where policy.json is json array of access control rules:
 
@@ -40,7 +40,7 @@ Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seco
 | authorization.url | string url | "" | Set Optional authorization server url for policy data |
 | authorization.autoReload | int | 0 | Set auto reload policy data from url |
 
-## Exmaples
+## Examples
 
 Set predefined authorization rules policy where policy.json is json array of access control rules:
 
@@ -64,7 +64,7 @@ helm install kubemq-cluster --set authorization.url="http://your.url.rules/",aut
 | url | string url | "" | Set Optional authorization server url for policy data |
 | autoReload | int | 0 | Set auto reload policy data from url |
 
-## Exmaples
+## Examples
 
 Set predefined authorization rules policy where policy.json is json array of access control rules:
 

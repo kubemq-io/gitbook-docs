@@ -8,7 +8,7 @@
 | :--- | :--- | :--- | :--- |
 
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 
@@ -30,7 +30,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 | :--- | :--- | :--- | :--- |
 
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 
@@ -52,7 +52,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 | :--- | :--- | :--- | :--- |
 
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 

@@ -12,7 +12,7 @@
 | --resources-requests-cpu | string | "2" | Set Requests CPU |
 | --resources-requests-memory | string | 512M | Set Requests Memory |
 
-## Exmaple
+## Example
 
 Set Resources limits:
 
@@ -38,7 +38,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 | resources.requestsCpu | string | "2" | Set Requests CPU |
 | resources.requestsMemory | string | 512M | Set Requests Memory |
 
-## Exmaple
+## Example
 
 Set Resources limits:
 
@@ -64,7 +64,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 | requestsCpu | string | "2" | Set Requests CPU |
 | requestsMemory | string | 512M | Set Requests Memory |
 
-## Exmaple
+## Example
 
 Set Resources limits:
 

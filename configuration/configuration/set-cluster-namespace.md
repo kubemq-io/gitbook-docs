@@ -8,7 +8,7 @@
 | :--- | :--- | :--- | :--- |
 | --namespace | string | "kubemq" | set kubemq cluster namespace |
 
-## Exmaple
+## Example
 
 Set implicit Kubemq cluster namespace installation:
 

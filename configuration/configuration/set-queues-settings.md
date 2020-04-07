@@ -17,7 +17,7 @@ Queues options allows to configure Kubemq Queues defaults.
 | --queue-default-visibility-seconds | int | 60 | Set default time of hold received message before returning to queue |
 | -- queue-default-wait-timeout-seconds | int | 1 | Set default time to wait for a message in a queue |
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 
@@ -46,7 +46,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 | queue.defaultVisibilitySeconds | int | 60 | Set default time of hold received message before returning to queue |
 | queue.defaultWaitTimeoutSeconds | int | 1 | Set default time to wait for a message in a queue |
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 
@@ -75,7 +75,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 | defaultVisibilitySeconds | int | 60 | Set default time of hold received message before returning to queue |
 | defaultWaitTimeoutSeconds | int | 1 | Set default time to wait for a message in a queue |
 
-## Exmaples
+## Examples
 
 Set max delay seconds allowed to no more than one hour:
 
