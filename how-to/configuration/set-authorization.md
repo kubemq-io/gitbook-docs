@@ -1,17 +1,16 @@
 # Set Authorization
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
 
-| Flag                      | Type/Options | Default | Description                          |
-|:--------------------------|:-------------|:--------|:-------------------------------------|
-| --authorization-enabled     | string       | false   | Enable authorization configuration   |
-| --authorization-policy-data | string       | ""      | Set authorization policy data        |
-| --authorization-policy-file | string       | ""      | set authorization policy filename    |
-| --authorization-url         | string url   | ""      | Set authorization policy loading url |
-| --authorization-auto-reload | int          | 0       | Set auto reload policy data from url |
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| --authorization-enabled | string | false | Enable authorization configuration |
+| --authorization-policy-data | string | "" | Set authorization policy data |
+| --authorization-policy-file | string | "" | set authorization policy filename |
+| --authorization-url | string url | "" | Set authorization policy loading url |
+| --authorization-auto-reload | int | 0 | Set auto reload policy data from url |
 
 ## Exmaples
 
@@ -20,6 +19,7 @@ Set predefined authorization rules policy where policy.json is json array of acc
 ```bash
 kubemqctl create cluster --authorization-enabled --authorization-policy-file ./policy.json
 ```
+
 .
 
 Set authorization web service rules source:
@@ -29,19 +29,16 @@ kubemqctl create cluster --authorization-enabled --authorization-url "http://you
 ```
 
 Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
-
-
 {% endtab %}
 
 {% tab title="Helm" %}
 ## Values
 
-| Value                     | Type/Options | Default | Description                                           |
-|:-------------------------|:-------------|:--------|:------------------------------------------------------|
-| authorization.PolicyData | string       |     ""    | Set Authorization policy data                         |
-| authorization.url        | string url   |   ""      | Set Optional authorization server url for policy data |
-| authorization.autoReload | int          |     0    | Set auto reload policy data from url                  |
-
+| Value | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| authorization.PolicyData | string | "" | Set Authorization policy data |
+| authorization.url | string url | "" | Set Optional authorization server url for policy data |
+| authorization.autoReload | int | 0 | Set auto reload policy data from url |
 
 ## Exmaples
 
@@ -51,13 +48,11 @@ Set predefined authorization rules policy where policy.json is json array of acc
 helm install kubemq-cluster --set-file authorization.policyData=./policy.json kubemq-charts/kubemq
 ```
 
-
 Set authorization web service rules source:
 
 ```bash
 helm install kubemq-cluster --set authorization.url="http://your.url.rules/",authorization.autoReload=120 kubemq-charts/kubemq
 ```
-
 {% endtab %}
 
 {% tab title="kubectl" %}
@@ -65,9 +60,9 @@ helm install kubemq-cluster --set authorization.url="http://your.url.rules/",aut
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| policyData | string | ""|Set Authorization policy data |
-| url | string url |"" |Set Optional authorization server url for policy data |
-| autoReload | int |0 |Set auto reload policy data from url |
+| policyData | string | "" | Set Authorization policy data |
+| url | string url | "" | Set Optional authorization server url for policy data |
+| autoReload | int | 0 | Set auto reload policy data from url |
 
 ## Exmaples
 
@@ -116,7 +111,6 @@ spec:
          },
       ]
 ```
-
 
 Set authorization web service rules source:
 

@@ -1,14 +1,12 @@
 # Set Cluster Name
 
-
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
+
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --name | string | "kubemq-cluster"|set kubemq cluster name |
-
+| --name | string | "kubemq-cluster" | set kubemq cluster name |
 
 ## Exmaple
 
@@ -20,11 +18,12 @@ kubemqctl create cluster --name your-kubemq-cluster-name
 {% endtab %}
 
 {% tab title="Helm" %}
-
 ## Values
+
 No values defined for cluster name.
 
 ## Exmaple
+
 Set implicit Kubemq cluster name:
 
 ```bash
@@ -33,17 +32,15 @@ helm install your-kubemq-cluster-name  kubemq-charts/kubemq
 {% endtab %}
 
 {% tab title="kubectl" %}
-
 ## Fields
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| name | string | "kubemq-cluster"|set kubemq cluster name |
-
+| name | string | "kubemq-cluster" | set kubemq cluster name |
 
 ## Exmaple
-Set implicit Kubemq cluster name:
-Run:
+
+Set implicit Kubemq cluster name: Run:
 
 ```bash
 kubectl apply -f {below-yaml-file}

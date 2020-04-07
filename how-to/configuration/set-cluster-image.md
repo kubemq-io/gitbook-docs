@@ -6,8 +6,8 @@
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --image | string |docker.io/kubemq/kubemq-uni:latest| Set kubemq server image |
-| --image-pull-policy | string Always/IfNotPresent/Never | Always|Set image pull policy |
+| --image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
+| --image-pull-policy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
 ## Exmaple
 
@@ -16,18 +16,17 @@ Set implicit Kubemq cluster docker image:
 ```bash
 kubemqctl create cluster --image docker.io/kubemq/kubemq:latest
 ```
-Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `registry/repository:tag` format
 
+Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `registry/repository:tag` format
 {% endtab %}
 
 {% tab title="Helm" %}
-
 ## Values
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| image.image | string |docker.io/kubemq/kubemq-uni:latest| Set kubemq server image |
-| image.pullPolicy | string Always/IfNotPresent/Never | Always|Set image pull policy |
+| image.image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
+| image.pullPolicy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
 ## Exmaple
 
@@ -41,18 +40,16 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 {% endtab %}
 
 {% tab title="kubectl" %}
-
 ## Fields
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| image | string |docker.io/kubemq/kubemq-uni:latest| Set kubemq server image |
-| pullPolicy | string Always/IfNotPresent/Never | Always|Set image pull policy |
+| image | string | docker.io/kubemq/kubemq-uni:latest | Set kubemq server image |
+| pullPolicy | string Always/IfNotPresent/Never | Always | Set image pull policy |
 
 ## Exmaple
 
-Set implicit Kubemq cluster docker image:
-Run:
+Set implicit Kubemq cluster docker image: Run:
 
 ```bash
 kubectl apply -f {below-yaml-file}

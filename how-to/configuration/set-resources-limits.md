@@ -4,14 +4,13 @@
 {% tab title="Kubemqctl" %}
 ## Flags
 
-| Flag                | Type/Options | Default | Description         |
-|:--------------------|:-------------|:--------|:--------------------|
-| --resources-enabled | bool         | false   | Enable resources configuration     |
-| --resources-limits-cpu           | string       | "2"     | Set Limits CPU      |
-| --resources-limits-memory        | 2Gi          | string  | Set Limits Memory   |
-| --resources-requests-cpu         | string       | "2"     | Set Requests CPU    |
-|--resources-requests-memory      | string       | 512M    | Set Requests Memory |
-
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| --resources-enabled | bool | false | Enable resources configuration |
+| --resources-limits-cpu | string | "2" | Set Limits CPU |
+| --resources-limits-memory | 2Gi | string | Set Limits Memory |
+| --resources-requests-cpu | string | "2" | Set Requests CPU |
+| --resources-requests-memory | string | 512M | Set Requests Memory |
 
 ## Exmaple
 
@@ -33,11 +32,11 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| resources.enable |  bool |false |Enable resources configuration  |
-| resources.limitsCpu |  string | "2"|Set Limits CPU |
-| resources.limitsMemory | 2Gi |string | Set Limits Memory |
-| resources.requestsCpu | string|"2" | Set Requests CPU |
-| resources.requestsMemory | string | 512M |Set Requests Memory |
+| resources.enable | bool | false | Enable resources configuration |
+| resources.limitsCpu | string | "2" | Set Limits CPU |
+| resources.limitsMemory | 2Gi | string | Set Limits Memory |
+| resources.requestsCpu | string | "2" | Set Requests CPU |
+| resources.requestsMemory | string | 512M | Set Requests Memory |
 
 ## Exmaple
 
@@ -59,11 +58,11 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| enable |  bool |false |Enable resources configuration |
-| limitsCpu |  string | "2"|Set Limits CPU |
-| limitsMemory | 2Gi |string | Set Limits Memory |
-| requestsCpu | string|"2" | Set Requests CPU |
-| requestsMemory | string | 512M |Set Requests Memory |
+| enable | bool | false | Enable resources configuration |
+| limitsCpu | string | "2" | Set Limits CPU |
+| limitsMemory | 2Gi | string | Set Limits Memory |
+| requestsCpu | string | "2" | Set Requests CPU |
+| requestsMemory | string | 512M | Set Requests Memory |
 
 ## Exmaple
 

@@ -6,13 +6,13 @@
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --tls-enabled | bool |false |Enable tls configuration |
-| --tls-cert-data | string |"" |Set tls certification data |
-| --tls-cert-file | string |"" |Set tls certification file name |
-| --tls-key-data | string | "" |Set tls private key data |
-| --tls-key-file | string | "" |Set tls private key file name |
-| --tls-ca-data | string | "" |Set tls certification authority  data |
-| --tls-ca-data | string | "" |Set tls certification authority  file name |
+| --tls-enabled | bool | false | Enable tls configuration |
+| --tls-cert-data | string | "" | Set tls certification data |
+| --tls-cert-file | string | "" | Set tls certification file name |
+| --tls-key-data | string | "" | Set tls private key data |
+| --tls-key-file | string | "" | Set tls private key file name |
+| --tls-ca-data | string | "" | Set tls certification authority  data |
+| --tls-ca-data | string | "" | Set tls certification authority  file name |
 
 ## Exmaple
 
@@ -21,20 +21,21 @@ Set TLS certificates to secure Kubemq cluster:
 ```bash
 kubemqctl create cluster --tls-enabled --tls-cert-file ./cert.pem --tls-key-file ./key.pem --tls-ca-file ./ca.pem
 ```
+
 Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS settings.
 {% endtab %}
 
 {% tab title="Helm" %}
-
 ## Values
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| tls.cert | string |"" |Set tls certification data |
-| tls.key | string | "" |Set tls private key data |
-| tls.ca | string | "" |Set tls certification authority  data |
+| tls.cert | string | "" | Set tls certification data |
+| tls.key | string | "" | Set tls private key data |
+| tls.ca | string | "" | Set tls certification authority  data |
 
 ## Exmaple
+
 Set TLS certificates to secure Kubemq cluster:
 
 ```bash
@@ -45,16 +46,16 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 {% endtab %}
 
 {% tab title="yaml" %}
-
 ## Fields
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| cert | string |"" |Set tls certification data |
-| key | string | "" |Set tls private key data |
-| ca | string | "" |Set tls certification authority  data |
+| cert | string | "" | Set tls certification data |
+| key | string | "" | Set tls private key data |
+| ca | string | "" | Set tls certification authority  data |
 
 ## Exmaple
+
 Set TLS certificates to secure Kubemq cluster:
 
 Run:

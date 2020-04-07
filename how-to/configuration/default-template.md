@@ -1,6 +1,5 @@
 # Set Cluster Replicas
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
@@ -30,6 +29,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 
+
 ## Exmaples
 
 Set max delay seconds allowed to no more than one hour:
@@ -50,6 +50,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
+
 
 ## Exmaples
 

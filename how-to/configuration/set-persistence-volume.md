@@ -4,13 +4,12 @@
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-|--volume-size | string |  "" |Desired size of Persisted Volume Claim |
-| --volume-storageClass | string |  "default" |Set persisted volume storage class |
+| --volume-size | string | "" | Desired size of Persisted Volume Claim |
+| --volume-storageClass | string | "default" | Set persisted volume storage class |
 
 ## Exmaples
 
@@ -25,7 +24,6 @@ Create Kubemq Cluster with 30Gi Persistent Volume Claim with specific Storage Cl
 ```bash
 kubemqctl create cluster -v 30Gi --volume-storage-class "your-storage-class-name"
 ```
-
 {% endtab %}
 
 {% tab title="Helm" %}
@@ -33,8 +31,8 @@ kubemqctl create cluster -v 30Gi --volume-storage-class "your-storage-class-name
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| volume.size | string |  "" |Desired size of Persisted Volume Claim |
-| volume.storageClass | string |  "default" |Set persisted volume storage class |
+| volume.size | string | "" | Desired size of Persisted Volume Claim |
+| volume.storageClass | string | "default" | Set persisted volume storage class |
 
 ## Exmaples
 
@@ -52,13 +50,12 @@ helm install kubemq-cluster --set volume.size=30Gi,volume.storageClass="your-sto
 {% endtab %}
 
 {% tab title="yaml" %}
-
 ## Fields
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| size | string |  "" |Desired size of Persisted Volume Claim |
-| storageClass | string |  "default" |Set persisted volume storage class |
+| size | string | "" | Desired size of Persisted Volume Claim |
+| storageClass | string | "default" | Set persisted volume storage class |
 
 ## Exmaples
 

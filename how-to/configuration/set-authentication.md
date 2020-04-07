@@ -11,7 +11,7 @@
 | --authentication-public-key-file | string | "" | Set authentication public key filename |
 | --authentication-public-key-type | string | "" | Set authentication public key type |
 
-authentication-public-key-type options: HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512 
+authentication-public-key-type options: HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512
 
 ## Example
 
@@ -30,9 +30,9 @@ kubemqctl create cluster --authentication-enabled --authentication-public-key-fi
 | authentication.key | string | "" | Set authentication public key data |
 | authentication.type | string | "" | Set authentication public key type |
 
-authentication.type options: 
+authentication.type options:
 
-HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512 
+HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512
 
 ## Example
 
@@ -51,7 +51,7 @@ helm install kubemq-cluster --set-file authentication.key=./key.pem --set authen
 | key | string | "" | Set JWT public key data |
 | type | string | "" | Set JWT public key signing method |
 
-type options: 
+type options:
 
 HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512
 
