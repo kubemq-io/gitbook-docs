@@ -24,7 +24,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | image.image | string |docker.io/kubemq/kubemq-uni:latest| Set kubemq server image |
 | image.pullPolicy | string Always/IfNotPresent/Never | Always|Set image pull policy |
@@ -44,7 +44,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | image | string |docker.io/kubemq/kubemq-uni:latest| Set kubemq server image |
 | pullPolicy | string Always/IfNotPresent/Never | Always|Set image pull policy |

@@ -32,7 +32,7 @@ Where license.key contains the license data
 
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | license | string | ""|Set license data |
 
@@ -49,7 +49,7 @@ Where license.key contains the license data
 
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | license | string | ""|Set license data |
 

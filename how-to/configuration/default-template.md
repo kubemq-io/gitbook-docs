@@ -27,7 +27,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 {% tab title="Helm" %}
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 
 ## Exmaples
@@ -48,7 +48,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 {% tab title="kubectl" %}
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 
 ## Exmaples

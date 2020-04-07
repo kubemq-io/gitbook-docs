@@ -25,7 +25,7 @@ kubemqctl create cluster --authentication-enabled --authentication-public-key-fi
 {% tab title="Helm" %}
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | authentication.key | string | "" | Set authentication public key data |
 | authentication.type | string | "" | Set authentication public key type |
@@ -46,7 +46,7 @@ helm install kubemq-cluster --set-file authentication.key=./key.pem --set authen
 {% tab title="yaml" %}
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | key | string | "" | Set JWT public key data |
 | type | string | "" | Set JWT public key signing method |

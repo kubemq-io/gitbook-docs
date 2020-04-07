@@ -28,7 +28,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | tls.cert | string |"" |Set tls certification data |
 | tls.key | string | "" |Set tls private key data |
@@ -48,7 +48,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | cert | string |"" |Set tls certification data |
 | key | string | "" |Set tls private key data |

@@ -1,21 +1,41 @@
 # Set Cluster Namespace
 
-Set implicit Kubemq cluster namespace installation
+
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
+
+## Flags
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| --namespace | string | "kubemq"|set kubemq cluster namespace |
+
+## Exmaple
+Set implicit Kubemq cluster namespace installation:
+
 ```bash
 kubemqctl create cluster --namespace kubemq-namespace
 ```
 {% endtab %}
 
+
 {% tab title="Helm" %}
+
+## Values
+No values defined for cluster namespace.
+
 ```bash
 helm install kubemq-cluster  kubemq-charts/kubemq -n kubemq-namespace
 ```
 {% endtab %}
 
 {% tab title="kubectl" %}
+
+## Fields
+
+| Field | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| namespace | string | "kubemq-cluster"|set kubemq cluster name |
 Run:
 
 ```bash

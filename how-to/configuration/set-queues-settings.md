@@ -35,7 +35,7 @@ kubemqctl create cluster --queue-default-visibility-seconds 180
 {% tab title="Helm" %}
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | queue.maxReceiveMessagesRequest | int | 1024 | Set max of sending / receiving batch of queue message |
 | queue.maxWaitTimeoutSeconds | int | 3600 | Set max wait timeout allowed for message |
@@ -64,7 +64,7 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 {% tab title="kubectl" %}
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | maxReceiveMessagesRequest | int | 1024 | Set max of sending / receiving batch of queue message |
 | maxWaitTimeoutSeconds | int | 3600 | Set max wait timeout allowed for message |

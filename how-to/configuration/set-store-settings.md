@@ -35,7 +35,7 @@ kubemqctl create cluster --store-purge-inactive-minutes 180
 {% tab title="Helm" %}
 ## Values
 
-| Flag | Type/Options | Default | Description |
+| Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | store.clean | bool | false | Set clear persistence data on start-up |
 | store.path | string | ./store | Set persistence file path |
@@ -64,7 +64,7 @@ helm install kubemq-cluster  --set store.purgeInactiveMinutes=t180 kubemq-charts
 {% tab title="kubectl" %}
 ## Fields
 
-| Flag | Type/Options | Default | Description |
+| Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
 | clean | bool | false | Set clear persistence data on start-up |
 | path | string | ./store | Set persistence file path |
