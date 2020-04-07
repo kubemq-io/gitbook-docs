@@ -132,7 +132,7 @@ Kubemq supports two configuration loading options:
 1. Set json array on cluster creation
 2. Set Url of a web service to call and get Authorization configuration json array with automatic reloading options every predefined second
 
-{% page-ref page="../../how-to/configuration/set-authorization.md" %}
+{% page-ref page="../../configuration/configuration/set-authorization.md" %}
 
 {% hint style="success" %}
 The authorization feature is available only on Kubemq Enterprise Edition.

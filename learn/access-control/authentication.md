@@ -29,7 +29,7 @@ Each signing method expects a different object type for its signing keys. Here a
 
 ## Loading Configuration
 
-{% page-ref page="../../how-to/configuration/set-authentication.md" %}
+{% page-ref page="../../configuration/configuration/set-authentication.md" %}
 
 {% hint style="success" %}
 The authentication feature is available only on Kubemq Enterprise Edition.
