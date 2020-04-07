@@ -19,7 +19,7 @@ Create Kubemq Cluster with 30Gi Persistent Volume Claim:
 kubemqctl create cluster -v 30Gi
 ```
 
-Create Kubemq Cluster with 30Gi Persistent Volume Claim with specific Storage Class name:
+Create Kubemq Cluster with 30Gi Persistent Volume Claim and specific Storage Class name:
 
 ```bash
 kubemqctl create cluster -v 30Gi --volume-storage-class "your-storage-class-name"
