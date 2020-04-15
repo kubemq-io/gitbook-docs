@@ -62,10 +62,7 @@
   * [Set Grafana Image](configuration/dashboard/set-grafana.md)
 
 ## HOW TO
-
-* [Operation](how-to/operation/README.md)
-  * [Scale Cluster](how-to/operation/scale-cluster.md)
-  * [Connect Your Cluster](how-to/operation/connect-your-cluster.md)
+* [Connect Your Cluster](how-to/connect-your-cluster.md)
 
 ## Troubleshooting
 
