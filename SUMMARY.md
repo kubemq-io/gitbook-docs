@@ -141,5 +141,5 @@
 * [Kubemq Cluster](change-log/kubemq-cluster.md)
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
-* [Connect Your Cluster](connect-your-cluster.md)
+
 
