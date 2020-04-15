@@ -42,5 +42,13 @@ Expose the required service via node port and access the service with host:port 
 
 {% page-ref page="configuration/configuration/set-rest-interface.md" %}
 
+### Connect with Kubemqctl as Proxy
 
+Kubemqctl CLI tool provides a very useful command which port-forward all cluster services ports of selected cluster to localhost.
+
+```text
+kubemqctl set cluster proxy
+```
+
+ 
 
