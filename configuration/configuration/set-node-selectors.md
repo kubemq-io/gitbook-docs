@@ -1,13 +1,12 @@
 # Set Node Selectors
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --node-selectors-keys| string map | "" |set node selectors key-value (map)|
+| --node-selectors-keys | string map | "" | set node selectors key-value \(map\) |
 
 ## Example
 
@@ -18,13 +17,12 @@ kubemqctl create cluster --node-selectors-keys key1=value1,key2=value2
 ```
 {% endtab %}
 
-
 {% tab title="Helm" %}
 ## Values
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| nodeSelectors.keys| string map | "" |set node selectors key-value (map)|
+| nodeSelectors.keys | string map | "" | set node selectors key-value \(map\) |
 
 ## Example
 
@@ -40,7 +38,7 @@ helm install kubemq-cluster  --set nodeSelectors.keys "key1=value1,key2=value2" 
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| keys| string map | "" |set node selectors key-value (map)|
+| keys | string map | "" | set node selectors key-value \(map\) |
 
 ## Example
 

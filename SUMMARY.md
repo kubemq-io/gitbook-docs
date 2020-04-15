@@ -53,7 +53,6 @@
   * [Set Resources Limits](configuration/configuration/set-resources-limits.md)
   * [Set Logs](configuration/configuration/set-logs.md)
   * [Set Node Selectors](configuration/configuration/set-node-selectors.md)
-* [Cluster Configuration](configuration/cluster.md)
 * [Dashboard Configuration](configuration/dashboard.md)
 
 ## HOW TO
