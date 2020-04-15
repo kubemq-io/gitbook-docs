@@ -53,10 +53,12 @@
   * [Set Resources Limits](configuration/configuration/set-resources-limits.md)
   * [Set Logs](configuration/configuration/set-logs.md)
   * [Set Node Selectors](configuration/configuration/set-node-selectors.md)
-* [Dashboard Configuration](configuration/dashboard/README.md)
+* [Dashboard](configuration/dashboard/README.md)
   * [Set Dashboard Name](configuration/dashboard/set-dashboard-name.md)
   * [Set Dashboard Namespace](configuration/dashboard/set-dashboard-namespace.md)
   * [Set View Port](configuration/dashboard/set-view-port.md)
+  * [Set Prometheus Image](configuration/dashboard/set-prometheus.md)
+  * [Set Grafana Image](configuration/dashboard/set-grafana.md)
 
 ## HOW TO
 
