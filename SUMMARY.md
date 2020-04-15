@@ -54,6 +54,8 @@
   * [Set Logs](configuration/configuration/set-logs.md)
   * [Set Node Selectors](configuration/configuration/set-node-selectors.md)
 * [Dashboard Configuration](configuration/dashboard/README.md)
+  * [Set Dashboard Name](configuration/dashboard/set-dashboard-name.md)
+  * [Set Dashboard Namespace](configuration/dashboard/set-dashboard-namespace.md)
   * [Set View Port](configuration/dashboard/set-view-port.md)
 
 ## HOW TO

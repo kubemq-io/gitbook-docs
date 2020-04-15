@@ -1,36 +1,33 @@
-# Set View Port
+# Set Dashboard Namespace
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --port | int |  | set kubemq dashboard expose port view |
+| --namespace | string | "kubemq" | set kubemq dashboard namespace |
 
 ## Example
 
-Set dashboard view to port 32000
+Set implicit Kubemq dashboard namespace installation:
 
 ```bash
-kubemqctl create dashboard --port 32000
+kubemqctl create dashboard --namespace kubemq-namespace
 ```
 {% endtab %}
 
 {% tab title="Helm" %}
 ## Values
 
-| Value | Type/Options | Default | Description |
-| :--- | :--- | :--- | :--- |
-| port | int |  | set kubemq dashboard expose port view |
+No values defined for dashboard namespace.
 
 ## Example
 
-Set dashboard view to port 32000
+Set implicit Kubemq dashboard namespace installation:
 
 ```bash
-helm install kubemq-dashboard  --set port=32000 kubemq-charts/dashboard
+helm install kubemq-dashboard  kubemq-charts/dashboard -n kubemq-dashboard-namesapce
 ```
 {% endtab %}
 
@@ -39,11 +36,11 @@ helm install kubemq-dashboard  --set port=32000 kubemq-charts/dashboard
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| port | int |  | set kubemq dashboard expose port view |
+| namespace | string | "kubemq-dashboard" | set kubemq dashboard namespace |
 
 ## Example
 
-Set dashboard view to port 32000:
+Set implicit Kubemq dashboard namespace installation:
 
 Run:
 
@@ -56,9 +53,7 @@ apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqDashboard
 metadata:
   name: kubemq-dashboard
-  namesapce: kubemq
-spec:
-  port: 33200
+  namesapce: kubemq-dashboard-namespace
 ```
 {% endtab %}
 {% endtabs %}

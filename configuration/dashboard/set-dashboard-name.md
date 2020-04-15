@@ -1,36 +1,33 @@
-# Set View Port
+# Set Cluster Name
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --port | int |  | set kubemq dashboard expose port view |
+| --name | string | "kubemq-dashboard" | set kubemq dashboard name |
 
 ## Example
 
-Set dashboard view to port 32000
+Set implicit Kubemq dashboard name:
 
 ```bash
-kubemqctl create dashboard --port 32000
+kubemqctl create dashboard --name your-kubemq-dashboard-name
 ```
 {% endtab %}
 
 {% tab title="Helm" %}
 ## Values
 
-| Value | Type/Options | Default | Description |
-| :--- | :--- | :--- | :--- |
-| port | int |  | set kubemq dashboard expose port view |
+No values defined for dashboard name.
 
 ## Example
 
-Set dashboard view to port 32000
+Set implicit Kubemq dashboard name:
 
 ```bash
-helm install kubemq-dashboard  --set port=32000 kubemq-charts/dashboard
+helm install your-kubemq-dashboard-name  kubemq-charts/dashboard
 ```
 {% endtab %}
 
@@ -39,11 +36,11 @@ helm install kubemq-dashboard  --set port=32000 kubemq-charts/dashboard
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| port | int |  | set kubemq dashboard expose port view |
+| name | string | "kubemq-dashboard" | set kubemq dashboard name |
 
 ## Example
 
-Set dashboard view to port 32000:
+Set implicit Kubemq dashboard name:
 
 Run:
 
@@ -55,10 +52,8 @@ kubectl apply -f {below-yaml-file}
 apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqDashboard
 metadata:
-  name: kubemq-dashboard
+  name: your-kubemq-dashboard-name
   namesapce: kubemq
-spec:
-  port: 33200
 ```
 {% endtab %}
 {% endtabs %}
