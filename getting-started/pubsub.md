@@ -2,7 +2,7 @@
 
 ## Install Kubemqctl tool
 
-{% page-ref page="../kubemqctl/kubemqctl.md" %}
+{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 
