@@ -1,5 +1,6 @@
 # Table of contents
 
+## Introduction
 * [Introduction](README.md)
   * [Introduction](introduction.md)
 * [What's New](whats-new.md)
