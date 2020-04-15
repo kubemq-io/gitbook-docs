@@ -1,4 +1,4 @@
 root: ./
 
 redirects:
-  introduction/introduction: ./
+  introduction/introduction: ./README.md
