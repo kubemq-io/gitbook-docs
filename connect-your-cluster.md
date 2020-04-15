@@ -28,5 +28,19 @@ For example, namespace is kubemq and cluster name is kubemq-cluster with cluster
 | Rest | kubemq-cluster-rest.kubemq.svc.cluster.local | 9090 |
 | API | kubemq-cluster-api.kubemq.svc.cluster.local | 8080 |
 
+## Outside Cluster
+
+### Connect with Node Port
+
+Expose the required service via node port and access the service with host:port defined.
+
+#### Configure gRPC Node Port
+
+{% page-ref page="configuration/configuration/set-grpc-interface.md" %}
+
+#### Configure Rest Node Port
+
+{% page-ref page="configuration/configuration/set-rest-interface.md" %}
+
 
 
