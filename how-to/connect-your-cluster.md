@@ -54,11 +54,13 @@ Kubemqctl CLI tool provides a very useful command which port-forward all cluster
 
 Run:
 
-```text
+```bash
 kubemqctl set cluster proxy
 ```
 
-```text
+Will show :
+
+```bach
 Current Kubernetes cluster context connection: kubernetes-local
 ? Select Kubemq cluster to Proxy kubemq/kubemq-cluster
 Current Kubernetes cluster context connection: kubernetes-local
