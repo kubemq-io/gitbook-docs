@@ -30,7 +30,7 @@
   * [Authorization](learn/access-control/authorization.md)
 * [Smart Routing](learn/smart-routing.md)
 * [Cluster Persistency](learn/cluster-persistency.md)
-* [Cluster Scale](learn/cluster-scale.md)
+* [Clustering](learn/cluster-scale.md)
 * [Dashboard](learn/dashboard.md)
 
 ## Configuration
