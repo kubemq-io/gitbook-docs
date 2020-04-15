@@ -1,10 +1,10 @@
 # Table of contents
+* [Home](README.md)
+* [What's New](whats-new.md)
 
 ## Introduction
-* [Introduction](README.md)
-  * [Introduction](introduction.md)
-* [What's New](whats-new.md)
-* [Home](home.md)
+* [Introduction](introduction/introduction.md)
+
 
 ## Getting Started
 
