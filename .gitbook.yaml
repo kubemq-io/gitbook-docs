@@ -1,4 +1,4 @@
 root: ./
 
 redirects:
-  introduction/intorduction: ./
+  introduction/introduction: ./
