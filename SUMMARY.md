@@ -29,7 +29,6 @@
   * [Authentication](learn/access-control/authentication.md)
   * [Authorization](learn/access-control/authorization.md)
 * [Smart Routing](learn/smart-routing.md)
-* [Cluster Persistency](learn/cluster-persistency.md)
 * [Clustering](learn/cluster-scale.md)
 * [Dashboard](learn/dashboard.md)
 

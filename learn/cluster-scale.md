@@ -1,8 +1,8 @@
 # Clustering
 
-KubeMQ cluster protocol base on [Raft](https://raft.github.io/) consensus algorithm. 
+Kubemq cluster protocol base on [Raft](https://raft.github.io/) consensus algorithm. 
 
-Since the KubeMQ leader node is handling all the incoming and the outgoing data. Adding more KubeMQ nodes will not scale horizontally but will increase the availability of KubeMQ cluster.   scaling cannot be achive by adding more nodes. It provides protection for some of the nodes in the cluster failing, but since the leader is handling all incoming data from publishers and outgoing data to subscribers, it is not horizontally scalable. The cluster size should probably be limited to 3 to 5 nodes \(RAFT recommends an odd number of nodes\).
+Since the Kubemq leader node is handling all the incoming and the outgoing data adding more Kubemq nodes will not scale horizontally but will increase the availability of Kubemq cluster. 
 
 ### Cluster Size
 
@@ -28,7 +28,23 @@ So a 4-node cluster is no more fault-tolerant than a 3-node cluster, so running 
 | 8 | 5 | 3 |
 | 9 | 5 | 4 |
 
+### Cluster Persistency
 
+KubeMQ supports two modes of cluster persistency:
+
+* Files on local container ephemeral volume - default
+* Files on PVC \(Persisted Volume Claim\)
+
+Consider:
+
+|  | Local Volume | Persisted Volume Claim |
+| :--- | :--- | :--- |
+| Speed | Fast | Slow |
+| Recovery | Only per raft availability | Any failure |
+
+For Persisted Volume Claim configuration, please checkout the link below. 
+
+{% page-ref page="../configuration/configuration/set-persistence-volume.md" %}
 
 
 
