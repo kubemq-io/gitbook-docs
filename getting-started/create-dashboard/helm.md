@@ -36,5 +36,5 @@ grafana:
   dashboardUrl: "https://raw.githubusercontent.com/kubemq-io/kubemq-dashboard/master/dashboard.json"
 ```
 
-{% page-ref page="../../configuration/dashboard.md" %}
+{% page-ref page="../../configuration/dashboard/" %}
 
