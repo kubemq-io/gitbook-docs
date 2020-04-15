@@ -1,6 +1,5 @@
 # Set Api Interface
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
@@ -9,7 +8,6 @@
 | :--- | :--- | :--- | :--- |
 | --api-disabled | bool | false | Disable api interface |
 | --api-port | int | 8080 | Set api port value |
-
 
 Expose Options:
 
@@ -32,7 +30,6 @@ kubemqctl create cluster --api-expose NodePort --api-node-port 30700
 | api.disabled | bool | false | Disable api interface |
 | api.port | int | 8080 | Set api port value |
 
-
 Expose Options:
 
 ClusterIP/NodePort/LoadBalancer
@@ -53,7 +50,6 @@ helm install kubemq-cluster --set api.expose=NodePort,api-nodePort=30700  -n kub
 | :--- | :--- | :--- | :--- |
 | disabled | bool | false | Disable api interface |
 | port | int | 50000 | Set api port value |
-
 
 Expose Options:
 

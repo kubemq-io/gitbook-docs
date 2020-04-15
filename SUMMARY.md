@@ -62,6 +62,7 @@
   * [Set Grafana Image](configuration/dashboard/set-grafana.md)
 
 ## HOW TO
+
 * [Connect Your Cluster](how-to/connect-your-cluster.md)
 
 ## Troubleshooting
@@ -141,5 +142,4 @@
 * [Kubemq Cluster](change-log/kubemq-cluster.md)
 * [Kubemq Dashboard](change-log/kubemq-dashboard.md)
 * [Kubemq Operator](change-log/kubemq-operator.md)
-
 

@@ -1,6 +1,5 @@
 # Set Rest Interface
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags

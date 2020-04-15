@@ -1,6 +1,5 @@
 # Set gRPC Interface
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ## Flags
