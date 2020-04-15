@@ -2,5 +2,5 @@
 
 KubeMQ Version 2
 
-KubeMQ 
+KubeMQ
 

@@ -1,10 +1,11 @@
 # Table of contents
+
 * [Home](README.md)
 * [What's New](whats-new.md)
 
 ## Introduction
-* [Introduction](introduction/introduction.md)
 
+* [Introduction](introduction/introduction.md)
 
 ## Getting Started
 
@@ -75,7 +76,7 @@
 
 ## Kubemqctl
 
-* [Get Started](kubemqctl/get-started.md)
+* [Get Started](kubemqctl/kubemqctl.md)
 * [Create](kubemqctl/kubemqctl_create/README.md)
   * [Cluster](kubemqctl/kubemqctl_create/kubemqctl_create_cluster.md)
   * [Dashboard](kubemqctl/kubemqctl_create/kubemqctl_create_dashboard.md)
