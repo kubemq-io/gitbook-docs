@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [What's New](whats-new.md)
+* [Home](home.md)
 
 ## Getting Started
 

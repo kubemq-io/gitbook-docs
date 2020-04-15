@@ -1,4 +1,4 @@
-# Set Cluster Name
+# Set Dashboard Name
 
 {% tabs %}
 {% tab title="Kubemqctl" %}

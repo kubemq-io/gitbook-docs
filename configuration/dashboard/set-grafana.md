@@ -2,12 +2,11 @@
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --grafana-image | string |  grafana/grafana:latest| set kubemq dashboard grafana docker image|
+| --grafana-image | string | grafana/grafana:latest | set kubemq dashboard grafana docker image |
 
 ## Example
 
@@ -23,7 +22,7 @@ kubemqctl create dashboard --grafana-image grafana-image-name:
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| grafana.image | string |  grafana/grafana:latest| set kubemq dashboard grafana docker image|
+| grafana.image | string | grafana/grafana:latest | set kubemq dashboard grafana docker image |
 
 ## Example
 
@@ -39,10 +38,9 @@ helm install kubemq-dashboard  --set grafana.image=grafana-image-name kubemq-cha
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| image | string |  grafana/grafana:latest| set kubemq dashboard grafana docker image|
+| image | string | grafana/grafana:latest | set kubemq dashboard grafana docker image |
 
 ## Example
-
 
 Set dashboard grafana image to specific image:
 

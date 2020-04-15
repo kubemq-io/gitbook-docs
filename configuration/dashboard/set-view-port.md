@@ -2,7 +2,6 @@
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |

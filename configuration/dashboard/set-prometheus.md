@@ -2,12 +2,11 @@
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
-
 ## Flags
 
 | Flag | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| --prometheus-image | string |  prometheus/prometheus:latest| set kubemq dashboard prometheus docker image|
+| --prometheus-image | string | prometheus/prometheus:latest | set kubemq dashboard prometheus docker image |
 
 ## Example
 
@@ -23,7 +22,7 @@ kubemqctl create dashboard --prometheus-image prometheus-image-name:
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| prometheus.image | string |  prometheus/prometheus:latest| set kubemq dashboard prometheus docker image|
+| prometheus.image | string | prometheus/prometheus:latest | set kubemq dashboard prometheus docker image |
 
 ## Example
 
@@ -39,10 +38,9 @@ helm install kubemq-dashboard  --set prometheus.image=prometheus-image-name kube
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| image | string |  prometheus/prometheus:latest| set kubemq dashboard prometheus docker image|
+| image | string | prometheus/prometheus:latest | set kubemq dashboard prometheus docker image |
 
 ## Example
-
 
 Set dashboard prometheus image to specific image:
 

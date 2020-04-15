@@ -1,4 +1,4 @@
-# Dashboard Configuration
+# Dashboard
 
 ## Basic
 
