@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+  * [Introduction](introduction.md)
 * [What's New](whats-new.md)
 * [Home](home.md)
 
