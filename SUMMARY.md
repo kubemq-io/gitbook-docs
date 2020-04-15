@@ -73,7 +73,7 @@
 
 ## Kubemqctl
 
-* [Get Started](kubemqctl/kubemqctl.md)
+* [Get Started](kubemqctl/get-started.md)
 * [Create](kubemqctl/kubemqctl_create/README.md)
   * [Cluster](kubemqctl/kubemqctl_create/kubemqctl_create_cluster.md)
   * [Dashboard](kubemqctl/kubemqctl_create/kubemqctl_create_dashboard.md)

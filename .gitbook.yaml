@@ -2,3 +2,23 @@ root: ./
 
 redirects:
   introduction/introduction: ./README.md
+  kubemqctl/kubemqctl: ./kubemqctl/get-started
+  tutorials/pubsub: ./learn/message-patterns/pubsub.md
+  get_started/rpc: ./getting-started/rpc.md
+  configuration/recipes/basic/basic-proxy: ./README.md
+  operations/context: ./README.md
+  installation/kubernetes: ./getting-started/create-cluster/README.md
+  installation/docker: ./getting-started/create-cluster/README.md
+  get_started/queue:  ./getting-started/queues.md
+  configuration/recipes/basic/basic-expose: ./configuration/configuration/set-grpc-interface.md
+  operations/delete: ./README.md
+  tutorials/rpc: ./learn/message-patterns/rpc.md
+  get_started/pubsub: ./getting-started/rpc.md
+  development/rest: ./development/sdk/README.md
+  development/net: ./development/sdk/README.md
+  configuration/recipes/basic/basic-namespace: ./README.md
+  tutorials/queue: ./learn/message-patterns/queue.md
+  kubemqctl/queues/kubemqctl_queues_receive: ./kubemqctl/kubemqctl_queues/kubemqctl_queues_receive.md
+  operations/proxy: ./README.md
+  operations/create: ./configuration/configuration/README.md
+  development/java: ./development/sdk/README.md
