@@ -1,6 +1,5 @@
 # Set gRPC Interface
 
-Expose gRPC interface port with a NodePort
 
 {% tabs %}
 {% tab title="Kubemqctl" %}

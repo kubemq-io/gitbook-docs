@@ -46,6 +46,7 @@
   * [Set License](configuration/configuration/set-license.md)
   * [Set gRPC Interface](configuration/configuration/set-grpc-interface.md)
   * [Set Rest Interface](configuration/configuration/set-rest-interface.md)
+  * [Set Api Interface](configuration/configuration/set-api-interface.md)
   * [Set Store Settings](configuration/configuration/set-store-settings.md)
   * [Set Queues Settings](configuration/configuration/set-queues-settings.md)
   * [Set Routing](configuration/configuration/set-routing.md)
