@@ -36,15 +36,15 @@ Expose the required service via node port and access the service with host:port 
 
 #### Configure gRPC Node Port
 
-{% page-ref page="../configuration/configuration/set-grpc-interface.md" %}
+{% page-ref page="../configuration/cluster/set-grpc-interface.md" %}
 
 #### Configure Rest Node Port
 
-{% page-ref page="../configuration/configuration/set-rest-interface.md" %}
+{% page-ref page="../configuration/cluster/set-rest-interface.md" %}
 
 #### Configure Api Node Port
 
-{% page-ref page="../configuration/configuration/set-api-interface.md" %}
+{% page-ref page="../configuration/cluster/set-api-interface.md" %}
 
 ### Connect with Kubemqctl as Proxy
 

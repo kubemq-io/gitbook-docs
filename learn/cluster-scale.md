@@ -44,7 +44,7 @@ Consider:
 
 For Persisted Volume Claim configuration, please checkout the link below. 
 
-{% page-ref page="../configuration/configuration/set-persistence-volume.md" %}
+{% page-ref page="../configuration/cluster/set-persistence-volume.md" %}
 
 
 
