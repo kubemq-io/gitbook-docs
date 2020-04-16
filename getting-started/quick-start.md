@@ -1,6 +1,6 @@
 # Quick Start
 
-**Welcome to KubeMQ!**
+## **Welcome to KubeMQ!**
 
 In this guide, we’ll walk you through how to install KubeMQ into your Kubernetes cluster.
 
@@ -12,13 +12,17 @@ When ready, make sure you’re running a recent version of Kubernetes with:
 kubectl version --short
 ```
 
-## Install KubeMQ Cluster Community Edition
+### Install KubeMQ Cluster Community Edition
+
+Run:
 
 ```bash
 kubectl apply -f https://get.kubemq.io/deploy
 ```
 
-## Install KubeMQ Cluster Enterprise Edition
+### Install KubeMQ Cluster Enterprise Edition
+
+Run:
 
 ```bash
 kubectl apply -f https://get.kubemq.io/deploy?token=<your-license-token>
@@ -27,6 +31,24 @@ kubectl apply -f https://get.kubemq.io/deploy?token=<your-license-token>
 {% hint style="info" %}
 For free 30 days Enterprise licence Please [Register](https://account.kubemq.io/login/register)
 {% endhint %}
+
+### Check Your KubeMQ Cluster Installation
+
+Run:
+
+```bash
+kubectl get kubemqclusters -n kubemq
+```
+
+### Check you KubeMQ Dashboard Installation
+
+Run:
+
+```bash
+kubectl get kubemqdashboard -n kubemq
+```
+
+You can view Kubemq Dashboard at [http://localhost:32000 ](%20http://localhost:32000)
 
 ## What next ?
 

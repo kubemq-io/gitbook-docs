@@ -46,8 +46,6 @@ Expose the required service via node port and access the service with host:port 
 
 {% page-ref page="../configuration/configuration/set-api-interface.md" %}
 
-
-
 ### Connect with Kubemqctl as Proxy
 
 Kubemqctl CLI tool provides a very useful command which port-forward all cluster services ports of selected cluster to localhost.
@@ -60,7 +58,7 @@ kubemqctl set cluster proxy
 
 Will show :
 
-```bach
+```text
 Current Kubernetes cluster context connection: kubernetes-local
 ? Select Kubemq cluster to Proxy kubemq/kubemq-cluster
 Current Kubernetes cluster context connection: kubernetes-local
@@ -69,6 +67,5 @@ start proxy for kubemq/kubemq-cluster-1. press CTRL C to close.
 kubemq/kubemq-cluster-1:8080 -> 127.0.0.1:8080
 kubemq/kubemq-cluster-1:9090 -> 127.0.0.1:9090
 kubemq/kubemq-cluster-1:50000 -> 127.0.0.1:50000
-
 ```
 
