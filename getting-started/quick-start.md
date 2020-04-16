@@ -86,11 +86,11 @@ $env:Path += ';C:\Program Files\kubemqctl'
 
 ### Get started with:
 
-{% page-ref page="queues.md" %}
+{% page-ref page="message-patterns/queues.md" %}
 
-{% page-ref page="pubsub.md" %}
+{% page-ref page="message-patterns/pubsub.md" %}
 
-{% page-ref page="rpc.md" %}
+{% page-ref page="message-patterns/rpc.md" %}
 
 ## Demo
 

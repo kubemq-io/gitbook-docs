@@ -14,9 +14,10 @@
   * [Kubemqctl](getting-started/create-dashboard/kubemqctl.md)
   * [Helm](getting-started/create-dashboard/helm.md)
   * [Openshift](getting-started/create-dashboard/openshift.md)
-* [Queues](getting-started/queues.md)
-* [Pub/Sub](getting-started/pubsub.md)
-* [RPC](getting-started/rpc.md)
+* [Message Patterns](getting-started/message-patterns/README.md)
+  * [Queues](getting-started/message-patterns/queues.md)
+  * [Pub/Sub](getting-started/message-patterns/pubsub.md)
+  * [RPC](getting-started/message-patterns/rpc.md)
 
 ## Learn
 
