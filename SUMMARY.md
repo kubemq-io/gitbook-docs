@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [What's New](whats-new.md)
 
 ## Getting Started
 
@@ -137,10 +136,4 @@
   * [Go](https://github.com/kubemq-io/kubemq-go/tree/master/examples)
   * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
   * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
-
-## Change Log
-
-* [Kubemq Cluster](change-log/kubemq-cluster.md)
-* [Kubemq Dashboard](change-log/kubemq-dashboard.md)
-* [Kubemq Operator](change-log/kubemq-operator.md)
 
