@@ -1,8 +1,10 @@
+---
+description: Get Started with Pub/ Sub in KubeMQ
+---
+
 # Pub/Sub
 
-## Install Kubemqctl tool
 
-{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 

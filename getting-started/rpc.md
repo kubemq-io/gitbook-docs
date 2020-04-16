@@ -1,8 +1,8 @@
+---
+description: Get Started with RPC in KubeMQ
+---
+
 # RPC
-
-## Install Kubemqctl tool
-
-{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 
