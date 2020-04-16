@@ -50,6 +50,10 @@ kubectl get kubemqdashboard -n kubemq
 
 You can view Kubemq Dashboard at [http://localhost:32000 ](%20http://localhost:32000)
 
+{% hint style="info" %}
+If for some reason you get an error saying "... no matches for kind "KubemqCluster" .... ", please re-run the command again
+{% endhint %}
+
 ## What next ?
 
 ### Install Kubemqctl tool
