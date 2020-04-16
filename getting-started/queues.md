@@ -1,8 +1,8 @@
+---
+description: Get Started with Queues in KubeMQ
+---
+
 # Queues
-
-## Install Kubemqctl tool
-
-{% page-ref page="../kubemqctl/get-started.md" %}
 
 ## Connect Your KubeMQ Cluster
 
