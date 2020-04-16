@@ -44,3 +44,11 @@ Obtain free license key: [Register](https://account.kubemq.io/login/register)
 
 ![](../../.gitbook/assets/create-cluster-3.png)
 
+## Configuration
+
+Check out cluster configuration setting available:
+
+{% page-ref page="../../configuration/cluster/" %}
+
+
+

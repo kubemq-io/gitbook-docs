@@ -38,3 +38,11 @@
 
 ![](../../.gitbook/assets/create-cluster-1.png)
 
+## Configuration
+
+Check out  dashboard configuration setting available:
+
+{% page-ref page="../../configuration/dashboard/" %}
+
+
+
