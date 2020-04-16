@@ -1,6 +1,7 @@
 root: ./
 
 redirects:
+  introduction/quick-start: ./getting-started/quick-start.md
   introduction/introduction: ./README.md
   kubemqctl/kubemqctl: ./kubemqctl/get-started
   tutorials/pubsub: ./learn/message-patterns/pubsub.md
