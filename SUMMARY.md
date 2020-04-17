@@ -28,7 +28,6 @@
 * [Access Control](learn/access-control/README.md)
   * [Authentication](learn/access-control/authentication.md)
   * [Authorization](learn/access-control/authorization.md)
-* [Smart Routing](learn/smart-routing.md)
 * [Clustering](learn/cluster-scale.md)
 * [Dashboard](learn/dashboard.md)
 

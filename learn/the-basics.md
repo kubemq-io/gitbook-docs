@@ -89,8 +89,6 @@ A predefined routes rule can be set with Kubemq Smart Routing configuration and 
 
 More on Smart Routes here:
 
-{% page-ref page="smart-routing.md" %}
-
 ### Mixing Message Pattern destinations
 
 Mixing message pattern destination is allowed. for example, an events sender can send a message to events\_store subscriber and to a queues subscriber at the same time.
