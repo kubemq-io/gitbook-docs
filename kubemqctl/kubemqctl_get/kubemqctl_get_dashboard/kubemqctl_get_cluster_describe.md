@@ -1,10 +1,10 @@
 # Describe
 
-Describe Kubemq cluster command
+Describe KubeMQ cluster command
 
 ## Synopsis
 
-Describe command allows describing a Kubemq cluster to console
+Describe command allows describing a KubeMQ cluster to console
 
 ```text
 kubemqctl get cluster describe [flags]

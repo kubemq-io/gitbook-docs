@@ -16,7 +16,7 @@
 
 ## Example
 
-Set TLS certificates to secure Kubemq cluster:
+Set TLS certificates to secure KubeMQ cluster:
 
 ```bash
 kubemqctl create cluster --tls-enabled --tls-cert-file ./cert.pem --tls-key-file ./key.pem --tls-ca-file ./ca.pem
@@ -36,7 +36,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 
 ## Example
 
-Set TLS certificates to secure Kubemq cluster:
+Set TLS certificates to secure KubeMQ cluster:
 
 ```bash
 helm install kubemq-cluster --set-file tls.cert=./cert.pem,tls.key=./key.pem,tls.ca=./ca.pem kubemq-charts/kubemq
@@ -56,7 +56,7 @@ Where cert.pem, key.pem and ca.pem are the required certificates/keys for TLS se
 
 ## Example
 
-Set TLS certificates to secure Kubemq cluster:
+Set TLS certificates to secure KubeMQ cluster:
 
 Run:
 

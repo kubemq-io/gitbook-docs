@@ -1,12 +1,12 @@
 ---
 description: >-
-  Kubemq Dashboard is pre-configured Grafana/Prometheus deployment which scrape
-  KubeMQ Prometheus endpoints and present all Kubemq's available metrics.
+  KubeMQ Dashboard is pre-configured Grafana/Prometheus deployment which scrape
+  KubeMQ Prometheus endpoints and present all KubeMQ's available metrics.
 ---
 
 # Dashboard
 
-## Kubemq Dashboard Main View
+## KubeMQ Dashboard Main View
 
 ![](../.gitbook/assets/dashboard-1.png)
 

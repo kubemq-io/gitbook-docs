@@ -10,7 +10,7 @@
 
 ## Example
 
-Set implicit Kubemq cluster namespace installation:
+Set implicit KubeMQ cluster namespace installation:
 
 ```bash
 kubemqctl create cluster --namespace kubemq-namespace

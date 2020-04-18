@@ -10,7 +10,7 @@
 
 ## Example
 
-Set implicit Kubemq dashboard name:
+Set implicit KubeMQ dashboard name:
 
 ```bash
 kubemqctl create dashboard --name your-kubemq-dashboard-name
@@ -24,7 +24,7 @@ No values defined for dashboard name.
 
 ## Example
 
-Set implicit Kubemq dashboard name:
+Set implicit KubeMQ dashboard name:
 
 ```bash
 helm install your-kubemq-dashboard-name  kubemq-charts/dashboard
@@ -40,7 +40,7 @@ helm install your-kubemq-dashboard-name  kubemq-charts/dashboard
 
 ## Example
 
-Set implicit Kubemq dashboard name:
+Set implicit KubeMQ dashboard name:
 
 Run:
 

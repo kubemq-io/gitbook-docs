@@ -1,6 +1,6 @@
 # Set License
 
-Create Kubemq Cluster with Enterprise License
+Create KubeMQ Cluster with Enterprise License
 
 {% tabs %}
 {% tab title="Kubemqctl" %}

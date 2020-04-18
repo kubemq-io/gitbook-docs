@@ -13,7 +13,7 @@
 
 ## Examples
 
-Create Kubemq Cluster with 30Gi Persistent Volume Claim:
+Create KubeMQ Cluster with 30Gi Persistent Volume Claim:
 
 ```bash
 kubemqctl create cluster -v 30Gi

@@ -10,7 +10,7 @@
 
 ## Example
 
-Set implicit Kubemq cluster name:
+Set implicit KubeMQ cluster name:
 
 ```bash
 kubemqctl create cluster --name your-kubemq-cluster-name
@@ -24,7 +24,7 @@ No values defined for cluster name.
 
 ## Example
 
-Set implicit Kubemq cluster name:
+Set implicit KubeMQ cluster name:
 
 ```bash
 helm install your-kubemq-cluster-name  kubemq-charts/kubemq
@@ -40,7 +40,7 @@ helm install your-kubemq-cluster-name  kubemq-charts/kubemq
 
 ## Example
 
-Set implicit Kubemq cluster name: Run:
+Set implicit KubeMQ cluster name: Run:
 
 ```bash
 kubectl apply -f {below-yaml-file}

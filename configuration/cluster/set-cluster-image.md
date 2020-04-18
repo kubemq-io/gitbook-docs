@@ -11,7 +11,7 @@
 
 ## Example
 
-Set implicit Kubemq cluster docker image:
+Set implicit KubeMQ cluster docker image:
 
 ```bash
 kubemqctl create cluster --image docker.io/kubemq/kubemq:latest
@@ -30,7 +30,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 
 ## Example
 
-Set implicit Kubemq cluster docker image:
+Set implicit KubeMQ cluster docker image:
 
 ```bash
 helm install kubemq-cluster  --set image.image  docker.io/kubemq/kubemq:latest kubemq-charts/kubemq
@@ -49,7 +49,7 @@ Replace `docker.io/kubemq/kubemq:latest` with the desired image with the `regist
 
 ## Example
 
-Set implicit Kubemq cluster docker image: Run:
+Set implicit KubeMQ cluster docker image: Run:
 
 ```bash
 kubectl apply -f {below-yaml-file}

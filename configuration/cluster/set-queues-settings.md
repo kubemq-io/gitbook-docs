@@ -1,6 +1,6 @@
 # Set Queues Settings
 
-Queues options allows to configure Kubemq Queues defaults.
+Queues options allows to configure KubeMQ Queues defaults.
 
 {% tabs %}
 {% tab title="Kubemqctl" %}

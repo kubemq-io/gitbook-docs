@@ -28,7 +28,7 @@ Set authorization web service rules source:
 kubemqctl create cluster --authorization-enabled --authorization-url "http://your.url.rules/" --authorization-auto-reload 120
 ```
 
-Kubemq will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
+KubeMQ will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
 {% endtab %}
 
 {% tab title="Helm" %}

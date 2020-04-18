@@ -6,7 +6,7 @@
 
 1. Open Operators/OperatorHub
 2. Goto Streaming & Messaging
-3. Type Kubemq in search box
+3. Type KubeMQ in search box
 4. Click on Kubemq Enterprise Operator
 
 ![](../../.gitbook/assets/install-operator-1.png)

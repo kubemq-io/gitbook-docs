@@ -6,8 +6,8 @@
 
 1. Open Operators/OperatorHub
 2. Goto Streaming & Messaging
-3. Type Kubemq in search box
-4. Click on Kubemq Enterprise Operator
+3. Type KubeMQ in search box
+4. Click on KubeMQ Enterprise Operator
 
 ![](../../.gitbook/assets/install-operator-1.png)
 
@@ -27,7 +27,7 @@
 
 ## Install KubeMQ Cluster Enterprise Edition
 
-1. Click On Kubemq Cluster 
+1. Click On KubeMQ Cluster
 2. Click on Create New
 3. A yaml editor will open with default configuration will open
 4. Click Create

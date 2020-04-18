@@ -10,7 +10,7 @@
 
 ## Example
 
-Set implicit Kubemq dashboard namespace installation:
+Set implicit KubeMQ dashboard namespace installation:
 
 ```bash
 kubemqctl create dashboard --namespace kubemq-namespace
@@ -24,7 +24,7 @@ No values defined for dashboard namespace.
 
 ## Example
 
-Set implicit Kubemq dashboard namespace installation:
+Set implicit KubeMQ dashboard namespace installation:
 
 ```bash
 helm install kubemq-dashboard  kubemq-charts/dashboard -n kubemq-dashboard-namesapce
@@ -40,7 +40,7 @@ helm install kubemq-dashboard  kubemq-charts/dashboard -n kubemq-dashboard-names
 
 ## Example
 
-Set implicit Kubemq dashboard namespace installation:
+Set implicit KubeMQ dashboard namespace installation:
 
 Run:
 

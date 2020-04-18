@@ -1,6 +1,6 @@
 # Set Store Settings
 
-Store options allows to configure the way Kubemq server store persistence data for both events\_store and queues message patterns.
+Store options allows to configure the way KubeMQ server store persistence data for both events\_store and queues message patterns.
 
 {% tabs %}
 {% tab title="Kubemqctl" %}
