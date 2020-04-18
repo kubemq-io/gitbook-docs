@@ -48,6 +48,10 @@ With the release of KubeMQ v2, helm charts repositories ware updated with the up
 
 Helm version 3 is required to install and manage KubeMQ charts.
 
+[Deploy KubeMQ Server with Helm](getting-started/create-cluster/helm.md#install-kubemq-cluster-enterprise-edition)
+
+[Deploy KubeMQ Dashboard with Helm](getting-started/create-dashboard/helm.md#install-kubemq-dashboard)
+
 ### Kubemqctl
 
 Kubemqctl is KubeMQ's CLI \(Command Line Interface\), which allows us to manage and control KubeMQ's applications and components with additional companion development tools that ease the development complexity of Kubernetes application based.
@@ -65,4 +69,8 @@ Kubemqctl is KubeMQ's CLI \(Command Line Interface\), which allows us to manage 
   * Events Store - Send, Receive, List and Attach
   * Commands - Send, Receive, and Attach
   * Queries - Send, Receive, and Attach
+
+[Deploy KubeMQ Server with Kubemqctl](getting-started/create-cluster/kubemqctl.md#install-kubemq-cluster-community-edition)
+
+[Deploy KubeMQ Dashboard with Kubectl](getting-started/create-dashboard/kubemqctl.md#install-kubemq-dashboard)
 
