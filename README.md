@@ -80,5 +80,3 @@ KubeMQ supports CQRS based RPC flows with the following core features:
 * **Ruby** - Ruby SDK based on Rest
 * **jQuery** jQuery SDK based Rest
 
-## Home
-
