@@ -21,7 +21,10 @@
 
 ## Learn
 
-* [The Basics](learn/the-basics.md)
+* [The Basics](learn/the-basics/README.md)
+  * [Channels](learn/the-basics/channels.md)
+  * [Smart Routing](learn/the-basics/smart-routing.md)
+  * [Grouping](learn/the-basics/grouping.md)
 * [Message Patterns](learn/message-patterns/README.md)
   * [Queues](learn/message-patterns/queue.md)
   * [Pub/Sub](learn/message-patterns/pubsub.md)

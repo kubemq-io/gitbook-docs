@@ -65,7 +65,7 @@ Here some cases of channel subscription patterns and which types of messages wit
 | `foo*.>` | `foo.bar`,foo1.bar\` | `foo\` |  |
 | `>` | any message | none |  |
 
-![](../.gitbook/assets/channels.png)
+![](../../.gitbook/assets/channels.png)
 
 ## Multicast Destinations
 
@@ -110,7 +110,7 @@ During a Subscription request, the receiver can set the group name to join or no
 * Any receiver without a group setting \(group="", blank\)
 * Only one receiver for each group he belongs to
 
-![](../.gitbook/assets/grouping.png)
+![](../../.gitbook/assets/grouping.png)
 
 Example:
 
