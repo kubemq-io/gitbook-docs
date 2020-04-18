@@ -1,4 +1,4 @@
-# Load the Dashboard
+# Show Dashboard
 
 ## Deploy KubeMQ Dashboard
 

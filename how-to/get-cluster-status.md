@@ -12,7 +12,6 @@ Will show:
 Current Kubernetes cluster context connection: docker-desktop
 NAME                   DESIRED  READY  IMAGE                           GRPC                           REST                            API                           LICENSE-TO  LICENSE-TYPE               LICENSE-EXPIRE
 kubemq/kubemq-cluster  3        3      docker.io/kubemq/kubemq:latest  ClusterIP: 10.106.3.147:50000  ClusterIP: 10.109.245.198:9090  ClusterIP: 10.96.138.25:8080  John Doe   Community Max 3 Instances  2020-05-16 11:35:33
-
 ```
 
 ## Using kubectl

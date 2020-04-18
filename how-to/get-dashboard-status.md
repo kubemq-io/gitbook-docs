@@ -1,6 +1,5 @@
 # Get Dashboard Status
 
-
 ## Using Kubectl
 
 ```bash
