@@ -19,7 +19,7 @@ Authorization Access Control - allows controlling the access of clients to KubeM
 Notifications Access Control - allows getting an event for any access connection attempt. Learn More.
 Smart Routing - In-flight and routing tables messaging allows to multicast messages to many destinations with a single message.
 
-####Enhancements to Existing Features
+#### Enhancements to Existing Features
 Inbound Traffic Control - allows controlling the messaging flow based on the state of cluster health (Circuit Breaker).
 Cluster Security - simple TLS and mTLS configuration with the ability to control buffers and message size.
 Persistent Store Configuration - In addition to simple PVC configuration, a Storage Class setting was added.
@@ -39,7 +39,7 @@ Helm version 3 is required to install and manage KubeMQ charts.
 ### Kubemqctl
 Kubemqctl is KubeMQ's CLI (Command Line Interface), which allows us to manage and control KubeMQ's applications and components with additional companion development tools that ease the development complexity of Kubernetes application based.
 
-####Key Features
+#### Key Features
 Create, Update, and Delete KubeMQ applications and components such as KubeMQ Cluster and Dashboard.
 Show Events Logs and configuration for KubeMQ Cluster
 Set Port-Froward proxy to KubeMQ cluster to ease development cycle
