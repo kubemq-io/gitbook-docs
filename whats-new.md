@@ -4,7 +4,7 @@
 
 ### KubeMQ Operator
 
-KubeMQ Operator is a software extension to Kubernetes that make use of KubeMQ's custom resources to manage the lifecycle of KubeMQ applications and associated components.
+KubeMQ Operator is a software extension to Kubernetes that make use of KubeMQ's [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) to manage the lifecycle of KubeMQ applications and associated components.
 
 KubeMQ release v2 introducing two core custom resources:
 
