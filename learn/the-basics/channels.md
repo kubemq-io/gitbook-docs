@@ -1,13 +1,16 @@
+---
+description: >-
+  KubeMQ Channel (Topic/Subject/Address/Destination) is a string-based
+  representation of an endpoint or a target of a message.
+---
+
 # Channels
-
-
-KubeMQ Channel \(Topic/Subject/Address/Destination\) is a string-based representation of an endpoint or a target of a message. KubeMQ supports [NATS.IO](https://nats.io/documentation/writing_applications/subjects/) Subject-based Messaging patterns for hierarchies, wildcards, and tokens.
 
 ## Senders and Receivers
 
 The core functionality of KubeMQ messaging is sending and receiving messages.
 
-**Senders** \(publishers\) can send one or many messages \(stream\) to one or many destinations \(Channel\). Sending a message does not require the set up of any predefined destination.
+**Senders** \(publishers\) can send one or many messages \(stream\) to one or many destinations \(Channels\). Sending a message does not require the set up of any predefined destination.
 
 **Receiver** \(subscribers/listeners\) can receive messages from one or more senders on the same channel or a wildcards channel. Before a Receiver can receive any messages, a Subscription function is needed to register his interest in receiving messages from a senders designation.
 
@@ -65,3 +68,4 @@ Here some cases of channel subscription patterns and which types of messages wit
 | `>` | any message | none |  |
 
 ![](../../.gitbook/assets/channels.png)
+

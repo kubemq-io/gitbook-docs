@@ -1,6 +1,7 @@
 # Smart Routing
 
 ## Multicast Destinations
+
 RPC and Queues **senders** can multicast a message to many channels at once, even to a different messaging pattern. Separate each destination with a `;` and specify the message pattern type with `:`.
 
 ### Message Pattern Format
@@ -32,8 +33,4 @@ Mixing message pattern destination is allowed. for example, an events sender can
 | Events | foo.bar;foo.bar.1;events\_store: store.foo;queues: q1 | events-&gt;foo.bar, events-&gt;foo.bar.1, events\_store-&gt;store.foo, queues-&gt;q1 |
 | Events Store | foo.bar.store;events: bar.1;queues:q2; routes:my-route | events\_store-&gt;foo.bar.store, events-&gt; bar.1, queues -&gt; q2, all destinations defined by my-route |
 | Queues | q1.foo.bar;events: bar.1;events\_store:store.foo.1 | queues-&gt; q1.foo.bar, events-&gt; bar.1, events\_store-&gt; store.foo.1 |
-
-
-
-
 

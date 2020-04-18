@@ -31,3 +31,4 @@ In the table below, we explore several message channels and which receiver will 
 | `foo` | R6,R7 |
 | `foo.bar` | R1, R2 or R3, R4 or R5, R6, R8 |
 | `foo.bar.zoo` | R1, R2 or R3, R6, R8 |
+
