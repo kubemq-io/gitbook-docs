@@ -20,8 +20,6 @@ Set predefined authorization rules policy where policy.json is json array of acc
 kubemqctl create cluster --authorization-enabled --authorization-policy-file ./policy.json
 ```
 
-.
-
 Set authorization web service rules source:
 
 ```bash

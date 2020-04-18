@@ -8,26 +8,17 @@
 | :--- | :--- | :--- | :--- |
 | --routing-data | string | "" | Set routing data |
 | --routing-file | string | "" | set routing  file |
-| --routing-url | string url | "" | Set routing policy loading url |
+| --routing-url | string url | "" | Set routing data loading url |
 | --routing-auto-reload | int | 0 | Set auto reload routing data from url |
 
-## Examples
+## Example
 
-Set predefined authorization rules policy where policy.json is json array of access control rules:
-
-```bash
-kubemqctl create cluster --authorization-enabled --authorization-policy-file ./policy.json
-```
-
-.
-
-Set authorization web service rules source:
+Set predefined routing rules data where routing.json is json array of routing rules:
 
 ```bash
-kubemqctl create cluster --authorization-enabled --authorization-url "http://your.url.rules/" --authorization-auto-reload 120
+kubemqctl create cluster --routing-file ./routing.json
 ```
 
-KubeMQ will call "[http://your.url.rules](http://your.url.rules)" every 120 seconds and pulls the Authorization policy json array
 {% endtab %}
 
 {% tab title="Helm" %}
@@ -35,23 +26,18 @@ KubeMQ will call "[http://your.url.rules](http://your.url.rules)" every 120 seco
 
 | Value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| authorization.PolicyData | string | "" | Set Authorization policy data |
-| authorization.url | string url | "" | Set Optional authorization server url for policy data |
-| authorization.autoReload | int | 0 | Set auto reload policy data from url |
+| routing.data | string | "" | Set routing data |
+| routing.url | string url | "" | Set routing data loading url |
+| routing.autoReload | int | 0 | Set auto reload routing data from url |
 
-## Examples
+## Example
 
-Set predefined authorization rules policy where policy.json is json array of access control rules:
-
-```bash
-helm install kubemq-cluster --set-file authorization.policyData=./policy.json kubemq-charts/kubemq
-```
-
-Set authorization web service rules source:
+Set predefined routing rules data where routing.json is json array of routing rules:
 
 ```bash
-helm install kubemq-cluster --set authorization.url="http://your.url.rules/",authorization.autoReload=120 kubemq-charts/kubemq
+helm install kubemq-cluster --set-file routing.data=./routing.json kubemq-charts/kubemq
 ```
+
 {% endtab %}
 
 {% tab title="kubectl" %}
@@ -59,13 +45,13 @@ helm install kubemq-cluster --set authorization.url="http://your.url.rules/",aut
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| policyData | string | "" | Set Authorization policy data |
-| url | string url | "" | Set Optional authorization server url for policy data |
-| autoReload | int | 0 | Set auto reload policy data from url |
+| data | string | "" | Set routing data |
+| url | string url | "" | Set routing data loading url |
+| autoReload | int | 0 | Set auto reload routing data from url |
 
-## Examples
+## Example
 
-Set predefined authorization rules policy where policy.json is json array of access control rules:
+Set predefined routing rules data where routing.json is json array of routing rules:
 
 Run:
 
@@ -84,55 +70,19 @@ metadata:
 spec:
   replicas: 3
   authorization:
-    policy: |-
+    data: |-
       [
          {
-            "ClientID":"client-1",
-            "Events":true,
-            "EventsStore": false,
-            "Queues": false,
-            "Commands": false,
-            "Queries": false,
-            "Channel":"foo.bar.1",
-            "Read":false,
-            "Write": true
+            "Key":"all-to-foo-bar",
+            "Routes": "events:foo.bar;events_store:foo.bar;queues:foo.bar"
          },
          {
-            "ClientID":"client-2",
-            "Events":true,
-            "EventsStore": false,
-            "Queues": false,
-            "Commands": false,
-            "Queries": false,
-            "Channel":"foo.bar.2",
-            "Read":false,
-            "Write": true
-         },
+            "Key":"sink-to-events-channel",
+            "Routes": "events:sink"
+         }
       ]
 ```
 
-Set authorization web service rules source:
-
-Run:
-
-```bash
-kubectl apply -f {below-yaml-file}
-```
-
-```yaml
-apiVersion: core.k8s.kubemq.io/v1alpha1
-kind: KubemqCluster
-metadata:
-  name: kubemq-cluster
-  namesapce: kubemq
-  labels:
-    app: kubemq-cluster
-spec:
-  replicas: 3
-  authorization:
-    url: "http://your.url.rules/"
-    autoReload: 120
-```
 {% endtab %}
 {% endtabs %}
 
