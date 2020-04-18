@@ -29,6 +29,7 @@
 * [Access Control](learn/access-control/README.md)
   * [Authentication](learn/access-control/authentication.md)
   * [Authorization](learn/access-control/authorization.md)
+  * [Notifications](learn/access-control/notifications.md)
 * [Clustering](learn/cluster-scale.md)
 * [Dashboard](learn/dashboard.md)
 
