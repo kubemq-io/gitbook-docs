@@ -23,7 +23,7 @@ Release v2 brings new features, enhancements to existing features together with 
 
 1. **Authentication Access Control** - allows controlling the access of clients to KubeMQ gRPC and Rest interfaces.[ Learn More](learn/access-control/authentication.md).
 2. **Authorization Access Control** - allows controlling the access of clients to KubeMQ server resources \(Channels, Read, and Write\). [Learn More](learn/access-control/authorization.md).
-3. **Notifications Access Control** - allows getting an event for any access connection attempt.  Learn More.
+3. **Notifications Access Control** - allows getting an event for any access connection attempt.  [Learn More](learn/access-control/notifications.md).
 4. **Smart Routing** - In-flight and routing tables messaging allows to multicast messages to many destinations with a single message. Learn More
 
 #### Enhancements to Existing Features
