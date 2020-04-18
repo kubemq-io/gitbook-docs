@@ -1,16 +1,10 @@
----
-description: >-
-  KubeMQ's Authentication feature allows controlling the access of clients to
-  KubeMQ gRPC and Rest interfaces.
----
-
 # Authentication
 
 ## General
 
 KubeMQ's Authentication feature allows controlling the access of clients to KubeMQ gRPC and Rest interfaces.
 
-## How Authentication Work
+## How Authentication Works
 
 Clients Authentication connectivity When a client connects to KubeMQ, and before it can perform operations, it must authenticate, that is, present and prove its identity.
 
@@ -36,7 +30,7 @@ Each signing method expects a different object type for its signing keys. Here a
 {% page-ref page="../../configuration/cluster/set-authentication.md" %}
 
 {% hint style="success" %}
-The authentication feature is available only on KubeMQ Enterprise Edition.
+The Authentication feature is available only on KubeMQ Enterprise Edition.
 
 Register for free 30 days license [here](https://account.kubemq.io/login/register).
 {% endhint %}

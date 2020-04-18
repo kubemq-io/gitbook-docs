@@ -1,16 +1,10 @@
----
-description: >-
-  KubeMQ's Authorization feature allows controlling the access of clients to
-  KubeMQ resources.
----
-
 # Authorization
 
 ## General
 
 KubeMQ's Authorization feature allows controlling the access of clients to KubeMQ resources.
 
-## How Permissions Work
+## How Permissions Works
 
 When a client wants to perform an operation such as send data to a channel, subscribe to a channel, pull messages from a queue, KubeMQ server checks whether the client has the permission to access the relevant resources and the action. The client must have been granted the appropriate permission rule to complete the operation.
 
@@ -131,7 +125,7 @@ Grant access for client-1 to send events only to foo.bar.1 and client-2 to send 
 
 ## Loading Configuration
 
-Kubemq supports two configuration loading options:
+KubeMQ supports two configuration loading options:
 
 1. Set json array on cluster creation
 2. Set Url of a web service to call and get Authorization configuration json array with automatic reloading options every predefined second
@@ -139,7 +133,7 @@ Kubemq supports two configuration loading options:
 {% page-ref page="../../configuration/cluster/set-authorization.md" %}
 
 {% hint style="success" %}
-The authorization feature is available only on Kubemq Enterprise Edition.
+The Authorization feature is available only on KubeMQ Enterprise Edition.
 
 Register for free 30 days license [here](https://account.kubemq.io/login/register).
 {% endhint %}

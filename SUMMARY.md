@@ -47,6 +47,7 @@
   * [Set Cluster Security](configuration/cluster/set-cluster-security.md)
   * [Set Authentication](configuration/cluster/set-authentication.md)
   * [Set Authorization](configuration/cluster/set-authorization.md)
+  * [Set Notification](configuration/cluster/set-notification.md)
   * [Set License](configuration/cluster/set-license.md)
   * [Set gRPC Interface](configuration/cluster/set-grpc-interface.md)
   * [Set Rest Interface](configuration/cluster/set-rest-interface.md)

@@ -57,6 +57,8 @@ HS256/HS384/HS512/RS256/RS384/RS512/ES256/ES384/ES512
 
 ## Example
 
+Load key.pem as a public key file encoded with RSA 512:
+
 Run:
 
 ```bash
