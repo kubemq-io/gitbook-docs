@@ -18,7 +18,6 @@ Set predefined routing rules data where routing.json is json array of routing ru
 ```bash
 kubemqctl create cluster --routing-file ./routing.json
 ```
-
 {% endtab %}
 
 {% tab title="Helm" %}
@@ -37,7 +36,6 @@ Set predefined routing rules data where routing.json is json array of routing ru
 ```bash
 helm install kubemq-cluster --set-file routing.data=./routing.json kubemq-charts/kubemq
 ```
-
 {% endtab %}
 
 {% tab title="kubectl" %}
@@ -82,7 +80,6 @@ spec:
          }
       ]
 ```
-
 {% endtab %}
 {% endtabs %}
 

@@ -24,13 +24,11 @@ A predefined routes rule can be set with KubeMQ Smart Routing configuration and 
 | :--- | :--- | :--- |
 | Routes | routes: all-foo-bar | to all destinations defined by all-foo-bar route |
 
-
-
 ### Mixing Message Pattern destinations
 
 Mixing message pattern destination is allowed. for example, an events sender can send a message to events\_store subscriber and to a queues subscriber at the same time.
 
-### Examples
+#### Examples
 
 | Sends From | Channel Destinations | Will routes to |
 | :--- | :--- | :--- |
@@ -48,10 +46,10 @@ A routing rule is defined by a record with two fields:
 | Routes | string | channel destinations separated by ; |
 
 {% hint style="danger" %}
-Routes cannot point to another Routes Key
+Routes cannot point to another Route Key
 {% endhint %}
 
-Example:
+#### Example:
 
 Two routing rules:
 
@@ -73,3 +71,4 @@ The Smart Route preload configuration feature is available only on KubeMQ Enterp
 
 Register for free 30 days license [here](https://account.kubemq.io/login/register).
 {% endhint %}
+
