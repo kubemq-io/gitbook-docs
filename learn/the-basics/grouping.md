@@ -1,6 +1,14 @@
+---
+description: >-
+  KubeMQ supports grouping receivers with the same subscription channel patterns
+  to form a load balancing group.
+---
+
 # Grouping
 
-KubeMQ supports grouping receivers with the same subscription channel patterns to form a load balancing group. The group pattern is a useful pattern for sharing message load handling between services and for redundancy functionality too.
+## Consumer Groups
+
+The group pattern is a useful pattern for sharing message load handling between services and for redundancy functionality too.
 
 During a Subscription request, the receiver can set the group name to join or not. Based on the Group value setting KubeMQ will deliver messages to the receiver as follows:
 
