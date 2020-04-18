@@ -1,6 +1,6 @@
 # Get Cluster Status
 
-## With Kubemqctl
+## Using Kubemqctl
 
 ```bash
 kubemqctl get cluster
@@ -15,7 +15,7 @@ kubemq/kubemq-cluster  3        3      docker.io/kubemq/kubemq:latest  ClusterIP
 
 ```
 
-## With Kubectl
+## Using kubectl
 
 ```bash
 kubectl get kubemqclusters -n kubemq

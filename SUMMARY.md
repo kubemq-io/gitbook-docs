@@ -69,8 +69,10 @@
 ## HOW TO
 
 * [Connect Your Cluster](how-to/connect-your-cluster.md)
-* [Load the Dashboard](how-to/load-the-dashboard.md)
+* [Show Dashboard](how-to/show-dashboard.md)
 * [Get Cluster Status](how-to/get-cluster-status.md)
+* [Get Dashboard Status](how-to/get-dashboard-status.md)
+* [Get Cluster Logs](how-to/get-cluster-logs.md)
 
 ## Development
 
