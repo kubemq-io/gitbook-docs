@@ -1,14 +1,12 @@
 # Introduction
 
-## Introduction
-
-### What is KubeMQ?
+## What is KubeMQ?
 
 KubeMQ is a Kubernetes Message Queue Broker.
 
 Enterprise-grade message broker and message queue, scalable, high available and secured. A Kubernetes native solution in a lightweight container, deployed in just one minute.
 
-### Main Features
+## Main Features
 
 * All-batteries included Messaging Queue Broker for Kubernetes environment
 * Deployed with Operator for full life cycle operation
@@ -22,15 +20,15 @@ Enterprise-grade message broker and message queue, scalable, high available and 
 * .Net, Java, Python, Go and NodeJS SDKs
 * Monitoring Dashboard
 
-### Kubernetes Ready
+## Kubernetes Ready
 
 * **Kubernetes** - KubeMQ can be deployed on any Kubernetes cluster as stateful set.
 * **MicroK8s** - [Canonical's MicroK8s](https://microk8s.io/)
 * **K3s** - [Rancher's](https://k3s.io/)
 
-### Messaging Patterns
+## Messaging Patterns
 
-#### Queues
+### Queues
 
 KubeMQ supports distributed durable FIFO based queues with the following core features:
 
@@ -44,7 +42,7 @@ KubeMQ supports distributed durable FIFO based queues with the following core fe
 * **Visibility timers** - Consumers can pull a message from the queue and set a timer which will cause the message not be visible to other consumers. This timer can be extended as needed.
 * **Resend Messages** - Consumers can send back a message they pulled to a new queue or send a modified message to the same queue for further processing.
 
-#### Pub/Sub
+### Pub/Sub
 
 KubeMQ supports Publish-Subscribe \(a.k.a Pub/Sub\) messages patterns with the following core features:
 
@@ -52,7 +50,7 @@ KubeMQ supports Publish-Subscribe \(a.k.a Pub/Sub\) messages patterns with the f
 * **Events Store** -An asynchronous Pub/Sub pattern with persistence.
 * **Grouping** - Load balancing of events between subscribers
 
-#### RPC
+### RPC
 
 KubeMQ supports CQRS based RPC flows with the following core features:
 
@@ -63,12 +61,12 @@ KubeMQ supports CQRS based RPC flows with the following core features:
 * **Grouping** - Load balancing of RPC calls between receivers
 * **Caching** - RPC response can be cached for future requests without the need to process again by a receiver
 
-### Interfaces
+## Interfaces
 
 * **gRPC** - High performance RPC and streaming framework that can run in any environment, Open source and Cloud Native.
 * **Rest** - Restful Api with WebSocket support for bi-directional streaming.
 
-### SDK
+## SDK
 
 * **C\#** - C\# SDK based on gRPC
 * **Java** - Java SDK based on gRPC
