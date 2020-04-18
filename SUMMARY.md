@@ -70,6 +70,22 @@
 
 * [Connect Your Cluster](how-to/connect-your-cluster.md)
 
+## Development
+
+* [SDK](development/sdk/README.md)
+  * [.Net](https://github.com/kubemq-io/kubemq-CSharp)
+  * [Java](https://github.com/kubemq-io/kubemq-Java)
+  * [Go](https://github.com/kubemq-io/kubemq-go)
+  * [Python](https://github.com/kubemq-io/kubemq-Python)
+  * [Node](https://github.com/kubemq-io/kubemq-node)
+  * [Rest](https://postman.kubemq.io/)
+* [Examples](development/examples/README.md)
+  * [.Net](https://github.com/kubemq-io/kubemq-CSharp/tree/master/Examples)
+  * [Java](https://github.com/kubemq-io/kubemq-Java/tree/master/examples)
+  * [Go](https://github.com/kubemq-io/kubemq-go/tree/master/examples)
+  * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
+  * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
+
 ## Troubleshooting
 
 * [Start Here](troubleshooting/start-here.md)
@@ -125,20 +141,4 @@
   * [Receive](kubemqctl/kubemqctl_queries/kubemqctl_queries_receive.md)
   * [Attach](kubemqctl/kubemqctl_queries/kubemqctl_queries_attach.md)
 * [Config](kubemqctl/kubemqctl_config.md)
-
-## Development
-
-* [SDK](development/sdk/README.md)
-  * [.Net](https://github.com/kubemq-io/kubemq-CSharp)
-  * [Java](https://github.com/kubemq-io/kubemq-Java)
-  * [Go](https://github.com/kubemq-io/kubemq-go)
-  * [Python](https://github.com/kubemq-io/kubemq-Python)
-  * [Node](https://github.com/kubemq-io/kubemq-node)
-  * [Rest](https://postman.kubemq.io/)
-* [Examples](development/examples/README.md)
-  * [.Net](https://github.com/kubemq-io/kubemq-CSharp/tree/master/Examples)
-  * [Java](https://github.com/kubemq-io/kubemq-Java/tree/master/examples)
-  * [Go](https://github.com/kubemq-io/kubemq-go/tree/master/examples)
-  * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
-  * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
 
