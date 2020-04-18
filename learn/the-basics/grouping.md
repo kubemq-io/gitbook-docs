@@ -1,6 +1,7 @@
 # Grouping
 
 ## General
+
 KubeMQ supports grouping receivers with the same subscription channel patterns to form a load balancing group.
 
 ## Consumer Groups

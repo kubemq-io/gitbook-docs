@@ -42,10 +42,9 @@ helm install kubemq-cluster --set notification.enabled=true,notification.prefix=
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-|enabled | bool | false | Enable notification configuration |
-|prefix | string | "" | Set notification channel prefix |
+| enabled | bool | false | Enable notification configuration |
+| prefix | string | "" | Set notification channel prefix |
 | log | bool | false | Set log notification to stdout" |
-
 
 ## Example
 
@@ -75,6 +74,6 @@ spec:
 {% endtabs %}
 
 {% hint style="info" %}
-[Learn Access Control - Notification Feature](../../learn/access-control/notification.md)
+[Learn Access Control - Notification Feature](https://github.com/kubemq-io/gitbook-docs/tree/864b0902d11420db7eced111d8cf9e295a654a6e/learn/access-control/notification.md)
 {% endhint %}
 
