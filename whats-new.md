@@ -4,10 +4,14 @@
 
 ### KubeMQ Operator
 KubeMQ Operator is a software extension to Kubernetes that make use of KubeMQ's custom resources to manage the lifecycle of KubeMQ applications and associated components.
+
 KubeMQ release v2 introducing two core custom resources:
-KubeMQCluster - manage KubeMQ server Statefulset deployment with associated config map, secrets, and services configuration.
-KubeMQDashboard - manage Prometheus and Grafana based dashboard monitoring for KubeMQ clusters deployment.
+
+1. KubeMQCluster - manage KubeMQ server Statefulset deployment with associated config map, secrets, and services configuration.
+2. KubeMQDashboard - manage Prometheus and Grafana based dashboard monitoring for KubeMQ clusters deployment.
+
 KubeMQ Operator is deployed in a pre-defined namespace and manage the whole lifecycle of KubeMQ components within the namespace.
+
 KubeMQ Operator is a certified Red Hat Openshift Operator.
 
 ### KubeMQ Server
