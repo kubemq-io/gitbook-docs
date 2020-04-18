@@ -1,10 +1,12 @@
 # RPC
 
+## General
+
 Remote Procedure Call \(RPC\) is a protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details.
 
 A procedure call is also sometimes known as a function call or a subroutine call.
 
-![](https://github.com/kubemq-io/gitbook-docs/tree/350be2e95d91efd8d8c2e882bbe7d0f0278630f5/learn/images/rpc.png)
+![RPC Message Pattern](../../.gitbook/assets/rpc.png)
 
 ## Core Features
 

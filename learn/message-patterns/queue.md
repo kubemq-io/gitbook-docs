@@ -1,10 +1,12 @@
 # Queues
 
-Message queues provide an asynchronous communications protocol, meaning that the sender and receiver of the message do not need to interact with the message queue at the same time. Messages placed onto the queue are stored until the recipient retrieves them.
+## General
 
-Message queues have implicit or explicit limits on the size of data that may be transmitted in a single message and the number of messages that may remain outstanding in the queue.
+Message queues provide an asynchronous communications protocol, meaning that the sender and receiver of the message do not need to interact with the message queue at the same time.
 
-![](../../.gitbook/assets/queue.png)
+Message queues have implicit or explicit limits on the size of data that may be transmitted in a single message and the number of messages that may remain outstanding in the queue. Messages placed onto the queue are stored until the recipient retrieves them.
+
+![Queues Message Pattern](../../.gitbook/assets/queue.png)
 
 ## Core Features
 
@@ -13,7 +15,7 @@ KubeMQ supports distributed durable FIFO based queues with the following core fe
 * **Exactly One Delivery** - Only one message guarantee will deliver to the subscriber
 * **Single and Batch Messages Send and Receive** - Single and multiple messages in one call
 * **RPC and Stream Flows** - RPC flow allows an insert and pulls messages in one call. Stream flow allows single message consuming in a transactional way
-* **Message Policy** - Each message can be configured with expiration and delay timers. Also, each message can specify a dead-letter queue for un-processed messages attempts
+* **Message Policy** - Each message can be configured with expiration and delay timers. Also, each message can specify a dead-letter queue for unprocessed messages attempts
 * **Long Polling** - Consumers can wait until a message available in the queue to consume
 * **Peak Messages** - Consumers can peek into a queue without removing them from the queue
 * **Ack All Queue Messages** - Any client can mark all the messages in a queue as discarded and will not be available anymore to consume
@@ -46,7 +48,7 @@ KubeMQ allows the producer to set each message with sending delay \(in seconds\)
 
 {% embed url="https://player.vimeo.com/video/372196064" caption="" %}
 
-### Dead-Letter Queue
+### Dead-Letter Queues
 
 KubeMQ allows a producer to set a dead-letter queue per each message a which the message will be moved onto in case of a consumer will fail to ack the message \(such a poison message\).
 

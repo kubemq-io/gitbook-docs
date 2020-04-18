@@ -1,8 +1,12 @@
 # Pub/Sub
 
+## General
+
 The publish-subscribe pattern \(or pub/sub, for short\) is a messaging pattern where senders of messages \(publishers\), do not program the messages to be sent directly to specific receivers \(subscribers\). Instead, the programmer “publishes” messages \(events\), without any knowledge of any subscribers there may be.
 
 Similarly, subscribers express interest in one or more events and only receive messages that are of interest, without any knowledge of any publishers.
+
+![Pub/Sub Message Pattern](../../.gitbook/assets/pubsub.png)
 
 ## Core Features
 

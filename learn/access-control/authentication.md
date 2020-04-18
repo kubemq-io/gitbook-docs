@@ -6,6 +6,10 @@ description: >-
 
 # Authentication
 
+## General
+
+KubeMQ's Authentication feature allows controlling the access of clients to KubeMQ gRPC and Rest interfaces.
+
 ## How Authentication Work
 
 Clients Authentication connectivity When a client connects to KubeMQ, and before it can perform operations, it must authenticate, that is, present and prove its identity.

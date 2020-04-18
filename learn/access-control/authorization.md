@@ -6,6 +6,10 @@ description: >-
 
 # Authorization
 
+## General
+
+KubeMQ's Authorization feature allows controlling the access of clients to KubeMQ resources.
+
 ## How Permissions Work
 
 When a client wants to perform an operation such as send data to a channel, subscribe to a channel, pull messages from a queue, KubeMQ server checks whether the client has the permission to access the relevant resources and the action. The client must have been granted the appropriate permission rule to complete the operation.
