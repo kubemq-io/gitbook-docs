@@ -6,57 +6,23 @@ In this guide, we’ll walk you through how to install KubeMQ into your Kubernet
 
 Before we can do anything, we need to ensure you have access to a Kubernetes cluster running 1.12 or later, and a functioning kubectl command on your local machine. \(One easy option is to run Kubernetes on your local machine. We suggest [Docker Desktop](https://www.docker.com/products/docker-desktop) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/), but there are [many options](https://kubernetes.io/docs/setup/).\)
 
-When ready, make sure you’re running a recent version of Kubernetes with:
+## Step 1:
 
-```bash
-kubectl version --short
-```
-
-### Install KubeMQ Cluster Community Edition
-
-Run:
+### Deploy KubeMQ package
 
 ```bash
 kubectl apply -f https://get.kubemq.io/deploy
 ```
 
-### Install KubeMQ Cluster Enterprise Edition
-
-Run:
-
-```bash
-kubectl apply -f https://get.kubemq.io/deploy?token=<your-license-token>
-```
-
-{% hint style="info" %}
-For free 30 days Enterprise licence Please [Register](https://account.kubemq.io/login/register)
-{% endhint %}
-
-### Check Your KubeMQ Cluster Installation
-
-Run:
+### Check Your KubeMQ Cluster Installation:
 
 ```bash
 kubectl get kubemqclusters -n kubemq
 ```
 
-### Check you KubeMQ Dashboard Installation
+## Step 2:
 
-Run:
-
-```bash
-kubectl get kubemqdashboard -n kubemq
-```
-
-You can view Kubemq Dashboard at [http://localhost:32000 ](%20http://localhost:32000)
-
-{% hint style="info" %}
-If for some reason you get an error saying "... no matches for kind "KubemqCluster" .... ", please re-run the command again
-{% endhint %}
-
-## What next ?
-
-### Install Kubemqctl tool
+### Install kubemqctl cli tool
 
 {% tabs %}
 {% tab title="MacOS/Linux" %}
@@ -84,17 +50,43 @@ $env:Path += ';C:\Program Files\kubemqctl'
 {% endtab %}
 {% endtabs %}
 
-### Get started with:
+## Step 3:
+
+### Send 'Hello World'
+
+```bash
+kubemqctl queue send my-queue hello-world
+```
+
+### Get 'Hello World'
+
+```bash
+kubemqctl queue receive my-queue
+```
+
+## What's Next
+
+### Learn KubeMQ Basics
+
+{% page-ref page="../learn/the-basics/channels.md" %}
+
+{% page-ref page="../learn/the-basics/smart-routing.md" %}
+
+{% page-ref page="../learn/the-basics/grouping.md" %}
+
+### Learn KubeMQ Message Patterns
+
+{% page-ref page="../learn/message-patterns/queue.md" %}
+
+{% page-ref page="../learn/message-patterns/pubsub.md" %}
+
+{% page-ref page="../learn/message-patterns/rpc.md" %}
+
+### Get started with KubeMQ message patterns
 
 {% page-ref page="message-patterns/queues.md" %}
 
 {% page-ref page="message-patterns/pubsub.md" %}
 
 {% page-ref page="message-patterns/rpc.md" %}
-
-## Demo
-
-{% embed url="https://player.vimeo.com/video/373966650" %}
-
-
 
