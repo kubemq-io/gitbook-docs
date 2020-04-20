@@ -32,7 +32,7 @@ Enterprise-grade message broker and message queue, scalable, high available and 
 
 KubeMQ supports distributed durable FIFO based queues with the following core features:
 
-* **Guaranteed delivery** - At-least-once delivery and most messages are delivered exactly once.
+* **Guaranteed Delivery** - At-least-once delivery and most messages are delivered exactly once.
 * **Single and Batch Messages Send and Receive** - Single and multiple messages in one call
 * **RPC and Stream Flows** - RPC flow allows an insert and pull messages in one call. Stream flow allows single message consuming in transactional way
 * **Message Policy** - Each message can be configured with expiration and delay timers. In addition, each message can specify a dead-letter queue for unprocessed messages attempts
