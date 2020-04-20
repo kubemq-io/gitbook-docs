@@ -12,7 +12,7 @@ Message queues have implicit or explicit limits on the size of data that may be 
 
 KubeMQ supports distributed durable FIFO based queues with the following core features:
 
-* **Exactly One Delivery** - Only one message guarantee will deliver to the subscriber
+* **Guaranteed delivery** - At-least-once delivery and most messages are delivered exactly once.
 * **Single and Batch Messages Send and Receive** - Single and multiple messages in one call
 * **RPC and Stream Flows** - RPC flow allows an insert and pulls messages in one call. Stream flow allows single message consuming in a transactional way
 * **Message Policy** - Each message can be configured with expiration and delay timers. Also, each message can specify a dead-letter queue for unprocessed messages attempts
