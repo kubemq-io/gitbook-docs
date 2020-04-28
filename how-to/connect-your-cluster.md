@@ -30,6 +30,104 @@ For example, namespace is kubemq and cluster name is kubemq-cluster with cluster
 
 ## Outside Cluster
 
+### Connect with Load Balancer
+
+#### Expose gRPC Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --grpc-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```text
+helm install kubemq-cluster --set grpc.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  grpc:
+    expose: LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
+
+#### Expose Rest Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --rest-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```bash
+helm install kubemq-cluster --set rest.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  rest:
+    expose: LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
+
+#### Expose Api Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --api-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```bash
+helm install kubemq-cluster --set api.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  api:
+    expose: LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
+
 ### Connect with Node Port
 
 Expose the required service via node port and access the service with host:port defined.
@@ -134,104 +232,6 @@ spec:
 {% endtab %}
 {% endtabs %}
 
-
-### Connect with Load Balancer
-
-#### Expose gRPC Load Balancer
-
-{% tabs %}
-{% tab title="Kubemqctl" %}
-```bash
-kubemqctl create cluster --grpc-expose LoadBalancer
-```
-{% endtab %}
-
-{% tab title="Helm" %}
-```text
-helm install kubemq-cluster --set grpc.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
-```
-{% endtab %}
-
-{% tab title="yaml" %}
-```yaml
-apiVersion: core.k8s.kubemq.io/v1alpha1
-kind: KubemqCluster
-metadata:
-  name: kubemq-cluster
-  namesapce: kubemq
-  labels:
-    app: kubemq-cluster
-spec:
-  replicas: 3
-  grpc:
-    expose: LoadBalancer
-```
-{% endtab %}
-{% endtabs %}
-
-#### Expose Rest Load Balancer
-
-{% tabs %}
-{% tab title="Kubemqctl" %}
-```bash
-kubemqctl create cluster --rest-expose LoadBalancer
-```
-{% endtab %}
-
-{% tab title="Helm" %}
-```bash
-helm install kubemq-cluster --set rest.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
-```
-{% endtab %}
-
-{% tab title="yaml" %}
-```yaml
-apiVersion: core.k8s.kubemq.io/v1alpha1
-kind: KubemqCluster
-metadata:
-  name: kubemq-cluster
-  namesapce: kubemq
-  labels:
-    app: kubemq-cluster
-spec:
-  replicas: 3
-  rest:
-    expose: LoadBalancer
-```
-{% endtab %}
-{% endtabs %}
-
-#### Expose Api Load Balancer
-
-{% tabs %}
-{% tab title="Kubemqctl" %}
-```bash
-kubemqctl create cluster --api-expose LoadBalancer
-```
-{% endtab %}
-
-{% tab title="Helm" %}
-```bash
-helm install kubemq-cluster --set api.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
-```
-{% endtab %}
-
-{% tab title="yaml" %}
-```yaml
-apiVersion: core.k8s.kubemq.io/v1alpha1
-kind: KubemqCluster
-metadata:
-  name: kubemq-cluster
-  namesapce: kubemq
-  labels:
-    app: kubemq-cluster
-spec:
-  replicas: 3
-  api:
-    expose: LoadBalancer
-```
-{% endtab %}
-{% endtabs %}
 
 ### Connect with Kubemqctl as Proxy
 
