@@ -36,15 +36,104 @@ Expose the required service via node port and access the service with host:port 
 
 #### Configure gRPC Node Port
 
-{% page-ref page="../configuration/cluster/set-grpc-interface.md" %}
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --grpc-expose NodePort --grpc-node-port 30500
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```text
+helm install kubemq-cluster --set grpc.expose=NodePort,grpc-nodePort=30500  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  grpc:
+    expose: NodePort
+    nodePort: 30500
+```
+{% endtab %}
+{% endtabs %}
 
 #### Configure Rest Node Port
 
-{% page-ref page="../configuration/cluster/set-rest-interface.md" %}
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --rest-expose NodePort --rest-node-port 30600
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```text
+helm install kubemq-cluster --set rest.expose=NodePort,rest-nodePort=30600  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  rest:
+    expose: NodePort
+    nodePort: 30500
+```
+{% endtab %}
+{% endtabs %}
 
 #### Configure Api Node Port
 
-{% page-ref page="../configuration/cluster/set-api-interface.md" %}
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --api-expose NodePort --api-node-port 30700
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```text
+helm install kubemq-cluster --set api.expose=NodePort,api-nodePort=30700  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  api:
+    expose: NodePort
+    nodePort: 30500
+```
+{% endtab %}
+{% endtabs %}
+
 
 ### Connect with Load Balancer
 
@@ -59,12 +148,88 @@ kubemqctl create cluster --grpc-expose LoadBalancer
 
 {% tab title="Helm" %}
 ```text
-kubemqctl create cluster --grpc-expose LoadBalancer
+helm install kubemq-cluster --set grpc.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
 ```
 {% endtab %}
 
 {% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  grpc:
+    expose: LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
 
+#### Expose Rest Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --rest-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```bash
+helm install kubemq-cluster --set rest.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  rest:
+    expose: LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
+
+#### Expose Api Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --api-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```bash
+helm install kubemq-cluster --set api.expose=LoadBalancer  -n kubemq kubemq-charts/kubemq
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqCluster
+metadata:
+  name: kubemq-cluster
+  namesapce: kubemq
+  labels:
+    app: kubemq-cluster
+spec:
+  replicas: 3
+  api:
+    expose: LoadBalancer
+```
 {% endtab %}
 {% endtabs %}
 
