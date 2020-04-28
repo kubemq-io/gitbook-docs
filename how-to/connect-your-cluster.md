@@ -46,6 +46,28 @@ Expose the required service via node port and access the service with host:port 
 
 {% page-ref page="../configuration/cluster/set-api-interface.md" %}
 
+### Connect with Load Balancer
+
+#### Expose gRPC Load Balancer
+
+{% tabs %}
+{% tab title="Kubemqctl" %}
+```bash
+kubemqctl create cluster --grpc-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="Helm" %}
+```text
+kubemqctl create cluster --grpc-expose LoadBalancer
+```
+{% endtab %}
+
+{% tab title="yaml" %}
+
+{% endtab %}
+{% endtabs %}
+
 ### Connect with Kubemqctl as Proxy
 
 Kubemqctl CLI tool provides a very useful command which port-forward all cluster services ports of selected cluster to localhost.
