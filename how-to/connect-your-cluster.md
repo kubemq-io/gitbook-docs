@@ -200,7 +200,6 @@ spec:
 
 #### Configure Api Node Port
 
-
 {% tabs %}
 {% tab title="Kubemqctl" %}
 ```bash
@@ -231,7 +230,6 @@ spec:
 ```
 {% endtab %}
 {% endtabs %}
-
 
 ### Connect with Kubemqctl as Proxy
 
