@@ -4,14 +4,21 @@ KubeMQ Helm charts required Helm v3. Please download/upgrade from [https://githu
 
 ## Add KubeMQ Helm Repository
 
-```text
+```bash
 helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 ```
 
-## Verify KubeMQ Helm Repository Charts
+## Update KubeMQ Helm Repository
 
-```text
-helm repo list
+```bash
+helm repo update
+```
+
+
+## Install KubeMQ Operator
+
+```bash
+helm install kubemq-operator kubemq-charts/operator
 ```
 
 ## Install KubeMQ Cluster Community Edition

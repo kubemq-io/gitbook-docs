@@ -78,3 +78,14 @@ KubeMQ supports CQRS based RPC flows with the following core features:
 * **Ruby** - Ruby SDK based on Rest
 * **jQuery** jQuery SDK based Rest
 
+## Getting Started
+
+[Start with OpenShift](https://docs.kubemq.io/getting-started/create-cluster/openshift)
+
+## Get Enterprise Trial License
+
+[Contact us](https://kubemq.io/contact-sales/)
+
+## Request a Demo
+
+[See KubeMQ in Action](https://kubemq.io/request-a-demo/)
