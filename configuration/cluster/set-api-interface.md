@@ -4,10 +4,13 @@
 {% tab title="Kubemqctl" %}
 ## Flags
 
-| Flag | Type/Options | Default | Description |
-| :--- | :--- | :--- | :--- |
-| --api-disabled | bool | false | Disable api interface |
-| --api-port | int | 8080 | Set api port value |
+| Flag           | Type/Options | Default | Description           |
+|:---------------|:-------------|:--------|:----------------------|
+| --api-disabled | bool         | false   | Disable API interface |
+| --api-port     | int          | 8080    | Set API port value    |
+| --api-expose | string | ClusterIP | Desired service type |
+| --api-node-port | int |  | Desired port number in NodePort expose type |
+
 
 Expose Options:
 
@@ -27,8 +30,10 @@ kubemqctl create cluster --api-expose NodePort --api-node-port 30700
 
 | value | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| api.disabled | bool | false | Disable api interface |
-| api.port | int | 8080 | Set api port value |
+| api.disabled | bool | false | Disable API interface |
+| api.port | int | 8080 | Set API port value |
+| api.expose | string | ClusterIP | Desired service type |
+| api.nodePort | int |  | Desired port number in NodePort expose type |
 
 Expose Options:
 
@@ -48,8 +53,10 @@ helm install kubemq-cluster --set api.expose=NodePort,api-nodePort=30700  -n kub
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| disabled | bool | false | Disable api interface |
-| port | int | 50000 | Set api port value |
+| disabled | bool | false | Disable API interface |
+| port | int | 8080 | Set API port value |
+| expose | string | ClusterIP | Desired service type |
+| nodePort | int |  | Desired port number in NodePort expose type |
 
 Expose Options:
 
