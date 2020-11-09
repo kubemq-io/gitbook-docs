@@ -14,7 +14,6 @@ helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 helm repo update
 ```
 
-
 ## Install KubeMQ Operator
 
 ```bash
@@ -40,6 +39,4 @@ helm install kubemq-cluster --set-file license=./lic.key -n kubemq kubemq-charts
 Check out cluster configuration setting available:
 
 {% page-ref page="../../configuration/cluster/" %}
-
-
 

@@ -4,13 +4,12 @@
 {% tab title="Kubemqctl" %}
 ## Flags
 
-| Flag           | Type/Options | Default | Description           |
-|:---------------|:-------------|:--------|:----------------------|
-| --api-disabled | bool         | false   | Disable API interface |
-| --api-port     | int          | 8080    | Set API port value    |
+| Flag | Type/Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| --api-disabled | bool | false | Disable API interface |
+| --api-port | int | 8080 | Set API port value |
 | --api-expose | string | ClusterIP | Desired service type |
 | --api-node-port | int |  | Desired port number in NodePort expose type |
-
 
 Expose Options:
 

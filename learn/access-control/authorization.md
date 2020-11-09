@@ -118,7 +118,7 @@ Grant access for client-1 to send events only to foo.bar.1 and client-2 to send 
       "Channel":"foo.bar.2",
       "Read":false,
       "Write": true
-   },
+   }
 
 ]
 ```

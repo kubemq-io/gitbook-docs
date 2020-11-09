@@ -28,7 +28,7 @@ helm install kubemq-dashboard kubemq-charts/dashboard
 
 ## Configuration
 
-Check out  dashboard configuration setting available:
+Check out dashboard configuration setting available:
 
 {% page-ref page="../../configuration/dashboard/" %}
 
