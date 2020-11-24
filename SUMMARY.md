@@ -146,7 +146,7 @@
   * [Attach](kubemqctl/kubemqctl_queries/kubemqctl_queries_attach.md)
 * [Config](kubemqctl/kubemqctl_config.md)
 
-## LIcense
+## License
 
 * [Open Source Software Notices](license/open-source-software-notices.md)
 
