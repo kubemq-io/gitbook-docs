@@ -38,9 +38,11 @@ Obtain free license key: [Register](https://account.kubemq.io/login/register)
 {% endhint %}
 
 4. Get the license key from the welcome email
+
 5. Insert the license key into the spec section
 
 Example:
+
 ```yaml
 apiVersion: core.k8s.kubemq.io/v1alpha1
 kind: KubemqCluster
