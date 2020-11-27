@@ -13,23 +13,24 @@
 
 ### Install KubeMQ Operator
 
-1. Set Installation mode to A specific namespace on the cluster
+1. Set Installation mode to a specific namespace on the cluster
 2. Set the namespace
 3. Click Subscribe
 
-![](../../.gitbook/assets/install-operator-2.png)
+![](../../.gitbook/assets/openshift-2.png)
 
 ## Verify Operator Installation
 
-![](../../.gitbook/assets/install-operator-3.png)
+![](../../.gitbook/assets/openshift-3.png)
 
-![](../../.gitbook/assets/install-operator-4.png)
+![](../../.gitbook/assets/openshift-4.png)
 
 ## Install KubeMQ Cluster Enterprise Edition
 
 1. Click On KubeMQ Cluster
-2. Click on Create New
-3. A yaml editor will open with default configuration will open
+2. Click on Create KubemqCluster
+3. Click on Configure via YAML View
+4. A yaml editor will open with default configuration will open
 
 {% hint style="danger" %}
 For all installations of Kubemq in Openshift platform, a License key is required.
@@ -63,13 +64,15 @@ spec:
     JM272-J-y5eB7_hGnH7bNZQeqweqweqweqe23424wqed
 ```
 
+Note: the above license is invalid
+
 6. Click create
 
-![](../../.gitbook/assets/create-cluster-2.png)
+![](../../.gitbook/assets/openshift-5.png)
 
 ## Verify KubeMQ Cluster Installation
 
-![](../../.gitbook/assets/create-cluster-3.png)
+![](../../.gitbook/assets/openshift-6.png)
 
 ## Configuration
 
