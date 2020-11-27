@@ -9,7 +9,7 @@
 3. Type KubeMQ in search box
 4. Click on KubeMQ Enterprise Operator
 
-![](../../.gitbook/assets/install-operator-1.png)
+![](../../.gitbook/assets/openshift-1.png)
 
 ### Install KubeMQ Operator
 

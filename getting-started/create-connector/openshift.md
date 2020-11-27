@@ -44,6 +44,7 @@ spec:
   config: |-
     bindings: null
 ```
+
 #### Create Sources Connector
 
 ```yaml
@@ -56,6 +57,7 @@ spec:
   config: |-
     bindings: null
 ```
+
 #### Create Bridges Connector
 
 ```yaml
@@ -69,6 +71,5 @@ spec:
     bindings: null
 ```
 
-
-4. Click Create
+1. Click Create
 
