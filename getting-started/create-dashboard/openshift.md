@@ -9,7 +9,7 @@
 3. Type KubeMQ in search box
 4. Click on Kubemq Enterprise Operator
 
-![](../../.gitbook/assets/install-operator-1.png)
+![](../../.gitbook/assets/openshift-1.png)
 
 ### Install KubeMQ Operator
 
@@ -17,26 +17,58 @@
 2. Set the namespace
 3. Click Subscribe
 
-![](../../.gitbook/assets/install-operator-2.png)
+![](../../.gitbook/assets/openshift-2.png)
 
 ### Verify Operator Installation
 
-![](../../.gitbook/assets/install-operator-3.png)
+![](../../.gitbook/assets/openshift-3.png)
 
-![](../../.gitbook/assets/install-operator-4.png)
+![](../../.gitbook/assets/openshift-4.png)
 
-### Install KubeMQ Dashboard
+## Install KubeMQ Dashboard
 
 1. Click On Kubemq Dashboard 
-2. Click on Create New
-3. A yaml editor will open with default configuration will open
-4. Click Create
+2. Click on Create KubeMQDashboard
+3. Click on Configure via YAML View
+4. A yaml editor will open with default configuration will open
+5. Click Create
 
-![](../../.gitbook/assets/create-dashboard.png)
+Example:
+
+```yaml
+apiVersion: core.k8s.kubemq.io/v1alpha1
+kind: KubemqDashboard
+metadata:
+  name: kubemq-dashboard
+  namespace: default
+```
+
+![](../../.gitbook/assets/openshift-dashboard-1.png)
 
 ### Verify KubeMQ Dashboard Installation
 
-![](../../.gitbook/assets/create-cluster-1.png)
+![](../../.gitbook/assets/openshift-dashboard-2.png)
+
+## View Grafana Dashboard
+
+### Add Route
+
+1. Click on Networking and then on Routes
+2. Click on Create Route
+
+![](../../.gitbook/assets/openshift-dashboard-3.png)
+
+3.  Set Route name
+
+4. Select Kubemq-dashboard Service
+
+![](../../.gitbook/assets/openshift-dashboard-4.png)
+
+5. Set Target Port to 3000-&gt;3000\(TCP\)
+
+![](../../.gitbook/assets/openshift-dashboard-5.png)
+
+6. Click Create
 
 ## Configuration
 
