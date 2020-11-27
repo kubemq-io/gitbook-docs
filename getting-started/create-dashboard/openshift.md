@@ -70,6 +70,24 @@ metadata:
 
 6. Click Create
 
+### Configure Grafana Dashboard
+
+1. Open the route link
+
+![](../../.gitbook/assets/openshift-dashboard-6.png)
+
+2. Click on the Home drop-down box
+
+![](../../.gitbook/assets/openshift-dashboard-7.png)
+
+3. Select Kubemq Dashboard
+
+![](../../.gitbook/assets/openshift-dashboard-8.png)
+
+4. Kubemq Dashboard will appear
+
+![](../../.gitbook/assets/openshift-dashboard-9.png)
+
 ## Configuration
 
 Check out dashboard configuration setting available:
