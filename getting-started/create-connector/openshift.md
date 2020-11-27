@@ -9,7 +9,7 @@
 3. Type KubeMQ in search box
 4. Click on Kubemq Enterprise Operator
 
-![](../../.gitbook/assets/install-operator-1.png)
+![](../../.gitbook/assets/openshift-1.png)
 
 ### Install KubeMQ Operator
 
@@ -17,20 +17,21 @@
 2. Set the namespace
 3. Click Subscribe
 
-![](../../.gitbook/assets/install-operator-2.png)
+![](../../.gitbook/assets/openshift-2.png)
 
 ### Verify Operator Installation
 
-![](../../.gitbook/assets/install-operator-3.png)
+![](../../.gitbook/assets/openshift-3.png)
 
-![](../../.gitbook/assets/install-operator-4.png)
+![](../../.gitbook/assets/openshift-4.png)
 
-### Install KubeMQ Dashboard
+### Install KubeMQ Connector
 
 1. Click On Kubemq Connector 
-2. Click on Create New
-3. A yaml editor will open with default configuration will open
-4. Select one of the configurations below
+2. Click on Create KubemqConnector
+3. Click on Configure via YAML View
+4. A yaml editor will open with default configuration will open
+5. Select one of the configurations below
 
 #### Create Targets Connector
 
@@ -71,5 +72,7 @@ spec:
     bindings: null
 ```
 
-1. Click Create
+6. Click Create
+
+![](../../.gitbook/assets/openshift-connector-1.png)
 
