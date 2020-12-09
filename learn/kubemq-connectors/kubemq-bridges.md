@@ -42,7 +42,7 @@ KubeMQ Bridges can support any binding topology :
 
 ### Aggregate
 
-![aggregate](../../.gitbook/assets/learn-kubemq-bridges-/aggregate.jpeg)
+![aggregate](../../.gitbook/assets/learn-kubemq-bridges-aggregate.jpeg)
 
 
 ### Transform
