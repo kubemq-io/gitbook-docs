@@ -43,7 +43,7 @@
 * [Dashboard](learn/dashboard.md)
 * [Connectors](learn/kubemq-connectors/README.md)
   * [KubeMQ Targets](learn/kubemq-connectors/kubemq-targets.md)
-
+  * [KubeMQ Sources](learn/kubemq-connectors/kubemq-sources.md)
 ## Configuration
 
 * [Cluster](configuration/cluster/README.md)
