@@ -96,3 +96,85 @@ Response received on request to get the data stored in Redis for key "log"
   "data": "SU5TRVJUIElOVE8gcG9zdChJRCxUSVRMRSxDT05URU5UKSBWQUxVRVMKCSAgICAgICAgICAgICAgICAgICAgICA"
 }
 ```
+
+
+## Middlewares 
+
+In bindings configuration, KubeMQ Bridges supports middleware setting for each pair of source and target bindings.
+
+These properties contain middleware information settings as follows:
+
+### Logs Middleware
+
+KubeMQ Bridges supports level based logging to console according to as follows:
+
+| Property  | Description       | Possible Values        |
+|:----------|:------------------|:-----------------------|
+| log_level | log level setting | "debug","info","error" |
+|           |                   |  "" - indicate no logging on this bindings |
+
+An example for only error level log to console:
+
+```yaml
+bindings:
+  - name: sample-binding 
+    properties: 
+      log_level: error
+    sources:
+    ......  
+```
+
+### Retry Middleware
+
+KubeMQ Bridges supports Retries' target execution before reporting of error back to the source on failed execution.
+
+Retry middleware settings values:
+
+
+| Property                      | Description                                           | Possible Values                             |
+|:------------------------------|:------------------------------------------------------|:--------------------------------------------|
+| retry_attempts                | how many retries before giving up on target execution | default - 1, or any int number              |
+| retry_delay_milliseconds      | how long to wait between retries in milliseconds      | default - 100ms or any int number           |
+| retry_max_jitter_milliseconds | max delay jitter between retries                      | default - 100ms or any int number           |
+| retry_delay_type              | type of retry delay                                   | "back-off" - delay increase on each attempt |
+|                               |                                                       | "fixed" - fixed time delay                  |
+|                               |                                                       | "random" - random time delay                |
+
+An example for 3 retries with back-off strategy:
+
+```yaml
+bindings:
+  - name: sample-binding 
+    properties: 
+      retry_attempts: 3
+      retry_delay_milliseconds: 1000
+      retry_max_jitter_milliseconds: 100
+      retry_delay_type: "back-off"
+    sources:
+    ......  
+```
+
+
+### Rate Limiter Middleware
+
+KubeMQ Sources support a Rate Limiting of target executions.
+
+Rate Limiter middleware settings values:
+
+
+| Property        | Description                                    | Possible Values                |
+|:----------------|:-----------------------------------------------|:-------------------------------|
+| rate_per_second | how many executions per second will be allowed | 0 - no limitation              |
+|                 |                                                | 1 - n integer times per second |
+
+An example for 100 executions per second:
+
+```yaml
+bindings:
+  - name: sample-binding 
+    properties: 
+      rate_per_second: 100
+    source:
+    ......  
+```
+

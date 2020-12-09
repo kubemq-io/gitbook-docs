@@ -1,47 +1,53 @@
-# KubeMQ Sources
+# KubeMQ Bridges
 
-KubeMQ Sources connects external systems and cloud services with KubeMQ message queue broker.
-
-KubeMQ Sources allows us to build a message-based microservices architecture on Kubernetes with minimal efforts and without developing connectivity interfaces between external system such as messaging components (RabbitMQ, Kafka, MQTT) ,REST APIs and KubeMQ message queue broker.
-In addition, KubeMQ Sources allows migrating legacy systems (together with [KubeMQ Targets](https://github.com/kubemq-hub/kubemq-targets)) to KubeMQ based messaging architecture.
-
+KubeMQ Bridges bridge, replicate, aggregate, and transform messages between KubeMQ clusters no matter where they are, allowing to build a true cloud-native messaging single network running globally.
 
 **Key Features**:
 
-- **Runs anywhere**  - Kubernetes, Cloud, on-prem, anywhere
+- **Runs anywhere**  - Kubernetes, Cloud, on-prem , anywhere
 - **Stand-alone** - small docker container / binary
-- **Single Interface** - One interface all the services
-- **API Gateway** - Act as an REST Api gateway
-- **Plug-in Architecture** Easy to extend, easy to connect
-- **Middleware Supports** - Logs, Metrics, Retries, and Rate Limiters
+- **Build Any Topology** - connects KubeMQ clusters in 1:1, 1:n , n:1, n:n
+- **Middleware Supports** - Logs, Metrics, Retries and Rate Limiters
 - **Easy Configuration** - simple yaml file builds your topology
 
-## Concepts
+**An example of a use case:**
 
-KubeMQ Sources building blocks are:
- - Binding
- - Source
- - Target
+![use-case](../../.gitbook/assets/learn-kubemq-bridges-usecase.jpeg)
 
-### Binding
+## Concept
 
-Binding is a 1:1 connection between Source and Target. Every Binding runs independently.
+KubeMQ Bridges' concept is bridging between sources and targets, thus Bindings.
 
-![binding](../../.gitbook/assets/learn-kubemq-sources-binding.jpg)
+Binding can be any source kinds to any target kinds, as shown below:
 
-### Source
+![concept](../../.gitbook/assets/learn-kubemq-bridges-concept.jpeg)
 
-Source is an external service that provide ingress data to KubeMQ's channels which then later consumed by services connected to KubeMQ server.
+KubeMQ Bridges can support any binding topology :
 
-Source can be services such HTTP REST Api, Messaging systems (RabbitMQ, Kafka, MQTT etc).
+| Topology   | Description                                                                                   | Sources-Targets        |
+|:----------|:----------------------------------------------------------------------------------------------|:-----------------------|
+| Bridge    | a 1:1 connectivity mainly for sync type of messages                                           | one source to 1 target   |
+| Replicate | a 1:n connectivity allowing  replicating messages between clusters                            | one source to n targets  |
+| Aggregate | an n:1 connectivity allowing aggregating streams fo messages from clusters to a single target | n source to 1 target   |
+| Transform | an n:n mix and match sources and targets in many to many topology                               | n sources to n targets |
 
-KubeMQ Sources integrate each one of the supported sources and ingest data into KubeMQ via Targets.
+
+### Bridge
+
+![bridge](../../.gitbook/assets/learn-kubemq-bridges-bridge.jpeg)
+
+### Replicate
+
+![replicate](../../.gitbook/assets/learn-kubemq-bridges-replicate.jpeg)
+
+### Aggregate
+
+![aggregate](../../.gitbook/assets/learn-kubemq-bridges-/aggregate.jpeg)
 
 
-### Target
+### Transform
 
-The target is a KubeMQ connection which send the data from the sources and route them to the appropriate KubeMQ channel for action, and return back a response if needed.
-
+![transform](../../.gitbook/assets/learn-kubemq-bridges-transform.jpeg)
 
 
 ## Middlewares 
