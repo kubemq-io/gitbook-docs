@@ -77,8 +77,8 @@
   * [Set Grafana Image](configuration/dashboard/set-grafana.md)
 * [Connectors](configuration/connectors/README.md)
   * [KubeMQ Targets](configuration/connectors/kubemq-targets/README.md)
-    *[Standalone](configuration/connectors/kubemq-targets/standalone/README.md)
-      *[Redis](configuration/connectors/kubemq-targets/standalone/redis.md)
+    * [Standalone](configuration/connectors/kubemq-targets/standalone/README.md)
+      * [Redis](configuration/connectors/kubemq-targets/standalone/redis.md)
   * [KubeMQ Sources](configuration/connectors/README.md)
   * [KubeMQ Bridges](configuration/connectors/README.md)
       
