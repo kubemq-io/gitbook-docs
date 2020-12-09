@@ -26,7 +26,7 @@ KubeMQ Targets building blocks are:
 
 Binding is a 1:1 connection between Source and Target. Every Binding runs independently.
 
-![binding](.github/assets/learn-kubemq-targets-binding.jpeg)
+![binding](../../.gitbook/assets/learn-kubemq-targets-binding.jpeg)
 
 ### Target
 
@@ -44,7 +44,7 @@ The source is a KubeMQ connection (in subscription mode), which listens to reque
 
 ### Request / Response
 
-![concept](.github/assets/learn-kubemq-targets-concept.jpeg)
+![concept](../../.gitbook/assets/learn-kubemq-targets-concept.jpeg)
 
 #### Request
 
