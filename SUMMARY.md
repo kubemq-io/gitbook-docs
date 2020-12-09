@@ -10,6 +10,8 @@
   * [Kubemqctl](getting-started/create-cluster/kubemqctl.md)
   * [Helm](getting-started/create-cluster/helm.md)
   * [Openshift](getting-started/create-cluster/openshift.md)
+  * [GCP](getting-started/create-cluster/gcp.md)
+  
 * [Create Dashboard](getting-started/create-dashboard/README.md)
   * [Kubemqctl](getting-started/create-dashboard/kubemqctl.md)
   * [Helm](getting-started/create-dashboard/helm.md)
