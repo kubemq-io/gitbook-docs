@@ -25,7 +25,7 @@ kubemqctl create cluster -t {your-license-token}
 ### Install with license file
 
 ```text
-kubemqctl create cluster --license-filename {your-license-filenam}
+kubemqctl create cluster --license-filename {your-license-filename}
 ```
 
 ## Configuration
