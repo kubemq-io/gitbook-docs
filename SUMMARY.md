@@ -15,6 +15,7 @@
   * [Helm](getting-started/create-dashboard/helm.md)
   * [Openshift](getting-started/create-dashboard/openshift.md)
 * [Create Connector](getting-started/create-connector/README.md)
+  * [Helm](getting-started/create-connector/helm.md)
   * [Openshift](getting-started/create-connector/openshift.md)
 * [Message Patterns](getting-started/message-patterns/README.md)
   * [Queues](getting-started/message-patterns/queues.md)
