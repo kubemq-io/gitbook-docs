@@ -7,8 +7,8 @@
 | Category   | Target                                                              | Kind                  | Configuration                        |
 |:-----------|:--------------------------------------------------------------------|:----------------------|:-------------------------------------|
 | Cache      |                                                                     |                       |                                      |
-|            | [Redis](https://redis.io/)                                          | cache.redis           | [Usage](./stand-alone/redis.md)         |
-|            | [Memcached](https://memcached.org/)                                 | cache.memcached       | [Usage](./stand-alone/memcached.md)     |
+|            | [Redis](https://redis.io/)                                          | cache.redis           | [Usage](stand-alone/redis.md)         |
+|            | [Memcached](https://memcached.org/)                                 | cache.memcached       | [Usage](stand-alone/memcached.md)     |
 |            | [Hazelcast](https://hazelcast.com/)                                 | cache.hazelcast       | [Usage](./stand-alone/hazelcast.md)     |
 | Stores/db  |                                                                     |                       |                                      |
 |            | [Postgres](https://www.postgresql.org/)                             | stores.postgres       | [Usage](./stand-alone/postgres.md)     |
