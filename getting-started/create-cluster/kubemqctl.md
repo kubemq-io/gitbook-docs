@@ -1,7 +1,3 @@
----
-description: Kubemqctl is KubeMQ's CLI tool
----
-
 # Kubemqctl
 
 ## Install Kubemqctl Tool

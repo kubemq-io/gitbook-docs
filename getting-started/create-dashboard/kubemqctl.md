@@ -1,10 +1,4 @@
----
-description: Kubemqctl is KubeMQ's CLI tool
----
-
 # Kubemqctl
-
-
 
 ## Install KubeMQ Dashboard
 
