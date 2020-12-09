@@ -75,7 +75,9 @@
   * [Set View Port](configuration/dashboard/set-view-port.md)
   * [Set Prometheus Image](configuration/dashboard/set-prometheus.md)
   * [Set Grafana Image](configuration/dashboard/set-grafana.md)
-
+* [Connectors](configuration/connectors/README.md)
+  *[KubeMQ Targets](configuration/connectors/kubemq-targets/README.md)
+      
 ## HOW TO
 
 * [Connect Your Cluster](how-to/connect-your-cluster.md)
