@@ -78,18 +78,18 @@
 |            | [RedShiftSVC](https://aws.amazon.com/redshift/)                | aws.rds.redshift.service | [Usage](./aws/redshift.md)           |
 | Messaging  |                                                                |                          |                                         |
 |            | [AmazonMQ](https://aws.amazon.com/amazon-mq/)                  | aws.amazonmq             | [Usage](./aws/amazonmq.md)           |
-|            | [msk](https://aws.amazon.com/msk/)                             | aws.msk                  | [Usage](./aws/msk.md)                |
+|            | [MSK](https://aws.amazon.com/msk/)                             | aws.msk                  | [Usage](./aws/msk.md)                |
 |            | [Kinesis](https://aws.amazon.com/kinesis/)                     | aws.kinesis              | [Usage](./aws/kinesis.md)            |
 |            | [SQS](https://aws.amazon.com/sqs/)                             | aws.sqs                  | [Usage](./aws/sqs.md)                |
 |            | [SNS](https://aws.amazon.com/sns/)                             | aws.sns                  | [Usage](./aws/sns.md)                |
 | Storage    |                                                                |                          |                                         |
-|            | [s3](https://aws.amazon.com/s3/)                               | aws.s3                   | [Usage](./aws/s3.md)                 |
+|            | [S3](https://aws.amazon.com/s3/)                               | aws.s3                   | [Usage](./aws/s3.md)                 |
 | Serverless |                                                                |                          |                                         |
-|            | [lambda](https://aws.amazon.com/lambda/)                       | aws.lambda               | [Usage](./aws/lambda.md)             |
+|            | [Lambda](https://aws.amazon.com/lambda/)                       | aws.lambda               | [Usage](./aws/lambda.md)             |
 | Other      |                                                                |                          |                                         |
-|            | [Cloud Watch](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.logs      | [Usage](./aws/cloudwatch-logs.md)    |
-|            | [Cloud Watch](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.events    | [Usage](./aws/cloudwatch-events.md)  |
-|            | [Cloud Watch](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.metrics   | [Usage](./aws/cloudwatch-metrics.md) |
+|            | [CloudWatch Logs](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.logs      | [Usage](./aws/cloudwatch-logs.md)    |
+|            | [CloudWatch Events](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.events    | [Usage](./aws/cloudwatch-events.md)  |
+|            | [CloudWatch Metrics](https://aws.amazon.com/cloudwatch/)              | aws.cloudwatch.metrics   | [Usage](./aws/cloudwatch-metrics.md) |
 
 
 
