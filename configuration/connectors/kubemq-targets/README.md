@@ -35,7 +35,7 @@
 
 
 
-#### Google Cloud Platform (GCP)
+### Google Cloud Platform (GCP)
 
 | Category   | Target                                                              | Kind                | Configuration                              |
 |:-----------|:--------------------------------------------------------------------|:--------------------|:-------------------------------------------|
@@ -60,7 +60,7 @@
 
 
 
-#### Amazon Web Service (AWS)
+### Amazon Web Service (AWS)
 
 
 | Category   | Target                                                         | Kind                     | Configuration                           |
@@ -93,7 +93,7 @@
 
 
 
-#### Microsoft Azure
+### Microsoft Azure
 
 | Category   | Target                                                                | Kind                  | Configuration                          |
 |:-----------|:----------------------------------------------------------------------|:----------------------|:---------------------------------------|
@@ -109,4 +109,15 @@
 |            | [EventHubs](https://azure.microsoft.com/en-us/services/event-hubs/)   | azure.eventhubs       | [Usage](./azure/eventshub.md)       |
 | ServiceBus |                                                                       |                       |                                        |
 |            | [ServiceBus](https://azure.microsoft.com/en-us/services/service-bus/) | azure.servicebus      | [Usage](./azure/servicebus.md)      |
+
+## Sources
+
+
+| Type                                                                              | Kind                | Configuration                           |
+|:----------------------------------------------------------------------------------|:--------------------|:----------------------------------------|
+| [Queue](https://docs.kubemq.io/learn/message-patterns/queue)                      | kubemq.queue        | [Usage](./sources/queue.md)        |
+| [Events](https://docs.kubemq.io/learn/message-patterns/pubsub#events)             | kubemq.events       | [Usage](./sources/events.md)       |
+| [Events Store](https://docs.kubemq.io/learn/message-patterns/pubsub#events-store) | kubemq.events-store | [Usage](./sources/events-store.md) |
+| [Command](https://docs.kubemq.io/learn/message-patterns/rpc#commands)             | kubemq.command      | [Usage](./sources/command.md)      |
+| [Query](https://docs.kubemq.io/learn/message-patterns/rpc#queries)                | kubemq.query        | [Usage](./sources/query.md)        |
 
