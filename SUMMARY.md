@@ -169,8 +169,20 @@
       * [Command](configuration/connectors/kubemq-sources/targets/command.md)
       * [Query](configuration/connectors/kubemq-sources/targets/query.md)
       
-  * [KubeMQ Bridges](configuration/connectors/README.md)
-      
+  * [KubeMQ Bridges](configuration/connectors/kubemq-bridges/README.md)
+    * [Targets](configuration/connectors/kubemq-bridges/targets/README.md)
+      * [Queue](configuration/connectors/kubemq-bridges/targets/queue.md)
+      * [Events](configuration/connectors/kubemq-bridges/targets/events.md)
+      * [Events Store](configuration/connectors/kubemq-bridges/targets/events-store.md)
+      * [Command](configuration/connectors/kubemq-bridges/targets/command.md)
+      * [Query](configuration/connectors/kubemq-bridges/targets/query.md)      
+    * [Sources](configuration/connectors/kubemq-bridges/sources/README.md)
+      * [Queue](configuration/connectors/kubemq-bridges/sources/queue.md)
+      * [Events](configuration/connectors/kubemq-bridges/sources/events.md)
+      * [Events Store](configuration/connectors/kubemq-bridges/sources/events-store.md)
+      * [Command](configuration/connectors/kubemq-bridges/sources/command.md)
+      * [Query](configuration/connectors/kubemq-bridges/sources/query.md)
+
 ## HOW TO
 
 * [Connect Your Cluster](how-to/connect-your-cluster.md)
