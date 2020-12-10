@@ -138,7 +138,12 @@
       * [Queue](configuration/connectors/kubemq-targets/azure/storage-queue.md)
       * [Events Hub](configuration/connectors/kubemq-targets/azure/eventshub.md)
       * [Service Bus](configuration/connectors/kubemq-targets/azure/servicebus.md)
-           
+    * [Sources](configuration/connectors/kubemq-targets/sources/README.md)
+      * [Queue](configuration/connectors/kubemq-targets/sources/queue.md)
+      * [Events](configuration/connectors/kubemq-targets/sources/events.md)
+      * [Events Store](configuration/connectors/kubemq-targets/sources/events-store.md)
+      * [Command](configuration/connectors/kubemq-targets/sources/command.md)
+      * [Query](configuration/connectors/kubemq-targets/sources/query.md)
   * [KubeMQ Sources](configuration/connectors/README.md)
   * [KubeMQ Bridges](configuration/connectors/README.md)
       
