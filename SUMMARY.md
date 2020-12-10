@@ -145,7 +145,7 @@
       * [Command](configuration/connectors/kubemq-targets/sources/command.md)
       * [Query](configuration/connectors/kubemq-targets/sources/query.md)
   * [KubeMQ Sources](configuration/connectors/kubemq-sources/README.md)
-    * [Http](configuration/connectors/kubemq-sources/http.md)
+    * [HTTP](configuration/connectors/kubemq-sources/http.md)
     * [Messaging](configuration/connectors/kubemq-sources/messaging/README.md)
       * [Kafka](configuration/connectors/kubemq-sources/messaging/kafka.md)
       * [RabbitMQ](configuration/connectors/kubemq-sources/messaging/rabbitmq.md)
