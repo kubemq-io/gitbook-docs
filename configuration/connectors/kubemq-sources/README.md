@@ -51,3 +51,60 @@
 | [Events Store](https://docs.kubemq.io/learn/message-patterns/pubsub#events-store) | kubemq.events-store | [Usage](./targets/events-store.md) |
 | [Command](https://docs.kubemq.io/learn/message-patterns/rpc#commands)             | kubemq.command      | [Usage](./targets/command.md)      |
 | [Query](https://docs.kubemq.io/learn/message-patterns/rpc#queries)                | kubemq.query        | [Usage](./targets/query.md)        |
+
+
+## Middlewares 
+
+In bindings configuration, KubeMQ Bridges supports middleware setting for each pair of source and target bindings.
+
+These properties contain middleware information settings as follows:
+
+### Logs Middleware
+
+KubeMQ Bridges supports level based logging to console according to as follows:
+
+| Property  | Description       | Possible Values        |
+|:----------|:------------------|:-----------------------|
+| log_level | log level setting | "debug","info","error" |
+|           |                   |  "" - indicate no logging on this bindings |
+
+An example for only error level log to console:
+
+```yaml
+bindings:
+  - name: sample-binding 
+    properties: 
+      log_level: error
+    sources:
+    ......  
+```
+
+### Retry Middleware
+
+KubeMQ Bridges supports Retries' target execution before reporting of error back to the source on failed execution.
+
+Retry middleware settings values:
+
+
+| Property                      | Description                                           | Possible Values                             |
+|:------------------------------|:------------------------------------------------------|:--------------------------------------------|
+| retry_attempts                | how many retries before giving up on target execution | default - 1, or any int number              |
+| retry_delay_milliseconds      | how long to wait between retries in milliseconds      | default - 100ms or any int number           |
+| retry_max_jitter_milliseconds | max delay jitter between retries                      | default - 100ms or any int number           |
+| retry_delay_type              | type of retry delay                                   | "back-off" - delay increase on each attempt |
+|                               |                                                       | "fixed" - fixed time delay                  |
+|                               |                                                       | "random" - random time delay                |
+
+An example for 3 retries with back-off strategy:
+
+```yaml
+bindings:
+  - name: sample-binding 
+    properties: 
+      retry_attempts: 3
+      retry_delay_milliseconds: 1000
+      retry_max_jitter_milliseconds: 100
+      retry_delay_type: "back-off"
+    sources:
+    ......  
+```
