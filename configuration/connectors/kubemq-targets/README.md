@@ -21,8 +21,7 @@
 |           | [CockroachDB](https://www.cockroachlabs.com/)                       | stores.cockroach      | [Usage](./stand-alone/cockroachdb.md)              |
 |           | [Percona](https://www.cockroachlabs.com/)                           | stores.stores.percona | [Usage](./stand-alone/percona.md)                  |
 |           | [Aerospike](https://www.aerospike.com/)                             | stores.aerospike      | [Usage](./stand-alone/aerospike.md)                |
-
-
+|            | [RethinkDB](https://rethinkdb.com/)                                 |stores.rethinkdb      | [Usage](./stand-alone/rethinkdb.md)                  |
 | Messaging  |                                                                     |                       |                                      |
 |            | [Kafka](https://kafka.apache.org/)                                  | messaging.kafka       | [Usage](./stand-alone/kafka.md)     |
 |            | [Nats](https://nats.io/)                                            | messaging.nats        | [Usage](./stand-alone/nats.md)      |

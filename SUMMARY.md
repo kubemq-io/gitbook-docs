@@ -85,6 +85,7 @@
       * [MSSql](configuration/connectors/kubemq-targets/standalone/mssql.md)
       * [Percona](configuration/connectors/kubemq-targets/standalone/percona.md)
       * [Aerospike](configuration/connectors/kubemq-targets/standalone/areospike.md)
+      * [ReThinkDB](configuration/connectors/kubemq-targets/standalone/rethinkdb.md)
       * [MongoDB](configuration/connectors/kubemq-targets/standalone/mongodb.md)
       * [Elastic Search](configuration/connectors/kubemq-targets/standalone/elastic.md)
       * [Cassandra](configuration/connectors/kubemq-targets/standalone/cassandra.md)
