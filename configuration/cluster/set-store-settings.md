@@ -42,8 +42,8 @@ kubemqctl create cluster --store-purge-inactive-minutes 180
 | store.maxChannels | int | 0 | Set limit number of persistence channels |
 | store.maxSubscribers | int | 0 | Set limit of subscribers per channel |
 | store.maxMessages | int | 0 | Set limit of messages per channel |
-| store.maxChannel-size | int | 0 | Set limit size of channel in bytes |
-| store.messagesRetention-minutes | int | 1440 | Set message retention time in minutes |
+| store.maxChannelSize | int | 0 | Set limit size of channel in bytes |
+| store.messagesRetentionMinutes | int | 1440 | Set message retention time in minutes |
 | store.purgeInactiveMinutes | int | 1440 | Set time in minutes of channel inactivity to delete |
 
 ## Examples
@@ -71,8 +71,8 @@ helm install kubemq-cluster  --set store.purgeInactiveMinutes=t180 kubemq-charts
 | maxChannels | int | 0 | Set limit number of persistence channels |
 | maxSubscribers | int | 0 | Set limit of subscribers per channel |
 | maxMessages | int | 0 | Set limit of messages per channel |
-| maxChannel-size | int | 0 | Set limit size of channel in bytes |
-| messagesRetention-minutes | int | 1440 | Set message retention time in minutes |
+| maxChannelSize | int | 0 | Set limit size of channel in bytes |
+| messagesRetentionMinutes | int | 1440 | Set message retention time in minutes |
 | purgeInactiveMinutes | int | 1440 | Set time in minutes of channel inactivity to delete |
 
 ## Examples
