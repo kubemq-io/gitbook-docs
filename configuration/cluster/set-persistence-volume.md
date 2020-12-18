@@ -49,7 +49,7 @@ helm install kubemq-cluster --set volume.size=30Gi,volume.storageClass="your-sto
 ```
 {% endtab %}
 
-{% tab title="yaml" %}
+{% tab title="kubectl" %}
 ## Fields
 
 | Field | Type/Options | Default | Description |
