@@ -1,24 +1,24 @@
-# KubeMQ Bridges Events Target
+# Events
 
 KubeMQ Bridges Events target provides an events sender for processing targets requests.
 
 ## Prerequisites
+
 The following are required to run the events target connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Events target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| channels | no       | set array of channels values to send the event                |  "events.a,events.b,events.c"                                                    |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| channels | no | set array of channels values to send the event | "events.a,events.b,events.c" |
 
 Example:
 

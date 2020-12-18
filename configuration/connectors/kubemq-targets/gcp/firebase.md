@@ -1,31 +1,33 @@
-# Kubemq firebase target Connector
+# Firebase
+
+## Kubemq firebase target Connector
 
 Kubemq gcp-firebase target connector allows services using kubemq server to access google firebase server.
 
-## Prerequisites
+### Prerequisites
+
 The following required to run the gcp-firebase target connector:
 
-- kubemq cluster
-- gcp-firebase set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-firebase set up
+* kubemq-source deployment
 
-## Configuration
+### Configuration
 
 firebase target connector configuration properties:
 
-| Properties Key  | Required | Description                                | Example                    |
-|:----------------|:---------|:-------------------------------------------|:---------------------------|
-| project_id      | yes      | gcp firebase project_id                    | "<googleurl>/myproject"    |
-| credentials     | yes      | gcp credentials files                      | "<google json credentials" |
-| db_client       | no       | initialize db client if true               | true/false                 |
-| db_url          | no       | gcp db full path                           | <google db url"            |
-| auth_client     | no       | initialize auth client if true             | true/false                 |
-| messaging_client | no       | initialize messaging client                | true/false                 |
-| defaultmsg      | no       | default Firebase Cloud Messaging           | json                       |
-| defaultmultimsg | no       | default Firebase Cloud MulticastMessage    | json                       |   
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp firebase project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
+| db\_client | no | initialize db client if true | true/false |
+| db\_url | no | gcp db full path | &lt;google db url" |
+| auth\_client | no | initialize auth client if true | true/false |
+| messaging\_client | no | initialize messaging client | true/false |
+| defaultmsg | no | default Firebase Cloud Messaging | json |
+| defaultmultimsg | no | default Firebase Cloud MulticastMessage | json |
 
-*defaultmsg - can be used for common message settings
-*defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
 
 Example:
 
@@ -53,28 +55,25 @@ bindings:
         db_client: "true"
         db_url: "db_url"
         auth_client: "true"
-
 ```
 
-## Usage
+### Usage
 
+### DB:
 
-##DB:
-
-### Get DB
+#### Get DB
 
 Get DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | get_db                |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | get\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_db",
@@ -84,21 +83,19 @@ Example:
 }
 ```
 
-
-### Set DB
+#### Set DB
 
 Set DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | set_db                |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | set\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_db",
@@ -108,22 +105,19 @@ Example:
 }
 ```
 
-
-
-### Update DB
+#### Update DB
 
 Update DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | update_db             |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | update\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_db",
@@ -133,39 +127,36 @@ Example:
 }
 ```
 
+#### Delete DB
 
-
-
-
-### Delete DB
-# Kubemq firebase target Connector
+## Kubemq firebase target Connector
 
 Kubemq gcp-firebase target connector allows services using kubemq server to access google firebase server.
 
-## Prerequisites
+### Prerequisites
+
 The following required to run the gcp-firebase target connector:
 
-- kubemq cluster
-- gcp-firebase set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-firebase set up
+* kubemq-source deployment
 
-## Configuration
+### Configuration
 
 firebase target connector configuration properties:
 
-| Properties Key  | Required | Description                                | Example                    |
-|:----------------|:---------|:-------------------------------------------|:---------------------------|
-| project_id      | yes      | gcp firebase project_id                    | "<googleurl>/myproject"    |
-| credentials     | yes      | gcp credentials files                      | "<google json credentials" |
-| db_client       | no       | initialize db client if true               | true/false                 |
-| db_url          | no       | gcp db full path                           | <google db url"            |
-| auth_client     | no       | initialize auth client if true             | true/false                 |
-| messaging_client | no       | initialize messaging client                | true/false                 |
-| defaultmsg      | no       | default Firebase Cloud Messaging           | json                       |
-| defaultmultimsg | no       | default Firebase Cloud MulticastMessage    | json                       |   
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp firebase project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
+| db\_client | no | initialize db client if true | true/false |
+| db\_url | no | gcp db full path | &lt;google db url" |
+| auth\_client | no | initialize auth client if true | true/false |
+| messaging\_client | no | initialize messaging client | true/false |
+| defaultmsg | no | default Firebase Cloud Messaging | json |
+| defaultmultimsg | no | default Firebase Cloud MulticastMessage | json |
 
-*defaultmsg - can be used for common message settings
-*defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
 
 Example:
 
@@ -193,28 +184,25 @@ bindings:
         db_client: "true"
         db_url: "db_url"
         auth_client: "true"
-
 ```
 
-## Usage
+### Usage
 
+### DB:
 
-##DB:
-
-### Get DB
+#### Get DB
 
 Get DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | get_db                |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | get\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_db",
@@ -224,21 +212,19 @@ Example:
 }
 ```
 
-
-### Set DB
+#### Set DB
 
 Set DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | set_db                |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | set\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_db",
@@ -248,22 +234,19 @@ Example:
 }
 ```
 
-
-
-### Update DB
+#### Update DB
 
 Update DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | update_db             |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | update\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "update_db",
@@ -273,24 +256,19 @@ Example:
 }
 ```
 
-
-
-
-
-### Delete DB
+#### Delete DB
 
 Delete DB metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | delete_db             |
-| ref_path     | yes      | ref path for the data                  | valid string          |
-| child_ref    | no       | path for child ref data                | valid string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | delete\_db |
+| ref\_path | yes | ref path for the data | valid string |
+| child\_ref | no | path for child ref data | valid string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_db",
@@ -300,22 +278,19 @@ Example:
 }
 ```
 
+### User:
 
-## User:
-
-
-### Create User
+#### Create User
 
 Create User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | create_user           |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | create\_user |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_user"
@@ -324,24 +299,21 @@ Example:
 }
 ```
 
-
-
-### Retrieve User
+#### Retrieve User
 
 Retrieve User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values           |
-|:-------------|:---------|:---------------------------------------|:--------------------------|
-| method       | yes      | method type                            | retrieve_user             |
-| retrieve_by  | yes      | type of retrieval                      | by_email ,by_uid,by_phone |
-| uid          | no       | valid unique string                    | string                    |
-| phone        | no       | valid phone number                     | string                    |
-| email        | no       | valid email                            | string                    |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | retrieve\_user |
+| retrieve\_by | yes | type of retrieval | by\_email ,by\_uid,by\_phone |
+| uid | no | valid unique string | string |
+| phone | no | valid phone number | string |
+| email | no | valid email | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "retrieve_user",
@@ -352,20 +324,18 @@ Example:
 }
 ```
 
-
-### Delete User
+#### Delete User
 
 Delete User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | delete_user           |
-| uid          | yes      | valid unique string                    | string                |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | delete\_user |
+| uid | yes | valid unique string | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_user",
@@ -375,18 +345,17 @@ Example:
 }
 ```
 
-### Delete Multiple Users
+#### Delete Multiple Users
 
- Delete Multiple Users metadata setting:
+Delete Multiple Users metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | delete_multiple_users |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | delete\_multiple\_users |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_multiple_users"
@@ -395,20 +364,18 @@ Example:
 }
 ```
 
-
-### Update User
+#### Update User
 
 Update User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | update_user           |        
-| uid          | yes      | valid unique string                    | string                |      
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | update\_user |
+| uid | yes | valid unique string | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "update_user",
@@ -418,19 +385,17 @@ Example:
 }
 ```
 
-
-### List Users
+#### List Users
 
 List User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | list_users            |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | list\_users |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_users"
@@ -439,22 +404,20 @@ Example:
 }
 ```
 
+### Token:
 
-## Token:
-
-### Custom Token
+#### Custom Token
 
 Custom Token metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | custom_token                |        |      |
-| uid          | yes      | valid unique string                    | string                     |        |
-
+| Metadata Key | Required | Description | Possible values |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| method | yes | method type | custom\_token |  |  |
+| uid | yes | valid unique string | string |  |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "custom_token",
@@ -464,19 +427,18 @@ Example:
 }
 ```
 
-### Verify Token
+#### Verify Token
 
 Verify Token metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| method       | yes      | method type                            | verify_token                |        |      |
-| uid          | yes      | valid unique string                    | string                     |        |
-
+| Metadata Key | Required | Description | Possible values |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| method | yes | method type | verify\_token |  |  |
+| uid | yes | valid unique string | string |  |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "verify_token",
@@ -486,24 +448,24 @@ Example:
 }
 ```
 
-## Messaging:
+### Messaging:
 
 Firebase messaging will send a FCM message or send the message to multiple devices.
-* message https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
-* multi https://firebase.google.com/docs/cloud-messaging/send-message#go_1
 
-### Send Message 
+* message [https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages)
+* multi [https://firebase.google.com/docs/cloud-messaging/send-message\#go\_1](https://firebase.google.com/docs/cloud-messaging/send-message#go_1)
+
+#### Send Message
 
 Create User metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values         |
-|:-------------|:---------|:---------------------------------------|:------------------------|
-| method       | yes      | method type                            | send_message/send_multi |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method type | send\_message/send\_multi |
 
+Example: send\_message
 
-Example:
-send_message
-```json 
+```javascript
 {
   "metadata": {
     "method": "send_message"
@@ -516,9 +478,10 @@ send_message
   "data": {"key1":"value1"}
   }
 ```
-Example:
-send_multi
-```json 
+
+Example: send\_multi
+
+```javascript
 {
   "metadata": {
     "method": "send_multi"
@@ -531,3 +494,4 @@ send_multi
      "data":{"Tokens":["123","456"],"Data":{"key":"val"},"Notification":{"title":"title"}}
   }
 ```
+

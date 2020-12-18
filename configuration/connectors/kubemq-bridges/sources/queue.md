@@ -1,27 +1,26 @@
-# KubeMQ Bridges Queue Source
+# Queue
 
-KubeMQ  Bridges Queue source provides an RPC queue subscriber for processing target commands.
+KubeMQ Bridges Queue source provides an RPC queue subscriber for processing target commands.
 
 ## Prerequisites
+
 The following are required to run the queue source connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Queue source configuration properties:
 
-| Property     | Required | Description                                             | Possible Values                                      |
-|:-------------|:---------|:--------------------------------------------------------|:-----------------------------------------------------|
-| address      | yes      | kubemq server address (gRPC interface)                  | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id    | no       | sets client_id value for connection                     | "cluster-a-queue-connection"                         |
-| auth_token   | no       | JWT auth token for connection authentication            | JWT token                                            |
-| channel      | yes      | kubemq channel to pull queue messages                   | queue.a                                              |
-| batch_size   | no       | sets how many messages the source will pull in one call | default - 1                                          |
-| wait_timeout | no       | sets how many seconds to wait per each pull             | 60                                                   |
-
+| Property | Required | Description | Possible Values |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | sets client\_id value for connection | "cluster-a-queue-connection" |
+| auth\_token | no | JWT auth token for connection authentication | JWT token |
+| channel | yes | kubemq channel to pull queue messages | queue.a |
+| batch\_size | no | sets how many messages the source will pull in one call | default - 1 |
+| wait\_timeout | no | sets how many seconds to wait per each pull | 60 |
 
 Example:
 

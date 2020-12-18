@@ -1,25 +1,25 @@
-# KubeMQ Sources Events-Store Target
+# Events Store
 
 KubeMQ Sources Events-Store target provides an events-store sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the events-store target connector:
 
-- kubemq cluster
-- kubemq-sources deployment
-
+* kubemq cluster
+* kubemq-sources deployment
 
 ## Configuration
 
 Events-Store target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| channel | no       | set send request default channel               |          "events-store"                                            |
-| dynamic_mapping | no       | set dynamic channel mapping per source               |          "false"                                            |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| channel | no | set send request default channel | "events-store" |
+| dynamic\_mapping | no | set dynamic channel mapping per source | "false" |
 
 Example:
 

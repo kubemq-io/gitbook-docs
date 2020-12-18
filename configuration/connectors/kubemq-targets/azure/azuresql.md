@@ -1,25 +1,26 @@
-# Kubemq azuresql Target Connector
+# Azure SQL
 
 Kubemq azuresql target connector allows services using kubemq server to access azuresql database services.
 
 ## Prerequisites
+
 The following are required to run the azuresql target connector:
-- access to db through azure firewall
-- kubemq cluster
-- azuresql server
-- kubemq-targets deployment
+
+* access to db through azure firewall
+* kubemq cluster
+* azuresql server
+* kubemq-targets deployment
 
 ## Configuration
 
 azuresql target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| connection                      | yes      | azuresql connection string address          | "server=server.net;user id=test;password=test;port=1433;database=initial_db;" |
-| max_idle_connections            | no       | set max idle connections                    | "10"                                                                   |
-| max_open_connections            | no       | set max open connections                    | "100"                                                                  |
-| connection_max_lifetime_seconds | no       | set max lifetime for connections in seconds | "3600"                                                                 |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| connection | yes | azuresql connection string address | "server=server.net;user id=test;password=test;port=1433;database=initial\_db;" |
+| max\_idle\_connections | no | set max idle connections | "10" |
+| max\_open\_connections | no | set max open connections | "100" |
+| connection\_max\_lifetime\_seconds | no | set max lifetime for connections in seconds | "3600" |
 
 Example:
 
@@ -54,21 +55,21 @@ bindings:
 
 Query request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| method          | yes      | set type of request | "query"      |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | set type of request | "query" |
 
 Query request data setting:
 
-| Data Key | Required | Description  | Possible values    |
-|:---------|:---------|:-------------|:-------------------|
-| data     | yes      | query string | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | query string | base64 bytes array |
 
 Example:
 
 Query string: `SELECT id,title,content,bignumber,boolvalue FROM post;`
 
-```json
+```javascript
 {
   "metadata": {
     "method": "query"
@@ -81,22 +82,21 @@ Query string: `SELECT id,title,content,bignumber,boolvalue FROM post;`
 
 Exec request metadata setting:
 
-| Metadata Key    | Required | Description                            | Possible values    |
-|:----------------|:---------|:---------------------------------------|:-------------------|
-| method          | yes      | set type of request                    | "exec"             |
-| isolation_level | no       | set isolation level for exec operation | ""                 |
-|                 |          |                                        | "read_uncommitted" |
-|                 |          |                                        | "read_committed"   |
-|                 |          |                                        | "repeatable_read"  |
-|                 |          |                                        | "serializable"     |
-|                 |          |                                        |                    |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | set type of request | "exec" |
+| isolation\_level | no | set isolation level for exec operation | "" |
+|  |  |  | "read\_uncommitted" |
+|  |  |  | "read\_committed" |
+|  |  |  | "repeatable\_read" |
+|  |  |  | "serializable" |
+|  |  |  |  |
 
 Exec request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | exec string | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | exec string | base64 bytes array |
 
 Example:
 
@@ -104,11 +104,11 @@ Exec string:
 
 ```sql
 INSERT INTO post(ID,TITLE,CONTENT,BIGNUMBER,BOOLVALUE) VALUES
-	                       (0,NULL,'Content One',1231241241231231123,true),
-	                       (1,'Title Two','Content Two',123125241231231123,false);
+                           (0,NULL,'Content One',1231241241231231123,true),
+                           (1,'Title Two','Content Two',123125241231231123,false);
 ```
 
-```json
+```javascript
 {
   "metadata": {
     "method": "exec",
@@ -122,21 +122,20 @@ INSERT INTO post(ID,TITLE,CONTENT,BIGNUMBER,BOOLVALUE) VALUES
 
 Transaction request metadata setting:
 
-| Metadata Key    | Required | Description                            | Possible values    |
-|:----------------|:---------|:---------------------------------------|:-------------------|
-| method          | yes      | set type of request                    | "transaction"             |
-| isolation_level | no       | set isolation level for exec operation | ""                 |
-|                 |          |                                        | "read_uncommitted" |
-|                 |          |                                        | "read_committed"   |
-|                 |          |                                        | "repeatable_read"  |
-|                 |          |                                        | "serializable"     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | set type of request | "transaction" |
+| isolation\_level | no | set isolation level for exec operation | "" |
+|  |  |  | "read\_uncommitted" |
+|  |  |  | "read\_committed" |
+|  |  |  | "repeatable\_read" |
+|  |  |  | "serializable" |
 
 Transaction request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | string string | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | string string | base64 bytes array |
 
 Example:
 
@@ -154,7 +153,7 @@ CREATE TABLE post (
        );
 ```
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-azuresql-key",
@@ -163,3 +162,4 @@ CREATE TABLE post (
   "data": "RFJPUCBUQUJMRSBJRiBFWElTVFMgcG9zdDsKCSAgICAgICBDUkVBVEUgVEFCTEUgcG9zdCAoCgkgICAgICAgICBJRCBiaWdpbnQsCgkgICAgICAgICBUSVRMRSB2YXJjaGFyKDQwKSwKCSAgICAgICAgIENPTlRFTlQgdmFyY2hhcigyNTUpLAoJCQkgQklHTlVNQkVSIGJpZ2ludCwKCQkJIEJPT0xWQUxVRSBib29sZWFuLAoJICAgICAgICAgQ09OU1RSQUlOVCBwa19wb3N0IFBSSU1BUlkgS0VZKElEKQoJICAgICAgICk7"
 }
 ```
+

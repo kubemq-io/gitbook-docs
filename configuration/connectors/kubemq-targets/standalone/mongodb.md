@@ -1,34 +1,33 @@
-# Kubemq Mongodb Target Connector
+# MongoDB
 
 Kubemq mongodb target connector allows services using kubemq server to access mongodb database services.
 
 ## Prerequisites
+
 The following are required to run the mongodb target connector:
 
-- kubemq cluster
-- mongodb server
-- kubemq-targets deployment
+* kubemq cluster
+* mongodb server
+* kubemq-targets deployment
 
 ## Configuration
 
 Mongodb target connector configuration properties:
 
-| Properties Key            | Required | Description                          | Example                   |
-|:--------------------------|:---------|:-------------------------------------|:--------------------------|
-| host                      | yes      | mongodb host address                 | "localhost:27017"         |
-| username                  | no       | mongodb username                     | "admin"                   |
-| password                  | no       | mongodb password                     | "password"                |
-| database                  | no       | set database name                    | "admin"                   |
-| collection                | no       | set database collection              | "test"                    |
-| params                    | no       | set connection additional parameters | ""                        |
-| write_concurrency         | no       | set write concurrency                | "","majority","1","2"     |
-| read_concurrency          | no       | set read concurrency                 | "","local"                |
-|                           |          |                                      | "","local"                |
-|                           |          |                                      | "majority","available"    |
-|                           |          |                                      | "linearizable","snapshot" |
-| operation_timeout_seconds | no       | set operation timeout in seconds     | "30"                      |
-
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| host | yes | mongodb host address | "localhost:27017" |
+| username | no | mongodb username | "admin" |
+| password | no | mongodb password | "password" |
+| database | no | set database name | "admin" |
+| collection | no | set database collection | "test" |
+| params | no | set connection additional parameters | "" |
+| write\_concurrency | no | set write concurrency | "","majority","1","2" |
+| read\_concurrency | no | set read concurrency | "","local" |
+|  |  |  | "","local" |
+|  |  |  | "majority","available" |
+|  |  |  | "linearizable","snapshot" |
+| operation\_timeout\_seconds | no | set operation timeout in seconds | "30" |
 
 Example:
 
@@ -69,14 +68,14 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | mongodb key string | any string      |
-| method       | yes      | get              | "get"           |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | mongodb key string | any string |
+| method | yes | get | "get" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-mongodb-key",
@@ -90,20 +89,20 @@ Example:
 
 Set request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | mongodb key string | any string      |
-| method       | yes      | set              | "set"           |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | mongodb key string | any string |
+| method | yes | set | "set" |
 
 Set request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | data to set for the mongodb key | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to set for the mongodb key | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-mongodb-key",
@@ -112,19 +111,19 @@ Example:
   "data": "c29tZS1kYXRh" 
 }
 ```
+
 ### Delete Request
 
 Delete request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | mongodb key string | any string      |
-| method       | yes      | delete           | "delete"        |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | mongodb key string | any string |
+| method | yes | delete | "delete" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-mongodb-key",
@@ -133,3 +132,4 @@ Example:
   "data": null
 }
 ```
+

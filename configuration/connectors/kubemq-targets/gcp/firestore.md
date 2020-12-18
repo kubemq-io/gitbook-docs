@@ -1,23 +1,23 @@
-# Kubemq firestore target Connector
+# Firestore
 
 Kubemq gcp-firestore target connector allows services using kubemq server to access google firestore server.
 
 ## Prerequisites
+
 The following required to run the gcp-firestore target connector:
 
-- kubemq cluster
-- gcp-firestore set up in native mode
-- kubemq-source deployment
+* kubemq cluster
+* gcp-firestore set up in native mode
+* kubemq-source deployment
 
 ## Configuration
 
 firestore target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                    |
-|:---------------|:---------|:-------------------------------------------|:---------------------------|
-| project_id     | yes      | gcp firestore project_id                   | "<googleurl>/myproject"    |
-| credentials    | yes      | gcp credentials files                      | "<google json credentials" |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp firestore project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
 
 Example:
 
@@ -47,21 +47,20 @@ bindings:
 
 ## Usage
 
-### Add Key 
+### Add Key
 
 add a key under collection
 
-Add Key  metadata setting:
+Add Key metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values      |
-|:-------------|:---------|:---------------------------------------|:---------------------|
-| method       | yes      | type of method                         | "add"                |
-| collection   | yes      | the name of the collection to sent to  | "collection name"    |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "add" |
+| collection | yes | the name of the collection to sent to | "collection name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "add",
@@ -71,23 +70,21 @@ Example:
 }
 ```
 
-
 ### get Values by document key
 
 get values by key under collection
 
-Get Key  metadata setting:
+Get Key metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values            |
-|:-------------|:---------|:---------------------------------------|:---------------------------|
-| method       | yes      | type of method                         | "document_key"             |
-| collection   | yes      | the name of the collection to sent to  | "collection name"          |
-| document_key | yes      | the name of the key to get his value   | "valid existing key"       |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "document\_key" |
+| collection | yes | the name of the collection to sent to | "collection name" |
+| document\_key | yes | the name of the key to get his value | "valid existing key" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "documents_all",
@@ -103,15 +100,15 @@ Example:
 get all values under collection
 
 Get all metadata setting:
-| Metadata Key | Required | Description                             | Possible values        |
-|:-------------|:---------|:----------------------------------------|:-----------------------|
-| method       | yes      | type of method                         | "documents_all"         |
-| collection   | yes      | the name of the collection to sent to  | "collection name"       |
 
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "documents\_all" |
+| collection | yes | the name of the collection to sent to | "collection name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "documents_all",
@@ -121,23 +118,21 @@ Example:
 }
 ```
 
-
 ### delete key
 
 delete key in collection
 
 Delete key metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values         |
-|:-------------|:---------|:----------------------------------------|:------------------------|
-| method       | yes      | type of method                          | "delete_document_key"   |
-| collection   | yes      | the name of the collection to sent to   | "collection name"     |
-| document_key | yes      | the name of the key to delete his value | "valid existing key"  |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_document\_key" |
+| collection | yes | the name of the collection to sent to | "collection name" |
+| document\_key | yes | the name of the key to delete his value | "valid existing key" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_document_key",
@@ -147,3 +142,4 @@ Example:
   "data": null
 }
 ```
+

@@ -1,29 +1,28 @@
-# KubeMQ Bridges Queue Target
+# Queue
 
 KubeMQ Bridges Queue target provides a queue sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the queue target connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Queue target connector configuration properties:
 
-| Properties Key     | Required | Description                                                           | Example                                              |
-|:-------------------|:---------|:----------------------------------------------------------------------|:-----------------------------------------------------|
-| address            | yes      | kubemq server address (gRPC interface)                                | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id          | no       | set client id                                                         | "client_id"                                          |
-| auth_token         | no       | set authentication token                                              | JWT token                                            |
-| channels           | no       | set array of channels values to send the event                        | "queue.a,queue.b,queue.c"                            |
-| expiration_seconds | no       | set default expiration seconds for each queue message                 | 0 - default, no expiration                           |
-| delay_seconds      | no       | set default delay seconds for each queue message                      | 0 - default, no delay                                |
-| max_receive_count  | no       | set how many failed queue messages before routes to dead-letter queue | 0 - default, no routes to dead-letter queue          |
-| dead_letter_queue  | no       | set dead-letter queue                                                 | "dead-letter.queue.a"                                |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| channels | no | set array of channels values to send the event | "queue.a,queue.b,queue.c" |
+| expiration\_seconds | no | set default expiration seconds for each queue message | 0 - default, no expiration |
+| delay\_seconds | no | set default delay seconds for each queue message | 0 - default, no delay |
+| max\_receive\_count | no | set how many failed queue messages before routes to dead-letter queue | 0 - default, no routes to dead-letter queue |
+| dead\_letter\_queue | no | set dead-letter queue | "dead-letter.queue.a" |
 
 Example:
 

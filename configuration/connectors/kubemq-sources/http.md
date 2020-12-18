@@ -1,23 +1,22 @@
-# Kubemq HTTP Source
+# HTTP
 
 Kubemq HTTP source provides a REST Api endpoints for processing source REST Api request.
 
 ## Prerequisites
+
 The following are required to run events source connector:
 
-- kubemq cluster
-- kubemq-sources deployment
-
+* kubemq cluster
+* kubemq-sources deployment
 
 ## Configuration
 
 HTTP source connector configuration properties:
 
-| Properties Key             | Required | Description                           | Example            |
-|:---------------------------|:---------|:--------------------------------------|:-------------------|
-| methods                    | yes      | List for REST API methods to process| "GET,POST,PUT,PATCH,DELETE"|
-| path                  | yes      | set http server endpoint path                      | "/path"        |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| methods | yes | List for REST API methods to process | "GET,POST,PUT,PATCH,DELETE" |
+| path | yes | set http server endpoint path | "/path" |
 
 Example:
 
@@ -41,3 +40,4 @@ bindings:
     properties:
       log_level: "info"
 ```
+

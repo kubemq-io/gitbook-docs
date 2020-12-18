@@ -30,5 +30,3 @@ Check out cluster configuration setting available:
 
 {% page-ref page="../../configuration/cluster/" %}
 
-
-

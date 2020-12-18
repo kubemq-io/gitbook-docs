@@ -58,7 +58,6 @@ helm install kubemq-cluster  --set queue.defaultVisibilitySeconds=180 kubemq-cha
 
 | Field | Type/Options | Default | Description |
 | :--- | :--- | :--- | :--- |
-| enable | bool | false | Enable resources configuration |
 | limitsCpu | string | "2" | Set Limits CPU |
 | limitsMemory | 2Gi | string | Set Limits Memory |
 | requestsCpu | string | "2" | Set Requests CPU |
@@ -85,13 +84,10 @@ metadata:
 spec:
   replicas: 3
   resources:
-    enable: false
-    limits:
-      cpu: 2
-      memory: 2Gi
-    requests:
-      cpu: 2
-      memory: 512Mi
+    limitsCpu: "2"
+    limitsMemory: 2Gi
+    requestsCpu: "1"
+    requestsMemory: 512Mi
 ```
 {% endtab %}
 {% endtabs %}

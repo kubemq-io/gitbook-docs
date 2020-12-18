@@ -1,24 +1,24 @@
-# Kubemq bigtable target Connector
+# BigTable
 
 Kubemq gcp-bigtable target connector allows services using kubemq server to access google bigtable server.
 
 ## Prerequisites
+
 The following required to run the gcp-bigtable target connector:
 
-- kubemq cluster
-- gcp-bigtable set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-bigtable set up
+* kubemq-source deployment
 
 ## Configuration
 
 bigtable target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| project_id     | yes      | gcp bigtable project_id                    | "<googleurl>/myproject"     |
-| credentials    | yes      | gcp credentials files                      | "<google json credentials"  |
-| instance       | yes      | bigtable instance name                     | "<bigtable instance name"   |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp bigtable project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
+| instance | yes | bigtable instance name | "&lt;bigtable instance name" |
 
 Example:
 
@@ -52,16 +52,15 @@ bindings:
 
 Create Column Family:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_column_family"                     |
-| column_family     | yes      | the column_family to create             | "valid unique string"                      |
-| table_name        | yes      | the table name                          | "table name to assign the column family"   |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_column\_family" |
+| column\_family | yes | the column\_family to create | "valid unique string" |
+| table\_name | yes | the table name | "table name to assign the column family" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_column_family",
@@ -76,15 +75,14 @@ Example:
 
 Create a table:
 
-| Metadata Key | Required | Description                             | Possible values                         |
-|:-------------|:---------|:----------------------------------------|:----------------------------------------|
-| method       | yes      | type of method                          | "create_table"         |
-| table_name   | yes      | the table name                          | "table name to delete or create"        |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_table" |
+| table\_name | yes | the table name | "table name to delete or create" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_table",
@@ -98,15 +96,14 @@ Example:
 
 Delete the table:
 
-| Metadata Key | Required | Description                             | Possible values                         |
-|:-------------|:---------|:----------------------------------------|:----------------------------------------|
-| method       | yes      | type of method                          | "delete_table"          |
-| table_name   | yes      | the table name                          | "table name to delete or create"        |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_table" |
+| table\_name | yes | the table name | "table name to delete or create" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_table",
@@ -116,21 +113,19 @@ Example:
 }
 ```
 
-
-
 ### Write Rows
 
 Write new rows to table by column family
 
-| Metadata Key      | Required | Description                             | Possible values                         |
-|:------------------|:---------|:----------------------------------------|:----------------------------------------|
-| method            | yes      | type of method                          | "write"                                 |
-| table_name        | yes      | the table name                          | "table name to delete or create"        |
-| column_family     | yes      | the column_family to create             | "valid unique string"                   |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "write" |
+| table\_name | yes | the table name | "table name to delete or create" |
+| column\_family | yes | the column\_family to create | "valid unique string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "write",
@@ -145,15 +140,15 @@ Example:
 
 Delete rows from table by prefix
 
-| Metadata Key      | Required | Description                             | Possible values                         |
-|:------------------|:---------|:----------------------------------------|:----------------------------------------|
-| method            | yes      | type of method                          | "delete_row"                            |
-| table_name        | yes      | the table name                          | "table name to delete or create"        |
-| row_key_prefix    | yes      | the row key                             | "valid unique string"                   |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_row" |
+| table\_name | yes | the table name | "table name to delete or create" |
+| row\_key\_prefix | yes | the row key | "valid unique string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_row",
@@ -164,25 +159,18 @@ Example:
 }
 ```
 
-
 ### Get All Rows
 
 Get all rows from the table:
 
-| Metadata Key      | Required | Description                  | Possible values                            |
-|:------------------|:---------|:-----------------------------|:-------------------------------------------|
-| method            | yes      | type of method               | "get_all_rows"                               |
-| table_name        | yes      | the table name               | "table name to delete or create"           |
-| row_key_prefix    | no       | the row key                  | "valid unique string"                      |
-| column_name       | no       | the column to return         | "column name"                              |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_all\_rows" |
+| table\_name | yes | the table name | "table name to delete or create" |
+| row\_key\_prefix | no | the row key | "valid unique string" |
+| column\_name | no | the column to return | "column name" |
 
 Example:
 
-```json
-{
-  "metadata": {
-    "method": "get_all_rows",
-    "table_name": "valid_table_string"
-  },
-  "data": null
-}
+\`\`\`json { "metadata": { "method": "get\_all\_rows", "table\_name": "valid\_table\_string" }, "data": null }
+

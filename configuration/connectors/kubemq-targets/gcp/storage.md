@@ -1,22 +1,22 @@
-# Kubemq storage target Connector
+# Storage
 
 Kubemq gcp-storage target connector allows services using kubemq server to access google storage server.
 
 ## Prerequisites
+
 The following required to run the gcp-storage target connector:
 
-- kubemq cluster
-- gcp-storage set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-storage set up
+* kubemq-source deployment
 
 ## Configuration
 
 storage target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                         |
-|:---------------|:---------|:-------------------------------------------|:--------------------------------|
-| credentials    | yes      | gcp credentials files                      | "<google json credentials"      |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
 
 Example:
 
@@ -44,24 +44,23 @@ bindings:
 
 ## Usage
 
-### Create bucket 
+### Create bucket
 
 create a new bucket under storage
 
 Create bucket metadata settings:
 
-| Metadata Key        | Required | Description                            | Possible values          |
-|:--------------------|:---------|:---------------------------------------|:-------------------------|
-| method              | yes      | type of method                         | "create_bucket"          |
-| bucket              | yes      | bucket name                            | "bucket name"            |
-| storage_class       | yes      | gcp-storage_class                      | "storage_class"          |
-| project_id          | yes      | gcp storage project_id                 | "<googleurl>/myproject"  |
-| location            | yes      | gcp storage valid location             | "gcp-supported locations"|
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_bucket" |
+| bucket | yes | bucket name | "bucket name" |
+| storage\_class | yes | gcp-storage\_class | "storage\_class" |
+| project\_id | yes | gcp storage project\_id | "/myproject" |
+| location | yes | gcp storage valid location | "gcp-supported locations" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_bucket",
@@ -74,24 +73,22 @@ Example:
 }
 ```
 
-
-### Upload file 
+### Upload file
 
 upload a file to selected bucket
 
 Upload file metadata settings:
 
-| Metadata Key | Required | Description                             | Possible values                                   |
-|:-------------|:---------|:---------------------------------------|:---------------------------------------------------|
-| method       | yes      | type of method                         | "upload"                                           |
-| bucket       | yes      | bucket name                            | "bucket name"                                      | 
-| object       | yes      | object name to save the file under     | "anyString"                                        |
-| path         | yes      | path to the file to upload             | "<absolute or relative path to file/filename.type>"|
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "upload" |
+| bucket | yes | bucket name | "bucket name" |
+| object | yes | object name to save the file under | "anyString" |
+| path | yes | path to the file to upload | "&lt;absolute or relative path to file/filename.type&gt;" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "upload",
@@ -103,22 +100,21 @@ Example:
 }
 ```
 
-### Delete file 
+### Delete file
 
 delete file from a bucket
 
 Delete file metadata settings:
 
-| Metadata Key | Required | Description                             | Possible values |
-|:-------------|:---------|:----------------------------------------|:----------------|
-| method       | yes      | type of method                         | "delete"         |
-| bucket       | yes      | bucket name                            | "bucket name"    |  
-| object       | yes      | object name                            | "anyString"      |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete" |
+| bucket | yes | bucket name | "bucket name" |
+| object | yes | object name | "anyString" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete",
@@ -129,21 +125,21 @@ Example:
 }
 ```
 
-### Download file 
+### Download file
 
 download file from bucket by object name
 
 Download file metadata settings:
 
-| Metadata Key | Required | Description                            | Possible values |
-|:------------ |:---------|:---------------------------------------|:----------------|
-| method       | yes      | type of method                         | "download"      |
-| bucket       | yes      | bucket name                            | "bucket name"   |  
-| object       | yes      | object name                            | "anyString"     |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "download" |
+| bucket | yes | bucket name | "bucket name" |
+| object | yes | object name | "anyString" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "download",
@@ -154,23 +150,22 @@ Example:
 }
 ```
 
-
-### Rename file 
+### Rename file
 
 rename an object under the same bucket
 
 Rename file metadata settings:
 
-| Metadata Key | Required | Description                             | Possible values |
-|:-------------|:---------|:----------------------------------------|:----------------|
-| method                  | yes      | type of method               | "rename"        |
-| bucket                  | yes      | bucket name                  | "bucket name"   |  
-| object                  | yes      | old object name              | "anyString"     |
-| rename_object           | yes      | new object name              | "anyString"     |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "rename" |
+| bucket | yes | bucket name | "bucket name" |
+| object | yes | old object name | "anyString" |
+| rename\_object | yes | new object name | "anyString" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "rename",
@@ -182,24 +177,23 @@ Example:
 }
 ```
 
-
-### Copy file 
+### Copy file
 
 copy file from one bucket to another
 
 Copy file metadata settings:
 
-| Metadata Key         | Required | Description                            | Possible values   |
-|:---------------------|:---------|:---------------------------------------|:------------------|
-| method               | yes      | type of method                         | "copy"            |
-| bucket               | yes      | old bucket name                        | "bucket name"     |  
-| dst_bucket           | yes      | new bucket name(can be the same)       | "bucket name"     |  
-| object               | yes      | old object name                        | "anyString"       |
-| rename_object        | yes      | new object name(can be the same)       | "anyString"       |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "copy" |
+| bucket | yes | old bucket name | "bucket name" |
+| dst\_bucket | yes | new bucket name\(can be the same\) | "bucket name" |
+| object | yes | old object name | "anyString" |
+| rename\_object | yes | new object name\(can be the same\) | "anyString" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "copy",
@@ -212,24 +206,23 @@ Example:
 }
 ```
 
-
-### Move file 
+### Move file
 
 move a file from one bucket to another
 
 Move file metadata settings:
 
-| Metadata Key        | Required | Description                            | Possible values          |
-|:--------------------|:---------|:---------------------------------------|:-------------------------|
-| method              | yes      | type of method                         | "move"                   |
-| bucket              | yes      | old bucket name                        | "bucket name"            |  
-| dst_bucket          | yes      | new bucket name(can be the same)       | "bucket name"            |  
-| object              | yes      | old object name                        | "anyString"              |
-| rename_object       | yes      | new object name(can be the same)       | "anyString"              |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "move" |
+| bucket | yes | old bucket name | "bucket name" |
+| dst\_bucket | yes | new bucket name\(can be the same\) | "bucket name" |
+| object | yes | old object name | "anyString" |
+| rename\_object | yes | new object name\(can be the same\) | "anyString" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "move",
@@ -248,14 +241,14 @@ list all files from a bucket
 
 List files metadata settings:
 
-| Metadata Key | Required | Description                            | Possible values          |
-|:-------------|:---------|:---------------------------------------|:-------------------------|
-| method       | yes      | type of method                         | "list"                   |
-| bucket       | yes      | old bucket name                        | "bucket name"            |  
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list" |
+| bucket | yes | old bucket name | "bucket name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list",
@@ -264,3 +257,4 @@ Example:
   "data": null
 }
 ```
+

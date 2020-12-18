@@ -1,22 +1,23 @@
-# Kubemq spanner target Connector
+# Spanner
 
 Kubemq gcp-spanner target connector allows services using kubemq server to access google spanner server.
 
 ## Prerequisites
+
 The following are required to run the gcp-spanner target connector:
 
-- kubemq cluster
-- gcp-spanner set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-spanner set up
+* kubemq-source deployment
 
 ## Configuration
 
 spanner target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                         |
-|:---------------|:---------|:-------------------------------------------|:--------------------------------|
-| db             | yes      | gcp spanner db name                        | "<googleurl>/mydb"  should conform to pattern "^projects/(?P<project>[^/]+)/instances/(?P<instance>[^/]+)/databases/(?P<database>[^/]+)$"            |
-| credentials    | yes      | gcp credentials files                      | "<google json credentials"      |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| db | yes | gcp spanner db name | "/mydb"  should conform to pattern "^projects/\(?P+\)/instances/\(?P+\)/databases/\(?P+\)$" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
 
 Example:
 
@@ -41,7 +42,6 @@ bindings:
       properties:
         db: "id"
         credentials: 'json'
-
 ```
 
 ## Usage
@@ -52,15 +52,14 @@ create query request.
 
 Query metadata setting:
 
-| Metadata Key | Required | Description                  | Possible values       |
-|:-------------|:---------|:-----------------------------|:----------------------|
-| method       | yes      | type of method               | "query"               |
-| query        | yes      | the query body               | "select * from table" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "query" |
+| query | yes | the query body | "select \* from table" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "query",
@@ -70,22 +69,20 @@ Example:
 }
 ```
 
-
 ### Read Table Request by columns
 
-read table by table_name
+read table by table\_name
 
 Read Table metadata setting:
 
-| Metadata Key | Required | Description               | Possible values                         |
-|:-------------|:---------|:--------------------------|:----------------------------------------|
-| method       | yes      | type of method            | "read"                                  |
-| table_name   | yes      | table name to read from   | "<your data set ID>"                    |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "read" |
+| table\_name | yes | table name to read from | "" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "read",
@@ -101,14 +98,13 @@ insert or update a table
 
 Insert Or Update metadata setting:
 
-| Metadata Key | Required | Description                     | Possible values                         |
-|:-------------|:---------|:--------------------------------|:----------------------------------------|
-| method       | yes      | type of method                  | "insert","update","insert_or_update"    |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "insert","update","insert\_or\_update" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "insert_or_update"
@@ -116,3 +112,4 @@ Example:
   "data": "W3tcInRhYmxlX25hbWVcIjpcInRlc3QyXCIsXCJjb2x1bW5fbmFtZXNcIjpbXCJpZFwiLFwibmFtZVwiXSxcImNvbHVtbl92YWx1ZXNcIjpbMTcsXCJuYW1lMVwiXSxcImNvbHVtbl90eXBlXCI6W1wiSU5UNjRcIixcIlNUUklOR1wiXX0se1widGFibGVfbmFtZVwiOlwidGVzdDJcIixcImNvbHVtbl9uYW1lc1wiOltcImlkXCIsXCJuYW1lXCJdLFwiY29sdW1uX3ZhbHVlc1wiOlsxOCxcIm5hbWUyXCJdLFwiY29sdW1uX3R5cGVcIjpbXCJJTlQ2NFwiLFwiU1RSSU5HXCJdfV0="
 }
 ```
+

@@ -1,25 +1,24 @@
-# Kubemq GCP Cloud Functions Target Connector
+# Functions
 
-Kubemq gcp Cloud Functions target connector allows services using kubemq server to access call a function target on gcp Cloud Function.
-The connector synchronously invokes a deployed Cloud Function, very limited traffic is allowed 16 per 100 seconds.
+Kubemq gcp Cloud Functions target connector allows services using kubemq server to access call a function target on gcp Cloud Function. The connector synchronously invokes a deployed Cloud Function, very limited traffic is allowed 16 per 100 seconds.
 
 ## Prerequisites
+
 The following are required to run the redis target connector:
 
-- kubemq cluster
-- Gcp Cloud function targe.
-- kubemq-targets deployment
+* kubemq cluster
+* Gcp Cloud function targe.
+* kubemq-targets deployment
 
 ## Configuration
 
 Kafka source connector configuration properties:
 
-| Properties Key | Required | Description                                    | Example          |
-|:---------------|:---------|:-----------------------------------------------|:-----------------|
-| project        | yes      | gcp project name                               | "testproject"    |
-| credentials    | yes      | gcp service account key location (json)        | "TestTopic"      |
-| location_match | no       | match missing function location (default true) | "true"          |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project | yes | gcp project name | "testproject" |
+| credentials | yes | gcp service account key location \(json\) | "TestTopic" |
+| location\_match | no | match missing function location \(default true\) | "true" |
 
 Example:
 
@@ -53,16 +52,15 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description                                          | Possible values                         |
-|:-------------|:---------|:-----------------------------------------------------|:----------------------------------------|
-| name         | yes      | name of the gcp function                             | "test_function"                          |
-| project      | no       | gcp project name (override parent value)             | "testproject1"                          |
-| location     | no       | gcp project location (missing value will be matched) | "us-central1"                           |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| name | yes | name of the gcp function | "test\_function" |
+| project | no | gcp project name \(override parent value\) | "testproject1" |
+| location | no | gcp project location \(missing value will be matched\) | "us-central1" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "name": "test_function",
@@ -71,3 +69,4 @@ Example:
   "data": "eyJtZXNzYWdlIjoidGVzdCJ9"
 }
 ```
+

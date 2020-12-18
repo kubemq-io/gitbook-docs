@@ -1,25 +1,25 @@
-# Kubemq cloudwatch-metrics target Connector
+# CloudWatch Metrics
 
 Kubemq cloudwatch-metrics target connector allows services using kubemq server to access aws cloudwatch-metrics service.
 
 ## Prerequisites
+
 The following required to run the aws-cloudwatch-metrics target connector:
 
-- kubemq cluster
-- aws account with cloudwatch-metrics active service
-- kubemq-source deployment
+* kubemq cluster
+* aws account with cloudwatch-metrics active service
+* kubemq-source deployment
 
 ## Configuration
 
 cloudwatch-metrics target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -54,17 +54,15 @@ bindings:
 
 Put Metrics:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "put_metrics"                     |
-| namespace         | yes      | aws namespace name                      | "string"                     |
-| data              | yes      | array of aws MetricDatum                |  `W3siQ291bnRzIjpudWxsLCJEaW1lbnNpb25zIjpudWxsLCJNZXRyaWNOYW1lIjoiTmV3IE1ldHJpYyIsIlN0YXRpc3RpY1ZhbHVlcyI6bnVsbCwiU3RvcmFnZVJlc29sdXRpb24iOm51bGwsIlRpbWVzdGFtcCI6IjIwMjAtMDgtMTJUMTc6MDk6NDguMzg5NTgyMiswMzowMCIsIlVuaXQiOiJDb3VudCIsIlZhbHVlIjoxMzEsIlZhbHVlcyI6bnVsbH1d`     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_metrics" |
+| namespace | yes | aws namespace name | "string" |
+| data | yes | array of aws MetricDatum | `W3siQ291bnRzIjpudWxsLCJEaW1lbnNpb25zIjpudWxsLCJNZXRyaWNOYW1lIjoiTmV3IE1ldHJpYyIsIlN0YXRpc3RpY1ZhbHVlcyI6bnVsbCwiU3RvcmFnZVJlc29sdXRpb24iOm51bGwsIlRpbWVzdGFtcCI6IjIwMjAtMDgtMTJUMTc6MDk6NDguMzg5NTgyMiswMzowMCIsIlVuaXQiOiJDb3VudCIsIlZhbHVlIjoxMzEsIlZhbHVlcyI6bnVsbH1d` |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "put_metrics",
@@ -74,20 +72,18 @@ Example:
 }
 ```
 
-
-### List Metrics 
+### List Metrics
 
 List Metrics:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_metrics"                     |
-| namespace         | no       | aws namespace name                      | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_metrics" |
+| namespace | no | aws namespace name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_metrics"
@@ -95,3 +91,4 @@ Example:
   "data": null
 }
 ```
+

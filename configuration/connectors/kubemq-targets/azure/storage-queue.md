@@ -1,30 +1,29 @@
-# Kubemq queue Target Connector
+# Queue
 
 Kubemq queue target connector allows services using kubemq server to access queue messaging services.
 
 ## Prerequisites
+
 The following are required to run the queue target connector:
 
-- kubemq cluster
-- Azure active storage account
-- Azure active with storage enable - with access account
-- kubemq-targets deployment
-
+* kubemq cluster
+* Azure active storage account
+* Azure active with storage enable - with access account
+* kubemq-targets deployment
 
 ## Configuration
 
 queue target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| storage_account                 | yes      | azure storage account name                  | "my_account"                                                 |
-| storage_access_key              | yes      | azure storage access key                    | "abcd1234"                                                   |
-| policy                          | no       | exponential or linear                       | "retry_policy_exponential",default(retry_policy_exponential) |
-| max_tries                       | no       | request max tries (1 disable)               | "1",default(1)                                                          |
-| try_timeout                     | no       | Maximum time allowed for any single try     | "3000",default(10000) milliseconds                           |
-| retry_delay                     | no       | Backoff amount for each retry               | "1000",default(600)   milliseconds                           |
-| max_retry_delay                 | no       | delay between retries                       | "1000",default(1800)  milliseconds                           |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| storage\_account | yes | azure storage account name | "my\_account" |
+| storage\_access\_key | yes | azure storage access key | "abcd1234" |
+| policy | no | exponential or linear | "retry\_policy\_exponential",default\(retry\_policy\_exponential\) |
+| max\_tries | no | request max tries \(1 disable\) | "1",default\(1\) |
+| try\_timeout | no | Maximum time allowed for any single try | "3000",default\(10000\) milliseconds |
+| retry\_delay | no | Backoff amount for each retry | "1000",default\(600\)   milliseconds |
+| max\_retry\_delay | no | delay between retries | "1000",default\(1800\)  milliseconds |
 
 Example:
 
@@ -63,14 +62,14 @@ bindings:
 
 Create metadata setting:
 
-| Metadata Key      | Required | Description                                    | Possible values                                  |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                 | "create"                                         |
-| service_url       | yes      | service url path                               | "https://test.queue.core.windows.net/test/test.txt"   | 
-| queue_name        | yes      | the name of the queue to create                | "my_queue"   |   
-| queue_metadata    | no       | key value string string queue Metadata         | "{"tag":"test","name":"myname"}",default(none)   |   
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create" |
+| service\_url | yes | service url path | "[https://test.queue.core.windows.net/test/test.txt](https://test.queue.core.windows.net/test/test.txt)" |
+| queue\_name | yes | the name of the queue to create | "my\_queue" |
+| queue\_metadata | no | key value string string queue Metadata | "{"tag":"test","name":"myname"}",default\(none\) |
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create",
@@ -85,19 +84,18 @@ Create metadata setting:
 
 Push metadata setting:
 
-| Metadata Key      | Required | Description                                                               | Possible values                                  |
-|:------------------|:---------|:--------------------------------------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                                            | "push"                                                |   
-| service_url       | yes      | service url path                                                          | "https://test.queue.core.windows.net/test/test.txt"   |                         
-| queue_name        | yes      | the name of the queue to send the message to                              | "my_queue"                                            |   
-| queue_metadata    | no       | key value string string queue Metadata                                    | "{"tag":"test","name":"myname"}",default(none)        |                         
-| visibility_timeout| no       | visibility timeout value,in milliseconds                                  | "2000000000",default(100000000)                      |                
-| time_to_live      | no       | maximum time to allow the message to be in the queue,in milliseconds      | "2000000000",default(100000000)                      |            
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "push" |
+| service\_url | yes | service url path | "[https://test.queue.core.windows.net/test/test.txt](https://test.queue.core.windows.net/test/test.txt)" |
+| queue\_name | yes | the name of the queue to send the message to | "my\_queue" |
+| queue\_metadata | no | key value string string queue Metadata | "{"tag":"test","name":"myname"}",default\(none\) |
+| visibility\_timeout | no | visibility timeout value,in milliseconds | "2000000000",default\(100000000\) |
+| time\_to\_live | no | maximum time to allow the message to be in the queue,in milliseconds | "2000000000",default\(100000000\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "push",
@@ -108,21 +106,19 @@ Example:
 }
 ```
 
-
 ### Get Message Count
 
 Get Message Count metadata setting:
 
-| Metadata Key      | Required | Description                             | Possible values                                        |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------------------|
-| method            | yes      | type of method                          | "get_messages_count"                                                  |                    
-| service_url       | yes      | service url path and                    | "https://test.queue.core.windows.net/test"             |
-| queue_name        | yes      | the name of the queue                   | "my_queue"                                             |   
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_messages\_count" |
+| service\_url | yes | service url path and | "[https://test.queue.core.windows.net/test](https://test.queue.core.windows.net/test)" |
+| queue\_name | yes | the name of the queue | "my\_queue" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_messages_count",
@@ -137,17 +133,15 @@ Example:
 
 Delete metadata setting:
 
-| Metadata Key      | Required | Description                             | Possible values                                        |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------------------|
-| method            | yes      | type of method                          | "delete"                                                  |                    
-| service_url       | yes      | service url path and                    | "https://test.queue.core.windows.net/test"             |
-| queue_name        | yes      | the name of the queue                   | "my_queue"                                             |   
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete" |
+| service\_url | yes | service url path and | "[https://test.queue.core.windows.net/test](https://test.queue.core.windows.net/test)" |
+| queue\_name | yes | the name of the queue | "my\_queue" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete",
@@ -162,17 +156,16 @@ Example:
 
 Peek metadata setting:
 
-| Metadata Key                   | Required | Description                             | Possible values                            |
-|:-------------------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method                         | yes      | type of method                          | "peek"                                  |
-| file_name                      | yes      | the name of the file to delete          | "myfile.txt"                              |
-| service_url                    | yes      | service url path and                    | "https://test.queue.core.windows.net/test/test.txt" |
-| max_messages                   | no       | max number of messages to receive int32 | "10",default(32) |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "peek" |
+| file\_name | yes | the name of the file to delete | "myfile.txt" |
+| service\_url | yes | service url path and | "[https://test.queue.core.windows.net/test/test.txt](https://test.queue.core.windows.net/test/test.txt)" |
+| max\_messages | no | max number of messages to receive int32 | "10",default\(32\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "peek",
@@ -189,17 +182,16 @@ Pop metadata setting:
 
 Pop will remove the message
 
-| Metadata Key                   | Required | Description                             | Possible values                            |
-|:-------------------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method                         | yes      | type of method                          | "pop"                                  |
-| file_name                      | yes      | the name of the file to delete          | "myfile.txt"                              |
-| service_url                    | yes      | service url path and                    | "https://test.queue.core.windows.net/test/test.txt" |
-| max_messages                   | no       | max number of messages to receive int32 | "10",default(32) |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "pop" |
+| file\_name | yes | the name of the file to delete | "myfile.txt" |
+| service\_url | yes | service url path and | "[https://test.queue.core.windows.net/test/test.txt](https://test.queue.core.windows.net/test/test.txt)" |
+| max\_messages | no | max number of messages to receive int32 | "10",default\(32\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "pop",
@@ -209,3 +201,4 @@ Example:
   "data": null
 }
 ```
+

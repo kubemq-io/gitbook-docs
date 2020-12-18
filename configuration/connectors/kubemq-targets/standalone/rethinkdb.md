@@ -1,35 +1,34 @@
-# Kubemq Rethinkdb Target Connector
+# ReThinkDB
 
 Kubemq Rethinkdb target connector allows services using kubemq server to access Rethinkdb database services.
 
 ## Prerequisites
+
 The following are required to run the Rethinkdb target connector:
 
-- kubemq cluster
-- Rethinkdb server
-- kubemq-targets deployment
+* kubemq cluster
+* Rethinkdb server
+* kubemq-targets deployment
 
 ## Configuration
 
 Rethinkdb target connector configuration properties:
 
-| Properties Key            | Required | Description                          | Example                   |
-|:--------------------------|:---------|:-------------------------------------|:--------------------------|
-| host                      | yes      | Rethinkdb host address               | "localhost:27017"         |
-| username                  | no       | Rethinkdb username(if user exists)   | "admin"                   |
-| password                  | no       | Rethinkdb password                   | "password"                |
-| timeout                   | no       | timeout in seconds                   | "5"                   |
-| keep_alive_period         | no       | keep alive period in seconds         | "5"                    |
-| auth_key                  | no       | auth key if needed for connection    | ""                        |
-| ssl                       | no       | set if ssl is needed                 | "false","true" |
-| cert_file                 | no       | ssl certificate file in string format| "my_file" |
-| cert_key                  | no       | ssl certificate key in string format | "my_key"  |
-| handShakeVersion          | no       | server hand shake version            | "1"     |
-| number_of_retries         | no       | number of retries for each request   | "1"               |
-| initial_cap               | no       | server initial cap                   | "0"               |
-| max_open                  | no       | max open for server                  | "0"               |
-
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| host | yes | Rethinkdb host address | "localhost:27017" |
+| username | no | Rethinkdb username\(if user exists\) | "admin" |
+| password | no | Rethinkdb password | "password" |
+| timeout | no | timeout in seconds | "5" |
+| keep\_alive\_period | no | keep alive period in seconds | "5" |
+| auth\_key | no | auth key if needed for connection | "" |
+| ssl | no | set if ssl is needed | "false","true" |
+| cert\_file | no | ssl certificate file in string format | "my\_file" |
+| cert\_key | no | ssl certificate key in string format | "my\_key" |
+| handShakeVersion | no | server hand shake version | "1" |
+| number\_of\_retries | no | number of retries for each request | "1" |
+| initial\_cap | no | server initial cap | "0" |
+| max\_open | no | max open for server | "0" |
 
 Example:
 
@@ -70,16 +69,16 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | no       | key name         | any string      |
-| method       | yes      | get              | "get"           |
-| db_name      | yes      | db name          | "my_db"           |
-| table        | yes      | table name       | "my_table"           |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | no | key name | any string |
+| method | yes | get | "get" |
+| db\_name | yes | db name | "my\_db" |
+| table | yes | table name | "my\_table" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-Rethinkdb-key",
@@ -95,22 +94,22 @@ Example:
 
 Update request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | key name         | any string      |
-| method       | yes      | get              | "update"        |
-| db_name      | yes      | db name          | "my_db"         |
-| table        | yes      | table name       | "my_table"      |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | key name | any string |
+| method | yes | get | "update" |
+| db\_name | yes | db name | "my\_db" |
+| table | yes | table name | "my\_table" |
 
 Update request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | map of string interface | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | map of string interface | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-Rethinkdb-key",
@@ -121,21 +120,21 @@ Example:
   "data": "ICAibWV0YWRhdGEiOiB7CiAgICAia2V5IjogInlvdXItUmV0aGlua2RiLWtleSIsCiAgICAiZGJfbmFtZSI6ICJ0ZXN0IiwKICAgICJ0YWJsZSI6ICJ1c2VycyIsCiAgICAibWV0aG9kIjogImdldCIKICB9LA==" 
 }
 ```
+
 ### Delete Request
 
 Delete request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | key name         | any string      |
-| method       | yes      | get              | "delete"        |
-| db_name      | yes      | db name          | "my_db"         |
-| table        | yes      | table name       | "my_table"      |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | key name | any string |
+| method | yes | get | "delete" |
+| db\_name | yes | db name | "my\_db" |
+| table | yes | table name | "my\_table" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-Rethinkdb-key",
@@ -147,27 +146,26 @@ Example:
 }
 ```
 
-
 ### Insert Request
 
 insert request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | key name         | any string      |
-| method       | yes      | get              | "insert"        |
-| db_name      | yes      | db name          | "my_db"         |
-| table        | yes      | table name       | "my_table"      |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | key name | any string |
+| method | yes | get | "insert" |
+| db\_name | yes | db name | "my\_db" |
+| table | yes | table name | "my\_table" |
 
 Insert request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | map of string interface | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | map of string interface | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-Rethinkdb-key",
@@ -178,3 +176,4 @@ Example:
   "data": "ICAibWV0YWRhdGEiOiB7CiAgICAia2V5IjogInlvdXItUmV0aGlua2RiLWtleSIsCiAgICAiZGJfbmFtZSI6ICJ0ZXN0IiwKICAgICJ0YWJsZSI6ICJ1c2VycyIsCiAgICAibWV0aG9kIjogImdldCIKICB9LA==" 
 }
 ```
+

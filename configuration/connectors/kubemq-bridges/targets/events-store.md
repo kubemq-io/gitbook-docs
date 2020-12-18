@@ -1,24 +1,24 @@
-# KubeMQ Bridges Events-Store Target
+# Events Store
 
 KubeMQ Bridges Events-Store target provides an events-store sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the events-store target connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Events-Store target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| channels | no       | set array of channels values to send the event                |  "events-store.a,events-store.b,events-store.c"                                                    |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| channels | no | set array of channels values to send the event | "events-store.a,events-store.b,events-store.c" |
 
 Example:
 

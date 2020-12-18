@@ -1,24 +1,24 @@
-# Kubemq ActiveMQ Target Connector
+# IBM-MQ
 
 Kubemq activemq target connector allows services using kubemq server to access activemq messaging services.
 
 ## Prerequisites
+
 The following are required to run the activemq target connector:
 
-- kubemq cluster
-- activemq server
-- kubemq-targets deployment
+* kubemq cluster
+* activemq server
+* kubemq-targets deployment
 
 ## Configuration
 
 ActiveMQ target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| host                      | yes      | activemq connection host          | "localhost:1883" |
-| username                      | no      | set activemq username          | "username" |
-| password                      | no      | set activemq password          | "password" |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| host | yes | activemq connection host | "localhost:1883" |
+| username | no | set activemq username | "username" |
+| password | no | set activemq password | "password" |
 
 Example:
 
@@ -52,22 +52,19 @@ bindings:
 
 Request metadata setting:
 
-| Metadata Key   | Required | Description         | Possible values |
-|:---------------|:---------|:--------------------|:----------------|
-| destination          | yes      | set destination name | "destination"         |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| destination | yes | set destination name | "destination" |
 
 Query request data setting:
 
-| Data Key | Required | Description  | Possible values    |
-|:---------|:---------|:-------------|:-------------------|
-| data     | yes      | data to publish | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to publish | base64 bytes array |
 
 Example:
 
-
-```json
+```javascript
 {
   "metadata": {
     "destination": "destination"
@@ -75,3 +72,4 @@ Example:
   "data": "U0VMRUNUIGlkLHRpdGxlLGNvbnRlbnQgRlJPTSBwb3N0Ow=="
 }
 ```
+

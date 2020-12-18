@@ -11,7 +11,6 @@
   * [Helm](getting-started/create-cluster/helm.md)
   * [Openshift](getting-started/create-cluster/openshift.md)
   * [GCP](getting-started/create-cluster/gcp.md)
-  
 * [Create Dashboard](getting-started/create-dashboard/README.md)
   * [Kubemqctl](getting-started/create-dashboard/kubemqctl.md)
   * [Helm](getting-started/create-dashboard/helm.md)
@@ -45,7 +44,7 @@
   * [KubeMQ Targets](learn/kubemq-connectors/kubemq-targets.md)
   * [KubeMQ Sources](learn/kubemq-connectors/kubemq-sources.md)
   * [KubeMQ Bridges](learn/kubemq-connectors/kubemq-bridges.md)
-  
+
 ## Configuration
 
 * [Cluster](configuration/cluster/README.md)
@@ -172,14 +171,13 @@
       * [Events Store](configuration/connectors/kubemq-sources/targets/events-store.md)
       * [Command](configuration/connectors/kubemq-sources/targets/command.md)
       * [Query](configuration/connectors/kubemq-sources/targets/query.md)
-      
   * [KubeMQ Bridges](configuration/connectors/kubemq-bridges/README.md)
     * [Targets](configuration/connectors/kubemq-bridges/targets/README.md)
       * [Queue](configuration/connectors/kubemq-bridges/targets/queue.md)
       * [Events](configuration/connectors/kubemq-bridges/targets/events.md)
       * [Events Store](configuration/connectors/kubemq-bridges/targets/events-store.md)
       * [Command](configuration/connectors/kubemq-bridges/targets/command.md)
-      * [Query](configuration/connectors/kubemq-bridges/targets/query.md)      
+      * [Query](configuration/connectors/kubemq-bridges/targets/query.md)
     * [Sources](configuration/connectors/kubemq-bridges/sources/README.md)
       * [Queue](configuration/connectors/kubemq-bridges/sources/queue.md)
       * [Events](configuration/connectors/kubemq-bridges/sources/events.md)

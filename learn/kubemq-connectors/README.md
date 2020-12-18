@@ -1,2 +1,2 @@
-# KubeMQ Connectors
+# Connectors
 

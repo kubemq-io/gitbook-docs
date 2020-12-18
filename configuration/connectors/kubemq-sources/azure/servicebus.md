@@ -1,27 +1,25 @@
-# Kubemq servicebus source Connector
+# ServiceBus
 
 Kubemq azure-servicebus source connector allows services using kubemq server to access google servicebus server.
 
 ## Prerequisites
+
 The following required to run the azure-servicebus source connector:
 
-- kubemq cluster
-- azure-servicebus set up
-- kubemq-source deployment
+* kubemq cluster
+* azure-servicebus set up
+* kubemq-source deployment
 
 ## Configuration
 
 event-hubs source connector configuration properties:
 
-| Properties Key                  | Required | Description                                                            | Example                                                                |
-|:--------------------------------|:---------|:-----------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| end_point                       | yes      | servicebus target endpoint                                             | "sb://my_account.net" |
-| shared_access_key_name          | yes      | servicebus access key name                                             | "keyname" |
-| shared_access_key               | yes      | servicebus shared access key name                                      | "213ase123" |
-| queue                           | yes      | servicebus queue name                                                  | "0" |
-
-
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| end\_point | yes | servicebus target endpoint | "sb://my\_account.net" |
+| shared\_access\_key\_name | yes | servicebus access key name | "keyname" |
+| shared\_access\_key | yes | servicebus shared access key name | "213ase123" |
+| queue | yes | servicebus queue name | "0" |
 
 Example:
 
@@ -47,6 +45,6 @@ bindings:
           end_point: "sb://my_account.net"
           shared_access_key_name: "keyname"
           shared_access_key: "213ase123"
-          queue: "test"  
-
+          queue: "test"
 ```
+

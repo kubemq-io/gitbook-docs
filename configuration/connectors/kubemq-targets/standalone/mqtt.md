@@ -1,24 +1,25 @@
-# Kubemq MQTT Target Connector
+# ActiveMQ
 
 Kubemq mqtt target connector allows services using kubemq server to access mqtt messaging services.
 
 ## Prerequisites
+
 The following are required to run the mqtt target connector:
 
-- kubemq cluster
-- mqtt server
-- kubemq-targets deployment
+* kubemq cluster
+* mqtt server
+* kubemq-targets deployment
 
 ## Configuration
 
 MQTT target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| host                      | yes      | mqtt connection host          | "localhost:1883" |
-| username                      | no      | set mqtt username          | "username" |
-| password                      | no      | set mqtt password          | "password" |
-| client_id                      | no      | mqtt connection string address          | "client_id" |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| host | yes | mqtt connection host | "localhost:1883" |
+| username | no | set mqtt username | "username" |
+| password | no | set mqtt password | "password" |
+| client\_id | no | mqtt connection string address | "client\_id" |
 
 Example:
 
@@ -53,22 +54,20 @@ bindings:
 
 Request metadata setting:
 
-| Metadata Key   | Required | Description         | Possible values |
-|:---------------|:---------|:--------------------|:----------------|
-| topic          | yes      | set topic name | "topic"         |
-| qos       | yes      | set qos level | "0","1","2"         |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| topic | yes | set topic name | "topic" |
+| qos | yes | set qos level | "0","1","2" |
 
 Query request data setting:
 
-| Data Key | Required | Description  | Possible values    |
-|:---------|:---------|:-------------|:-------------------|
-| data     | yes      | data to publish | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to publish | base64 bytes array |
 
 Example:
 
-
-```json
+```javascript
 {
   "metadata": {
     "topic": "topic",
@@ -77,3 +76,4 @@ Example:
   "data": "U0VMRUNUIGlkLHRpdGxlLGNvbnRlbnQgRlJPTSBwb3N0Ow=="
 }
 ```
+

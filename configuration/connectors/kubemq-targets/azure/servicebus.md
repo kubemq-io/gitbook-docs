@@ -1,26 +1,24 @@
-# Kubemq servicebus Target Connector
+# Service Bus
 
 Kubemq servicebus target connector allows services using kubemq server to access servicebus messaging services.
 
 ## Prerequisites
+
 The following are required to run the servicebus target connector:
 
-- kubemq cluster
-- Azure active with servicebus enable 
-- kubemq-targets deployment
-
-
+* kubemq cluster
+* Azure active with servicebus enable 
+* kubemq-targets deployment
 
 ## Configuration
 
 servicebus target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| end_point                       | yes      | event hubs target endpoint                  | "sb://my_account.net" |
-| shared_access_key_name          | yes      | event hubs access key name                  | "keyname" |
-| shared_access_key               | yes      | event hubs shared access key name           | "213ase123" |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| end\_point | yes | event hubs target endpoint | "sb://my\_account.net" |
+| shared\_access\_key\_name | yes | event hubs access key name | "keyname" |
+| shared\_access\_key | yes | event hubs shared access key name | "213ase123" |
 
 Example:
 
@@ -55,18 +53,16 @@ bindings:
 
 send metadata setting:
 
-| Metadata Key      | Required | Description                                    | Possible values                                  |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                 | "send"                                         |
-| label             | no       | the message label                              | "my_label"                                     |
-| content_type      | no       | message content type                           | "content_type"                               |
-| time_to_live      | no       | message time to live                           | "1000000000"default(1000000000)          |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "send" |
+| label | no | the message label | "my\_label" |
+| content\_type | no | message content type | "content\_type" |
+| time\_to\_live | no | message time to live | "1000000000"default\(1000000000\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "send",
@@ -80,17 +76,16 @@ Example:
 
 send batch metadata setting:
 
-| Metadata Key                   | Required | Description                                     | Possible values                            |
-|:-------------------------------|:---------|:------------------------------------------------|:-------------------------------------------|
-| method                         | yes      | type of method                                  | "send_batch"                                  |
-| label                          | no       | the message label                              | "my_label"                                     |
-| content_type                   | no       | message content type                           | "content_type"                               |
-| time_to_live                   | no       | message time to live                           | "1000000000"default(1000000000)          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "send\_batch" |
+| label | no | the message label | "my\_label" |
+| content\_type | no | message content type | "content\_type" |
+| time\_to\_live | no | message time to live | "1000000000"default\(1000000000\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "send_batch",
@@ -98,4 +93,6 @@ Example:
   },
   "data": "WyJ0ZXN0MSIsInRlc3QyIiwidGVzdDMiLCJ0ZXN0NCJd"
 }
-``````
+```
+```
+

@@ -1,25 +1,25 @@
-# Kubemq sns target Connector
+# SNS
 
 Kubemq aws-sns target connector allows services using kubemq server to access aws sns service.
 
 ## Prerequisites
+
 The following required to run the aws-sns target connector:
 
-- kubemq cluster
-- aws account with sns active service
-- kubemq-source deployment
+* kubemq cluster
+* aws account with sns active service
+* kubemq-source deployment
 
 ## Configuration
 
 sns target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string)         | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string\) | aws token |
 
 Example:
 
@@ -56,14 +56,13 @@ list all topics
 
 List Topics:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_topics"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_topics" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_topics"
@@ -72,22 +71,19 @@ Example:
 }
 ```
 
-
-
 ### List Subscriptions
 
 list all subscriptions
 
 List Subscriptions:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_subscriptions"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_subscriptions" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_subscriptions"
@@ -96,22 +92,20 @@ Example:
 }
 ```
 
-
 ### List Subscriptions By Topic
 
 list all Subscriptions of the selected topic
 
 List Subscriptions By Topic:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_subscriptions_by_topic"       |
-| topic             | yes      | topic_name                              | "arn:aws-my-topic"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_subscriptions\_by\_topic" |
+| topic | yes | topic\_name | "arn:aws-my-topic" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_subscriptions_by_topic",
@@ -121,23 +115,21 @@ Example:
 }
 ```
 
-
 ### Create Topic
 
-create a new topic , topic name must by unique 
+create a new topic , topic name must by unique
 
 Create Topic:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_topic"       |
-| topic             | yes      | topic_name                              | "arn:aws-my-topic"                     |
-| data              | no       | create attributes as base64             | '{"DisplayName":"my-display-name"}' 
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_topic" |
+| topic | yes | topic\_name | "arn:aws-my-topic" |
+| data | no | create attributes as base64 | '{"DisplayName":"my-display-name"}' |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_topic",
@@ -147,28 +139,26 @@ Example:
 }
 ```
 
-
 ### Send Message
 
 send a message to topic.
 
 Send Message:
 
-| Metadata Key      | Required                            | Description                  | Possible values                            |
-|:------------------|:------------------------------------|:-----------------------------|:-------------------------------------------|
-| method            | yes                                 | type of method               | "send_message"                           |
-| topic             | no(unless target_arn is missing)    | topic_name                   | "arn:aws-my-topic"                     |
-| target_arn        | no(unless topic is missing)         | target_arn                   | "arn:aws-my-topic"                     |
-| message           | yes                                 | message body as string       | 'some message in string format'        || 
-| message           | yes                                 | message body as string       | 'some message in string format'        || 
-| subject           | no                                  | sns subject name             | "string name of sns subject"           || 
-| phone_number      | no                                  | valid phone number           | "valid phone number"                   || 
-| data              | no                                  | message attributes as base64 | "[{"name":"store","data_type":"String","string_value":"my_store"},{"name":"event","data_type":"String","string_value":"my_event"}]"                  || 
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "send\_message" |  |
+| topic | no\(unless target\_arn is missing\) | topic\_name | "arn:aws-my-topic" |  |
+| target\_arn | no\(unless topic is missing\) | target\_arn | "arn:aws-my-topic" |  |
+| message | yes | message body as string | 'some message in string format' |  |
+| message | yes | message body as string | 'some message in string format' |  |
+| subject | no | sns subject name | "string name of sns subject" |  |
+| phone\_number | no | valid phone number | "valid phone number" |  |
+| data | no | message attributes as base64 | "\[{"name":"store","data\_type":"String","string\_value":"my\_store"},{"name":"event","data\_type":"String","string\_value":"my\_event"}\]" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "send_message",
@@ -179,23 +169,21 @@ Example:
 }
 ```
 
-
 ### Subscribe
 
 Subscribe to topic
 
 Subscribe:
 
-| Metadata Key      | Required | Description                             | Possible values                                           |
-|:--------------------|:------------------------------------|:---------------------------------|:--------------------------------------|
-| method              | yes                                 | type of method                   | "subscribe"                           |
-| topic               | yes    | topic_name                 | "arn:aws-my-topic"               | "arn:aws-my-topic"   |
-| data                | no                                  | Subscribe attributes as base64   | '{"store": ["mystore"],"event": [{"anything-but": "my-event"}]}'       
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "subscribe" |  |
+| topic | yes | topic\_name | "arn:aws-my-topic" | "arn:aws-my-topic" |
+| data | no | Subscribe attributes as base64 | '{"store": \["mystore"\],"event": \[{"anything-but": "my-event"}\]}' |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "subscribe",
@@ -211,15 +199,14 @@ delete the selected topic
 
 Delete Topic:
 
-| Metadata Key      | Required | Description                             | Possible values                                           |
-|:--------------------|:------------------------------------|:-------------------------------|:--------------------------------------|
-| method              | yes                                 | type of method                 | "delete_topic"                           |
-| topic               | yes                                 | topic_name                     | "arn:aws-my-topic"         | 
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_topic" |
+| topic | yes | topic\_name | "arn:aws-my-topic" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_topic",
@@ -228,3 +215,4 @@ Example:
   "data": null
 }
 ```
+

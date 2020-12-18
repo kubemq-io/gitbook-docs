@@ -1,24 +1,25 @@
-# Kubemq redshift target Connector (Service admin)
+# RedShift Service
+
 Kubemq aws-redshift target connector allows services using kubemq server to access aws redshift service.
 
 ## Prerequisites
+
 The following required to run the aws-redshift service target connector:
 
-- kubemq cluster
-- aws account with redshift active service(Not rds, see rds/redshift)
-- kubemq-source deployment
+* kubemq cluster
+* aws account with redshift active service\(Not rds, see rds/redshift\)
+* kubemq-source deployment
 
 ## Configuration
 
 redshift target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -55,17 +56,15 @@ create a tag for a resource ,must be accessible to redshift cluster.
 
 Create Tags:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_tags"                     |
-| resource_arn      | yes      | aws resource ARN                        | "arn:aws:redshift:region:account_id:cluster:cluster_name"                     |
-| data              | yes      | key value of string string(tag-value)   | "eyJ0ZXN0MS1rZXkiOiJ0ZXN0MS12YWx1ZSJ9"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_tags" |
+| resource\_arn | yes | aws resource ARN | "arn:aws:redshift:region:account\_id:cluster:cluster\_name" |
+| data | yes | key value of string string\(tag-value\) | "eyJ0ZXN0MS1rZXkiOiJ0ZXN0MS12YWx1ZSJ9" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_tags",
@@ -81,17 +80,15 @@ delete tag from resource,must be accessible to redshift cluster.
 
 Delete Tags:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "delete_tags"                     |
-| resource_arn      | yes      | aws resource ARN                        | "arn:aws:redshift:region:account_id:cluster:cluster_name"                     |
-| data              | yes      | key slice of tags to remove(by keys)    | "WyJ0ZXN0MS1rZXkiXQ=="                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_tags" |
+| resource\_arn | yes | aws resource ARN | "arn:aws:redshift:region:account\_id:cluster:cluster\_name" |
+| data | yes | key slice of tags to remove\(by keys\) | "WyJ0ZXN0MS1rZXkiXQ==" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_tags",
@@ -107,15 +104,13 @@ list all tags on the redshift cluster
 
 List Tags:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_tags"                     |            |
-
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_tags" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_tags"
@@ -130,15 +125,13 @@ list all redshift snapshots.
 
 List Snapshots:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_snapshots"                     |            |
-
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_snapshots" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_snapshots"
@@ -153,15 +146,14 @@ list all redshift snapshots with the matching tag keys.
 
 List Snapshots By Tag Keys:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_snapshots_by_tags_keys"              |            |
-| data              | yes      | key slice of tags to search by(by keys) | "WyJ0ZXN0MS1rZXkiXQ=="                     |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_snapshots\_by\_tags\_keys" |  |
+| data | yes | key slice of tags to search by\(by keys\) | "WyJ0ZXN0MS1rZXkiXQ==" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_snapshots_by_tags_keys"
@@ -176,15 +168,14 @@ list all redshift snapshots with the matching tag Values.
 
 List Snapshots By Tag Values:
 
-| Metadata Key      | Required | Description                               | Possible values                            |
-|:------------------|:---------|:------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                            | "list_snapshots_by_tags_values"                     |            |
-| data              | yes      | key slice of tags to search by(by values) | "WyJ0ZXN0MS1rZXkiXQ=="                     |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_snapshots\_by\_tags\_values" |  |
+| data | yes | key slice of tags to search by\(by values\) | "WyJ0ZXN0MS1rZXkiXQ==" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_snapshots_by_tags_keys"
@@ -197,15 +188,14 @@ Example:
 
 Describe Clusters:
 
-| Metadata Key      | Required | Description                               | Possible values                            |
-|:------------------|:---------|:------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                            | "describe_cluster"                     |            |
-| resource_name     | yes      | aws resource name                         | "my_cluster_name"                     |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "describe\_cluster" |  |
+| resource\_name | yes | aws resource name | "my\_cluster\_name" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_snapshots_by_tags_keys",
@@ -221,15 +211,13 @@ list clusters under redshift service
 
 List Clusters:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_clusters"                     |            |
-
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_clusters" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_clusters"
@@ -244,15 +232,14 @@ list clusters under redshift service by tag keys
 
 List Clusters By Tag Keys:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_clusters_by_tags_keys"                     |            |
-| data              | yes      | key slice of tags to search by(by keys) | "WyJ0ZXN0MS1rZXkiXQ=="                     |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_clusters\_by\_tags\_keys" |  |
+| data | yes | key slice of tags to search by\(by keys\) | "WyJ0ZXN0MS1rZXkiXQ==" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_clusters_by_tags_keys"
@@ -267,15 +254,14 @@ list clusters under redshift service by tag values
 
 List Clusters By Tag Values:
 
-| Metadata Key      | Required | Description                               | Possible values                            |
-|:------------------|:---------|:------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                            | "list_clusters_by_tags_values"             |            |
-| data              | yes      | key slice of tags to search by(by values) | "WyJ0ZXN0MS1rZXkiXQ=="                     |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_clusters\_by\_tags\_values" |  |
+| data | yes | key slice of tags to search by\(by values\) | "WyJ0ZXN0MS1rZXkiXQ==" |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_clusters_by_tags_values"

@@ -1,26 +1,26 @@
-# Kubemq cloudwatch-logs target Connector
+# CloudWatch Logs
 
 Kubemq cloudwatch-logs target connector allows services using kubemq server to access aws cloudwatch-logs service.
 
 ## Prerequisites
+
 The following required to run the aws-cloudwatch-logs target connector:
 
-- kubemq cluster
-- aws account with cloudwatch-logs active service
-- some action will need cloudwatch-logs permission (IAM User)
-- kubemq-source deployment
+* kubemq cluster
+* aws account with cloudwatch-logs active service
+* some action will need cloudwatch-logs permission \(IAM User\)
+* kubemq-source deployment
 
 ## Configuration
 
 cloudwatch-logs target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -51,23 +51,21 @@ bindings:
 
 ## Usage
 
-### Create log Stream 
+### Create log Stream
 
 create a new log stream
 
 Create log Stream:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_log_event_stream"                     |
-| log_stream_name   | yes      | aws log stream name                     | "string"                     |
-| log_group_name    | yes      | aws log group name                      | "string"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_log\_event\_stream" |
+| log\_stream\_name | yes | aws log stream name | "string" |
+| log\_group\_name | yes | aws log group name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_log_event_stream",
@@ -78,23 +76,20 @@ Example:
 }
 ```
 
+### Describe log Stream
 
-### Describe log Stream 
-
-describe a selected log stream by group_name
+describe a selected log stream by group\_name
 
 Describe log Stream:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "describe_log_event_stream"                     |
-| log_group_name    | yes      | aws log group name                      | "string"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "describe\_log\_event\_stream" |
+| log\_group\_name | yes | aws log group name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "describe_log_event_stream",
@@ -104,23 +99,21 @@ Example:
 }
 ```
 
-### Delete log Stream 
+### Delete log Stream
 
 delete log stream
 
 Delete log Stream:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "delete_log_event_stream"                     |
-| log_stream_name   | yes      | aws log stream name                     | "string"                     |
-| log_group_name    | yes      | aws log group name                      | "string"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_log\_event\_stream" |
+| log\_stream\_name | yes | aws log stream name | "string" |
+| log\_group\_name | yes | aws log group name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_log_event_stream",
@@ -133,21 +126,19 @@ Example:
 
 ### Get log Event
 
-get log event 
+get log event
 
 Get log Stream:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                 | "get_log_event"                     |
-| log_stream_name   | yes      | aws log stream name                            | "string"                     |
-| log_group_name    | yes      | aws log group name                             | "string"                                                 |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_log\_event" |
+| log\_stream\_name | yes | aws log stream name | "string" |
+| log\_group\_name | yes | aws log group name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_log_event",
@@ -164,17 +155,15 @@ create a new log event group
 
 Create Log Event Group:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                 | "create_log_group"                     |
-| log_group_name    | yes      | aws log group name                             | "string"                                                 |
-| data              | no       | aws tags                                       | key value pair string string                                                 |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_log\_group" |
+| log\_group\_name | yes | aws log group name | "string" |
+| data | no | aws tags | key value pair string string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_log_group",
@@ -184,25 +173,23 @@ Example:
 }
 ```
 
-### Put Log 
+### Put Log
 
 put a log in log stream
 
 Put Log Event:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:---------------------------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                                 | "put_log_event"                     |
-| log_stream_name   | yes      | aws log stream name                                            | "string"                     |
-| log_group_name    | yes      | aws log group name                                             | "string"                     |
-| sequence_token    | yes      | aws stream sequence token                                      | "string"                     |
-| data              | yes      | key value pair of int-string int-time - string-Message         | "string"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_log\_event" |
+| log\_stream\_name | yes | aws log stream name | "string" |
+| log\_group\_name | yes | aws log group name | "string" |
+| sequence\_token | yes | aws stream sequence token | "string" |
+| data | yes | key value pair of int-string int-time - string-Message | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "put_log_event",
@@ -219,16 +206,14 @@ describe log event group
 
 Describe Log Event Group:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                 | "describe_log_group"                     |
-| log_group_prefix  | yes      | aws log group prefix                           | "string"                                                 |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "describe\_log\_group" |
+| log\_group\_prefix | yes | aws log group prefix | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "describe_log_group",
@@ -238,23 +223,20 @@ Example:
 }
 ```
 
-
 ### Delete Log Event Group
 
 delete log event group
 
 Delete Log Event Group:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                 | "delete_log_group"                     |
-| log_group_name    | yes      | aws log group name                              | "string"                                                 |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_log\_group" |
+| log\_group\_name | yes | aws log group name | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_log_group",
@@ -263,3 +245,4 @@ Example:
   "data": null
 }
 ```
+

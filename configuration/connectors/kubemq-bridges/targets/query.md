@@ -1,26 +1,25 @@
-# KubeMQ Bridges Query Target
+# Query
 
 KubeMQ Bridges Query target provides an RPC query sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the query target connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Query target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| default_channel | no       | set default channel to send request                |                                                      |
-| timeout_seconds | no       | sets query request default timeout (600 seconds) |                                                      |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| default\_channel | no | set default channel to send request |  |
+| timeout\_seconds | no | sets query request default timeout \(600 seconds\) |  |
 
 Example:
 
@@ -54,6 +53,6 @@ bindings:
           client_id: "cluster-c-query-connection"
           auth_token: ""
           channel: "query"
-          group: ""              
+          group: ""
 ```
 

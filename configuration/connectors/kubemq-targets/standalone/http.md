@@ -1,29 +1,29 @@
-# Kubemq Https Target Connector
+# HTTP
 
 Kubemq Https target connector allows services using kubemq server to invoke http rest function to any destination.
 
 ## Prerequisites
+
 The following are required to run the http target connector:
 
-- kubemq cluster
-- kubemq-targets deployment
+* kubemq cluster
+* kubemq-targets deployment
 
 ## Configuration
 
 http target connector configuration properties:
 
-| Properties Key     | Required | Description                                        | Example                          |
-|:-------------------|:---------|:---------------------------------------------------|:---------------------------------|
-| auth_type          | no       | http authentication type                           | "","no_auth","basic","auth_token |
-| username           | no       | set username in auth_type=basic mode               | "admin"                          |
-| password           | no       | set password in auth_type=basic mode               | "password"                       |
-| token              | no       | set auth token in auth_type=auth_token mode        | valid JWT token                  |
-| proxy              | no       | set proxy url                                      | "http://localhost:8080"          |
-| root_certificate   | no       | set root ca certificate for mTLS handshake         | any x509 pem                     |
-| client_private_key | no       | set private key for mTLS handshake                 | any x509 pem                     |
-| client_public_key  | no       | set public key for mTLS handshake                  | any x509 pem                     |
-| default_headers    | no       | set any default headers to be add for each call    | map of headers                   |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| auth\_type | no | http authentication type | "","no\_auth","basic","auth\_token |
+| username | no | set username in auth\_type=basic mode | "admin" |
+| password | no | set password in auth\_type=basic mode | "password" |
+| token | no | set auth token in auth\_type=auth\_token mode | valid JWT token |
+| proxy | no | set proxy url | "[http://localhost:8080](http://localhost:8080)" |
+| root\_certificate | no | set root ca certificate for mTLS handshake | any x509 pem |
+| client\_private\_key | no | set private key for mTLS handshake | any x509 pem |
+| client\_public\_key | no | set public key for mTLS handshake | any x509 pem |
+| default\_headers | no | set any default headers to be add for each call | map of headers |
 
 Example:
 
@@ -56,23 +56,22 @@ bindings:
 
 Request metadata setting:
 
-| Metadata Key | Required | Description                     | Possible values                       |
-|:-------------|:---------|:--------------------------------|:--------------------------------------|
-| method       | yes      | http method to invoke           | "get","post","head","put"             |
-|              |          |                                 | "delete","patch","options"            |
-| url          | yes      | http url                        | "https://httpbin.org/get"             |
-| headers      | no       | any headers required for method | '{"Content-Type":"application/json"}' |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | http method to invoke | "get","post","head","put" |
+|  |  |  | "delete","patch","options" |
+| url | yes | http url | "[https://httpbin.org/get](https://httpbin.org/get)" |
+| headers | no | any headers required for method | '{"Content-Type":"application/json"}' |
 
 Request data setting:
 
-| Data Key | Required | Description                          | Possible values     |
-|:---------|:---------|:-------------------------------------|:--------------------|
-| data     | yes      | data to set for the http request | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to set for the http request | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get",
@@ -81,3 +80,4 @@ Example:
  "data": null
 }
 ```
+

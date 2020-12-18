@@ -1,26 +1,25 @@
-# KubeMQ Bridges Command Target
+# Command
 
 KubeMQ Bridges Command target provides an RPC command sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the command target connector:
 
-- kubemq cluster
-- kubemq-bridges deployment
-
+* kubemq cluster
+* kubemq-bridges deployment
 
 ## Configuration
 
 Command target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| default_channel | no       | set default channel to send request                |   "commands"                                                   |
-| timeout_seconds | no       | sets command request default timeout (600 seconds) |                                                      |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-a-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| default\_channel | no | set default channel to send request | "commands" |
+| timeout\_seconds | no | sets command request default timeout \(600 seconds\) |  |
 
 Example:
 
@@ -54,6 +53,6 @@ bindings:
           client_id: "cluster-c-command-connection"
           auth_token: ""
           channel: "command"
-          group: ""              
+          group: ""
 ```
 

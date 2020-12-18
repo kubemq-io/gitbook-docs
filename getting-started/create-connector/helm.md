@@ -25,13 +25,16 @@ helm install kubemq-operator kubemq-charts/operator
 ```bash
 helm install kubemq-targets kubemq-charts/connector --set type=targets
 ```
+
 ## Install KubeMQ Sources Connector
 
 ```bash
 helm install kubemq-sources kubemq-charts/connector --set type=sources
 ```
+
 ## Install KubeMQ Bridges Connector
 
 ```bash
 helm install kubemq-bridges kubemq-charts/connector --set type=bridges
 ```
+

@@ -1,30 +1,29 @@
-# Kubemq files Target Connector
+# Files
 
 Kubemq files target connector allows services using kubemq server to access files messaging services.
 
 ## Prerequisites
+
 The following are required to run the files target connector:
 
-- kubemq cluster
-- Azure active storage account
-- Azure active with storage enable - with access account
-- kubemq-targets deployment
-
+* kubemq cluster
+* Azure active storage account
+* Azure active with storage enable - with access account
+* kubemq-targets deployment
 
 ## Configuration
 
 files target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| storage_account                 | yes      | azure storage account name                  | "my_account"                                                 |
-| storage_access_key              | yes      | azure storage access key                    | "abcd1234"                                                   |
-| policy                          | no       | exponential or linear                       | "retry_policy_exponential",default(retry_policy_exponential) |
-| max_tries                       | no       | request max tries (1 disable)               | "1",default(1)                                                          |
-| try_timeout                     | no       | Maximum time allowed for any single try     | "3000",default(10000) milliseconds                           |
-| retry_delay                     | no       | Backoff amount for each retry               | "1000",default(600)   milliseconds                           |
-| max_retry_delay                 | no       | delay between retries                       | "1000",default(1800)  milliseconds                           |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| storage\_account | yes | azure storage account name | "my\_account" |
+| storage\_access\_key | yes | azure storage access key | "abcd1234" |
+| policy | no | exponential or linear | "retry\_policy\_exponential",default\(retry\_policy\_exponential\) |
+| max\_tries | no | request max tries \(1 disable\) | "1",default\(1\) |
+| try\_timeout | no | Maximum time allowed for any single try | "3000",default\(10000\) milliseconds |
+| retry\_delay | no | Backoff amount for each retry | "1000",default\(600\)   milliseconds |
+| max\_retry\_delay | no | delay between retries | "1000",default\(1800\)  milliseconds |
 
 Example:
 
@@ -58,13 +57,13 @@ bindings:
 
 Create metadata setting:
 
-| Metadata Key      | Required | Description                                    | Possible values                                  |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                 | "create"                                         |
-| service_url       | yes      | service url path and filename                  | "https://test.files.core.windows.net/test/test.txt"   |                         |
-| size              | no       | max file size                                  | "2000",default(1000000)   |   
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create" |  |
+| service\_url | yes | service url path and filename | "[https://test.files.core.windows.net/test/test.txt](https://test.files.core.windows.net/test/test.txt)" |  |
+| size | no | max file size | "2000",default\(1000000\) |  |
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create",
@@ -78,19 +77,18 @@ Create metadata setting:
 
 Upload metadata setting:
 
-| Metadata Key      | Required | Description                                    | Possible values                                  |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                 | "upload"                                         |
-| service_url       | yes      | service url path and filename                  | "https://test.files.core.windows.net/test/test.txt"   |
-| data              | yes      | file data (byte array)                         | "bXktZmlsZS1kYXRh"                               |
-| range_size        | no       | specifies the range size to use in bytes       | "0" ,default(4194304)                            | 
-| parallelism       | no       | maximum number of ranges to upload in parallel | "upload",default(0)                              |
-| file_metadata     | no       | key value string string file Metadata          | "{"tag":"test","name":"myname"}",default(none)   |                           |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "upload" |  |
+| service\_url | yes | service url path and filename | "[https://test.files.core.windows.net/test/test.txt](https://test.files.core.windows.net/test/test.txt)" |  |
+| data | yes | file data \(byte array\) | "bXktZmlsZS1kYXRh" |  |
+| range\_size | no | specifies the range size to use in bytes | "0" ,default\(4194304\) |  |
+| parallelism | no | maximum number of ranges to upload in parallel | "upload",default\(0\) |  |
+| file\_metadata | no | key value string string file Metadata | "{"tag":"test","name":"myname"}",default\(none\) |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "upload",
@@ -100,23 +98,21 @@ Example:
 }
 ```
 
-
 ### Get
 
 Get metadata setting:
 
-| Metadata Key      | Required | Description                             | Possible values                                        |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------------------|
-| method            | yes      | type of method                          | "get"                                                  |                      |
-| service_url       | yes      | service url path and filename           | "https://test.files.core.windows.net/test"              |
-| max_retry_request | no       | max retry count                         | "20" (default "1")                                     |
-| count             | no       | number of files to get                  | "20" (will get all from offset)                        |
-| offset            | no       | start reading files from offset         | "20" (will start from the first byte in files)          |
-
+| Metadata Key | Required | Description | Possible values |  |
+| :--- | :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get" |  |
+| service\_url | yes | service url path and filename | "[https://test.files.core.windows.net/test](https://test.files.core.windows.net/test)" |  |
+| max\_retry\_request | no | max retry count | "20" \(default "1"\) |  |
+| count | no | number of files to get | "20" \(will get all from offset\) |  |
+| offset | no | start reading files from offset | "20" \(will start from the first byte in files\) |  |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get",
@@ -130,16 +126,15 @@ Example:
 
 Delete metadata setting:
 
-| Metadata Key                   | Required | Description                             | Possible values                            |
-|:-------------------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method                         | yes      | type of method                          | "delete"                                  |
-| file_name                      | yes      | the name of the file to delete          | "myfile.txt"                              |
-| service_url                    | yes      | service url path and filename           | "https://test.files.core.windows.net/test/test.txt" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete" |
+| file\_name | yes | the name of the file to delete | "myfile.txt" |
+| service\_url | yes | service url path and filename | "[https://test.files.core.windows.net/test/test.txt](https://test.files.core.windows.net/test/test.txt)" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete",
@@ -148,3 +143,4 @@ Example:
   "data": null
 }
 ```
+

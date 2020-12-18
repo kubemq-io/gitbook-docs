@@ -1,23 +1,24 @@
-# Kubemq Memcached Target Connector
+# Memcached
 
 Kubemq memcached target connector allows services using kubemq server to access memcached server functions such `set`, `get` and `delete`.
 
 ## Prerequisites
+
 The following are required to run the memcached target connector:
 
-- kubemq cluster
-- memcached server
-- kubemq-targets deployment
+* kubemq cluster
+* memcached server
+* kubemq-targets deployment
 
 ## Configuration
 
 Memcached target connector configuration properties:
 
-| Properties Key          | Required | Description                                       | Example                           |
-|:------------------------|:---------|:--------------------------------------------------|:----------------------------------|
-| hosts                   | yes      | memcached servers list address separated by comma | "localhost:11211,localhost:11212" |
-| max_idle_connections    | no       | set max idle connection                           | "2"                               |
-| default_timeout_seconds | no       | set default timeout seconds for operation         | "10"                              |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| hosts | yes | memcached servers list address separated by comma | "localhost:11211,localhost:11212" |
+| max\_idle\_connections | no | set max idle connection | "2" |
+| default\_timeout\_seconds | no | set default timeout seconds for operation | "10" |
 
 Example:
 
@@ -52,15 +53,14 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | memcached key string | any string      |
-| method       | yes      | get              | "get"           |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | memcached key string | any string |
+| method | yes | get | "get" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-memcached-key",
@@ -74,20 +74,20 @@ Example:
 
 Set request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | memcached key string | any string      |
-| method       | yes      | set              | "set"           |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | memcached key string | any string |
+| method | yes | set | "set" |
 
 Set request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | data to set for the memcached key | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to set for the memcached key | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-memcached-key",
@@ -96,19 +96,19 @@ Example:
   "data": "c29tZS1kYXRh" 
 }
 ```
+
 ### Delete Request
 
 Delete request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | memcached key string | any string      |
-| method       | yes      | delete           | "delete"        |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | memcached key string | any string |
+| method | yes | delete | "delete" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-memcached-key",
@@ -117,3 +117,4 @@ Example:
   "data": null
 }
 ```
+

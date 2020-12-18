@@ -1,28 +1,27 @@
-# Kubemq Queue Source
+# Queue
 
 Kubemq Queue source provides a queue subscriber for processing source queues.
 
 ## Prerequisites
+
 The following are required to run queue source connector:
 
-- kubemq cluster
-- kubemq-targets deployment
-
+* kubemq cluster
+* kubemq-targets deployment
 
 ## Configuration
 
 Queue source connector configuration properties:
 
-| Properties Key | Required | Description                                            | Example     |
-|:---------------|:---------|:-------------------------------------------------------|:------------|
-| address                    | yes      | kubemq server address (gRPC interface) | kubemq-cluster:50000 |
-| client_id      | no       | set client id                                          | "client_id" |
-| auth_token     | no       | set authentication token                               | jwt token   |
-| channel        | yes      | set channel to subscribe                               |             |
-| response_channel             | no       | set send target response to channel   | "response.channel" |
-| batch_size     | yes      | set how many messages to pull from queue               | "1"         |
-| wait_timeout   | yes      | set how long to wait for messages to arrive in seconds | "60"        |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | jwt token |
+| channel | yes | set channel to subscribe |  |
+| response\_channel | no | set send target response to channel | "response.channel" |
+| batch\_size | yes | set how many messages to pull from queue | "1" |
+| wait\_timeout | yes | set how long to wait for messages to arrive in seconds | "60" |
 
 Example:
 
@@ -49,3 +48,4 @@ bindings:
         password: "password"
         sniff: "false"
 ```
+

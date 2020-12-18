@@ -1,25 +1,26 @@
-# Kubemq MSK Source Connector
+# MSK
 
 Kubemq MSK target connector allows services using kubemq server to store messages on MSK specific topics.
 
 ## Prerequisites
+
 The following are required to run the redis target connector:
 
-- kubemq cluster
-- MSK set up in aws
-- kubemq-targets deployment
+* kubemq cluster
+* MSK set up in aws
+* kubemq-targets deployment
 
 ## Configuration
 
 MSK source connector configuration properties:
 
-| Properties Key | Required | Description                                | Example          |
-|:---------------|:---------|:-------------------------------------------|:-----------------|
-| brokers        | yes      | MSK brokers connection, comma separated  | "localhost:9092" |
-| topic          | yes      | MSK stored topic                         | "TestTopic"      |
-| consumerGroup  | yes      | MSK consumer group name                  | "Group1          |
-| saslUsername   | no       | SASL based authentication with broker      | "user"           |
-| saslPassword   | no       | SASL based authentication with broker      | "pass"           |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| brokers | yes | MSK brokers connection, comma separated | "localhost:9092" |
+| topic | yes | MSK stored topic | "TestTopic" |
+| consumerGroup | yes | MSK consumer group name | "Group1 |
+| saslUsername | no | SASL based authentication with broker | "user" |
+| saslPassword | no | SASL based authentication with broker | "pass" |
 
 Example:
 
@@ -52,15 +53,14 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values                         |
-|:-------------|:---------|:----------------------------------------|:----------------------------------------|
-| key          | yes      | MSK message key base64                | "a2V5"                                  |
-| headers      | no       | MSK message headers Key Value base64 | `[{"Key": "ZG9n","Value": "bWV0YTE="}]` |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | MSK message key base64 | "a2V5" |
+| headers | no | MSK message headers Key Value base64 | `[{"Key": "ZG9n","Value": "bWV0YTE="}]` |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "a2V5",
@@ -69,3 +69,4 @@ Example:
   "data": null
 }
 ```
+

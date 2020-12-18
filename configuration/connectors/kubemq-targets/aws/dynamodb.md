@@ -1,25 +1,25 @@
-# Kubemq dynamodb target Connector
+# DynamoDB
 
 Kubemq dynamodb target connector allows services using kubemq server to access aws dynamodb service.
 
 ## Prerequisites
+
 The following required to run the aws-dynamodb target connector:
 
-- kubemq cluster
-- aws account with dynamodb active service
-- kubemq-source deployment
+* kubemq cluster
+* aws account with dynamodb active service
+* kubemq-source deployment
 
 ## Configuration
 
 dynamodb target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -50,20 +50,19 @@ bindings:
 
 ## Usage
 
-### List Tables 
+### List Tables
 
 list all tables under dynamodb.
 
 List Tables:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_tables"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_tables" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_tables"
@@ -72,21 +71,20 @@ Example:
 }
 ```
 
-### Create Table 
+### Create Table
 
 create a new table under dynamodb.
 
 Create Table:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_table"                     |
-| data              | yes      | dynamodb.CreateTableInput as json       | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_table" |
+| data | yes | dynamodb.CreateTableInput as json | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_table"
@@ -95,21 +93,20 @@ Example:
 }
 ```
 
-### Delete Table 
+### Delete Table
 
 delete a table under dynamodb.
 
 Delete Table:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "delete_table"                     |
-| table_name        | yes      | table name to delete                    | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_table" |
+| table\_name | yes | table name to delete | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_table",
@@ -119,23 +116,21 @@ Example:
 }
 ```
 
-
-### Insert Item 
+### Insert Item
 
 insert item to table under dynamodb.
 
 Insert Item :
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "insert_item"                     |
-| table_name        | yes      | table name to delete                    | "string"                     |
-| data              | yes      | dynamodb.AttributeValue as json         | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "insert\_item" |
+| table\_name | yes | table name to delete | "string" |
+| data | yes | dynamodb.AttributeValue as json | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "insert_item",
@@ -145,21 +140,20 @@ Example:
 }
 ```
 
-### Get Item 
+### Get Item
 
 get an item from a table under dynamodb.
 
 Get Item :
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "get_item"                     |
-| data              | yes      | dynamodb.GetItemInput as json           | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_item" |
+| data | yes | dynamodb.GetItemInput as json | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_item"
@@ -168,22 +162,20 @@ Example:
 }
 ```
 
-### Update Item 
+### Update Item
 
 update an item from a table under dynamodb.
 
-
 Update Item :
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "update_item"                     |
-| data              | yes      | dynamodb.UpdateItemInput as json        | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "update\_item" |
+| data | yes | dynamodb.UpdateItemInput as json | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "update_item"
@@ -192,21 +184,20 @@ Example:
 }
 ```
 
-### Delete Item 
+### Delete Item
 
 delete an item from a table under dynamodb.
 
 Delete Item :
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "delete_item"                     |
-| data              | yes      | dynamodb.DeleteItemInput as json        | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_item" |
+| data | yes | dynamodb.DeleteItemInput as json | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_item"
@@ -214,3 +205,4 @@ Example:
   "data": "ewoJCQkJCSJLZXkiOiB7CgkJCQkJCSJUaXRsZSI6IHsKCQkJCQkJCSJTIjogIkt1YmVNUSB0ZXN0IE1vdmllIgoJCQkJCQl9LAoJCQkJCQkiWWVhciI6IHsKCQkJCQkJCSJOIjogIjIwMjAiCgkJCQkJCX0KCQkJCQl9LAoJCQkJCSJUYWJsZU5hbWUiOiAibXl0YWJsZW5hbWUiCgkJCQl9"
 }
 ```
+

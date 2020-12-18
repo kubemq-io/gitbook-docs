@@ -1,8 +1,8 @@
-# Google Cloud Platform
+# GCP
 
-KubeMQ cluster can be deployed via Google Cloud Platform (GCP) marketplace
+KubeMQ cluster can be deployed via Google Cloud Platform \(GCP\) marketplace
 
-## Install KubeMQ Cluster 
+## Install KubeMQ Cluster
 
 1. Search KubeMQ solution in GCP marketplace
 2. Click Configure
@@ -10,8 +10,7 @@ KubeMQ cluster can be deployed via Google Cloud Platform (GCP) marketplace
 
 ![](../../.gitbook/assets/gcp-deploy-marketplace.png)
 
-4. Click Deploy
-
+1. Click Deploy
 
 ## Configuration
 

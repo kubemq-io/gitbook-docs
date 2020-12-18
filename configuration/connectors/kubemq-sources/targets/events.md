@@ -1,26 +1,25 @@
-# KubeMQ Sources Events Target
+# Events
 
 KubeMQ Sources Events target provides an events sender for processing sources requests.
 
 ## Prerequisites
+
 The following are required to run the command target connector:
 
-- kubemq cluster
-- kubemq-sources deployment
-
+* kubemq cluster
+* kubemq-sources deployment
 
 ## Configuration
 
 Events target connector configuration properties:
 
-| Properties Key  | Required | Description                                        | Example                                              |
-|:----------------|:---------|:---------------------------------------------------|:-----------------------------------------------------|
-| address         | yes      | kubemq server address (gRPC interface)             | kubemq-cluster-grpc.kubemq.svc.cluster.local:50000 |
-| client_id       | no       | set client id                                      | "client_id"                                          |
-| auth_token      | no       | set authentication token                           | JWT token                                            |
-| channel | no       | set send request default channel               |          "events"                                            |
-| dynamic_mapping | no       | set dynamic channel mapping per source               |          "false"                                            |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| address | yes | kubemq server address \(gRPC interface\) | kubemq-cluster-grpc.kubemq.svc.cluster.local:50000 |
+| client\_id | no | set client id | "client\_id" |
+| auth\_token | no | set authentication token | JWT token |
+| channel | no | set send request default channel | "events" |
+| dynamic\_mapping | no | set dynamic channel mapping per source | "false" |
 
 Example:
 

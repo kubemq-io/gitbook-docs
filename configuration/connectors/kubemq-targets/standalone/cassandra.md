@@ -1,36 +1,34 @@
-# Kubemq Cassandra Target Connector
+# Cassandra
 
 Kubemq cassandra target connector allows services using kubemq server to access cassandra database services.
 
 ## Prerequisites
+
 The following are required to run the cassandra target connector:
 
-- kubemq cluster
-- cassandra server/cluster
-- kubemq-targets deployment
+* kubemq cluster
+* cassandra server/cluster
+* kubemq-targets deployment
 
 ## Configuration
 
 Cassandra target connector configuration properties:
 
-| Properties Key     | Required | Description               | Example                             |
-|:-------------------|:---------|:--------------------------|:------------------------------------|
-| hosts              | yes      | cassandra hosts addresses | "localhost"                         |
-| port               | yes      | cassandra port            | "9042"                              |
-| proto_version      | no       | cassandra proto version   | "4"                                 |
-| replication_factor | no       | set replication factor           | "1"                            |
-| username           | no       | set cassandra username    | "cassandra"                         |
-| password           | no       | set cassandra password    | "cassandra"                         |
-| consistency        | no       | set cassandra consistency | "", "All","One","Two"               |
-|                    |          |                           | "Quorum","LocalQuorum","EachQuorum" |
-|                    |          |                           | "LocalOne","Any"                    |
-| default_table      | no       | set table name            | "test"                              |
-| default_keyspace   | no       | set keyspace name         | "test"                              |
-| timeout_seconds      | no       |set default timeout seconds            | "60"                              |
-| connect_timeout_seconds   | no       | set default connect timeout seconds         | "60"                              |
-
-
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| hosts | yes | cassandra hosts addresses | "localhost" |
+| port | yes | cassandra port | "9042" |
+| proto\_version | no | cassandra proto version | "4" |
+| replication\_factor | no | set replication factor | "1" |
+| username | no | set cassandra username | "cassandra" |
+| password | no | set cassandra password | "cassandra" |
+| consistency | no | set cassandra consistency | "", "All","One","Two" |
+|  |  |  | "Quorum","LocalQuorum","EachQuorum" |
+|  |  |  | "LocalOne","Any" |
+| default\_table | no | set table name | "test" |
+| default\_keyspace | no | set keyspace name | "test" |
+| timeout\_seconds | no | set default timeout seconds | "60" |
+| connect\_timeout\_seconds | no | set default connect timeout seconds | "60" |
 
 Example:
 
@@ -72,17 +70,17 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description          | Possible values       |
-|:-------------|:---------|:---------------------|:----------------------|
-| key          | yes      | cassandra key string | any string            |
-| method       | yes      | get                  | "get"                 |
-| consistency  | yes      | set consistency                   | "",strong","eventual" |
-| table        | yes      | table name           | "table                |
-| keyspace     | yes      | key space name       | "keyspace"            |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | cassandra key string | any string |
+| method | yes | get | "get" |
+| consistency | yes | set consistency | "",strong","eventual" |
+| table | yes | table name | "table |
+| keyspace | yes | key space name | "keyspace" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-cassandra-key",
@@ -99,23 +97,23 @@ Example:
 
 Set request metadata setting:
 
-| Metadata Key   | Required | Description               | Possible values  |
-|:---------------|:---------|:--------------------------|:-----------------|
-| key          | yes      | cassandra key string | any string            |
-| method       | yes      | method name set                  | "set"                 |
-| consistency  | yes      | set consistency                  | "",strong","eventual" |
-| table        | yes      | table name           | "table                |
-| keyspace     | yes      | key space name       | "keyspace"            |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | cassandra key string | any string |
+| method | yes | method name set | "set" |
+| consistency | yes | set consistency | "",strong","eventual" |
+| table | yes | table name | "table |
+| keyspace | yes | key space name | "keyspace" |
 
 Set request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | data to set for the cassandra key | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to set for the cassandra key | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-cassandra-key",
@@ -127,22 +125,21 @@ Example:
   "data": "c29tZS1kYXRh" 
 }
 ```
+
 ### Delete Request
 
 Delete request metadata setting:
 
-| Metadata Key | Required | Description          | Possible values |
-|:-------------|:---------|:---------------------|:----------------|
-| key          | yes      | cassandra key string | any string      |
-| method       | yes      | method name delete   | "delete"        |
-| table        | yes      | table name           | "table          |
-| keyspace     | yes      | key space name       | "keyspace"      |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | cassandra key string | any string |
+| method | yes | method name delete | "delete" |
+| table | yes | table name | "table |
+| keyspace | yes | key space name | "keyspace" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-cassandra-key",
@@ -158,23 +155,22 @@ Example:
 
 Query request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| method       | yes      | method name query   | "query"        |
-| consistency  | yes      | set consistency                  | "",strong","eventual" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | method name query | "query" |
+| consistency | yes | set consistency | "",strong","eventual" |
 
 Query request data setting:
 
-| Data Key | Required | Description  | Possible values    |
-|:---------|:---------|:-------------|:-------------------|
-| data     | yes      | query string | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | query string | base64 bytes array |
 
 Example:
 
 Query string: `SELECT value FROM test.test WHERE key = 'some-key`
 
-```json
+```javascript
 {
   "metadata": {
     "method": "query",
@@ -188,26 +184,26 @@ Query string: `SELECT value FROM test.test WHERE key = 'some-key`
 
 Exec request metadata setting:
 
-| Metadata Key    | Required | Description                            | Possible values    |
-|:----------------|:---------|:---------------------------------------|:-------------------|
-| method          | yes      | set type of request                    | "exec"             |
-| consistency  | yes      | set consistency                  | "",strong","eventual" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | set type of request | "exec" |
+| consistency | yes | set consistency | "",strong","eventual" |
 
 Exec request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | exec string | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | exec string | base64 bytes array |
 
 Example:
 
 Exec string:
+
 ```sql
 INSERT INTO test.test (key, value) VALUES ('some-key',textAsBlob('some-data'))
 ```
 
-```json
+```javascript
 {
   "metadata": {
     "method": "exec",
@@ -216,3 +212,4 @@ INSERT INTO test.test (key, value) VALUES ('some-key',textAsBlob('some-data'))
   "data": "SU5TRVJUIElOVE8gdGVzdC50ZXN0IChrZXksIHZhbHVlKSBWQUxVRVMgKCdzb21lLWtleScsdGV4dEFzQmxvYignc29tZS1kYXRhJykp" 
 }
 ```
+

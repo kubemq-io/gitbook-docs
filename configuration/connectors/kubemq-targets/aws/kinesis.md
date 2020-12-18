@@ -1,25 +1,25 @@
-# Kubemq kinesis  target Connector
+# Kinesis
 
-Kubemq kinesis target connector allows services using kubemq server to access aws kinesis  service.
+Kubemq kinesis target connector allows services using kubemq server to access aws kinesis service.
 
 ## Prerequisites
-The following required to run the aws-kinesis  target connector:
 
-- kubemq cluster
-- aws account with kinesis active service
-- kubemq-source deployment
+The following required to run the aws-kinesis target connector:
+
+* kubemq cluster
+* aws account with kinesis active service
+* kubemq-source deployment
 
 ## Configuration
 
 sns target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -56,14 +56,13 @@ list kinesis streams
 
 List Streams:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_streams"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_streams" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_streams"
@@ -72,23 +71,20 @@ Example:
 }
 ```
 
-
-
 ### List Stream Consumers
 
 list kinesis Stream Consumers.
 
 List Stream Consumers:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_stream_consumers"                     |
-| stream_arn        | yes      | aws stream arn of the desired stream    | "arn::mystream"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_stream\_consumers" |
+| stream\_arn | yes | aws stream arn of the desired stream | "arn::mystream" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_stream_consumers",
@@ -104,16 +100,15 @@ Create a kinesis Stream.
 
 Create Stream:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "create_stream"                     |
-| stream_name       | yes      | aws stream name as string               | "string"                     |
-| shard_count       | no       | number of shards to create (default 1)  | "1"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_stream" |
+| stream\_name | yes | aws stream name as string | "string" |
+| shard\_count | no | number of shards to create \(default 1\) | "1" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_stream",
@@ -124,22 +119,20 @@ Example:
 }
 ```
 
-
 ### List Shards
 
 list stream Shards .
 
 List Shards:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_shards"                     |
-| stream_name       | yes      | aws stream name as string               | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_shards" |
+| stream\_name | yes | aws stream name as string | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_shards",
@@ -155,17 +148,16 @@ Get Shard Iterator used to preform get data .
 
 Get Shard Iterator:
 
-| Metadata Key              | Required | Description                                                | Possible values                            |
-|:--------------------------|:---------|:-----------------------------------------------------------|:-------------------------------------------|
-| method                    | yes      | type of method                                             | "get_shard_iterator"                     |
-| stream_name               | yes      | aws stream name as string                                  | "string"                                 |
-| shard_iterator_type       | yes      | aws shard iterator type                                    | see https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html |
-| shard_id                  | yes      | aws shard full id (can be acquired using list shard)       | see https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_shard\_iterator" |
+| stream\_name | yes | aws stream name as string | "string" |
+| shard\_iterator\_type | yes | aws shard iterator type | see [https://docs.aws.amazon.com/kinesis/latest/APIReference/API\_GetShardIterator.html](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html) |
+| shard\_id | yes | aws shard full id \(can be acquired using list shard\) | see [https://docs.aws.amazon.com/kinesis/latest/APIReference/API\_GetShardIterator.html](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_shard_iterator",
@@ -183,17 +175,16 @@ Send data to stream .
 
 Put Record:
 
-| Metadata Key              | Required | Description                                                            | Possible values                            |
-|:--------------------------|:---------|:-----------------------------------------------------------------------|:-------------------------------------------|
-| method                    | yes      | type of method                                                         | "put_record"                     |
-| stream_name               | yes      | aws stream name as string                                              | "string"                                 |
-| partition_key             | yes      | determines which shard in the stream the data record is assigned to.   | see https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html |
-| data                      | yes      | Message to send to stream                                              | string |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_record" |
+| stream\_name | yes | aws stream name as string | "string" |
+| partition\_key | yes | determines which shard in the stream the data record is assigned to. | see [https://docs.aws.amazon.com/kinesis/latest/APIReference/API\_PutRecord.html](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html) |
+| data | yes | Message to send to stream | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "put_record",
@@ -210,16 +201,15 @@ Send multi data to a stream .
 
 Put Records:
 
-| Metadata Key              | Required | Description                                                            | Possible values                            |
-|:--------------------------|:---------|:-----------------------------------------------------------------------|:-------------------------------------------|
-| method                    | yes      | type of method                                                         | "put_records"                     |
-| stream_name               | yes      | aws stream name as string                                              | "string"                                 |
-| data                      | yes      | Key value pair of partition_key(string) and message([]byte)            | key value of partition_key and message as key value pair https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html|
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_records" |
+| stream\_name | yes | aws stream name as string | "string" |
+| data | yes | Key value pair of partition\_key\(string\) and message\(\[\]byte\) | key value of partition\_key and message as key value pair [https://docs.aws.amazon.com/kinesis/latest/APIReference/API\_PutRecord.html](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "put_records",
@@ -235,17 +225,15 @@ Send multi data to a stream .
 
 Put Records:
 
-| Metadata Key              | Required | Description                                                            | Possible values                            |
-|:--------------------------|:---------|:-----------------------------------------------------------------------|:-------------------------------------------|
-| method                    | yes      | type of method                                                         | "put_records"                     |
-| stream_name               | yes      | aws stream name as string                                              | "string"                                 |
-| data                      | yes      | Key value pair of partition_key(string) and message([]byte)            | key value of partition_key and message as key value pair https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html|
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_records" |
+| stream\_name | yes | aws stream name as string | "string" |
+| data | yes | Key value pair of partition\_key\(string\) and message\(\[\]byte\) | key value of partition\_key and message as key value pair [https://docs.aws.amazon.com/kinesis/latest/APIReference/API\_PutRecord.html](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html) |
 
 Example:
 
-```json
-
+```javascript
 {
   "metadata": {
     "method": "put_records",
@@ -261,17 +249,15 @@ Get multi data from a stream .
 
 Get Records:
 
-| Metadata Key              | Required | Description                                                            | Possible values                            |
-|:--------------------------|:---------|:-----------------------------------------------------------------------|:-------------------------------------------|
-| method                    | yes      | type of method                                                         | "get_records"                     |
-| stream_name               | yes      | aws stream name as string                                              | "string"                                 |
-| limit                     | no       | Number of limit message to get (default "1")                           | "int value"|
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_records" |
+| stream\_name | yes | aws stream name as string | "string" |
+| limit | no | Number of limit message to get \(default "1"\) | "int value" |
 
 Example:
 
-```json
-
+```javascript
 {
   "metadata": {
     "method": "put_records",
@@ -281,3 +267,4 @@ Example:
   "data": null
 }
 ```
+

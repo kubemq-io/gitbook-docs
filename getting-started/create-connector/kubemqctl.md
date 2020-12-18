@@ -5,6 +5,7 @@
 ```bash
 kubemqctl create connector
 ```
+
 select "targets"
 
 ## Install KubeMQ Sources Connector
@@ -20,6 +21,6 @@ select "sources"
 ```bash
 kubemqctl create connector
 ```
-select "bridges"
 
+select "bridges"
 

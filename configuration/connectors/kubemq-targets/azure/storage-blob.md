@@ -1,30 +1,29 @@
-# Kubemq blob Target Connector
+# Blob
 
 Kubemq blob target connector allows services using kubemq server to access blob messaging services.
 
 ## Prerequisites
+
 The following are required to run the blob target connector:
 
-- kubemq cluster
-- Azure active storage account
-- Azure active with storage enable - with access account
-- kubemq-targets deployment
-
+* kubemq cluster
+* Azure active storage account
+* Azure active with storage enable - with access account
+* kubemq-targets deployment
 
 ## Configuration
 
 blob target connector configuration properties:
 
-| Properties Key                  | Required | Description                                          | Example                                                                |
-|:--------------------------------|:---------|:-----------------------------------------------------|:-----------------------------------------------------------------------|
-| storage_account                 | yes     | azure storage account name                            | "my_account"                                                              |
-| storage_access_key              | yes     | azure storage access key                              | "abcd1234"                                                                |
-| policy                          | no      | azure blob retry policy                               | "retry_policy_exponential",retry_policy_fixed(default retry_policy_fixed) |
-| max_tries                       | no      | try at most x times to perform the operation          | "3" default (1)                                                           |
-| try_timeout                     | no      | Maximum time allowed for any single try (Millisecond) | "600"default (1000)                                                       |
-| retry_delay                     | no      | Backoff amount for each retry (Millisecond)           | "60" default (60)                                                         |
-| max_retry_delay                 | no      | Max delay between retries (Millisecond)               | "180"default (180                                                         |
- 
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| storage\_account | yes | azure storage account name | "my\_account" |
+| storage\_access\_key | yes | azure storage access key | "abcd1234" |
+| policy | no | azure blob retry policy | "retry\_policy\_exponential",retry\_policy\_fixed\(default retry\_policy\_fixed\) |
+| max\_tries | no | try at most x times to perform the operation | "3" default \(1\) |
+| try\_timeout | no | Maximum time allowed for any single try \(Millisecond\) | "600"default \(1000\) |
+| retry\_delay | no | Backoff amount for each retry \(Millisecond\) | "60" default \(60\) |
+| max\_retry\_delay | no | Max delay between retries \(Millisecond\) | "180"default \(180 |
 
 Example:
 
@@ -58,20 +57,19 @@ bindings:
 
 Upload metadata setting:
 
-| Metadata Key      | Required | Description                                    | Possible values                                  |
-|:------------------|:---------|:-----------------------------------------------|:-------------------------------------------------|
-| method            | yes      | type of method                                 | "upload"                                         |
-| file_name         | yes      | the name to upload the file under              | "myfile.txt"                                     |
-| service_url       | yes      | service url path                               | "https://test.blob.core.windows.net/test"        |
-| data              | yes      | file data (byte array)                         | "bXktZmlsZS1kYXRh"                               |
-| block_size        | no       | specifies the block size to use                | "0" ,default(azblob.BlockBlobMaxStageBlockBytes) |
-| parallelism       | no       | maximum number of blocks to upload in parallel | "upload",default(0)                              |
-| blob_metadata     | no       | Key value string string of blob_metadata       | "{"tag":"test","name":"myname"}"                              |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "upload" |
+| file\_name | yes | the name to upload the file under | "myfile.txt" |
+| service\_url | yes | service url path | "[https://test.blob.core.windows.net/test](https://test.blob.core.windows.net/test)" |
+| data | yes | file data \(byte array\) | "bXktZmlsZS1kYXRh" |
+| block\_size | no | specifies the block size to use | "0" ,default\(azblob.BlockBlobMaxStageBlockBytes\) |
+| parallelism | no | maximum number of blocks to upload in parallel | "upload",default\(0\) |
+| blob\_metadata | no | Key value string string of blob\_metadata | "{"tag":"test","name":"myname"}" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "upload",
@@ -86,17 +84,16 @@ Example:
 
 Delete metadata setting:
 
-| Metadata Key                   | Required | Description                             | Possible values                            |
-|:-------------------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method                         | yes      | type of method                          | "delete"                                  |
-| file_name                      | yes      | the name of the file to delete          | "myfile.txt"                              |
-| service_url                    | yes      | service url path                        | "https://test.blob.core.windows.net/test" |
-| delete_snapshots_option_type   | no       | type of method                          | "only","include","" (default "")          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete" |
+| file\_name | yes | the name of the file to delete | "myfile.txt" |
+| service\_url | yes | service url path | "[https://test.blob.core.windows.net/test](https://test.blob.core.windows.net/test)" |
+| delete\_snapshots\_option\_type | no | type of method | "only","include","" \(default ""\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete",
@@ -109,22 +106,20 @@ Example:
 
 ### get
 
-For more information, see https://docs.microsoft.com/rest/api/storageservices/get-blob
-get metadata setting:
+For more information, see [https://docs.microsoft.com/rest/api/storageservices/get-blob](https://docs.microsoft.com/rest/api/storageservices/get-blob) get metadata setting:
 
-| Metadata Key      | Required | Description                             | Possible values                                        |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------------------|
-| method            | yes      | type of method                          | "get"                                                  |
-| file_name         | yes      | the name of the file to get             | "myfile.txt"                                           |
-| service_url       | yes      | service url path                        | "https://test.blob.core.windows.net/test"              |
-| max_retry_request | no       | type of method                          | "20" (default "1")                                     |
-| count             | no       | number of files to get                  | "20" (will get all from offset)                        |
-| offset            | no       | start reading blob from offset          | "20" (will start from the first byte in blob)          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get" |
+| file\_name | yes | the name of the file to get | "myfile.txt" |
+| service\_url | yes | service url path | "[https://test.blob.core.windows.net/test](https://test.blob.core.windows.net/test)" |
+| max\_retry\_request | no | type of method | "20" \(default "1"\) |
+| count | no | number of files to get | "20" \(will get all from offset\) |
+| offset | no | start reading blob from offset | "20" \(will start from the first byte in blob\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get",
@@ -134,3 +129,4 @@ Example:
   "data": null
 }
 ```
+

@@ -1,25 +1,25 @@
-# Kubemq athena target Connector
+# Athena
 
 Kubemq athena target connector allows services using kubemq server to access aws athena service.
 
 ## Prerequisites
+
 The following required to run the aws-athena target connector:
 
-- kubemq cluster
-- aws account with athena active service
-- kubemq-source deployment
+* kubemq cluster
+* aws account with athena active service
+* kubemq-source deployment
 
 ## Configuration
 
 athena target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -50,20 +50,19 @@ bindings:
 
 ## Usage
 
-### List Catalogs 
+### List Catalogs
 
 list all catalogs
 
 List Catalogs:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_data_catalogs"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_data\_catalogs" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_data_catalogs"
@@ -72,21 +71,20 @@ Example:
 }
 ```
 
-### List Databases 
+### List Databases
 
-list all databases 
+list all databases
 
 List Databases:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_databases"                     |
-| catalog           | yes      | aws athena catalog                      | "string"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_databases" |
+| catalog | yes | aws athena catalog | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_databases",
@@ -96,25 +94,23 @@ Example:
 }
 ```
 
+### Query
 
-### Query 
-
-create a query request return execution_id.
+create a query request return execution\_id.
 
 Query:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "query"                     |
-| catalog           | yes      | aws athena catalog                      | "string"                     |
-| db                | yes      | aws athena db name                      | "string"                     |
-| output_location   | yes      | aws athena folder location              | "string"                     |
-| query             | yes      | aws query to execute                    | "query"                     |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "query" |
+| catalog | yes | aws athena catalog | "string" |
+| db | yes | aws athena db name | "string" |
+| output\_location | yes | aws athena folder location | "string" |
+| query | yes | aws query to execute | "query" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "query",
@@ -127,22 +123,20 @@ Example:
 }
 ```
 
-
 ### Get Query Result
 
-get Query result by execution_id that return from Query result.
+get Query result by execution\_id that return from Query result.
 
 Get Query Result:
 
-| Metadata Key      | Required | Description                                | Possible values                            |
-|:------------------|:---------|:-------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                             | "get_query_result"                         |
-| execution_id      | yes      | aws executionID that returned from query   | "string"                                   |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_query\_result" |
+| execution\_id | yes | aws executionID that returned from query | "string" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_query_result",
@@ -151,3 +145,4 @@ Example:
   "data": null
 }
 ```
+

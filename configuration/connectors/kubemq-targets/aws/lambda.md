@@ -1,25 +1,25 @@
-# Kubemq lambda target Connector
+# Lambda
 
 Kubemq aws-lambda target connector allows services using kubemq server to access aws lambda service.
 
 ## Prerequisites
+
 The following required to run the aws-lambda target connector:
 
-- kubemq cluster
-- aws account with lambda active service
-- kubemq-source deployment
+* kubemq cluster
+* aws account with lambda active service
+* kubemq-source deployment
 
 ## Configuration
 
 lambda target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -56,15 +56,13 @@ List all lambdas
 
 List Lambda:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list"
@@ -79,24 +77,22 @@ create a new lambda.
 
 Create Lambda:
 
-| Metadata Key      | Required | Description                                     | Possible values                            |
-|:------------------|:---------|:------------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                  | "create"                     |
-| zip_file_name     | yes      | name of the zip file                            | "file.zip"                     |
-| handler_name      | yes      | lambda handler name                             | "handler-path"                     |
-| role              | yes      | aws role name                                   | "arn:aws:iam::0000000:myRole"                     |
-| runtime           | yes      | lambda runtime version                          | see https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html|
-| function_name     | yes      | lambda function name                            | string                |
-| data              | yes      | the function code , in byte array               | byte array            |
-| memory_size       | no       | memory_size needed default of 256               | int                   |
-| timeout           | no       | timeout set for task default of 15 (seconds)    | int                   |
-| description       | no       | function description default of ""              | string                |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create" |
+| zip\_file\_name | yes | name of the zip file | "file.zip" |
+| handler\_name | yes | lambda handler name | "handler-path" |
+| role | yes | aws role name | "arn:aws:iam::0000000:myRole" |
+| runtime | yes | lambda runtime version | see [https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) |
+| function\_name | yes | lambda function name | string |
+| data | yes | the function code , in byte array | byte array |
+| memory\_size | no | memory\_size needed default of 256 | int |
+| timeout | no | timeout set for task default of 15 \(seconds\) | int |
+| description | no | function description default of "" | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create",
@@ -119,17 +115,15 @@ run a specific lambda
 
 Run Lambda:
 
-| Metadata Key      | Required | Description                                     | Possible values                            |
-|:------------------|:---------|:------------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                  | "run"                     |
-| function_name     | yes      | lambda function name                            | string                |
-| data              | yes      | the run request code , in byte array            | byte array            |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "run" |
+| function\_name | yes | lambda function name | string |
+| data | yes | the run request code , in byte array | byte array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "run",
@@ -143,16 +137,14 @@ Example:
 
 Delete Lambda:
 
-| Metadata Key      | Required | Description                                     | Possible values                            |
-|:------------------|:---------|:------------------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                                  | "delete"                     |
-| function_name     | yes      | lambda function name                            | string                |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete" |
+| function\_name | yes | lambda function name | string |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete",
@@ -161,3 +153,4 @@ Example:
   "data": null
 }
 ```
+

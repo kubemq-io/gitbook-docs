@@ -1,21 +1,22 @@
-# Kubemq RabbitMQ Target Connector
+# MQTT
 
 Kubemq rabbitmq target connector allows services using kubemq server to access rabbitmq messaging services.
 
 ## Prerequisites
+
 The following are required to run the rabbitmq target connector:
 
-- kubemq cluster
-- rabbitmq server
-- kubemq-targets deployment
+* kubemq cluster
+* rabbitmq server
+* kubemq-targets deployment
 
 ## Configuration
 
 RabbitMQ target connector configuration properties:
 
-| Properties Key                  | Required | Description                                 | Example                                                                |
-|:--------------------------------|:---------|:--------------------------------------------|:-----------------------------------------------------------------------|
-| url                             | yes      | rabbitmq connection string address          | "amqp://rabbitmq:rabbitmq@localhost:5672/" |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| url | yes | rabbitmq connection string address | "amqp://rabbitmq:rabbitmq@localhost:5672/" |
 
 Example:
 
@@ -48,29 +49,27 @@ bindings:
 
 Request metadata setting:
 
-| Metadata Key   | Required | Description         | Possible values |
-|:---------------|:---------|:--------------------|:----------------|
-| queue          | yes      | set queue name | "queue"         |
-| exchange       | no       | set exchange name | "exchange"         |
-| mandatory      | no       | set mandatory | "true","false"         |
-| immediate      | no       | set immediate | "true","false"         |
-| delivery_mode  | no       | set delivery mode | "1","2"         |
-| priority       | no       | set priority | "0"-"9"         |
-| correlation_id | no       | set correlation id | "some id"         |
-| reply_to       | no       | set set reply to | ""         |
-| expiry_seconds | no       | set message expiry in seconds| "3600"         |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| queue | yes | set queue name | "queue" |
+| exchange | no | set exchange name | "exchange" |
+| mandatory | no | set mandatory | "true","false" |
+| immediate | no | set immediate | "true","false" |
+| delivery\_mode | no | set delivery mode | "1","2" |
+| priority | no | set priority | "0"-"9" |
+| correlation\_id | no | set correlation id | "some id" |
+| reply\_to | no | set set reply to | "" |
+| expiry\_seconds | no | set message expiry in seconds | "3600" |
 
 Query request data setting:
 
-| Data Key | Required | Description  | Possible values    |
-|:---------|:---------|:-------------|:-------------------|
-| data     | yes      | data to publish | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to publish | base64 bytes array |
 
 Example:
 
-
-```json
+```javascript
 {
   "metadata": {
     "queue": "queue",
@@ -83,8 +82,9 @@ Example:
     "correlation_id": "",
     "reply_to": "",
     "expiry_seconds": "3600"
-    
+
   },
   "data": "U0VMRUNUIGlkLHRpdGxlLGNvbnRlbnQgRlJPTSBwb3N0Ow=="
 }
 ```
+

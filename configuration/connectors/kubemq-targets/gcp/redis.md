@@ -1,22 +1,23 @@
-# Kubemq Redis-gcp Target Connector
+# Redis
 
 Kubemq redis target connector allows services using kubemq server to access redis server functions such `set`, `get` and `delete`.
 
 ## Prerequisites
+
 The following are required to run the redis target connector:
 
-- kubemq cluster
-- redis v5.0.0 (or later)
-- access to gcp redis server
-- kubemq-targets deployment
+* kubemq cluster
+* redis v5.0.0 \(or later\)
+* access to gcp redis server
+* kubemq-targets deployment
 
 ## Configuration
 
 Redis target connector configuration properties:
 
-| Properties Key | Required | Description                  | Example          |
-|:---------------|:---------|:-----------------------------|:-----------------|
-| url           | yes      | redis connection string                | "redis://localhost:6379" |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| url | yes | redis connection string | "redis://localhost:6379" |
 
 Example:
 
@@ -50,15 +51,14 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | redis key string | any string      |
-| method       | yes      | get              | "get"           |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | redis key string | any string |
+| method | yes | get | "get" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-redis-key",
@@ -72,28 +72,28 @@ Example:
 
 Set request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | redis key string | any string      |
-| method       | yes      | set              | "set"           |
-| etag         | no       | set etag version | "0"             |
-| concurrency  | no       | set concurrency  | ""              |
-|              |          |                  | "first-write"   |
-|              |          |                  | "last-write"    |
-|              |          |                  |                 |
-| consistency  | no       | set consistency  | ""              |
-|              |          |                  | "strong"        |
-|              |          |                  | "eventual"      |
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | redis key string | any string |
+| method | yes | set | "set" |
+| etag | no | set etag version | "0" |
+| concurrency | no | set concurrency | "" |
+|  |  |  | "first-write" |
+|  |  |  | "last-write" |
+|  |  |  |  |
+| consistency | no | set consistency | "" |
+|  |  |  | "strong" |
+|  |  |  | "eventual" |
 
 Set request data setting:
 
-| Data Key | Required | Description                   | Possible values     |
-|:---------|:---------|:------------------------------|:--------------------|
-| data     | yes      | data to set for the redis key | base64 bytes array |
+| Data Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| data | yes | data to set for the redis key | base64 bytes array |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-redis-key",
@@ -105,19 +105,19 @@ Example:
   "data": "c29tZS1kYXRh" 
 }
 ```
+
 ### Delete Request
 
 Delete request metadata setting:
 
-| Metadata Key | Required | Description      | Possible values |
-|:-------------|:---------|:-----------------|:----------------|
-| key          | yes      | redis key string | any string      |
-| method       | yes      | delete           | "delete"        |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | redis key string | any string |
+| method | yes | delete | "delete" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "your-redis-key",
@@ -126,3 +126,4 @@ Example:
   "data": null
 }
 ```
+

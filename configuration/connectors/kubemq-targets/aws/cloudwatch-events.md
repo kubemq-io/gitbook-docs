@@ -1,25 +1,25 @@
-# Kubemq cloudwatch-events target Connector
+# CloudWatch Events
 
 Kubemq cloudwatch-events target connector allows services using kubemq server to access aws cloudwatch-events service.
 
 ## Prerequisites
+
 The following required to run the aws-cloudwatch-events target connector:
 
-- kubemq cluster
-- aws account with cloudwatch-events active service (IAM Permission under EventBridge)
-- kubemq-source deployment
+* kubemq cluster
+* aws account with cloudwatch-events active service \(IAM Permission under EventBridge\)
+* kubemq-source deployment
 
 ## Configuration
 
 cloudwatch-events target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                     |
-|:---------------|:---------|:-------------------------------------------|:----------------------------|
-| aws_key        | yes      | aws key                                    | aws key supplied by aws         |
-| aws_secret_key | yes      | aws secret key                             | aws secret key supplied by aws  |
-| region         | yes      | region                                     | aws region                      |
-| token          | no       | aws token ("default" empty string          | aws token                       |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| aws\_key | yes | aws key | aws key supplied by aws |
+| aws\_secret\_key | yes | aws secret key | aws secret key supplied by aws |
+| region | yes | region | aws region |
+| token | no | aws token \("default" empty string | aws token |
 
 Example:
 
@@ -54,17 +54,15 @@ bindings:
 
 Put Target:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "put_targets"                     |
-| rule              | yes      | aws existing rule name                  | "string"                     |
-| data              | yes      | Key value pair of target ARN and ID     |  `{"my_arn_id":"arn:aws:test:number:function:id"}`     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "put\_targets" |
+| rule | yes | aws existing rule name | "string" |
+| data | yes | Key value pair of target ARN and ID | `{"my_arn_id":"arn:aws:test:number:function:id"}` |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "put_targets",
@@ -74,21 +72,18 @@ Example:
 }
 ```
 
-
 ### List Event Buses
 
 List Event Buses:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:------------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method            | yes      | type of method                          | "list_buses"                     |
-| limit             | no       | limit of return buses                   | "int"                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "list\_buses" |
+| limit | no | limit of return buses | "int" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "list_buses",
@@ -98,24 +93,21 @@ Example:
 }
 ```
 
-
 ### Send Event
 
 Send Event:
 
-| Metadata Key      | Required | Description                             | Possible values                            |
-|:-----------------|:---------|:----------------------------------------|:-------------------------------------------|
-| method           | yes      | type of method                          | "send_event"                     |
-| detail           | no       | general details on the event            | "string"                     |
-| detail_type      | no       | event type                              | "string"                     |
-| source           | no       | aws source to assign the message to     | "string"                     |
-| data             | yes      | aws resources to assign the event to    |  slice of strings ("arn:string")                     |
-
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "send\_event" |
+| detail | no | general details on the event | "string" |
+| detail\_type | no | event type | "string" |
+| source | no | aws source to assign the message to | "string" |
+| data | yes | aws resources to assign the event to | slice of strings \("arn:string"\) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "send_event",
@@ -126,3 +118,4 @@ Example:
   "data": "WyJhcm46YXdzOnNpdGU6cmVnaW9uOmlkOmZ1bmN0aW9uOm15LWZ1bmN0aXNvbnMiXQ=="
 }
 ```
+

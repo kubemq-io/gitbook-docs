@@ -1,22 +1,23 @@
-# Kubemq bigquery target Connector
+# BigQuery
 
 Kubemq gcp-bigquery target connector allows services using kubemq server to access google bigquery server.
 
 ## Prerequisites
+
 The following are required to run the gcp-bigquery target connector:
 
-- kubemq cluster
-- gcp-bigquery set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-bigquery set up
+* kubemq-source deployment
 
 ## Configuration
 
 bigquery target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                    |
-|:---------------|:---------|:-------------------------------------------|:---------------------------|
-| project_id     | yes      | gcp bigquery project_id                    | "<googleurl>/myproject"    |
-| credentials    | yes      | gcp credentials files                      | "<google json credentials" |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp bigquery project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
 
 Example:
 
@@ -43,7 +44,6 @@ bindings:
         credentials: 'json'
 ```
 
-
 ## Usage
 
 ### Query Request
@@ -52,15 +52,14 @@ query request.
 
 Query metadata setting:
 
-| Metadata Key | Required | Description                  | Possible values       |
-|:-------------|:---------|:-----------------------------|:----------------------|
-| method       | yes      | type of method               | "query"               |
-| query        | yes      | the query body               | "select * from table" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "query" |
+| query | yes | the query body | "select \* from table" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "query",
@@ -70,41 +69,38 @@ Example:
 }
 ```
 
-
 ### Create Table Request
 
 create a new table under data set
 
-This method required a body of rows of string [bigquery.TableMetadata]
-
-
+This method required a body of rows of string \[bigquery.TableMetadata\]
 
 Example how to create the struct:
+
 ```go
     mySchema := bigquery.Schema{
-    		{Name: "name", Type: bigquery.StringFieldType},
-    		{Name: "age", Type: bigquery.IntegerFieldType},
-    	}
-    
-    	metaData := &bigquery.TableMetadata{
-    		Schema:         mySchema,
-    		ExpirationTime: time.Now().AddDate(2, 1, 0), // Table will deleted in 2 years and 1 month.
-    	}
-    	bSchema, err := json.Marshal(metaData)
+            {Name: "name", Type: bigquery.StringFieldType},
+            {Name: "age", Type: bigquery.IntegerFieldType},
+        }
+
+        metaData := &bigquery.TableMetadata{
+            Schema:         mySchema,
+            ExpirationTime: time.Now().AddDate(2, 1, 0), // Table will deleted in 2 years and 1 month.
+        }
+        bSchema, err := json.Marshal(metaData)
 ```
 
 Create table metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "create_table"        |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-| table_name   | yes      | table name                              | "unique name" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_table" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
+| table\_name | yes | table name | "unique name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_table",
@@ -115,23 +111,21 @@ Example:
 }
 ```
 
-
 ### Delete Table Request
 
 delete a new table under data set
 
 Delete table metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "create_table"        |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-| table_name   | yes      | table name                              | "unique name" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_table" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
+| table\_name | yes | table name | "unique name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_table",
@@ -148,16 +142,15 @@ Create a Data Set
 
 Create Data Set metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "create_data_set"        |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-| location     | yes      | dataset location to set                 | "US"  See https://cloud.google.com/bigquery/docs/locations |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "create\_data\_set" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
+| location | yes | dataset location to set | "US"  See [https://cloud.google.com/bigquery/docs/locations](https://cloud.google.com/bigquery/docs/locations) |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "create_data_set",
@@ -168,22 +161,20 @@ Example:
 }
 ```
 
-
 ### Delete Data Set Request
 
 delete a Data Set
 
 Delete Data Set metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "delete_data_set"        |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "delete\_data\_set" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "delete_data_set",
@@ -199,14 +190,13 @@ get data sets.
 
 Get DataSets setting:
 
-| Metadata Key | Required | Description                             | Possible values   |
-|:-------------|:---------|:----------------------------------------|:------------------|
-| method       | yes      | type of method                          | "get_data_sets"   |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_data\_sets" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_data_sets"
@@ -221,16 +211,15 @@ get basic information on a table by name
 
 Get table Info
 
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "get_table_info"      |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-| table_name   | yes      | table name                              | "unique table name" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "get\_table\_info" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
+| table\_name | yes | table name | "unique table name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "get_table_info",
@@ -241,31 +230,28 @@ Example:
 }
 ```
 
-
 ### Insert To Table
 
 insert rows to table
 
 Insert To Table this method required a body of rows as json array
 
-```json
+```javascript
 [
  {"id":"id-1","service":{"id":"service_id_1","value":0.1},"time":"1980-10-10T00:00:00Z"},
  {"id":"id-2","service":{"id":"service_id_2","value":0.1},"time":"1980-10-10T00:00:00Z"}
  ]
 ```
 
-
-| Metadata Key | Required | Description                             | Possible values       |
-|:-------------|:---------|:----------------------------------------|:----------------------|
-| method       | yes      | type of method                          | "insert"              |
-| dataset_id   | yes      | dataset to assign the table to          | "your data set ID"  |
-| table_name   | yes      | table name                              | "unique table name" |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| method | yes | type of method | "insert" |
+| dataset\_id | yes | dataset to assign the table to | "your data set ID" |
+| table\_name | yes | table name | "unique table name" |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "method": "insert",
@@ -275,3 +261,4 @@ Example:
   "data": "W3sgIm5hbWUiOiJteU5hbWU0IiwgImFnZSI6MjV9XQ=="
 }
 ```
+

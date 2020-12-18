@@ -1,24 +1,25 @@
-# Kubemq Kafka Source Connector
+# Kafka
 
 Kubemq kafka target connector allows services using kubemq server to store messages on kafka specific topics.
 
 ## Prerequisites
+
 The following are required to run the redis target connector:
 
-- kubemq cluster
-- kafka server
-- kubemq-targets deployment
+* kubemq cluster
+* kafka server
+* kubemq-targets deployment
 
 ## Configuration
 
 Kafka source connector configuration properties:
 
-| Properties Key | Required | Description                                | Example          |
-|:---------------|:---------|:-------------------------------------------|:-----------------|
-| brokers        | yes      | kafka brokers connection, comma separated  | "localhost:9092" |
-| topic          | yes      | kafka stored topic                         | "TestTopic"      |
-| sasl_username  | no       | SASL based authentication with broker      | "user"           |
-| sasl_password  | no       | SASL based authentication with broker      | "pass"           |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| brokers | yes | kafka brokers connection, comma separated | "localhost:9092" |
+| topic | yes | kafka stored topic | "TestTopic" |
+| sasl\_username | no | SASL based authentication with broker | "user" |
+| sasl\_password | no | SASL based authentication with broker | "pass" |
 
 Example:
 
@@ -53,15 +54,14 @@ bindings:
 
 Get request metadata setting:
 
-| Metadata Key | Required | Description                             | Possible values                         |
-|:-------------|:---------|:----------------------------------------|:----------------------------------------|
-| key          | yes      | kafka message key base64                | "a2V5"                                  |
-| headers      | no       | kafka message headers Key Value base64 | `[{"Key": "ZG9n","Value": "bWV0YTE="}]` |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| key | yes | kafka message key base64 | "a2V5" |
+| headers | no | kafka message headers Key Value base64 | `[{"Key": "ZG9n","Value": "bWV0YTE="}]` |
 
 Example:
 
-```json
+```javascript
 {
   "metadata": {
     "key": "a2V5",
@@ -70,3 +70,4 @@ Example:
   "data": null
 }
 ```
+

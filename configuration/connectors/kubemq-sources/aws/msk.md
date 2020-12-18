@@ -1,26 +1,27 @@
-# Kubemq msk Source Connector
+# MSK
 
 Kubemq msk source connector allows services using kubemq server to access msk server. TODO
 
 ## Prerequisites
+
 The following are required to run the msk target connector:
 
-- kubemq cluster
-- active msk cluster
-- kubemq-target-connectors deployment
+* kubemq cluster
+* active msk cluster
+* kubemq-target-connectors deployment
 
 ## Configuration
 
 msk source connector configuration properties:
 
-| Properties Key | Required | Description                                | Example          |
-|:---------------|:---------|:-------------------------------------------|:-----------------|
-| brokers        | yes      | msk brokers connection, comma separated    | "localhost:9092" |
-| topics         | yes      | msk stored topic, comma separated          | "TestTopic"      |
-| dynamic_mapping| yes      | set if to map msk topic to kubemq channel  | "true"          |
-| consumer_group | yes      | msk consumer group name                    | "Group1          |
-| sasl_username  | no       | SASL based authentication with broker      | "user"           |
-| sasl_password  | no       | SASL based authentication with broker      | "pass"           |
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| brokers | yes | msk brokers connection, comma separated | "localhost:9092" |
+| topics | yes | msk stored topic, comma separated | "TestTopic" |
+| dynamic\_mapping | yes | set if to map msk topic to kubemq channel | "true" |
+| consumer\_group | yes | msk consumer group name | "Group1 |
+| sasl\_username | no | SASL based authentication with broker | "user" |
+| sasl\_password | no | SASL based authentication with broker | "pass" |
 
 Example:
 
@@ -44,7 +45,8 @@ bindings:
       kind: aws.msk
       name: source-aws-msk
       properties:
-     	brokers: "localhost:9092,localhost:9093",
-	    topic: "TestTopic",
-	    consumer_group: "cg"
+         brokers: "localhost:9092,localhost:9093",
+        topic: "TestTopic",
+        consumer_group: "cg"
 ```
+

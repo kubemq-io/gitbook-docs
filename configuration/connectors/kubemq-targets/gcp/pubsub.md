@@ -1,24 +1,24 @@
-# Kubemq pubsub target Connector
+# Pub/Sub
 
 Kubemq gcp-pubsub target connector allows services using kubemq server to access google pubsub server.
 
 ## Prerequisites
+
 The following required to run the gcp-pubsub target connector:
 
-- kubemq cluster
-- gcp-pubsub set up
-- kubemq-source deployment
+* kubemq cluster
+* gcp-pubsub set up
+* kubemq-source deployment
 
 ## Configuration
 
 pubsub target connector configuration properties:
 
-| Properties Key | Required | Description                                | Example                    |
-|:---------------|:---------|:-------------------------------------------|:---------------------------|
-| project_id     | yes      | gcp firestore project_id                   | "<googleurl>/myproject"    |
-| credentials    | yes      | gcp credentials files                      | "<google json credentials" |
-| retries        | no       | number of sending retires                  | retries number             |
-
+| Properties Key | Required | Description | Example |
+| :--- | :--- | :--- | :--- |
+| project\_id | yes | gcp firestore project\_id | "/myproject" |
+| credentials | yes | gcp credentials files | "&lt;google json credentials" |
+| retries | no | number of sending retires | retries number |
 
 Example:
 
@@ -44,26 +44,24 @@ bindings:
         project_id: "projectID"
         retries:    "0"
         credentials: 'json'
-
 ```
 
 ## Usage
 
-### Send Message 
+### Send Message
 
 send a message to pub sub
 
 Send Message metadata setting:
 
-| Metadata Key | Required | Description                            | Possible values       |
-|:-------------|:---------|:---------------------------------------|:----------------------|
-| topicID      | yes      | the name of the topicID to sent to     | valid topicID         |
-| tags         | no       | type of method                         | key value string          |
-
+| Metadata Key | Required | Description | Possible values |
+| :--- | :--- | :--- | :--- |
+| topicID | yes | the name of the topicID to sent to | valid topicID |
+| tags | no | type of method | key value string |
 
 Example with tags:
 
-```json
+```javascript
 {
   "metadata": {
     "topic_id": "my_topic",
@@ -73,10 +71,9 @@ Example with tags:
 }
 ```
 
-
 Example without tags:
 
-```json
+```javascript
 {
   "metadata": {
     "topic_id": "my_topic"
@@ -84,3 +81,4 @@ Example without tags:
   "data": "c3RyaW5n"
 }
 ```
+
