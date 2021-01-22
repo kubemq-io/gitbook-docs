@@ -6,13 +6,24 @@ In this guide, we’ll walk you through how to install KubeMQ into your Kubernet
 
 Before we can do anything, we need to ensure you have access to a Kubernetes cluster running 1.12 or later, and a functioning kubectl command on your local machine. \(One easy option is to run Kubernetes on your local machine. We suggest [Docker Desktop](https://www.docker.com/products/docker-desktop) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/), but there are [many options](https://kubernetes.io/docs/setup/).\)
 
+## Step 0:
+
+### Obtain KubeMQ Registration Token
+
+1. Please visit: [https://account.kubemq.io/login/register](https://account.kubemq.io/login/register) and register for a license token.
+2. Wait for an email confirmation with your license token
+
 ## Step 1:
 
 ### Deploy KubeMQ package
 
 ```bash
-kubectl apply -f https://get.kubemq.io/deploy
+kubectl apply -f https://get.kubemq.io/deploy?token=<kubemq-registration-token>
 ```
+
+{% hint style="info" %}
+If you get any errors such as "kind not found", run the command again
+{% endhint %}
 
 ### Check Your KubeMQ Cluster Installation:
 
@@ -22,7 +33,7 @@ kubectl get kubemqclusters -n kubemq
 
 ## Step 2:
 
-### Install kubemqctl cli tool
+### Install kubemqctl CLI tool
 
 {% tabs %}
 {% tab title="MacOS/Linux" %}
