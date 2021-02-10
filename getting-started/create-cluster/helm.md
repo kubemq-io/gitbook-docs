@@ -17,22 +17,16 @@ helm repo update
 ## Install KubeMQ Operator
 
 ```bash
-helm install kubemq-operator kubemq-charts/operator
+helm install kubemq-operator kubemq-charts/operator -n kubemq
 ```
 
-## Install KubeMQ Cluster Community Edition
+## Install KubeMQ Cluster
 
 ```bash
-helm install kubemq-cluster kubemq-charts/kubemq
+helm install kubemq-cluster --set key={your kubemq license key} kubemq-charts/kubemq -n kubemq 
 ```
 
-## Install KubeMQ Cluster Enterprise Edition
 
-Save your key to a file \(e.g. ./lic.key\)
-
-```bash
-helm install kubemq-cluster --set-file license=./lic.key -n kubemq kubemq-charts/kubemq
-```
 
 ## Configuration
 
