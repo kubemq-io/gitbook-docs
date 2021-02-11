@@ -23,7 +23,7 @@ helm install kubemq-operator kubemq-charts/operator -n kubemq
 ## Install KubeMQ Cluster
 
 ```bash
-helm install kubemq-cluster --set key={your kubemq license key} kubemq-charts/kubemq -n kubemq 
+helm install kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq -n kubemq 
 ```
 
 
