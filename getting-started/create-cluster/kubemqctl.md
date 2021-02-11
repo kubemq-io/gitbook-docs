@@ -4,24 +4,10 @@
 
 {% page-ref page="../../kubemqctl/get-started.md" %}
 
-## Install KubeMQ Cluster Community Edition
+## Install KubeMQ Cluster
 
 ```text
-kubemqctl create cluster
-```
-
-## Install KubeMQ Cluster Enterprise Edition
-
-### Install with license token
-
-```text
-kubemqctl create cluster -t {your-license-token}
-```
-
-### Install with license file
-
-```text
-kubemqctl create cluster --license-filename {your-license-filename}
+kubemqctl create cluster -k {your-license-key}
 ```
 
 ## Configuration
