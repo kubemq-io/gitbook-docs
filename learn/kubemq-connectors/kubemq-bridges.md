@@ -4,10 +4,10 @@ KubeMQ Bridges bridge, replicate, aggregate, and transform messages between Kube
 
 **Key Features**:
 
-* **Runs anywhere**  - Kubernetes, Cloud, on-prem , anywhere
-* **Stand-alone** - small docker container / binary
+* **Runs anywhere**  - Kubernetes, Cloud, on-prem, anywhere
+* **Stand-alone** - small docker container/binary
 * **Build Any Topology** - connects KubeMQ clusters in 1:1, 1:n , n:1, n:n
-* **Middleware Supports** - Logs, Metrics, Retries and Rate Limiters
+* **Middleware Supports** - Logs, Metrics, Retries, and Rate Limiters
 * **Easy Configuration** - simple yaml file builds your topology
 
 **An example of a use case:**
@@ -60,7 +60,7 @@ KubeMQ Bridges supports level based logging to console according to as follows:
 | Property | Description | Possible Values |
 | :--- | :--- | :--- |
 | log\_level | log level setting | "debug","info","error" |
-|  |  | "" - indicate no logging on this bindings |
+|  |  | "" - indicate no logging on this binding |
 
 An example for only error level log to console:
 
@@ -88,7 +88,7 @@ Retry middleware settings values:
 |  |  | "fixed" - fixed time delay |
 |  |  | "random" - random time delay |
 
-An example for 3 retries with back-off strategy:
+An example of 3 retries with back-off strategy:
 
 ```yaml
 bindings:

@@ -17,13 +17,17 @@ Before we can do anything, we need to ensure you have access to a Kubernetes clu
 
 ### Deploy KubeMQ package
 
+First, install KubeMQ CRD components:
+
 ```bash
-kubectl apply -f https://get.kubemq.io/deploy?token=<kubemq-registration-token>
+kubectl apply -f https://deploy.kubemq.io/init
 ```
 
-{% hint style="info" %}
-If you get any errors such as "kind not found", run the command again
-{% endhint %}
+Then, install KubeMQ operator and cluster:
+
+```bash
+kubectl apply -f https://deploy.kubemq.io/key/<kubemq-registration-token>
+```
 
 ### Check Your KubeMQ Cluster Installation:
 
@@ -100,4 +104,6 @@ kubemqctl queue receive my-queue
 {% page-ref page="message-patterns/pubsub.md" %}
 
 {% page-ref page="message-patterns/rpc.md" %}
+
+
 
