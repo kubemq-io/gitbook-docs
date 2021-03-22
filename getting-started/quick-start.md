@@ -81,6 +81,12 @@ kubemqctl queue receive my-queue
 
 ## What's Next
 
+### Build & Deploy KubeMQ Components
+
+{% page-ref page="build-and-deploy.md" %}
+
+
+
 ### Learn KubeMQ Basics
 
 {% page-ref page="../learn/the-basics/channels.md" %}
