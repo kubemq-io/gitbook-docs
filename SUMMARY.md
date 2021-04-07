@@ -201,14 +201,9 @@
   * [Java](https://github.com/kubemq-io/kubemq-Java)
   * [Go](https://github.com/kubemq-io/kubemq-go)
   * [Python](https://github.com/kubemq-io/kubemq-Python)
-  * [Node](https://github.com/kubemq-io/kubemq-node)
+  * [Node](https://github.com/kubemq-io/kubemq-js)
   * [Rest](https://postman.kubemq.io/)
-* [Examples](development/examples/README.md)
-  * [.Net](https://github.com/kubemq-io/kubemq-CSharp/tree/master/Examples)
-  * [Java](https://github.com/kubemq-io/kubemq-Java/tree/master/examples)
-  * [Go](https://github.com/kubemq-io/kubemq-go/tree/master/examples)
-  * [Python](https://github.com/kubemq-io/kubemq-Python/tree/master/examples)
-  * [Node](https://github.com/kubemq-io/kubemq-node/tree/master/examples)
+* [Cookbook](development/examples.md)
 
 ## Troubleshooting
 
