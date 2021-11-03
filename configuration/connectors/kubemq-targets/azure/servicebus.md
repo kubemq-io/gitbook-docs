@@ -7,18 +7,18 @@ Kubemq servicebus target connector allows services using kubemq server to access
 The following are required to run the servicebus target connector:
 
 * kubemq cluster
-* Azure active with servicebus enable 
+* Azure active with servicebus enable&#x20;
 * kubemq-targets deployment
 
 ## Configuration
 
 servicebus target connector configuration properties:
 
-| Properties Key | Required | Description | Example |
-| :--- | :--- | :--- | :--- |
-| end\_point | yes | event hubs target endpoint | "sb://my\_account.net" |
-| shared\_access\_key\_name | yes | event hubs access key name | "keyname" |
-| shared\_access\_key | yes | event hubs shared access key name | "213ase123" |
+| Properties Key            | Required | Description                       | Example                |
+| ------------------------- | -------- | --------------------------------- | ---------------------- |
+| end\_point                | yes      | event hubs target endpoint        | "sb://my\_account.net" |
+| shared\_access\_key\_name | yes      | event hubs access key name        | "keyname"              |
+| shared\_access\_key       | yes      | event hubs shared access key name | "213ase123"            |
 
 Example:
 
@@ -53,12 +53,12 @@ bindings:
 
 send metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | type of method | "send" |
-| label | no | the message label | "my\_label" |
-| content\_type | no | message content type | "content\_type" |
-| time\_to\_live | no | message time to live | "1000000000"default\(1000000000\) |
+| Metadata Key   | Required | Description          | Possible values                 |
+| -------------- | -------- | -------------------- | ------------------------------- |
+| method         | yes      | type of method       | "send"                          |
+| label          | no       | the message label    | "my\_label"                     |
+| content\_type  | no       | message content type | "content\_type"                 |
+| time\_to\_live | no       | message time to live | "1000000000"default(1000000000) |
 
 Example:
 
@@ -76,16 +76,16 @@ Example:
 
 send batch metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | type of method | "send\_batch" |
-| label | no | the message label | "my\_label" |
-| content\_type | no | message content type | "content\_type" |
-| time\_to\_live | no | message time to live | "1000000000"default\(1000000000\) |
+| Metadata Key   | Required | Description          | Possible values                 |
+| -------------- | -------- | -------------------- | ------------------------------- |
+| method         | yes      | type of method       | "send\_batch"                   |
+| label          | no       | the message label    | "my\_label"                     |
+| content\_type  | no       | message content type | "content\_type"                 |
+| time\_to\_live | no       | message time to live | "1000000000"default(1000000000) |
 
 Example:
 
-```javascript
+````javascript
 {
   "metadata": {
     "method": "send_batch",
@@ -94,5 +94,4 @@ Example:
   "data": "WyJ0ZXN0MSIsInRlc3QyIiwidGVzdDMiLCJ0ZXN0NCJd"
 }
 ```
-```
-
+````

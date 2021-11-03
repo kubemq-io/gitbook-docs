@@ -27,7 +27,7 @@
 
 ### Install KubeMQ Connector
 
-1. Click On Kubemq Connector 
+1. Click On Kubemq Connector&#x20;
 2. Click on Create KubemqConnector
 3. Click on Configure via YAML View
 4. A yaml editor will open with default configuration will open
@@ -72,7 +72,6 @@ spec:
     bindings: null
 ```
 
-6. Click Create
+6\. Click Create
 
 ![](../../.gitbook/assets/openshift-connector-1.png)
-

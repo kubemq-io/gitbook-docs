@@ -38,9 +38,9 @@ For all installations of Kubemq in Openshift platform, a License key is required
 Obtain free license : [Register](https://account.kubemq.io/login/register)
 {% endhint %}
 
-4. Get the license data from the welcome email
+4\. Get the license data from the welcome email
 
-5. Insert the license data into the spec section
+5\. Insert the license data into the spec section
 
 Example:
 
@@ -66,7 +66,7 @@ spec:
 
 Note: the above license is invalid
 
-6. Click create
+6\. Click create
 
 ![](../../.gitbook/assets/openshift-5.png)
 
@@ -78,5 +78,6 @@ Note: the above license is invalid
 
 Check out cluster configuration setting available:
 
-{% page-ref page="../../configuration/cluster/" %}
-
+{% content-ref url="../../configuration/cluster/" %}
+[cluster](../../configuration/cluster/)
+{% endcontent-ref %}

@@ -27,7 +27,7 @@
 
 ## Install KubeMQ Dashboard
 
-1. Click On Kubemq Dashboard 
+1. Click On Kubemq Dashboard&#x20;
 2. Click on Create KubeMQDashboard
 3. Click on Configure via YAML View
 4. A yaml editor will open with default configuration will open
@@ -58,17 +58,17 @@ metadata:
 
 ![](../../.gitbook/assets/openshift-dashboard-3.png)
 
-3.  Set Route name
+3\.  Set Route name
 
-4. Select Kubemq-dashboard Service
+4\. Select Kubemq-dashboard Service
 
 ![](../../.gitbook/assets/openshift-dashboard-4.png)
 
-5. Set Target Port to 3000-&gt;3000\(TCP\)
+5\. Set Target Port to 3000->3000(TCP)
 
 ![](../../.gitbook/assets/openshift-dashboard-5.png)
 
-6. Click Create
+6\. Click Create
 
 ### Configure Grafana Dashboard
 
@@ -76,15 +76,15 @@ metadata:
 
 ![](../../.gitbook/assets/openshift-dashboard-6.png)
 
-2. Click on the Home drop-down box
+2\. Click on the Home drop-down box
 
 ![](../../.gitbook/assets/openshift-dashboard-7.png)
 
-3. Select Kubemq Dashboard
+3\. Select Kubemq Dashboard
 
 ![](../../.gitbook/assets/openshift-dashboard-8.png)
 
-4. Kubemq Dashboard will appear
+4\. Kubemq Dashboard will appear
 
 ![](../../.gitbook/assets/openshift-dashboard-9.png)
 
@@ -92,5 +92,6 @@ metadata:
 
 Check out dashboard configuration setting available:
 
-{% page-ref page="../../configuration/dashboard/" %}
-
+{% content-ref url="../../configuration/dashboard/" %}
+[dashboard](../../configuration/dashboard/)
+{% endcontent-ref %}

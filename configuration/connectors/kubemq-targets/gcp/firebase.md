@@ -16,18 +16,18 @@ The following required to run the gcp-firebase target connector:
 
 firebase target connector configuration properties:
 
-| Properties Key | Required | Description | Example |
-| :--- | :--- | :--- | :--- |
-| project\_id | yes | gcp firebase project\_id | "/myproject" |
-| credentials | yes | gcp credentials files | "&lt;google json credentials" |
-| db\_client | no | initialize db client if true | true/false |
-| db\_url | no | gcp db full path | &lt;google db url" |
-| auth\_client | no | initialize auth client if true | true/false |
-| messaging\_client | no | initialize messaging client | true/false |
-| defaultmsg | no | default Firebase Cloud Messaging | json |
-| defaultmultimsg | no | default Firebase Cloud MulticastMessage | json |
+| Properties Key    | Required | Description                             | Example                     |
+| ----------------- | -------- | --------------------------------------- | --------------------------- |
+| project\_id       | yes      | gcp firebase project\_id                | "/myproject"                |
+| credentials       | yes      | gcp credentials files                   | "\<google json credentials" |
+| db\_client        | no       | initialize db client if true            | true/false                  |
+| db\_url           | no       | gcp db full path                        | \<google db url"            |
+| auth\_client      | no       | initialize auth client if true          | true/false                  |
+| messaging\_client | no       | initialize messaging client             | true/false                  |
+| defaultmsg        | no       | default Firebase Cloud Messaging        | json                        |
+| defaultmultimsg   | no       | default Firebase Cloud MulticastMessage | json                        |
 
-_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings _defaultmultimsg - can be used for common message settings
 
 Example:
 
@@ -65,11 +65,11 @@ bindings:
 
 Get DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | get\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | get\_db         |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -87,11 +87,11 @@ Example:
 
 Set DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | set\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | set\_db         |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -109,11 +109,11 @@ Example:
 
 Update DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | update\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | update\_db      |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -145,18 +145,18 @@ The following required to run the gcp-firebase target connector:
 
 firebase target connector configuration properties:
 
-| Properties Key | Required | Description | Example |
-| :--- | :--- | :--- | :--- |
-| project\_id | yes | gcp firebase project\_id | "/myproject" |
-| credentials | yes | gcp credentials files | "&lt;google json credentials" |
-| db\_client | no | initialize db client if true | true/false |
-| db\_url | no | gcp db full path | &lt;google db url" |
-| auth\_client | no | initialize auth client if true | true/false |
-| messaging\_client | no | initialize messaging client | true/false |
-| defaultmsg | no | default Firebase Cloud Messaging | json |
-| defaultmultimsg | no | default Firebase Cloud MulticastMessage | json |
+| Properties Key    | Required | Description                             | Example                     |
+| ----------------- | -------- | --------------------------------------- | --------------------------- |
+| project\_id       | yes      | gcp firebase project\_id                | "/myproject"                |
+| credentials       | yes      | gcp credentials files                   | "\<google json credentials" |
+| db\_client        | no       | initialize db client if true            | true/false                  |
+| db\_url           | no       | gcp db full path                        | \<google db url"            |
+| auth\_client      | no       | initialize auth client if true          | true/false                  |
+| messaging\_client | no       | initialize messaging client             | true/false                  |
+| defaultmsg        | no       | default Firebase Cloud Messaging        | json                        |
+| defaultmultimsg   | no       | default Firebase Cloud MulticastMessage | json                        |
 
-_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings _defaultmultimsg - can be used for common message settings
 
 Example:
 
@@ -194,11 +194,11 @@ bindings:
 
 Get DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | get\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | get\_db         |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -216,11 +216,11 @@ Example:
 
 Set DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | set\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | set\_db         |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -238,11 +238,11 @@ Example:
 
 Update DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | update\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | update\_db      |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -260,11 +260,11 @@ Example:
 
 Delete DB metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | delete\_db |
-| ref\_path | yes | ref path for the data | valid string |
-| child\_ref | no | path for child ref data | valid string |
+| Metadata Key | Required | Description             | Possible values |
+| ------------ | -------- | ----------------------- | --------------- |
+| method       | yes      | method type             | delete\_db      |
+| ref\_path    | yes      | ref path for the data   | valid string    |
+| child\_ref   | no       | path for child ref data | valid string    |
 
 Example:
 
@@ -285,8 +285,8 @@ Example:
 Create User metadata setting:
 
 | Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | create\_user |
+| ------------ | -------- | ----------- | --------------- |
+| method       | yes      | method type | create\_user    |
 
 Example:
 
@@ -303,13 +303,13 @@ Example:
 
 Retrieve User metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | retrieve\_user |
-| retrieve\_by | yes | type of retrieval | by\_email ,by\_uid,by\_phone |
-| uid | no | valid unique string | string |
-| phone | no | valid phone number | string |
-| email | no | valid email | string |
+| Metadata Key | Required | Description         | Possible values              |
+| ------------ | -------- | ------------------- | ---------------------------- |
+| method       | yes      | method type         | retrieve\_user               |
+| retrieve\_by | yes      | type of retrieval   | by\_email ,by\_uid,by\_phone |
+| uid          | no       | valid unique string | string                       |
+| phone        | no       | valid phone number  | string                       |
+| email        | no       | valid email         | string                       |
 
 Example:
 
@@ -328,10 +328,10 @@ Example:
 
 Delete User metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | delete\_user |
-| uid | yes | valid unique string | string |
+| Metadata Key | Required | Description         | Possible values |
+| ------------ | -------- | ------------------- | --------------- |
+| method       | yes      | method type         | delete\_user    |
+| uid          | yes      | valid unique string | string          |
 
 Example:
 
@@ -349,9 +349,9 @@ Example:
 
 Delete Multiple Users metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | delete\_multiple\_users |
+| Metadata Key | Required | Description | Possible values         |
+| ------------ | -------- | ----------- | ----------------------- |
+| method       | yes      | method type | delete\_multiple\_users |
 
 Example:
 
@@ -368,10 +368,10 @@ Example:
 
 Update User metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | update\_user |
-| uid | yes | valid unique string | string |
+| Metadata Key | Required | Description         | Possible values |
+| ------------ | -------- | ------------------- | --------------- |
+| method       | yes      | method type         | update\_user    |
+| uid          | yes      | valid unique string | string          |
 
 Example:
 
@@ -390,8 +390,8 @@ Example:
 List User metadata setting:
 
 | Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | list\_users |
+| ------------ | -------- | ----------- | --------------- |
+| method       | yes      | method type | list\_users     |
 
 Example:
 
@@ -410,10 +410,10 @@ Example:
 
 Custom Token metadata setting:
 
-| Metadata Key | Required | Description | Possible values |  |  |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| method | yes | method type | custom\_token |  |  |
-| uid | yes | valid unique string | string |  |  |
+| Metadata Key | Required | Description         | Possible values |   |   |
+| ------------ | -------- | ------------------- | --------------- | - | - |
+| method       | yes      | method type         | custom\_token   |   |   |
+| uid          | yes      | valid unique string | string          |   |   |
 
 Example:
 
@@ -431,10 +431,10 @@ Example:
 
 Verify Token metadata setting:
 
-| Metadata Key | Required | Description | Possible values |  |  |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| method | yes | method type | verify\_token |  |  |
-| uid | yes | valid unique string | string |  |  |
+| Metadata Key | Required | Description         | Possible values |   |   |
+| ------------ | -------- | ------------------- | --------------- | - | - |
+| method       | yes      | method type         | verify\_token   |   |   |
+| uid          | yes      | valid unique string | string          |   |   |
 
 Example:
 
@@ -453,15 +453,15 @@ Example:
 Firebase messaging will send a FCM message or send the message to multiple devices.
 
 * message [https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages)
-* multi [https://firebase.google.com/docs/cloud-messaging/send-message\#go\_1](https://firebase.google.com/docs/cloud-messaging/send-message#go_1)
+* multi [https://firebase.google.com/docs/cloud-messaging/send-message#go\_1](https://firebase.google.com/docs/cloud-messaging/send-message#go\_1)
 
 #### Send Message
 
 Create User metadata setting:
 
-| Metadata Key | Required | Description | Possible values |
-| :--- | :--- | :--- | :--- |
-| method | yes | method type | send\_message/send\_multi |
+| Metadata Key | Required | Description | Possible values           |
+| ------------ | -------- | ----------- | ------------------------- |
+| method       | yes      | method type | send\_message/send\_multi |
 
 Example: send\_message
 
@@ -494,4 +494,3 @@ Example: send\_multi
      "data":{"Tokens":["123","456"],"Data":{"key":"val"},"Notification":{"title":"title"}}
   }
 ```
-
