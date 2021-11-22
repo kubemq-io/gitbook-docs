@@ -14,16 +14,10 @@ helm repo add kubemq-charts  https://kubemq-io.github.io/charts
 helm repo update
 ```
 
-## Install KubeMQ Operator
-
-```bash
-helm install kubemq-operator kubemq-charts/operator -n kubemq
-```
-
 ## Install KubeMQ Cluster
 
 ```bash
-helm install kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq -n kubemq 
+helm install kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq -n kubemq --create-namespace --wait
 ```
 
 
@@ -32,5 +26,6 @@ helm install kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq -n
 
 Check out cluster configuration setting available:
 
-{% page-ref page="../../configuration/cluster/" %}
-
+{% content-ref url="../../configuration/cluster/" %}
+[cluster](../../configuration/cluster/)
+{% endcontent-ref %}
