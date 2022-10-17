@@ -4,4 +4,4 @@
 
 Browse to: [https://build.kubemq.io/#/clusters](https://build.kubemq.io/#/clusters)
 
-<figure><img src="../../.gitbook/assets/Snag_124c81d3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/BA35F8F9-3987-4262-8404-DB047A3C4B95.GIF" alt=""><figcaption></figcaption></figure>
