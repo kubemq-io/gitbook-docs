@@ -201,7 +201,7 @@
   * [Go](https://github.com/kubemq-io/kubemq-go)
   * [Python](https://github.com/kubemq-io/kubemq-Python)
   * [Node](https://github.com/kubemq-io/kubemq-js)
-  * [Rest](https://postman.kubemq.io)
+  * [Rest](https://postman.kubemq.io/)
 * [Cookbook](development/examples.md)
 
 ## Troubleshooting

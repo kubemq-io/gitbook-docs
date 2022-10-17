@@ -27,7 +27,7 @@ firebase target connector configuration properties:
 | defaultmsg        | no       | default Firebase Cloud Messaging        | json                        |
 | defaultmultimsg   | no       | default Firebase Cloud MulticastMessage | json                        |
 
-_defaultmsg - can be used for common message settings _defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
 
 Example:
 
@@ -156,7 +156,7 @@ firebase target connector configuration properties:
 | defaultmsg        | no       | default Firebase Cloud Messaging        | json                        |
 | defaultmultimsg   | no       | default Firebase Cloud MulticastMessage | json                        |
 
-_defaultmsg - can be used for common message settings _defaultmultimsg - can be used for common message settings
+_defaultmsg - can be used for common message settings_ defaultmultimsg - can be used for common message settings
 
 Example:
 

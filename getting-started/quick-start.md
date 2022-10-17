@@ -4,7 +4,7 @@
 
 In this guide, we’ll walk you through how to install KubeMQ into your Kubernetes cluster.
 
-Before we can do anything, we need to ensure you have access to a Kubernetes cluster running 1.12 or later, and a functioning kubectl command on your local machine. \(One easy option is to run Kubernetes on your local machine. We suggest [Docker Desktop](https://www.docker.com/products/docker-desktop) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/), but there are [many options](https://kubernetes.io/docs/setup/).\)
+Before we can do anything, we need to ensure you have access to a Kubernetes cluster running 1.12 or later, and a functioning kubectl command on your local machine. (One easy option is to run Kubernetes on your local machine. We suggest [Docker Desktop](https://www.docker.com/products/docker-desktop) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/), but there are [many options](https://kubernetes.io/docs/setup/).)
 
 ## Step 0:
 
@@ -79,37 +79,65 @@ kubemqctl queue send my-queue hello-world
 kubemqctl queue receive my-queue
 ```
 
+## Step 4:
+
+### Load KubeMQ Dashboard
+
+```
+kubemqctl get dashboard
+```
+
+<figure><img src="../.gitbook/assets/Snag_1237dbef.png" alt=""><figcaption><p>KubeMQ Dashboard</p></figcaption></figure>
+
 ## What's Next
 
 ### Build & Deploy KubeMQ Components
 
-{% page-ref page="build-and-deploy.md" %}
+{% content-ref url="build-and-deploy.md" %}
+[build-and-deploy.md](build-and-deploy.md)
+{% endcontent-ref %}
 
 
 
 ### Learn KubeMQ Basics
 
-{% page-ref page="../learn/the-basics/channels.md" %}
+{% content-ref url="../learn/the-basics/channels.md" %}
+[channels.md](../learn/the-basics/channels.md)
+{% endcontent-ref %}
 
-{% page-ref page="../learn/the-basics/smart-routing.md" %}
+{% content-ref url="../learn/the-basics/smart-routing.md" %}
+[smart-routing.md](../learn/the-basics/smart-routing.md)
+{% endcontent-ref %}
 
-{% page-ref page="../learn/the-basics/grouping.md" %}
+{% content-ref url="../learn/the-basics/grouping.md" %}
+[grouping.md](../learn/the-basics/grouping.md)
+{% endcontent-ref %}
 
 ### Learn KubeMQ Message Patterns
 
-{% page-ref page="../learn/message-patterns/queue.md" %}
+{% content-ref url="../learn/message-patterns/queue.md" %}
+[queue.md](../learn/message-patterns/queue.md)
+{% endcontent-ref %}
 
-{% page-ref page="../learn/message-patterns/pubsub.md" %}
+{% content-ref url="../learn/message-patterns/pubsub.md" %}
+[pubsub.md](../learn/message-patterns/pubsub.md)
+{% endcontent-ref %}
 
-{% page-ref page="../learn/message-patterns/rpc.md" %}
+{% content-ref url="../learn/message-patterns/rpc.md" %}
+[rpc.md](../learn/message-patterns/rpc.md)
+{% endcontent-ref %}
 
 ### Get started with KubeMQ message patterns
 
-{% page-ref page="message-patterns/queues.md" %}
+{% content-ref url="message-patterns/queues.md" %}
+[queues.md](message-patterns/queues.md)
+{% endcontent-ref %}
 
-{% page-ref page="message-patterns/pubsub.md" %}
+{% content-ref url="message-patterns/pubsub.md" %}
+[pubsub.md](message-patterns/pubsub.md)
+{% endcontent-ref %}
 
-{% page-ref page="message-patterns/rpc.md" %}
-
-
+{% content-ref url="message-patterns/rpc.md" %}
+[rpc.md](message-patterns/rpc.md)
+{% endcontent-ref %}
 
