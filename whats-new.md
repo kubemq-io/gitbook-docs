@@ -1,5 +1,19 @@
 # What's New
 
+## What's new in KubeMQ Release v2.3
+
+### KubeMQ Dashboard
+
+KubeMQ has new web interface for all KubeMQ functions:
+
+<figure><img src=".gitbook/assets/Snag_1237dbef.png" alt=""><figcaption><p>KubeMQ Dashboard</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Snag_123c17cc.png" alt=""><figcaption><p>View Queue Message</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Snag_123c1905.png" alt=""><figcaption><p>KubeMQ Cluster Nodes</p></figcaption></figure>
+
+
+
 ## What's new in KubeMQ Release v2
 
 ### KubeMQ Operator
@@ -22,13 +36,13 @@ Release v2 brings new features, enhancements to existing features together with 
 #### New Features
 
 1. **Authentication Access Control** - allows controlling the access of clients to KubeMQ gRPC and Rest interfaces.[ Learn More](learn/access-control/authentication.md).
-2. **Authorization Access Control** - allows controlling the access of clients to KubeMQ server resources \(Channels, Read, and Write\). [Learn More](learn/access-control/authorization.md).
+2. **Authorization Access Control** - allows controlling the access of clients to KubeMQ server resources (Channels, Read, and Write). [Learn More](learn/access-control/authorization.md).
 3. **Notifications Access Control** - allows getting an event for any access connection attempt.  [Learn More](learn/access-control/notifications.md).
 4. **Smart Routing** - In-flight and routing tables messaging allows to multicast messages to many destinations with a single message. [Learn More](learn/the-basics/smart-routing.md)
 
 #### Enhancements to Existing Features
 
-1. **Inbound Traffic Control** - allows controlling the messaging flow based on the state of cluster health \(Circuit Breaker\).
+1. **Inbound Traffic Control** - allows controlling the messaging flow based on the state of cluster health (Circuit Breaker).
 2. **Cluster Security** - simple TLS and mTLS configuration with the ability to control buffers and message size.
 3. **Persistent Store Configuration** - In addition to simple PVC configuration, a Storage Class setting was added.
 4. **StatefulSet Deployment** - Easy configurations to Health, Resources, and Node Selectors were added.
@@ -54,7 +68,7 @@ Helm version 3 is required to install and manage KubeMQ charts.
 
 ### Kubemqctl
 
-Kubemqctl is KubeMQ's CLI \(Command Line Interface\), which allows us to manage and control KubeMQ's applications and components with additional companion development tools that ease the development complexity of Kubernetes application based.
+Kubemqctl is KubeMQ's CLI (Command Line Interface), which allows us to manage and control KubeMQ's applications and components with additional companion development tools that ease the development complexity of Kubernetes application based.
 
 #### Key Features
 
@@ -73,4 +87,3 @@ Kubemqctl is KubeMQ's CLI \(Command Line Interface\), which allows us to manage 
 [Deploy KubeMQ Server with Kubemqctl](getting-started/create-cluster/kubemqctl.md#install-kubemq-cluster-community-edition)
 
 [Deploy KubeMQ Dashboard with Kubectl](getting-started/create-dashboard/kubemqctl.md#install-kubemq-dashboard)
-
