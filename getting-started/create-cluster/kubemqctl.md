@@ -1,18 +1,7 @@
-# Kubemqctl
+# Build & Deploy
 
-## Install Kubemqctl Tool
+## Browse to Build & Deploy site
 
-{% page-ref page="../../kubemqctl/get-started.md" %}
+Browse to: [https://build.kubemq.io/#/clusters](https://build.kubemq.io/#/clusters)
 
-## Install KubeMQ Cluster
-
-```text
-kubemqctl create cluster -k {your-license-key}
-```
-
-## Configuration
-
-Check out cluster configuration setting available:
-
-{% page-ref page="../../configuration/cluster/" %}
-
+<figure><img src="../../.gitbook/assets/Snag_124c81d3.png" alt=""><figcaption></figcaption></figure>

@@ -64,7 +64,7 @@ Helm version 3 is required to install and manage KubeMQ charts.
 
 [Deploy KubeMQ Server with Helm](getting-started/create-cluster/helm.md#install-kubemq-cluster-enterprise-edition)
 
-[Deploy KubeMQ Dashboard with Helm](getting-started/create-dashboard/helm.md#install-kubemq-dashboard)
+[Deploy KubeMQ Dashboard with Helm](broken-reference)
 
 ### Kubemqctl
 
@@ -86,4 +86,4 @@ Kubemqctl is KubeMQ's CLI (Command Line Interface), which allows us to manage an
 
 [Deploy KubeMQ Server with Kubemqctl](getting-started/create-cluster/kubemqctl.md#install-kubemq-cluster-community-edition)
 
-[Deploy KubeMQ Dashboard with Kubectl](getting-started/create-dashboard/kubemqctl.md#install-kubemq-dashboard)
+[Deploy KubeMQ Dashboard with Kubectl](broken-reference)

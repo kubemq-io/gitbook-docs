@@ -2,7 +2,9 @@
 
 ## Deploy KubeMQ Dashboard
 
-{% page-ref page="../getting-started/create-dashboard/" %}
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 ## With Kubemqctl
 
@@ -18,6 +20,4 @@ Connecting to kubernetes cluster...Current Kubernetes cluster context connection
 -> connected to kubemq/kubemq-dashboard-b79cd4bc5-2rgnj at Grafana Port 2724:3000 Prometheus Port 2725:8080, ok
 
 ```
-
-
 
