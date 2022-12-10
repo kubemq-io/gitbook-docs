@@ -32,7 +32,7 @@ kubectl apply -f https://deploy.kubemq.io/key/<license-key>
 Run:
 
 ```bash
-docker run -it -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ_TOKEN=<license-key> kubemq/kubemq
+docker run -d -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ_TOKEN=<license-key> kubemq/kubemq
 ```
 {% endtab %}
 {% endtabs %}
