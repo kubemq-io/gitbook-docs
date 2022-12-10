@@ -8,32 +8,30 @@ Before we can do anything, we need to ensure you have access to a Kubernetes clu
 
 ## Step 0:
 
-### Obtain KubeMQ Registration Token
+### Obtain KubeMQ License Key
 
 1. Please visit: [https://account.kubemq.io/login/register](https://account.kubemq.io/login/register) and register for a license token.
-2. Wait for an email confirmation with your license token
+2. Wait for an email confirmation with your license Key
 
 ## Step 1:
 
-### Deploy KubeMQ package
+{% tabs %}
+{% tab title="Kubernetes" %}
+Run:
 
-First, install KubeMQ CRD components:
+`kubectl apply -f https://deploy.kubemq.io/init`
 
-```bash
-kubectl apply -f https://deploy.kubemq.io/init
-```
+`kubectl apply -f https://deploy.kubemq.io/key/<license-key>`
+{% endtab %}
 
-Then, install KubeMQ operator and cluster:
+{% tab title="Docker" %}
+Run:
 
-```bash
-kubectl apply -f https://deploy.kubemq.io/key/<kubemq-registration-token>
-```
+docker run -it -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ\_TOKEN=`<license-key>` kubemq/kubemq
+{% endtab %}
+{% endtabs %}
 
-### Check Your KubeMQ Cluster Installation:
 
-```bash
-kubectl get kubemqclusters -n kubemq
-```
 
 ## Step 2:
 
