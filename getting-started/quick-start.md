@@ -19,15 +19,21 @@ Before we can do anything, we need to ensure you have access to a Kubernetes clu
 {% tab title="Kubernetes" %}
 Run:
 
-`kubectl apply -f https://deploy.kubemq.io/init`
+```bash
+kubectl apply -f https://deploy.kubemq.io/init
+```
 
-`kubectl apply -f https://deploy.kubemq.io/key/<license-key>`
+```bash
+kubectl apply -f https://deploy.kubemq.io/key/<license-key>
+```
 {% endtab %}
 
 {% tab title="Docker" %}
 Run:
 
-docker run -it -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ\_TOKEN=`<license-key>` kubemq/kubemq
+```bash
+docker run -it -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ_TOKEN=<license-key> kubemq/kubemq
+```
 {% endtab %}
 {% endtabs %}
 
