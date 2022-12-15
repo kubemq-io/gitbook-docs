@@ -34,7 +34,7 @@
   * [Authentication](learn/access-control/authentication.md)
   * [Authorization](learn/access-control/authorization.md)
   * [Notifications](learn/access-control/notifications.md)
-* [Clustering](learn/cluster-scale.md)
+* [Clustering and HA](learn/cluster-scale.md)
 * [Connectors](learn/kubemq-connectors/README.md)
   * [KubeMQ Targets](learn/kubemq-connectors/kubemq-targets.md)
   * [KubeMQ Sources](learn/kubemq-connectors/kubemq-sources.md)
