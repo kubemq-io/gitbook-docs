@@ -17,7 +17,9 @@ helm repo update
 ## Install KubeMQ Cluster
 
 ```bash
-helm install kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq -n kubemq --create-namespace --wait
+helm install --create-namespace -n kubemq kubemq-crds kubemq-charts/kubemq-crds
+helm install --wait -n kubemq kubemq-controller kubemq-charts/kubemq-controller
+helm install --wait -n kubemq kubemq-cluster --set key={your-license-key} kubemq-charts/kubemq-cluster
 ```
 
 
