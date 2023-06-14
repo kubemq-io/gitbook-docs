@@ -29,11 +29,21 @@ kubectl apply -f https://deploy.kubemq.io/key/<license-key>
 {% endtab %}
 
 {% tab title="Docker" %}
-Run:
+Run with default configuration:
 
+{% code overflow="wrap" %}
 ```bash
 docker run -d -p 8080:8080 -p 50000:50000 -p 9090:9090 -e KUBEMQ_TOKEN=<license-key> kubemq/kubemq
 ```
+{% endcode %}
+
+Run with configuration file:
+
+{% code overflow="wrap" %}
+```docker
+docker run -d -p 8080:8080 -p 50000:50000 -p 9090:9090 -v $(pwd)/config.yaml:/kubemq/config.yaml -e KUBEMQ_TOKEN=<license-key> kubemq/kubemq
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

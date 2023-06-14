@@ -173,6 +173,7 @@
       * [Events Store](configuration/connectors/kubemq-bridges/sources/events-store.md)
       * [Command](configuration/connectors/kubemq-bridges/sources/command.md)
       * [Query](configuration/connectors/kubemq-bridges/sources/query.md)
+* [Docker](configuration/docker.md)
 
 ## HOW TO
 
